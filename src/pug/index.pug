@@ -1,0 +1,14 @@
+extends layouts/main-layout.pug
+
+block variables
+  -
+    const title = "LittleWeb"
+    const desc = "LittleWeb - сообщество людей НЕравнодушных к WEB"
+    const keywords = ""
+
+block page-content
+
+  main(data-barba="container" data-barba-namespace="home")
+    include ./sections/index-page/hero
+
+block modals

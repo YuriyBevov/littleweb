@@ -1,0 +1,46 @@
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
+
+:root {
+    // base
+    --font-family: "MontserratAlternates", sans-serif;
+    --content-width: 1410px;
+    --content-fluid-width: 1890px;
+    --container-offset: 15px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+    --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+
+    // colors
+
+    --light-color         : #e4e4e4;
+    --accent-color        : #d52027;
+
+    --primary-color       : #007bff;
+    --secondary-color     : #6c757d;
+
+    --success-color       : #28a745;
+    --warning-color       : #ffc107;
+    --danger-color        : #dc3545;
+
+    --white-color         : #ffffff;
+    --black-color         : #000000;
+
+    --main-bg-color       : var(--white-color);
+
+    // scrollbar
+    --main-scrollbar-width: 6px;
+    --main-scrollbar-color: var(--light-color);
+    --main-scrollbar-thumb-color: var(--primary-color);
+
+    // text-sizes
+    --text-xxl: clamp(36px, 7.5vw, 64px);
+    --text-xl: clamp(28px, 5vw, 44px);
+    --text-lg: clamp(24px, 4vw, 36px);
+    --text-md: clamp(20px, 3.5vw, 32px);
+    --text-sm: clamp(16px, 3vw, 28px);
+    --text-xs: 14px;
+    --text-xxs: 12px;
+
+    //transition
+    --main-t-rules: 0.25s 0.05s ease;
+  }

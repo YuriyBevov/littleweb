@@ -1,0 +1,26 @@
+include ./head
+
+doctype html
+
+block variables
+  -
+    const title = ""
+    const desc = ""
+    const keywords = ""
+    const namespace = ""
+
+html(lang="ru")
+  +head(title, desc, keywords)
+
+  body(data-barba="wrapper")
+    include ./main-header
+
+    #smooth-wrapper
+      #smooth-content
+        block page-content
+
+    include ./main-footer
+
+    include ../components/barba-transition
+
+    block modals

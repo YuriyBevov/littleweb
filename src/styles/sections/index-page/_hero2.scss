@@ -1,0 +1,59 @@
+.hero {
+  &__bg {
+    position: absolute;
+    top: -100px;
+    right: 20vw;
+    width: 300px;
+    height: 300px;
+
+    svg {
+      overflow: visible;
+      path {
+        cursor: pointer;
+      }
+    }
+
+    a {
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      color: #ffffff;
+    }
+  }
+
+  .underlay {
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    z-index: -1;
+  }
+
+}
+
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+
+  z-index: 100;
+  position: relative;
+  top: 0;
+  left: 60vw;
+  width: 40vw;
+  justify-content: center;
+  margin-top: 10vh;
+  padding: 10vh 0;
+}
+
+.menu-item {
+  padding: 30px;
+  font-size: 60px;
+
+  a {
+    color: var(--light-color);
+  }
+}
