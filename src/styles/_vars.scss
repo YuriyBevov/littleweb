@@ -12,28 +12,33 @@
 
     // colors
 
-    --light-color         : #e4e4e4;
+    //--light-color         : #947bfb;
     --accent-color        : #d52027;
 
-    --primary-color       : #007bff;
-    --secondary-color     : #6c757d;
+    --primary-color       : #10164a;
+    --secondary-color     : #8468f6;
 
-    --success-color       : #28a745;
-    --warning-color       : #ffc107;
-    --danger-color        : #dc3545;
+    //--success-color       : #28a745;
+    --warning-color       : #ec9a29;
+    //--danger-color        : #dc3545;
 
     --white-color         : #ffffff;
     --black-color         : #000000;
 
-    --main-bg-color       : var(--white-color);
+    --purple-1: var(--primary-color);
+    --purple-2: #5030d4;
+    --purple-3: #8468f6;
+    --purple-4: #947bfb;
+
+    --main-bg-color       : var(--primary-color);
 
     // scrollbar
     --main-scrollbar-width: 6px;
-    --main-scrollbar-color: var(--light-color);
-    --main-scrollbar-thumb-color: var(--primary-color);
+    --main-scrollbar-color: var(--primary-4);
+    --main-scrollbar-thumb-color: var(--purple-4);
 
     // text-sizes
-    --text-xxl: clamp(36px, 7.5vw, 64px);
+    --text-xxl: clamp(36px, 7.5vw, 80px);
     --text-xl: clamp(28px, 5vw, 44px);
     --text-lg: clamp(24px, 4vw, 36px);
     --text-md: clamp(20px, 3.5vw, 32px);

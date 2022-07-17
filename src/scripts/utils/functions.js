@@ -1,4 +1,15 @@
 // работа с классами эл-та
+
+const root = document.querySelector(':root');
+
+function getCssPropertyValue(name) {
+  return getComputedStyle(root).getPropertyValue(name);
+}
+
+function setCssProperty(name, value) {
+  root.style.setProperty(name, value);
+}
+
 function addClass(el, cl) {
   el.classList.add(cl);
 }
@@ -14,6 +25,17 @@ function checkClass(el, cl) {
 function toggleClass(el, cl) {
   el.classList.toggle(cl);
 }
+
+// Linear interpolation
+const lerp = (a, b, n) => (1 - n) * a + n * b;
+
+// Позиция мыши
+const getMousePos = evt => {
+    return {
+        x : evt.clientX,
+        y : evt.clientY
+    };
+};
 
 //получение радиан из градусов(для канваса)
 function getRadians(degrees) {
@@ -77,4 +99,4 @@ function getBoundingClientRect(elem, side) {
   }
 }
 
-export  { getRadians,limitStr, addClass, removeClass, checkClass, toggleClass, bodyLocker, getBoundingClientRect }
+export  { getCssPropertyValue, setCssProperty, lerp, getMousePos, getRadians,limitStr, addClass, removeClass, checkClass, toggleClass, bodyLocker, getBoundingClientRect }

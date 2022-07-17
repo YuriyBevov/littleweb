@@ -60,4 +60,13 @@
   &-fw-black {
     font-weight: 900;
   }
+
+  /*buttons*/
+  &-button {
+    &-main {
+      @extend .button;
+      background: var(--warning-color);
+      border-radius: 36px;
+    }
+  }
 }

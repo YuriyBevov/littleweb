@@ -5,6 +5,18 @@
 }
 
 .section-padding {
+  padding: 100px 0;
+
+  @include m-b-desktop-down {
+    padding: 60px 0;
+  }
+
+  @include m-b-laptop-down {
+    padding: 20px 0;
+  }
+}
+
+.section-padding-top {
   padding-top: 100px;
 
   @include m-b-desktop-down {
@@ -13,6 +25,18 @@
 
   @include m-b-laptop-down {
     padding-top: 20px;
+  }
+}
+
+.section-padding-bottom {
+  padding-bottom: 100px;
+
+  @include m-b-desktop-down {
+    padding-bottom: 60px;
+  }
+
+  @include m-b-laptop-down {
+    padding-bottom: 20px;
   }
 }
 
@@ -76,6 +100,19 @@
     padding: 0;
     background-color: transparent;
     cursor: pointer;
+}
+
+.button {
+  @extend .button-default;
+  @extend .flex-centered-content;
+  width: fit-content;
+  height: fit-content;
+  min-height: 40px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--primary-color);
 }
 
 /*scroll*/
