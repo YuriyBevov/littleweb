@@ -45,8 +45,10 @@ bg_tl.to(bg,{
 
 }
 
-/*const wave = document.querySelector('#wave');
+const wave = document.querySelector('#wave');
 const wavePathMiddle = wave.dataset.pathMiddle;
+const wave2 = document.querySelector('#wave2');
+const wave2PathMiddle = wave2.dataset.pathMiddle;
 const wavePathTo = wave.dataset.pathTo;
 const wavePath = wave.getAttribute('d');
 
@@ -60,7 +62,17 @@ gsap.to(wave, {
     shape: wavePathMiddle,
     type: 'rotational',
   }
-})*/
+})
+
+gsap.to(wave2, {
+  ease: 'elastic',
+  duration: 2,
+  delay: 0.3,
+  morphSVG: {
+    shape: wave2PathMiddle,
+    type: 'rotational',
+  }
+})
 
 /*tl.to(wave, {
   ease: 'linear',

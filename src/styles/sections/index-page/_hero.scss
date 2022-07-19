@@ -5,7 +5,6 @@
   height: 100vh;
   min-height: 768px;
   overflow: hidden;
-  //overflow-y: auto;
   position: relative;
 
   .bg {
@@ -28,19 +27,29 @@
   }
 
   &__wrapper {
-    @extend .section-padding;
     display: flex;
+    flex-direction: column
   }
 
   &__content {
     @extend .flex-column;
     @extend .flex-centered-content;
+    @extend .section-padding;
 
     width: 100%;
     max-width: 680px;
     margin: auto;
 
     z-index: 11;
+  }
+
+  &__header {
+    padding: 30px 0;
+    &-menu {
+      margin-left: auto;
+      background: var(--white-color);
+      border-radius: 45px;
+    }
   }
 
   &__logo {
@@ -69,14 +78,6 @@
     height: 44px;
   }
 
-  &__menu {
-    position: relative;
-    top: 0;
-    left: 100%;
-
-    background: var(--white-color);
-    border-radius: 44.1127px;
-  }
 }
 /*gsap start*/
 body:not(.nojs) {

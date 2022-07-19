@@ -178,23 +178,36 @@ function blobAnimation(option) {
     }
   });
 }
-/*const wave = document.querySelector('#wave');
-const wavePathMiddle = wave.dataset.pathMiddle;
-const wavePathTo = wave.dataset.pathTo;
-const wavePath = wave.getAttribute('d');
 
-let tl = gsap.timeline({repeat: -1, repeatDelay: 1, delay: 2.5});
-
-gsap.to(wave, {
+var wave = document.querySelector('#wave');
+var wavePathMiddle = wave.dataset.pathMiddle;
+var wave2 = document.querySelector('#wave2');
+var wave2PathMiddle = wave2.dataset.pathMiddle;
+var wavePathTo = wave.dataset.pathTo;
+var wavePath = wave.getAttribute('d');
+var tl = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+  repeat: -1,
+  repeatDelay: 1,
+  delay: 2.5
+});
+gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave, {
   ease: 'elastic',
   duration: 2,
   delay: 0.3,
   morphSVG: {
     shape: wavePathMiddle,
-    type: 'rotational',
+    type: 'rotational'
   }
-})*/
-
+});
+gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave2, {
+  ease: 'elastic',
+  duration: 2,
+  delay: 0.3,
+  morphSVG: {
+    shape: wave2PathMiddle,
+    type: 'rotational'
+  }
+});
 /*tl.to(wave, {
   ease: 'linear',
   duration: 20,
@@ -219,7 +232,6 @@ gsap.to(wave, {
     type: 'rotational',
   }
 });*/
-
 
 var rightBlob = document.querySelector('.blob-path--right');
 var rightBlobPathFrom = rightBlob.getAttribute('d');
