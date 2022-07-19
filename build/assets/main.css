@@ -1435,9 +1435,8 @@ h1, h2, h3, h4, h5, h6, p {
   height: fit-content;
   min-height: 40px;
   padding: 10px 15px;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
   color: var(--primary-color);
 }
 
@@ -1562,8 +1561,12 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: 900;
 }
 .lw-button-main {
-  background: var(--warning-color);
-  border-radius: 36px;
+  background: -webkit-gradient(linear, left top, right top, from(#F5DFA0), color-stop(68.75%, #EC9A29));
+  background: -o-linear-gradient(left, #F5DFA0 0%, #EC9A29 68.75%);
+  background: linear-gradient(90deg, #F5DFA0 0%, #EC9A29 68.75%);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 52px;
 }
 
 .grid-layout-container {
@@ -1679,7 +1682,6 @@ h1, h2, h3, h4, h5, h6, p {
   height: 100vh;
   min-height: 768px;
   overflow: hidden;
-  overflow-y: auto;
   position: relative;
 }
 .hero .bg {
@@ -1730,6 +1732,13 @@ h1, h2, h3, h4, h5, h6, p {
 .hero__btn {
   width: 240px;
   height: 44px;
+}
+.hero__menu {
+  position: relative;
+  top: 0;
+  left: 100%;
+  background: var(--white-color);
+  border-radius: 44.1127px;
 }
 
 /*gsap start*/
@@ -1789,13 +1798,13 @@ body:not(.nojs) .hero__logo {
 .hero__blobs .blob--left {
   width: 500px;
   height: 400px;
-  top: 45%;
+  top: 53%;
   left: 70%;
 }
 .hero__blobs .blob--right {
   width: 400px;
   height: 400px;
-  top: 10%;
+  top: 25%;
   left: 17%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);

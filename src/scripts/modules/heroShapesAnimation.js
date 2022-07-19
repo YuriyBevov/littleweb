@@ -45,7 +45,7 @@ bg_tl.to(bg,{
 
 }
 
-const wave = document.querySelector('#wave');
+/*const wave = document.querySelector('#wave');
 const wavePathMiddle = wave.dataset.pathMiddle;
 const wavePathTo = wave.dataset.pathTo;
 const wavePath = wave.getAttribute('d');
@@ -60,7 +60,7 @@ gsap.to(wave, {
     shape: wavePathMiddle,
     type: 'rotational',
   }
-})
+})*/
 
 /*tl.to(wave, {
   ease: 'linear',
