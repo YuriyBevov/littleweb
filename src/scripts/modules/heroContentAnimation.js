@@ -5,10 +5,12 @@ const content = document.querySelector('.hero__content');
 if(content) {
 
   function animateHeroContent() {
+    const logo = content.querySelector('.hero__logo');
     const titleTexts = content.querySelectorAll('.hero__title span > span');
     const desc = content.querySelector('.hero__desc');
     const button = content.querySelector('.hero__btn');
     const buttonText = button.querySelector('span');
+
     let tl = gsap.timeline();
 
     for(const [index, title] of titleTexts.entries()) {
@@ -21,6 +23,14 @@ if(content) {
         ease: 'power1'
       })
     }
+
+    gsap.to(logo, {
+      duration: 1.5,
+      delay: 0.2,
+      y: 0,
+      opacity: 1,
+      ease: 'back'
+    })
 
     gsap.to(button, {
       duration: 1.5,
@@ -47,5 +57,4 @@ if(content) {
   };
 
   animateHeroContent();
-
 }
