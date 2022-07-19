@@ -11,9 +11,9 @@
 		display: block;
 		pointer-events: none;
 		z-index: 10000;
-		
-    	fill: var(--accent-color);
-		stroke: var(--accent-color);
+
+    	fill: var(--warning-color);
+		stroke: var(--warning-color);
 		mix-blend-mode: difference;
 	}
 

@@ -1664,8 +1664,8 @@ h1, h2, h3, h4, h5, h6, p {
     display: block;
     pointer-events: none;
     z-index: 10000;
-    fill: var(--accent-color);
-    stroke: var(--accent-color);
+    fill: var(--warning-color);
+    stroke: var(--warning-color);
     mix-blend-mode: difference;
   }
 
