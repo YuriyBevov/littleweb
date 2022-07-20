@@ -30,7 +30,11 @@ svg(style="overflow: visible;" width="40" height="40" viewBox="0 0 40 40").curso
 */
  //console.log(Cursor)
 
-new _utils_Cursor_js__WEBPACK_IMPORTED_MODULE_0__.Cursor(document.querySelectorAll('.cursor'), '.gsap-cursor-trigger, label, input, a, button');
+if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  new _utils_Cursor_js__WEBPACK_IMPORTED_MODULE_0__.Cursor(document.querySelectorAll('.cursor'), '.gsap-cursor-trigger, label, input, a, button');
+} else {
+  alert('mobile!');
+}
 
 /***/ }),
 
@@ -140,6 +144,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_2__.MorphSVGPlugin);
+/**
+* Wave animation
+*/
+
 var wave = document.querySelector('#wave');
 var wavePathMiddle = wave.dataset.pathMiddle;
 var wavePath = wave.getAttribute('d');
@@ -200,7 +208,7 @@ tl.to(wave, {
 });
 tl2.to(wave2, {
   ease: 'linear',
-  duration: 30,
+  duration: 20,
   delay: .5,
   yoyo: true,
   startAt: {
@@ -214,8 +222,8 @@ tl2.to(wave2, {
   }
 }).to(wave2, {
   ease: 'linear',
-  duration: 30,
-  delay: 0.5,
+  duration: 20,
+  delay: .5,
   yoyo: true,
   morphSVG: {
     shape: wave2PathMiddle,
@@ -223,8 +231,8 @@ tl2.to(wave2, {
   }
 });
 /**
- * Blobs animations function
- */
+* Blobs animations function
+*/
 
 function blobAnimation(option) {
   gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(option.el, {
@@ -238,6 +246,10 @@ function blobAnimation(option) {
     }
   });
 }
+/**
+* Blobs
+*/
+
 
 var rightBlob = document.querySelector('.blob-path--right');
 var rightBlobPathFrom = rightBlob.getAttribute('d');

@@ -4,7 +4,9 @@ import {MorphSVGPlugin} from 'gsap/MorphSVGPlugin';
 
 gsap.registerPlugin( MorphSVGPlugin );
 
-
+/**
+* Wave animation
+*/
 
 const wave = document.querySelector('#wave');
 const wavePathMiddle = wave.dataset.pathMiddle;
@@ -64,7 +66,7 @@ tl.to(wave, {
 
 tl2.to(wave2, {
   ease: 'linear',
-  duration: 30,
+  duration: 20,
   delay: .5,
   yoyo: true,
   startAt: {
@@ -78,8 +80,8 @@ tl2.to(wave2, {
   }
 }).to(wave2, {
   ease: 'linear',
-  duration: 30,
-  delay: 0.5,
+  duration: 20,
+  delay: .5,
   yoyo: true,
   morphSVG: {
     shape: wave2PathMiddle,
@@ -88,8 +90,8 @@ tl2.to(wave2, {
 });
 
 /**
- * Blobs animations function
- */
+* Blobs animations function
+*/
 
  function blobAnimation(option) {
 
@@ -104,6 +106,10 @@ tl2.to(wave2, {
     }
   });
 }
+
+/**
+* Blobs
+*/
 
 const rightBlob = document.querySelector('.blob-path--right');
 const rightBlobPathFrom = rightBlob.getAttribute('d');
