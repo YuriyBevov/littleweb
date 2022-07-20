@@ -70,6 +70,7 @@ if (content) {
     var desc = content.querySelector('.hero__desc');
     var button = content.querySelector('.hero__btn');
     var buttonText = button.querySelector('span');
+    var header = document.querySelector('.main-header');
     var tl = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline();
 
     var _iterator = _createForOfIteratorHelper(titleTexts.entries()),
@@ -119,6 +120,12 @@ if (content) {
     });
     tl.to(buttonText, {
       duration: .9,
+      opacity: 1,
+      ease: 'ease-in'
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(header, {
+      duration: 1.3,
+      delay: 2.5,
       opacity: 1,
       ease: 'ease-in'
     });

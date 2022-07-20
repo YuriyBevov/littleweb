@@ -10,6 +10,7 @@ if(content) {
     const desc = content.querySelector('.hero__desc');
     const button = content.querySelector('.hero__btn');
     const buttonText = button.querySelector('span');
+    const header = document.querySelector('.main-header');
 
     let tl = gsap.timeline();
 
@@ -54,6 +55,13 @@ if(content) {
       opacity: 1,
       ease: 'ease-in'
     })
+
+    gsap.to(header,{
+      duration: 1.3,
+      delay: 2.5,
+      opacity: 1,
+      ease: 'ease-in'
+    });
   };
 
   animateHeroContent();
