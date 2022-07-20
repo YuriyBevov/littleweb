@@ -1688,6 +1688,9 @@ h1, h2, h3, h4, h5, h6, p {
   min-height: 768px;
   overflow: hidden;
   position: relative;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../assets/img/bg.png");
 }
 .hero .container, .hero__wrapper {
   height: inherit;
@@ -1745,9 +1748,12 @@ h1, h2, h3, h4, h5, h6, p {
   background-repeat: no-repeat;
 }
 .hero__header {
-  position: relative;
+  position: fixed;
   padding: 30px 0;
   z-index: 11;
+  top: 0;
+  left: 0;
+  width: 100vw;
 }
 .hero__header-menu {
   margin-left: auto;

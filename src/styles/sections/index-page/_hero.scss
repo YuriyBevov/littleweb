@@ -6,6 +6,9 @@
   min-height: 768px;
   overflow: hidden;
   position: relative;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../assets/img/bg.png');
 
   .container,
   &__wrapper {
@@ -74,9 +77,12 @@
   }
 
   &__header {
-    position: relative;
+    position: fixed;
     padding: 30px 0;
     z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100vw;
 
     &-menu {
       margin-left: auto;
