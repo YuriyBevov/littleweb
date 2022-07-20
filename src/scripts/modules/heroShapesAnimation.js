@@ -4,55 +4,18 @@ import {MorphSVGPlugin} from 'gsap/MorphSVGPlugin';
 
 gsap.registerPlugin( MorphSVGPlugin );
 
-/**
- * hero section bg animation
- */
-const bg = document.querySelector('.hero__bg');
-const clipValue = getCssPropertyValue('--hero-block-clip');
 
-/*let bg_tl = gsap.timeline({repeat: -1, repeatDelay: 1});
-
-bg_tl.to(bg,{
-  duration: 60,
-  clipPath: 'circle(92.6% at 95% -40%)',
-  ease: 'ease-in',
-})
-.to(bg,{
-  duration: 60,
-  clipPath: clipValue,
-  ease: 'ease-in',
-});*/
-
-/**
- * Blobs animations function
- */
-
- function blobAnimation(option) {
-
-  gsap.to(option.el, {
-    ease: option.ease ? option.ease : 'elastic',
-    duration: option.duration ? option.duration : 3,
-    delay: option.delay ? option.delay : 0.3,
-    scale: option.scale ? option.scale : 1,
-    //rotate: '180deg',
-    //transformOrigin: 'center',
-    morphSVG: {
-      shape: option.shape,
-      type: 'rotational',
-      //transformOrigin: 'center',
-    }
-  });
-
-}
 
 const wave = document.querySelector('#wave');
 const wavePathMiddle = wave.dataset.pathMiddle;
-const wave2 = document.querySelector('#wave2');
-const wave2PathMiddle = wave2.dataset.pathMiddle;
-const wavePathTo = wave.dataset.pathTo;
 const wavePath = wave.getAttribute('d');
 
+const wave2 = document.querySelector('#wave2');
+const wave2PathMiddle = wave2.dataset.pathMiddle;
+const wave2Path = wave2.getAttribute('d');
+
 let tl = gsap.timeline({repeat: -1, repeatDelay: 1, delay: 2.5});
+let tl2 = gsap.timeline({repeat: -1, repeatDelay: 1, delay: 2.5});
 
 gsap.to(wave, {
   ease: 'elastic',
@@ -74,9 +37,9 @@ gsap.to(wave2, {
   }
 })
 
-/*tl.to(wave, {
+tl.to(wave, {
   ease: 'linear',
-  duration: 20,
+  duration: 30,
   delay: .5,
   yoyo: true,
   startAt: {
@@ -85,19 +48,62 @@ gsap.to(wave2, {
     }
   },
   morphSVG: {
-    shape: wavePathTo,
+    shape: wavePath,
     type: 'rotational',
   }
 }).to(wave, {
   ease: 'linear',
-  duration: 20,
+  duration: 30,
   delay: 0.5,
   yoyo: true,
   morphSVG: {
     shape: wavePathMiddle,
     type: 'rotational',
   }
-});*/
+});
+
+tl2.to(wave2, {
+  ease: 'linear',
+  duration: 30,
+  delay: .5,
+  yoyo: true,
+  startAt: {
+    morphSVG: {
+      shape: wave2PathMiddle,
+    }
+  },
+  morphSVG: {
+    shape: wave2Path,
+    type: 'rotational',
+  }
+}).to(wave2, {
+  ease: 'linear',
+  duration: 30,
+  delay: 0.5,
+  yoyo: true,
+  morphSVG: {
+    shape: wave2PathMiddle,
+    type: 'rotational',
+  }
+});
+
+/**
+ * Blobs animations function
+ */
+
+ function blobAnimation(option) {
+
+  gsap.to(option.el, {
+    ease: option.ease ? option.ease : 'elastic',
+    duration: option.duration ? option.duration : 3,
+    delay: option.delay ? option.delay : 0.3,
+    scale: option.scale ? option.scale : 1,
+    morphSVG: {
+      shape: option.shape,
+      type: 'rotational',
+    }
+  });
+}
 
 const rightBlob = document.querySelector('.blob-path--right');
 const rightBlobPathFrom = rightBlob.getAttribute('d');
@@ -109,7 +115,6 @@ blobAnimation({
   el: rightBlob,
   shape: rightBlobPathTo,
   delay: 0.5,
-
   ease: 'back',
 })
 
@@ -144,7 +149,9 @@ gsap.set(leftBlob, {scale: 0});
 blobAnimation({
   el: leftBlob,
   shape: leftBlobPathTo,
-  delay: 0.5
+  delay: 1,
+
+  ease: 'back',
 })
 
 const onLeftBlobMouseOutHandler = () => {

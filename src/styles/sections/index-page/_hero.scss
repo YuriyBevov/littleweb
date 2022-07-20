@@ -7,19 +7,6 @@
   overflow: hidden;
   position: relative;
 
-  .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    svg {
-    background: transparent;
-    transform: rotateZ(90deg) scaleX(0.75) scaleY(1.33333);
-    }
-  }
-
   .container,
   &__wrapper {
     height: inherit;
@@ -47,10 +34,12 @@
     position: relative;
     padding: 30px 0;
     z-index: 11;
+
     &-menu {
       margin-left: auto;
       background: var(--white-color);
       border-radius: 45px;
+      min-width: 115px;
     }
   }
 
@@ -66,6 +55,7 @@
 
   &__title {
     font-weight: 900;
+    //line-height: 1;
     margin-bottom: 40px;
     overflow: hidden;
   }
@@ -79,13 +69,14 @@
     width: 240px;
     height: 44px;
   }
-
 }
+
 /*gsap start*/
 body:not(.nojs) {
   .hero__title span {
     overflow: hidden;
-    display: block;
+    display: flex;
+    flex-direction: column;
     span {
       display: inline-block;
       transform: translateY(120%);
@@ -111,14 +102,13 @@ body:not(.nojs) {
 }
 /*gsap end*/
 
-.hero__bg {
+.wave-bg {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  clip-path: var(--hero-block-clip);
-  background: url('../assets/img/bg.png');
 }
 
 .hero__blobs {
@@ -132,60 +122,20 @@ body:not(.nojs) {
   .blob {
     position: absolute;
     overflow: visible;
+    transform: translate(-50%, -50%);
   }
 
-  .blob--left {
+  .blob--right {
     width: 500px;
     height: 400px;
     top: 53%;
     left: 70%;
   }
 
-  .blob--right {
+  .blob--left {
     width: 400px;
     height: 400px;
     top: 25%;
     left: 17%;
-    transform: translate(-50%, -50%);
   }
 }
-
-/*.hero__blobs {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-
-  .blob {
-    position: absolute;
-    top: 0;
-
-    height: 100%;
-    outline: 1px solid red;
-
-    svg {
-      position: absolute;
-      overflow: visible;
-    }
-
-    &--left {
-      width: 50%;
-      left: 0;
-      svg {
-        top: 46%;
-        left: 0;
-      }
-    }
-
-    &--bottom {
-      width: 50%;
-      left: 50%;
-      svg {
-        top: 60%;
-        left: 58%;
-      }
-    }
-  }
-}*/

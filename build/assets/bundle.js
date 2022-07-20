@@ -140,52 +140,18 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_2__.MorphSVGPlugin);
-/**
- * hero section bg animation
- */
-
-var bg = document.querySelector('.hero__bg');
-var clipValue = (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.getCssPropertyValue)('--hero-block-clip');
-/*let bg_tl = gsap.timeline({repeat: -1, repeatDelay: 1});
-
-bg_tl.to(bg,{
-  duration: 60,
-  clipPath: 'circle(92.6% at 95% -40%)',
-  ease: 'ease-in',
-})
-.to(bg,{
-  duration: 60,
-  clipPath: clipValue,
-  ease: 'ease-in',
-});*/
-
-/**
- * Blobs animations function
- */
-
-function blobAnimation(option) {
-  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(option.el, {
-    ease: option.ease ? option.ease : 'elastic',
-    duration: option.duration ? option.duration : 3,
-    delay: option.delay ? option.delay : 0.3,
-    scale: option.scale ? option.scale : 1,
-    //rotate: '180deg',
-    //transformOrigin: 'center',
-    morphSVG: {
-      shape: option.shape,
-      type: 'rotational' //transformOrigin: 'center',
-
-    }
-  });
-}
-
 var wave = document.querySelector('#wave');
 var wavePathMiddle = wave.dataset.pathMiddle;
+var wavePath = wave.getAttribute('d');
 var wave2 = document.querySelector('#wave2');
 var wave2PathMiddle = wave2.dataset.pathMiddle;
-var wavePathTo = wave.dataset.pathTo;
-var wavePath = wave.getAttribute('d');
+var wave2Path = wave2.getAttribute('d');
 var tl = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+  repeat: -1,
+  repeatDelay: 1,
+  delay: 2.5
+});
+var tl2 = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
   repeat: -1,
   repeatDelay: 1,
   delay: 2.5
@@ -208,30 +174,70 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave2, {
     type: 'rotational'
   }
 });
-/*tl.to(wave, {
+tl.to(wave, {
   ease: 'linear',
-  duration: 20,
+  duration: 30,
   delay: .5,
   yoyo: true,
   startAt: {
     morphSVG: {
-      shape: wavePathMiddle,
+      shape: wavePathMiddle
     }
   },
   morphSVG: {
-    shape: wavePathTo,
-    type: 'rotational',
+    shape: wavePath,
+    type: 'rotational'
   }
 }).to(wave, {
   ease: 'linear',
-  duration: 20,
+  duration: 30,
   delay: 0.5,
   yoyo: true,
   morphSVG: {
     shape: wavePathMiddle,
-    type: 'rotational',
+    type: 'rotational'
   }
-});*/
+});
+tl2.to(wave2, {
+  ease: 'linear',
+  duration: 30,
+  delay: .5,
+  yoyo: true,
+  startAt: {
+    morphSVG: {
+      shape: wave2PathMiddle
+    }
+  },
+  morphSVG: {
+    shape: wave2Path,
+    type: 'rotational'
+  }
+}).to(wave2, {
+  ease: 'linear',
+  duration: 30,
+  delay: 0.5,
+  yoyo: true,
+  morphSVG: {
+    shape: wave2PathMiddle,
+    type: 'rotational'
+  }
+});
+/**
+ * Blobs animations function
+ */
+
+function blobAnimation(option) {
+  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(option.el, {
+    ease: option.ease ? option.ease : 'elastic',
+    duration: option.duration ? option.duration : 3,
+    delay: option.delay ? option.delay : 0.3,
+    scale: option.scale ? option.scale : 1,
+    morphSVG: {
+      shape: option.shape,
+      type: 'rotational'
+    }
+  });
+}
 
 var rightBlob = document.querySelector('.blob-path--right');
 var rightBlobPathFrom = rightBlob.getAttribute('d');
@@ -276,7 +282,8 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(leftBlob, {
 blobAnimation({
   el: leftBlob,
   shape: leftBlobPathTo,
-  delay: 0.5
+  delay: 1,
+  ease: 'back'
 });
 
 var onLeftBlobMouseOutHandler = function onLeftBlobMouseOutHandler() {
