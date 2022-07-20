@@ -4,6 +4,9 @@
 
 /*Есть ли у устройства указывающее уст-во ( напр. мышь)*/
 @media (any-pointer:fine) {
+  .custom-cursor-container.hidden {
+    display: none;
+  }
 	.cursor {
 		position: fixed;
 		top: 0;
