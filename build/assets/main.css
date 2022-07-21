@@ -1560,7 +1560,8 @@ h1, h2, h3, h4, h5, h6, p {
 .lw-button-main {
   font-size: 18px;
   font-weight: 700;
-  min-height: 56px;
+  height: 56px;
+  height: clamp(44px, 6.5vw, 56px);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 52px;
@@ -1631,6 +1632,11 @@ body:not(.nojs) .hero__logo {
   background: var(--white-color);
   border-radius: 45px;
   min-width: 115px;
+}
+@media (max-width: 768px) {
+  .main-header__menu {
+    display: none;
+  }
 }
 
 .modal-overlay {
@@ -1737,6 +1743,16 @@ body:not(.nojs) .hero__logo {
   background-size: cover;
   background-image: url("../assets/img/bg.png");
 }
+@media (max-width: 960px) {
+  .hero {
+    min-height: 634px;
+  }
+}
+@media (max-width: 534px) {
+  .hero {
+    min-height: 534px;
+  }
+}
 .hero .container, .hero__wrapper {
   height: inherit;
   min-height: inherit;
@@ -1758,6 +1774,12 @@ body:not(.nojs) .hero__logo {
 }
 .hero__logo {
   margin-bottom: 35px;
+  width: clamp(234px, 30vw, 266px);
+  height: clamp(44px, 10vw, 56px);
+}
+.hero__logo svg {
+  width: 100%;
+  height: 100%;
 }
 .hero__title, .hero__desc {
   text-align: center;
@@ -1774,7 +1796,6 @@ body:not(.nojs) .hero__logo {
 }
 .hero__btn {
   width: 240px;
-  height: 44px;
 }
 
 .wave-bg {
@@ -1807,6 +1828,16 @@ body:not(.nojs) .hero__logo {
   height: 400px;
   top: 65%;
   left: 85%;
+}
+@media (max-width: 960px) {
+  .hero__blobs .blob--right {
+    left: 100%;
+  }
+}
+@media (max-width: 534px) {
+  .hero__blobs .blob--right {
+    display: none;
+  }
 }
 .hero__blobs .blob--left {
   width: 400px;

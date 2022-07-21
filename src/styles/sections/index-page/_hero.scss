@@ -10,6 +10,14 @@
   background-size: cover;
   background-image: url('../assets/img/bg.png');
 
+  @include m-b-tablet-lg-down {
+    min-height: 634px;
+  }
+
+  @include m-b-mobile-lg-down {
+    min-height: 534px;
+  }
+
   .container,
   &__wrapper {
     height: inherit;
@@ -35,6 +43,13 @@
 
   &__logo {
     margin-bottom: 35px;
+    width: clamp(234px, 30vw, 266px);
+    height: clamp(44px, 10vw, 56px);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__title,
@@ -56,7 +71,6 @@
 
   &__btn {
     width: 240px;
-    height: 44px;
   }
 }
 
@@ -89,6 +103,14 @@
     height: 400px;
     top: 65%;
     left: 85%;
+
+    @include m-b-tablet-lg-down {
+      left: 100%;
+    }
+
+    @include m-b-mobile-lg-down {
+      display: none;
+    }
   }
 
   .blob--left {

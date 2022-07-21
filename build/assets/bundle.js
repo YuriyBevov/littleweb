@@ -82,7 +82,6 @@ if (content) {
             index = _step$value[0],
             title = _step$value[1];
 
-        console.log(index);
         gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(title, {
           duration: 0.7,
           delay: 0.25 * (index + 1),

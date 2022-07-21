@@ -15,8 +15,6 @@ if(content) {
     let tl = gsap.timeline();
 
     for(const [index, title] of titleTexts.entries()) {
-      console.log(index);
-
       gsap.to(title, {
         duration: 0.7,
         delay: 0.25 * (index+1),
