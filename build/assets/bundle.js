@@ -327,26 +327,6 @@ leftBlob.addEventListener('mouseover', onLeftBlobMouseOverHandler);
 
 /***/ }),
 
-/***/ "./src/scripts/modules/setViewportHeight.js":
-/*!**************************************************!*\
-  !*** ./src/scripts/modules/setViewportHeight.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
-
-(0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.setVieportHeight)();
-/*let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-window.addEventListener('resize', () => {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-});*/
-
-/***/ }),
-
 /***/ "./src/scripts/utils/Cursor.js":
 /*!*************************************!*\
   !*** ./src/scripts/utils/Cursor.js ***!
@@ -9027,11 +9007,10 @@ var __webpack_exports__ = {};
   !*** ./src/scripts/main.js ***!
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_setViewportHeight_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/setViewportHeight.js */ "./src/scripts/modules/setViewportHeight.js");
-/* harmony import */ var _modules_custom_cursor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/custom_cursor.js */ "./src/scripts/modules/custom_cursor.js");
-/* harmony import */ var _modules_heroContentAnimation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/heroContentAnimation.js */ "./src/scripts/modules/heroContentAnimation.js");
-/* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
-
+/* harmony import */ var _modules_custom_cursor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/custom_cursor.js */ "./src/scripts/modules/custom_cursor.js");
+/* harmony import */ var _modules_heroContentAnimation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/heroContentAnimation.js */ "./src/scripts/modules/heroContentAnimation.js");
+/* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
+//import "./modules/setViewportHeight.js";
 
 
 

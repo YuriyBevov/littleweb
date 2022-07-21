@@ -16,9 +16,9 @@ html {
 html,
 body {
   width: 100%;
-  //height: fit-content;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  height: fit-content;
+  min-height: 100vh;
+  //height: calc(var(--vh, 1vh) * 100);
   -webkit-text-size-adjust: none;
 }
 
