@@ -191,19 +191,19 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave2, {
     type: 'rotational'
   }
 });
-waveTimeline.to(wave, {
+/*waveTimeline.to(wave, {
   ease: 'linear',
   duration: 30,
   delay: .5,
   yoyo: true,
   startAt: {
     morphSVG: {
-      shape: wavePathMiddle
+      shape: wavePathMiddle,
     }
   },
   morphSVG: {
     shape: wavePath,
-    type: 'rotational'
+    type: 'rotational',
   }
 }).to(wave, {
   ease: 'linear',
@@ -212,9 +212,10 @@ waveTimeline.to(wave, {
   yoyo: true,
   morphSVG: {
     shape: wavePathMiddle,
-    type: 'rotational'
+    type: 'rotational',
   }
 });
+
 wave2Timeline.to(wave2, {
   ease: 'linear',
   duration: 20,
@@ -222,12 +223,12 @@ wave2Timeline.to(wave2, {
   yoyo: true,
   startAt: {
     morphSVG: {
-      shape: wave2PathMiddle
+      shape: wave2PathMiddle,
     }
   },
   morphSVG: {
     shape: wave2Path,
-    type: 'rotational'
+    type: 'rotational',
   }
 }).to(wave2, {
   ease: 'linear',
@@ -236,9 +237,10 @@ wave2Timeline.to(wave2, {
   yoyo: true,
   morphSVG: {
     shape: wave2PathMiddle,
-    type: 'rotational'
+    type: 'rotational',
   }
-});
+});*/
+
 /**
 * Blobs animations function
 */
