@@ -62,6 +62,16 @@
     font-weight: 900;
     margin-bottom: 40px;
     overflow: hidden;
+
+    span {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        display: inline-block;
+      }
+    }
   }
 
   &__desc {

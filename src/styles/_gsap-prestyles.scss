@@ -1,11 +1,7 @@
 /*gsap start*/
 body:not(.nojs) {
   .hero__title span {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
     span {
-      display: inline-block;
       transform: translateY(120%);
     }
   }
