@@ -1278,11 +1278,6 @@ body.body-locked {
   overflow: hidden;
 }
 
-svg {
-  -webkit-transform: translateZ(0.0001px);
-  transform: translateZ(0.0001px);
-}
-
 footer {
   margin-top: auto;
 }
@@ -1811,6 +1806,7 @@ body:not(.nojs) .hero__logo {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 2;
 }
 
 .hero__blobs {
