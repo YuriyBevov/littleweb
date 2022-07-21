@@ -11,13 +11,13 @@
 
 html {
   box-sizing: border-box;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 html,
 body {
   width: 100%;
-  height: fit-content;
-  min-height: 100vh;
   -webkit-text-size-adjust: none;
 }
 
@@ -27,6 +27,7 @@ body {
   flex-direction: column;
   font-family: var(--font-family, sans-serif);
   font-weight: 400;
+  height: fit-content;
   background-color: var(--main-bg-color);
   overflow-x: hidden !important;
 
