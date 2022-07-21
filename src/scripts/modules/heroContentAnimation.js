@@ -2,9 +2,8 @@ import {gsap} from "gsap";
 
 const content = document.querySelector('.hero__content');
 
-if(content) {
-
-  function animateHeroContent() {
+export function animateHeroContent() {
+  if(content) {
     const logo = content.querySelector('.hero__logo');
     const titleTexts = content.querySelectorAll('.hero__title span > span');
     const desc = content.querySelector('.hero__desc');
@@ -20,8 +19,8 @@ if(content) {
         delay: 0.25 * (index+1),
         y: 0,
         ease: 'power1'
-      })
-    }
+      });
+    };
 
     gsap.to(logo, {
       duration: 1.5,
@@ -29,13 +28,13 @@ if(content) {
       y: 0,
       opacity: 1,
       ease: 'back'
-    })
+    });
 
     gsap.to(button, {
       duration: 1.5,
       y: 0,
       ease: 'linear'
-    })
+    });
 
     tl.to(desc, {
       duration: .8,
@@ -48,11 +47,11 @@ if(content) {
       width: '240px',
       ease: 'elastic'
     })
-    tl.to(buttonText, {
+    .to(buttonText, {
       duration: .9,
       opacity: 1,
       ease: 'ease-in'
-    })
+    });
 
     gsap.to(header,{
       duration: 1.3,
@@ -61,6 +60,6 @@ if(content) {
       ease: 'ease-in'
     });
   };
+};
 
-  animateHeroContent();
-}
+animateHeroContent();

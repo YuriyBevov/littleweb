@@ -45,6 +45,9 @@ if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "animateHeroContent": () => (/* binding */ animateHeroContent)
+/* harmony export */ });
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -62,9 +65,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 var content = document.querySelector('.hero__content');
-
-if (content) {
-  function animateHeroContent() {
+function animateHeroContent() {
+  if (content) {
     var logo = content.querySelector('.hero__logo');
     var titleTexts = content.querySelectorAll('.hero__title span > span');
     var desc = content.querySelector('.hero__desc');
@@ -95,6 +97,7 @@ if (content) {
       _iterator.f();
     }
 
+    ;
     gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(logo, {
       duration: 1.5,
       delay: 0.2,
@@ -116,8 +119,7 @@ if (content) {
       duration: 0.7,
       width: '240px',
       ease: 'elastic'
-    });
-    tl.to(buttonText, {
+    }).to(buttonText, {
       duration: .9,
       opacity: 1,
       ease: 'ease-in'
@@ -131,8 +133,9 @@ if (content) {
   }
 
   ;
-  animateHeroContent();
 }
+;
+animateHeroContent();
 
 /***/ }),
 
@@ -160,15 +163,15 @@ var wavePath = wave.getAttribute('d');
 var wave2 = document.querySelector('#wave2');
 var wave2PathMiddle = wave2.dataset.pathMiddle;
 var wave2Path = wave2.getAttribute('d');
-var tl = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+var waveTimeline = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
   repeat: -1,
   repeatDelay: 1,
   delay: 2.5
 });
-var tl2 = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+var wave2Timeline = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
   repeat: -1,
   repeatDelay: 1,
-  delay: 2.5
+  delay: 3
 });
 gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave, {
   ease: 'elastic',
@@ -188,7 +191,7 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave2, {
     type: 'rotational'
   }
 });
-tl.to(wave, {
+waveTimeline.to(wave, {
   ease: 'linear',
   duration: 30,
   delay: .5,
@@ -212,7 +215,7 @@ tl.to(wave, {
     type: 'rotational'
   }
 });
-tl2.to(wave2, {
+wave2Timeline.to(wave2, {
   ease: 'linear',
   duration: 20,
   delay: .5,
@@ -241,13 +244,13 @@ tl2.to(wave2, {
 */
 
 function blobAnimation(option) {
-  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(option.el, {
+  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(option.pathFrom, {
     ease: option.ease ? option.ease : 'elastic',
     duration: option.duration ? option.duration : 3,
-    delay: option.delay ? option.delay : 0.3,
+    delay: option.delay ? option.delay : 0,
     scale: option.scale ? option.scale : 1,
     morphSVG: {
-      shape: option.shape,
+      shape: option.pathTo,
       type: 'rotational'
     }
   });
@@ -264,17 +267,16 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(rightBlob, {
   scale: 0
 });
 blobAnimation({
-  el: rightBlob,
-  shape: rightBlobPathTo,
+  pathFrom: rightBlob,
+  pathTo: rightBlobPathTo,
   delay: 0.5,
   ease: 'back'
 });
 
 var onRightBlobMouseOutHandler = function onRightBlobMouseOutHandler() {
   blobAnimation({
-    el: rightBlob,
-    shape: rightBlobPathTo,
-    delay: 0
+    pathFrom: rightBlob,
+    pathTo: rightBlobPathTo
   });
   rightBlob.addEventListener('mouseover', onRightBlobMouseOverHandler);
   rightBlob.removeEventListener('mouseout', onRightBlobMouseOutHandler);
@@ -282,9 +284,8 @@ var onRightBlobMouseOutHandler = function onRightBlobMouseOutHandler() {
 
 var onRightBlobMouseOverHandler = function onRightBlobMouseOverHandler() {
   blobAnimation({
-    el: rightBlob,
-    shape: rightBlobPathFrom,
-    delay: 0
+    pathFrom: rightBlob,
+    pathTo: rightBlobPathFrom
   });
   rightBlob.removeEventListener('mouseover', onRightBlobMouseOverHandler);
   rightBlob.addEventListener('mouseout', onRightBlobMouseOutHandler);
@@ -298,17 +299,16 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(leftBlob, {
   scale: 0
 });
 blobAnimation({
-  el: leftBlob,
-  shape: leftBlobPathTo,
+  pathFrom: leftBlob,
+  pathTo: leftBlobPathTo,
   delay: 1,
   ease: 'back'
 });
 
 var onLeftBlobMouseOutHandler = function onLeftBlobMouseOutHandler() {
   blobAnimation({
-    el: leftBlob,
-    shape: leftBlobPathTo,
-    delay: 0
+    pathFrom: leftBlob,
+    pathTo: leftBlobPathTo
   });
   leftBlob.addEventListener('mouseover', onLeftBlobMouseOverHandler);
   leftBlob.removeEventListener('mouseout', onLeftBlobMouseOutHandler);
@@ -316,15 +316,27 @@ var onLeftBlobMouseOutHandler = function onLeftBlobMouseOutHandler() {
 
 var onLeftBlobMouseOverHandler = function onLeftBlobMouseOverHandler() {
   blobAnimation({
-    el: leftBlob,
-    shape: leftBlobPathFrom,
-    delay: 0
+    pathFrom: leftBlob,
+    pathTo: leftBlobPathFrom
   });
   leftBlob.removeEventListener('mouseover', onLeftBlobMouseOverHandler);
   leftBlob.addEventListener('mouseout', onLeftBlobMouseOutHandler);
 };
 
 leftBlob.addEventListener('mouseover', onLeftBlobMouseOverHandler);
+
+/***/ }),
+
+/***/ "./src/scripts/modules/setViewportHeight.js":
+/*!**************************************************!*\
+  !*** ./src/scripts/modules/setViewportHeight.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
+
+(0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.setVieportHeight)();
 
 /***/ }),
 
@@ -573,6 +585,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "limitStr": () => (/* binding */ limitStr),
 /* harmony export */   "removeClass": () => (/* binding */ removeClass),
 /* harmony export */   "setCssProperty": () => (/* binding */ setCssProperty),
+/* harmony export */   "setVieportHeight": () => (/* binding */ setVieportHeight),
 /* harmony export */   "toggleClass": () => (/* binding */ toggleClass)
 /* harmony export */ });
 // работа с классами эл-та
@@ -584,6 +597,15 @@ function getCssPropertyValue(name) {
 
 function setCssProperty(name, value) {
   root.style.setProperty(name, value);
+}
+
+function setVieportHeight() {
+  var vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+  window.addEventListener('resize', function () {
+    var vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+  });
 }
 
 function addClass(el, cl) {
@@ -8998,13 +9020,22 @@ var __webpack_exports__ = {};
   !*** ./src/scripts/main.js ***!
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_custom_cursor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/custom_cursor.js */ "./src/scripts/modules/custom_cursor.js");
-/* harmony import */ var _modules_heroContentAnimation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/heroContentAnimation.js */ "./src/scripts/modules/heroContentAnimation.js");
-/* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
+/* harmony import */ var _modules_setViewportHeight_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/setViewportHeight.js */ "./src/scripts/modules/setViewportHeight.js");
+/* harmony import */ var _modules_custom_cursor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/custom_cursor.js */ "./src/scripts/modules/custom_cursor.js");
+/* harmony import */ var _modules_heroContentAnimation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/heroContentAnimation.js */ "./src/scripts/modules/heroContentAnimation.js");
+/* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
+
 
 
 
 document.querySelector('.nojs').classList.remove('nojs');
+/*
+для Барбы !
+import { animateHeroContent } from "./modules/heroContentAnimation.js";
+
+animateHeroContent();
+
+*/
 })();
 
 /******/ })()

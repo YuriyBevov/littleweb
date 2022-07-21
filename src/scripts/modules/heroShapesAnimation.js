@@ -16,8 +16,8 @@ const wave2 = document.querySelector('#wave2');
 const wave2PathMiddle = wave2.dataset.pathMiddle;
 const wave2Path = wave2.getAttribute('d');
 
-let tl = gsap.timeline({repeat: -1, repeatDelay: 1, delay: 2.5});
-let tl2 = gsap.timeline({repeat: -1, repeatDelay: 1, delay: 2.5});
+let waveTimeline = gsap.timeline({repeat: -1, repeatDelay: 1, delay: 2.5});
+let wave2Timeline = gsap.timeline({repeat: -1, repeatDelay: 1, delay: 3});
 
 gsap.to(wave, {
   ease: 'elastic',
@@ -39,7 +39,7 @@ gsap.to(wave2, {
   }
 })
 
-tl.to(wave, {
+waveTimeline.to(wave, {
   ease: 'linear',
   duration: 30,
   delay: .5,
@@ -64,7 +64,7 @@ tl.to(wave, {
   }
 });
 
-tl2.to(wave2, {
+wave2Timeline.to(wave2, {
   ease: 'linear',
   duration: 20,
   delay: .5,
@@ -95,13 +95,13 @@ tl2.to(wave2, {
 
  function blobAnimation(option) {
 
-  gsap.to(option.el, {
+  gsap.to(option.pathFrom, {
     ease: option.ease ? option.ease : 'elastic',
     duration: option.duration ? option.duration : 3,
-    delay: option.delay ? option.delay : 0.3,
+    delay: option.delay ? option.delay : 0,
     scale: option.scale ? option.scale : 1,
     morphSVG: {
-      shape: option.shape,
+      shape: option.pathTo,
       type: 'rotational',
     }
   });
@@ -118,17 +118,16 @@ const rightBlobPathTo = rightBlob.dataset.pathTo;
 gsap.set(rightBlob, {scale: 0});
 
 blobAnimation({
-  el: rightBlob,
-  shape: rightBlobPathTo,
+  pathFrom: rightBlob,
+  pathTo: rightBlobPathTo,
   delay: 0.5,
   ease: 'back',
 })
 
 const onRightBlobMouseOutHandler = () => {
   blobAnimation({
-    el: rightBlob,
-    shape: rightBlobPathTo,
-    delay: 0,
+    pathFrom: rightBlob,
+    pathTo: rightBlobPathTo
   })
   rightBlob.addEventListener('mouseover', onRightBlobMouseOverHandler);
   rightBlob.removeEventListener('mouseout', onRightBlobMouseOutHandler);
@@ -136,9 +135,8 @@ const onRightBlobMouseOutHandler = () => {
 
 const onRightBlobMouseOverHandler = () => {
   blobAnimation({
-    el: rightBlob,
-    shape: rightBlobPathFrom,
-    delay: 0,
+    pathFrom: rightBlob,
+    pathTo: rightBlobPathFrom
   })
   rightBlob.removeEventListener('mouseover', onRightBlobMouseOverHandler);
   rightBlob.addEventListener('mouseout', onRightBlobMouseOutHandler);
@@ -153,8 +151,8 @@ const leftBlobPathTo = leftBlob.dataset.pathTo;
 gsap.set(leftBlob, {scale: 0});
 
 blobAnimation({
-  el: leftBlob,
-  shape: leftBlobPathTo,
+  pathFrom: leftBlob,
+  pathTo: leftBlobPathTo,
   delay: 1,
 
   ease: 'back',
@@ -162,9 +160,8 @@ blobAnimation({
 
 const onLeftBlobMouseOutHandler = () => {
   blobAnimation({
-    el: leftBlob,
-    shape: leftBlobPathTo,
-    delay: 0,
+    pathFrom: leftBlob,
+    pathTo: leftBlobPathTo
   })
   leftBlob.addEventListener('mouseover', onLeftBlobMouseOverHandler);
   leftBlob.removeEventListener('mouseout', onLeftBlobMouseOutHandler);
@@ -172,9 +169,8 @@ const onLeftBlobMouseOutHandler = () => {
 
 const onLeftBlobMouseOverHandler = () => {
   blobAnimation({
-    el: leftBlob,
-    shape: leftBlobPathFrom,
-    delay: 0,
+    pathFrom: leftBlob,
+    pathTo: leftBlobPathFrom
   })
   leftBlob.removeEventListener('mouseover', onLeftBlobMouseOverHandler);
   leftBlob.addEventListener('mouseout', onLeftBlobMouseOutHandler);

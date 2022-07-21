@@ -10,6 +10,16 @@ function setCssProperty(name, value) {
   root.style.setProperty(name, value);
 }
 
+function setVieportHeight() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
+}
+
 function addClass(el, cl) {
   el.classList.add(cl);
 }
@@ -99,4 +109,4 @@ function getBoundingClientRect(elem, side) {
   }
 }
 
-export  { getCssPropertyValue, setCssProperty, lerp, getMousePos, getRadians,limitStr, addClass, removeClass, checkClass, toggleClass, bodyLocker, getBoundingClientRect }
+export  { setVieportHeight, getCssPropertyValue, setCssProperty, lerp, getMousePos, getRadians,limitStr, addClass, removeClass, checkClass, toggleClass, bodyLocker, getBoundingClientRect }
