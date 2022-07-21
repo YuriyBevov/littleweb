@@ -1279,8 +1279,8 @@ body.body-locked {
 }
 
 svg {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translateZ(0.0001px);
+  transform: translateZ(0.0001px);
 }
 
 footer {
