@@ -1,4 +1,3 @@
-import "./modules/setViewportHeight.js";
 import "./modules/custom_cursor.js";
 import "./modules/heroContentAnimation.js";
 import "./modules/heroShapesAnimation.js";
@@ -12,7 +11,3 @@ import { animateHeroContent } from "./modules/heroContentAnimation.js";
 animateHeroContent();
 
 */
-
-
-
-
