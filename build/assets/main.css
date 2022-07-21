@@ -1256,6 +1256,9 @@ html {
 html,
 body {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   min-height: 100vh;
   min-height: calc(var(--vh, 1vh) * 100);
   -webkit-text-size-adjust: none;
@@ -1746,12 +1749,12 @@ body:not(.nojs) .hero__logo {
 }
 @media (max-width: 960px) {
   .hero {
-    min-height: 634px;
+    min-height: 534px;
   }
 }
 @media (max-width: 534px) {
   .hero {
-    min-height: 534px;
+    min-height: 434px;
   }
 }
 .hero .container, .hero__wrapper {

@@ -337,6 +337,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
 
 (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.setVieportHeight)();
+/*let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});*/
 
 /***/ }),
 

@@ -11,11 +11,11 @@
   background-image: url('../assets/img/bg.png');
 
   @include m-b-tablet-lg-down {
-    min-height: 634px;
+    min-height: 534px;
   }
 
   @include m-b-mobile-lg-down {
-    min-height: 534px;
+    min-height: 434px;
   }
 
   .container,
