@@ -1261,8 +1261,6 @@ body {
   height: fit-content;
   min-height: 100vh;
   -webkit-text-size-adjust: none;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
 }
 
 body {
@@ -1730,6 +1728,7 @@ body:not(.nojs) .hero__logo {
   height: fit-content;
   width: 100vw;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   min-height: 768px;
   overflow: hidden;
   position: relative;

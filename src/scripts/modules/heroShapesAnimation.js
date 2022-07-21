@@ -39,7 +39,7 @@ gsap.to(wave2, {
   }
 })
 
-/*waveTimeline.to(wave, {
+waveTimeline.to(wave, {
   ease: 'linear',
   duration: 30,
   delay: .5,
@@ -87,7 +87,7 @@ wave2Timeline.to(wave2, {
     shape: wave2PathMiddle,
     type: 'rotational',
   }
-});*/
+});
 
 /**
 * Blobs animations function

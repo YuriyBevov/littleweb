@@ -191,19 +191,19 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave2, {
     type: 'rotational'
   }
 });
-/*waveTimeline.to(wave, {
+waveTimeline.to(wave, {
   ease: 'linear',
   duration: 30,
   delay: .5,
   yoyo: true,
   startAt: {
     morphSVG: {
-      shape: wavePathMiddle,
+      shape: wavePathMiddle
     }
   },
   morphSVG: {
     shape: wavePath,
-    type: 'rotational',
+    type: 'rotational'
   }
 }).to(wave, {
   ease: 'linear',
@@ -212,10 +212,9 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave2, {
   yoyo: true,
   morphSVG: {
     shape: wavePathMiddle,
-    type: 'rotational',
+    type: 'rotational'
   }
 });
-
 wave2Timeline.to(wave2, {
   ease: 'linear',
   duration: 20,
@@ -223,12 +222,12 @@ wave2Timeline.to(wave2, {
   yoyo: true,
   startAt: {
     morphSVG: {
-      shape: wave2PathMiddle,
+      shape: wave2PathMiddle
     }
   },
   morphSVG: {
     shape: wave2Path,
-    type: 'rotational',
+    type: 'rotational'
   }
 }).to(wave2, {
   ease: 'linear',
@@ -237,10 +236,9 @@ wave2Timeline.to(wave2, {
   yoyo: true,
   morphSVG: {
     shape: wave2PathMiddle,
-    type: 'rotational',
+    type: 'rotational'
   }
-});*/
-
+});
 /**
 * Blobs animations function
 */
@@ -326,6 +324,19 @@ var onLeftBlobMouseOverHandler = function onLeftBlobMouseOverHandler() {
 };
 
 leftBlob.addEventListener('mouseover', onLeftBlobMouseOverHandler);
+
+/***/ }),
+
+/***/ "./src/scripts/modules/setViewportHeight.js":
+/*!**************************************************!*\
+  !*** ./src/scripts/modules/setViewportHeight.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
+
+(0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.setVieportHeight)();
 
 /***/ }),
 
@@ -9009,10 +9020,11 @@ var __webpack_exports__ = {};
   !*** ./src/scripts/main.js ***!
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_custom_cursor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/custom_cursor.js */ "./src/scripts/modules/custom_cursor.js");
-/* harmony import */ var _modules_heroContentAnimation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/heroContentAnimation.js */ "./src/scripts/modules/heroContentAnimation.js");
-/* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
-//import "./modules/setViewportHeight.js";
+/* harmony import */ var _modules_setViewportHeight_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/setViewportHeight.js */ "./src/scripts/modules/setViewportHeight.js");
+/* harmony import */ var _modules_custom_cursor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/custom_cursor.js */ "./src/scripts/modules/custom_cursor.js");
+/* harmony import */ var _modules_heroContentAnimation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/heroContentAnimation.js */ "./src/scripts/modules/heroContentAnimation.js");
+/* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
+
 
 
 
