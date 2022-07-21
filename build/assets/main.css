@@ -1359,7 +1359,7 @@ h1, h2, h3, h4, h5, h6, p {
   flex-wrap: wrap;
 }
 
-.flex-centered-content, .hero__content, .button, .lw-button-main {
+.flex-centered-content, .hero__content, .loader, .button, .lw-button-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1608,6 +1608,90 @@ body:not(.nojs) .hero__logo {
 
 /*gsap end*/
 /* components */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  z-index: 99;
+  overflow: hidden;
+}
+.loader-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: var(--white-color);
+}
+.loader-dot--left {
+  -webkit-animation: loader 1s ease-in infinite;
+  animation: loader 1s ease-in infinite;
+}
+.loader-dot--middle {
+  -webkit-animation: loader 1s 0.3s ease-in infinite;
+  animation: loader 1s 0.3s ease-in infinite;
+}
+.loader-dot--right {
+  -webkit-animation: loader 1s 0.7s ease-in infinite;
+  animation: loader 1s 0.7s ease-in infinite;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+  50% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.2);
+    transform: scale(0.2);
+  }
+}
+body:not(.loading) .loader {
+  -webkit-animation: fadeOut 0.5s 0.3s ease-out forwards;
+  animation: fadeOut 0.5s 0.3s ease-out forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 .main-header {
   position: absolute;
   top: 0;
@@ -1708,7 +1792,7 @@ body:not(.nojs) .hero__logo {
     left: 0;
     display: block;
     pointer-events: none;
-    z-index: 10000;
+    z-index: 98;
     fill: var(--warning-color);
     stroke: var(--warning-color);
     mix-blend-mode: difference;

@@ -17,7 +17,7 @@ export const preloader = _ => {
             imgwrap.appendChild(imgEl);
         });
 
-        const arrImg = [...document.querySelectorAll('.preload'), ...document.querySelectorAll('.content__bg')];
+        const arrImg = [...document.querySelectorAll('.js-preload'), ...document.querySelectorAll('.content__bg')];
         imagesLoaded(arrImg, {background: true}, _ => {
             imgwrap.parentNode.removeChild(imgwrap);
             body.classList.remove('loading');
@@ -25,3 +25,19 @@ export const preloader = _ => {
         });
     });
 };
+
+/*
+
+const imagesLoaded = require('imagesloaded');
+
+export const preloader = _ => {
+    return new Promise(resolve => {
+        const arrImg = [...document.querySelectorAll('.js-preload')];
+        imagesLoaded(arrImg, {background: true}, _ => {
+            document.body.classList.remove('loading');
+            resolve();
+        });
+    });
+};
+
+*/

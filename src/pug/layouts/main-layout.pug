@@ -12,7 +12,7 @@ block variables
 html(lang="ru")
   +head(title, desc, keywords)
 
-  body(data-barba="wrapper").nojs
+  body(data-barba="wrapper").loading.nojs
 
     include ./main-header
 
@@ -20,5 +20,6 @@ html(lang="ru")
 
     include ../components/barba_transition
     include ../components/custom_cursor
+    include ../components/loader
 
     block modals
