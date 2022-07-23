@@ -4,6 +4,14 @@
   margin-bottom: 20px;
 }
 
+.section-mb-100 {
+  margin-bottom: clamp(30px, 10vw, 100px);
+}
+
+.section-mb-50 {
+  margin-bottom: clamp(25px, 5vw, 50px);
+}
+
 .section-padding {
   padding: 100px 0;
 

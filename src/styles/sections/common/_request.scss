@@ -1,0 +1,106 @@
+.request {
+  @extend .section-mb-100;
+
+  &__wrapper {
+    position: relative;
+    padding: 50px;
+    padding-right: 28% !important;
+
+    background-color: rgba(67, 21, 255, 0.2);
+    background-image: url("../assets/img/request-form-bg@1x.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+
+    box-shadow: 96px 165px 76px rgba(3, 10, 104, 0.03), 54px 93px 65px rgba(3, 10, 104, 0.1), 24px 41px 48px rgba(3, 10, 104, 0.17), 6px 10px 26px rgba(3, 10, 104, 0.2), 0px 0px 0px rgba(3, 10, 104, 0.2);
+    backdrop-filter: blur(50px);
+
+    @include m-b-tablet-lg-down {
+      padding: 30px;
+    }
+
+    @include m-b-down(640px) {
+      padding: 30px 15px;
+    }
+
+    @include m-b-down(640px) {
+      background-position: center;
+    }
+
+    @include m-b-mobile-lg-down {
+      padding-right: 15px !important;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      content: '';
+      width: 28%;
+      height: 120%;
+      background-image: url(../assets/img/hand-img.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include m-b-mobile-lg-down {
+        display: none;
+      }
+    }
+  }
+
+  h2 {
+    max-width: 660px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  form {
+    @extend .flex-wrap;
+
+    fieldset {
+      @extend .fieldset-default;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      width: 50%;
+      max-width: 300px;
+
+      @include m-b-down(820px) {
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+      }
+
+      input {
+        font-size: 16px;
+        font-weight: 300;
+        width: 100%;
+        padding: 15px;
+        color: var(--color-white);
+        background-color: var(--purple-5);
+        border: none;
+        border-radius: 4px;
+        min-height: var(--btn-height);
+
+        &::placeholder {
+          font-weight: 300;
+          font-size: 16px;
+          opacity: 0.5;
+          color: var(--color-white);
+          background-color: var(--purple-5);
+        }
+      }
+
+      &:last-of-type {
+        margin-right: 50px;
+
+        @include m-b-down(820px) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

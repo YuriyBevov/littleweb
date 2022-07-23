@@ -10,14 +10,15 @@
 @import "_gsap-prestyles";
 
 /* components */
-
 // @import "./components/barba-transitions";
 @import "./components/loader";
 @import "./components/main-header";
 @import "./components/modal";
 @import "./components/cursor";
-
+@import "./components/social";
 
 /*sections*/
-
 @import "./sections/index-page/hero";
+@import "./sections/contacts-page/contacts";
+
+@import "./sections/common/request";

@@ -1,0 +1,71 @@
+.page-container {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+
+  .blob {
+    position: absolute;
+    z-index: -1;
+    &--right {
+      top: 10vh;
+      left: 85%;
+    }
+
+    &--left {
+      position: absolute;
+      top: 30vh;
+      left: -10%;
+    }
+  }
+}
+
+.contacts {
+  &__wrapper {
+    @extend .section-padding;
+  }
+
+  &__header {
+    @extend .section-mb-100;
+  }
+
+  &__content {
+    @extend .flex-wrap;
+    @extend .section-mb-50;
+
+    &-field {
+      @extend .flex-column;
+      margin-bottom: 40px;
+      width: 50%;
+      min-width: 300px;
+
+      & > span {
+        margin-bottom: 12px;
+      }
+
+      & > a {
+        /*@extend .flex-wrap;
+        position: relative;
+        align-items: center;*/
+        color: var(--white-color);
+
+        /*svg {
+          width: clamp(32px, 10vw, 40px);
+          margin-right: 15px;
+          fill: var(--secondary-color);
+        }*/
+      }
+    }
+  }
+
+  .blob--right {
+    position: absolute;
+    top: 15vh;
+    left: 100%;
+  }
+
+  .blob--left {
+    position: absolute;
+    top: 30vh;
+    left: -30%;
+  }
+}
