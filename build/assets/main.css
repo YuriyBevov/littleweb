@@ -1843,6 +1843,16 @@ body:not(.loading) .loader {
     display: none;
   }
 }
+.page-container {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.page-container .blob {
+  position: absolute;
+  z-index: -1;
+}
+
 .social__item {
   margin-right: clamp(10px, 5vw, 30px);
 }
@@ -1987,25 +1997,26 @@ body:not(.loading) .loader {
   left: 17%;
 }
 
-.page-container {
-  position: relative;
-  overflow: hidden;
-  overflow-y: auto;
-}
-.page-container .blob {
-  position: absolute;
-  z-index: -1;
-}
-.page-container .blob--right {
+.contacts-page-container .blob--right {
   top: 10vh;
   left: 85%;
 }
-.page-container .blob--left {
+@media (max-width: 534px) {
+  .contacts-page-container .blob--right {
+    left: 0;
+    opacity: 0.5;
+  }
+}
+.contacts-page-container .blob--left {
   position: absolute;
   top: 30vh;
   left: -10%;
 }
-
+@media (max-width: 534px) {
+  .contacts-page-container .blob--left {
+    display: none;
+  }
+}
 .contacts__content-field {
   margin-bottom: 40px;
   width: 50%;

@@ -1,25 +1,27 @@
-.page-container {
-  position: relative;
-  overflow: hidden;
-  overflow-y: auto;
+.contacts {
+  &-page-container {
+    .blob {
+      &--right {
+        top: 10vh;
+        left: 85%;
+        @include m-b-mobile-lg-down {
+          left: 0;
+          opacity: 0.5;
+        }
+      }
 
-  .blob {
-    position: absolute;
-    z-index: -1;
-    &--right {
-      top: 10vh;
-      left: 85%;
-    }
+      &--left {
+        position: absolute;
+        top: 30vh;
+        left: -10%;
 
-    &--left {
-      position: absolute;
-      top: 30vh;
-      left: -10%;
+        @include m-b-mobile-lg-down {
+          display: none;
+        }
+      }
     }
   }
-}
 
-.contacts {
   &__wrapper {
     @extend .section-padding;
   }

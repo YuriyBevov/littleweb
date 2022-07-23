@@ -1,0 +1,10 @@
+.page-container {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+
+  .blob {
+    position: absolute;
+    z-index: -1;
+  }
+}
