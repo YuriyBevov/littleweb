@@ -2,11 +2,15 @@
   @extend .flex-wrap;
   margin-bottom: 30px;
 
+  @include m-b-laptop-down {
+    flex-direction: column;
+  }
   &__item {
     flex-grow: 1;
+
     a {
       @extend .flex-centered-content;
-      padding: 10px 0;
+      padding: 10px;
       color: var(--white-color);
     }
   }
