@@ -1922,9 +1922,9 @@ body:not(.loading) .loader {
   margin-right: clamp(10px, 5vw, 30px);
 }
 .social__item a {
-  border: 1px solid var(--white-color);
   border-radius: 50%;
   padding: 3px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .social__item a svg {
   width: clamp(40px, 7vw, 60px);
@@ -2064,20 +2064,26 @@ body:not(.loading) .loader {
 
 .contacts-page-container .blob--right {
   top: 10vh;
-  left: 85%;
+  left: 83%;
+}
+@media (max-width: 1140px) {
+  .contacts-page-container .blob--right {
+    top: 0;
+    left: 55%;
+  }
 }
 @media (max-width: 534px) {
   .contacts-page-container .blob--right {
-    left: 0;
+    left: 10%;
     opacity: 0.5;
   }
 }
 .contacts-page-container .blob--left {
   position: absolute;
-  top: 30vh;
-  left: -10%;
+  top: 25vh;
+  left: -70px;
 }
-@media (max-width: 534px) {
+@media (max-width: 1140px) {
   .contacts-page-container .blob--left {
     display: none;
   }
@@ -2123,7 +2129,7 @@ body:not(.loading) .loader {
   background-image: url("../assets/img/request-form-bg@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: center;
   -webkit-box-shadow: 96px 165px 76px rgba(3, 10, 104, 0.03), 54px 93px 65px rgba(3, 10, 104, 0.1), 24px 41px 48px rgba(3, 10, 104, 0.17), 6px 10px 26px rgba(3, 10, 104, 0.2), 0px 0px 0px rgba(3, 10, 104, 0.2);
   box-shadow: 96px 165px 76px rgba(3, 10, 104, 0.03), 54px 93px 65px rgba(3, 10, 104, 0.1), 24px 41px 48px rgba(3, 10, 104, 0.17), 6px 10px 26px rgba(3, 10, 104, 0.2), 0px 0px 0px rgba(3, 10, 104, 0.2);
   -webkit-backdrop-filter: blur(50px);

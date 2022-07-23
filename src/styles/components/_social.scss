@@ -6,10 +6,9 @@
 
     a {
       @extend .flex-centered-content;
-      border: 1px solid var(--white-color);
       border-radius: 50%;
       padding: 3px;
-
+      background-color: rgba(255, 255, 255, 0.1);
       svg {
         width: clamp(40px, 7vw, 60px);
         height: clamp(40px, 7vw, 60px);

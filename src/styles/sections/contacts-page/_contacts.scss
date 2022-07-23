@@ -3,20 +3,25 @@
     .blob {
       &--right {
         top: 10vh;
-        left: 85%;
+        left: 83%;
 
+        @include m-b-laptop-down {
+          top: 0;
+          left: 55%;
+        }
         @include m-b-mobile-lg-down {
-          left: 0;
+          left: 10%;
           opacity: 0.5;
         }
       }
 
       &--left {
         position: absolute;
-        top: 30vh;
-        left: -10%;
+        top: 25vh;
+        left: -70px;
 
-        @include m-b-mobile-lg-down {
+
+        @include m-b-laptop-down {
           display: none;
         }
       }
