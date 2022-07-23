@@ -1,3 +1,4 @@
+include ../mixins/footer
 include ./head
 
 doctype html
@@ -8,16 +9,17 @@ block variables
     const desc = ""
     const keywords = ""
     const namespace = ""
+    const footerType = ""
 
 html(lang="ru")
   +head(title, desc, keywords)
 
-  body(data-barba="wrapper").nojs.grid-layout-container
-    //include ./main-header
+  body(data-barba="wrapper").nojs
+    include ./inner-header
 
     block page-content
 
-    include ./main-footer
+    +footer(footerType)
 
     include ../components/barba_transition
     include ../components/custom_cursor

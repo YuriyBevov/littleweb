@@ -1,0 +1,12 @@
+.footer-logo {
+  @extend .flex-column;
+  @extend .flex-centered-content;
+
+  a {
+    margin-bottom: 12px;
+  }
+
+  span {
+    font-size: 16px;
+  }
+}

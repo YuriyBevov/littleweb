@@ -1,0 +1,13 @@
+.inner-header {
+  padding: 30px 0;
+
+  &__wrapper {
+    @extend .flex-wrap;
+    align-items: center;
+  }
+
+  &__logo {
+    @extend .flex-centered-content;
+    margin-right: auto;
+  }
+}

@@ -160,90 +160,94 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_MorphSVGPlugin__WEBPA
 */
 
 var wave = document.querySelector('#wave');
-var wavePathMiddle = wave.dataset.pathMiddle;
-var wavePath = wave.getAttribute('d');
-var wave2 = document.querySelector('#wave2');
-var wave2PathMiddle = wave2.dataset.pathMiddle;
-var wave2Path = wave2.getAttribute('d');
-var waveTimeline = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-  repeat: -1,
-  repeatDelay: 1,
-  delay: 2.5
-});
-var wave2Timeline = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
-  repeat: -1,
-  repeatDelay: 1,
-  delay: 3
-});
-gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave, {
-  ease: 'elastic',
-  duration: 2,
-  delay: 0.3,
-  morphSVG: {
-    shape: wavePathMiddle,
-    type: 'rotational'
-  }
-});
-gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave2, {
-  ease: 'elastic',
-  duration: 2,
-  delay: 0.3,
-  morphSVG: {
-    shape: wave2PathMiddle,
-    type: 'rotational'
-  }
-});
-waveTimeline.to(wave, {
-  ease: 'linear',
-  duration: 30,
-  delay: .5,
-  yoyo: true,
-  startAt: {
+
+if (wave) {
+  var wavePathMiddle = wave.dataset.pathMiddle;
+  var wavePath = wave.getAttribute('d');
+  var wave2 = document.querySelector('#wave2');
+  var wave2PathMiddle = wave2.dataset.pathMiddle;
+  var wave2Path = wave2.getAttribute('d');
+  var waveTimeline = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+    repeat: -1,
+    repeatDelay: 1,
+    delay: 2.5
+  });
+  var wave2Timeline = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+    repeat: -1,
+    repeatDelay: 1,
+    delay: 3
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave, {
+    ease: 'elastic',
+    duration: 2,
+    delay: 0.3,
     morphSVG: {
-      shape: wavePathMiddle
+      shape: wavePathMiddle,
+      type: 'rotational'
     }
-  },
-  morphSVG: {
-    shape: wavePath,
-    type: 'rotational'
-  }
-}).to(wave, {
-  ease: 'linear',
-  duration: 30,
-  delay: 0.5,
-  yoyo: true,
-  morphSVG: {
-    shape: wavePathMiddle,
-    type: 'rotational'
-  }
-});
-wave2Timeline.to(wave2, {
-  ease: 'linear',
-  duration: 20,
-  delay: .5,
-  yoyo: true,
-  startAt: {
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave2, {
+    ease: 'elastic',
+    duration: 2,
+    delay: 0.3,
     morphSVG: {
-      shape: wave2PathMiddle
+      shape: wave2PathMiddle,
+      type: 'rotational'
     }
-  },
-  morphSVG: {
-    shape: wave2Path,
-    type: 'rotational'
-  }
-}).to(wave2, {
-  ease: 'linear',
-  duration: 20,
-  delay: .5,
-  yoyo: true,
-  morphSVG: {
-    shape: wave2PathMiddle,
-    type: 'rotational'
-  }
-});
+  });
+  waveTimeline.to(wave, {
+    ease: 'linear',
+    duration: 30,
+    delay: .5,
+    yoyo: true,
+    startAt: {
+      morphSVG: {
+        shape: wavePathMiddle
+      }
+    },
+    morphSVG: {
+      shape: wavePath,
+      type: 'rotational'
+    }
+  }).to(wave, {
+    ease: 'linear',
+    duration: 30,
+    delay: 0.5,
+    yoyo: true,
+    morphSVG: {
+      shape: wavePathMiddle,
+      type: 'rotational'
+    }
+  });
+  wave2Timeline.to(wave2, {
+    ease: 'linear',
+    duration: 20,
+    delay: .5,
+    yoyo: true,
+    startAt: {
+      morphSVG: {
+        shape: wave2PathMiddle
+      }
+    },
+    morphSVG: {
+      shape: wave2Path,
+      type: 'rotational'
+    }
+  }).to(wave2, {
+    ease: 'linear',
+    duration: 20,
+    delay: .5,
+    yoyo: true,
+    morphSVG: {
+      shape: wave2PathMiddle,
+      type: 'rotational'
+    }
+  });
+}
 /**
 * Blobs animations function
 */
+
 
 function blobAnimation(option) {
   gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(option.pathFrom, {
@@ -263,69 +267,76 @@ function blobAnimation(option) {
 
 
 var rightBlob = document.querySelector('.blob-path--right');
-var rightBlobPathFrom = rightBlob.getAttribute('d');
-var rightBlobPathTo = rightBlob.dataset.pathTo;
-gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(rightBlob, {
-  scale: 0
-});
-blobAnimation({
-  pathFrom: rightBlob,
-  pathTo: rightBlobPathTo,
-  delay: 0.5,
-  ease: 'back'
-});
 
-var onRightBlobMouseOutHandler = function onRightBlobMouseOutHandler() {
+if (rightBlob) {
+  var rightBlobPathFrom = rightBlob.getAttribute('d');
+  var rightBlobPathTo = rightBlob.dataset.pathTo;
+  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(rightBlob, {
+    scale: 0
+  });
   blobAnimation({
     pathFrom: rightBlob,
-    pathTo: rightBlobPathTo
+    pathTo: rightBlobPathTo,
+    delay: 0.5,
+    ease: 'back'
   });
+
+  var onRightBlobMouseOutHandler = function onRightBlobMouseOutHandler() {
+    blobAnimation({
+      pathFrom: rightBlob,
+      pathTo: rightBlobPathTo
+    });
+    rightBlob.addEventListener('mouseover', onRightBlobMouseOverHandler);
+    rightBlob.removeEventListener('mouseout', onRightBlobMouseOutHandler);
+  };
+
+  var onRightBlobMouseOverHandler = function onRightBlobMouseOverHandler() {
+    blobAnimation({
+      pathFrom: rightBlob,
+      pathTo: rightBlobPathFrom
+    });
+    rightBlob.removeEventListener('mouseover', onRightBlobMouseOverHandler);
+    rightBlob.addEventListener('mouseout', onRightBlobMouseOutHandler);
+  };
+
   rightBlob.addEventListener('mouseover', onRightBlobMouseOverHandler);
-  rightBlob.removeEventListener('mouseout', onRightBlobMouseOutHandler);
-};
+}
 
-var onRightBlobMouseOverHandler = function onRightBlobMouseOverHandler() {
-  blobAnimation({
-    pathFrom: rightBlob,
-    pathTo: rightBlobPathFrom
-  });
-  rightBlob.removeEventListener('mouseover', onRightBlobMouseOverHandler);
-  rightBlob.addEventListener('mouseout', onRightBlobMouseOutHandler);
-};
-
-rightBlob.addEventListener('mouseover', onRightBlobMouseOverHandler);
 var leftBlob = document.querySelector('.blob-path--left');
-var leftBlobPathFrom = leftBlob.getAttribute('d');
-var leftBlobPathTo = leftBlob.dataset.pathTo;
-gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(leftBlob, {
-  scale: 0
-});
-blobAnimation({
-  pathFrom: leftBlob,
-  pathTo: leftBlobPathTo,
-  delay: 1,
-  ease: 'back'
-});
 
-var onLeftBlobMouseOutHandler = function onLeftBlobMouseOutHandler() {
+if (leftBlob) {
+  var leftBlobPathFrom = leftBlob.getAttribute('d');
+  var leftBlobPathTo = leftBlob.dataset.pathTo;
+  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(leftBlob, {
+    scale: 0
+  });
   blobAnimation({
     pathFrom: leftBlob,
-    pathTo: leftBlobPathTo
+    pathTo: leftBlobPathTo,
+    delay: 1,
+    ease: 'back'
   });
+
+  var onLeftBlobMouseOutHandler = function onLeftBlobMouseOutHandler() {
+    blobAnimation({
+      pathFrom: leftBlob,
+      pathTo: leftBlobPathTo
+    });
+    leftBlob.addEventListener('mouseover', onLeftBlobMouseOverHandler);
+    leftBlob.removeEventListener('mouseout', onLeftBlobMouseOutHandler);
+  };
+
+  var onLeftBlobMouseOverHandler = function onLeftBlobMouseOverHandler() {
+    blobAnimation({
+      pathFrom: leftBlob,
+      pathTo: leftBlobPathFrom
+    });
+    leftBlob.removeEventListener('mouseover', onLeftBlobMouseOverHandler);
+    leftBlob.addEventListener('mouseout', onLeftBlobMouseOutHandler);
+  };
+
   leftBlob.addEventListener('mouseover', onLeftBlobMouseOverHandler);
-  leftBlob.removeEventListener('mouseout', onLeftBlobMouseOutHandler);
-};
-
-var onLeftBlobMouseOverHandler = function onLeftBlobMouseOverHandler() {
-  blobAnimation({
-    pathFrom: leftBlob,
-    pathTo: leftBlobPathFrom
-  });
-  leftBlob.removeEventListener('mouseover', onLeftBlobMouseOverHandler);
-  leftBlob.addEventListener('mouseout', onLeftBlobMouseOutHandler);
-};
-
-leftBlob.addEventListener('mouseover', onLeftBlobMouseOverHandler);
+}
 
 /***/ }),
 

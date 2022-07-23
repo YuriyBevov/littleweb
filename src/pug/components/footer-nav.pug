@@ -1,0 +1,17 @@
+-
+  const footerNav = [
+    { link: 'Главная', url: 'index.html' },
+    { link: 'Услуги', url: 'services.html' },
+    { link: 'Портфолио', url: 'portfolio.html' },
+    { link: 'Наши клиенты', url: 'clients.html' },
+    { link: 'О нас', url: 'about.html' },
+    { link: 'Контакты', url: 'contacts.html' },
+    { link: 'Статьи', url: 'blog.html' },
+    { link: 'Вакансии', url: 'vacancies.html' },
+    { link: 'Цены', url: 'prices.html' }
+  ]
+
+ul.footer-nav
+  each item in footerNav
+    li.footer-nav__item
+      a(href= item.url).lw-text-sm.lw-fw-bold= item.link

@@ -1,0 +1,13 @@
+.footer-nav {
+  @extend .flex-wrap;
+  margin-bottom: 30px;
+
+  &__item {
+    flex-grow: 1;
+    a {
+      @extend .flex-centered-content;
+      padding: 10px 0;
+      color: var(--white-color);
+    }
+  }
+}

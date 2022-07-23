@@ -4,6 +4,7 @@
       &--right {
         top: 10vh;
         left: 85%;
+
         @include m-b-mobile-lg-down {
           left: 0;
           opacity: 0.5;
@@ -20,10 +21,16 @@
         }
       }
     }
+
+    & > .footer {
+      span {
+        display: none;
+      }
+    }
   }
 
   &__wrapper {
-    @extend .section-padding;
+    @extend .section-padding-lg;
   }
 
   &__header {

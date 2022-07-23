@@ -1320,16 +1320,30 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: clamp(25px, 5vw, 50px);
 }
 
-.section-padding, .contacts__wrapper, .hero__content {
+.section-padding, .hero__content {
   padding: 100px 0;
 }
 @media (max-width: 1440px) {
-  .section-padding, .contacts__wrapper, .hero__content {
+  .section-padding, .hero__content {
     padding: 60px 0;
   }
 }
 @media (max-width: 1140px) {
-  .section-padding, .contacts__wrapper, .hero__content {
+  .section-padding, .hero__content {
+    padding: 20px 0;
+  }
+}
+
+.section-padding-lg, .contacts__wrapper {
+  padding: 70px 0;
+}
+@media (max-width: 1440px) {
+  .section-padding-lg, .contacts__wrapper {
+    padding: 50px 0;
+  }
+}
+@media (max-width: 1140px) {
+  .section-padding-lg, .contacts__wrapper {
     padding: 20px 0;
   }
 }
@@ -1363,7 +1377,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* flex*/
-.flex-wrap, .request form, .contacts__content, .social {
+.flex-wrap, .request form, .contacts__content, .social, .footer-nav, .inner-header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1371,7 +1385,7 @@ h1, h2, h3, h4, h5, h6, p {
   flex-wrap: wrap;
 }
 
-.flex-centered-content, .hero__content, .social__item a, .loader, .button, .lw-button-main {
+.flex-centered-content, .hero__content, .social__item a, .footer-logo, .footer-nav__item a, .footer__bottom--truncated, .inner-header__logo, .loader, .button, .lw-button-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1383,7 +1397,7 @@ h1, h2, h3, h4, h5, h6, p {
   justify-content: center;
 }
 
-.flex-column, .contacts__content-field, .hero__content, .lw-section-header {
+.flex-column, .contacts__content-field, .hero__content, .footer-logo, .lw-section-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1753,6 +1767,49 @@ body:not(.loading) .loader {
   }
 }
 
+.inner-header {
+  padding: 30px 0;
+}
+.inner-header__wrapper {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.inner-header__logo {
+  margin-right: auto;
+}
+
+.footer {
+  border-top: 1px solid #FFFFFF;
+}
+.footer__wrapper {
+  padding: 30px 0;
+  padding-bottom: 60px;
+}
+.footer__bottom--truncated .footer__info {
+  display: none;
+}
+
+.footer-nav {
+  margin-bottom: 30px;
+}
+.footer-nav__item {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+.footer-nav__item a {
+  padding: 10px 0;
+  color: var(--white-color);
+}
+
+.footer-logo a {
+  margin-bottom: 12px;
+}
+.footer-logo span {
+  font-size: 16px;
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -2017,6 +2074,9 @@ body:not(.loading) .loader {
     display: none;
   }
 }
+.contacts-page-container > .footer span {
+  display: none;
+}
 .contacts__content-field {
   margin-bottom: 40px;
   width: 50%;
@@ -2120,6 +2180,7 @@ body:not(.loading) .loader {
 }
 .request form fieldset input {
   font-size: 16px;
+  line-height: 1;
   font-weight: 300;
   width: 100%;
   padding: 15px;
@@ -2132,6 +2193,7 @@ body:not(.loading) .loader {
 .request form fieldset input::-webkit-input-placeholder {
   font-weight: 300;
   font-size: 16px;
+  line-height: 1;
   opacity: 0.5;
   color: var(--color-white);
   background-color: var(--purple-5);
@@ -2139,6 +2201,7 @@ body:not(.loading) .loader {
 .request form fieldset input::-moz-placeholder {
   font-weight: 300;
   font-size: 16px;
+  line-height: 1;
   opacity: 0.5;
   color: var(--color-white);
   background-color: var(--purple-5);
@@ -2146,6 +2209,7 @@ body:not(.loading) .loader {
 .request form fieldset input:-ms-input-placeholder {
   font-weight: 300;
   font-size: 16px;
+  line-height: 1;
   opacity: 0.5;
   color: var(--color-white);
   background-color: var(--purple-5);
@@ -2153,6 +2217,7 @@ body:not(.loading) .loader {
 .request form fieldset input::-ms-input-placeholder {
   font-weight: 300;
   font-size: 16px;
+  line-height: 1;
   opacity: 0.5;
   color: var(--color-white);
   background-color: var(--purple-5);
@@ -2160,6 +2225,7 @@ body:not(.loading) .loader {
 .request form fieldset input::placeholder {
   font-weight: 300;
   font-size: 16px;
+  line-height: 1;
   opacity: 0.5;
   color: var(--color-white);
   background-color: var(--purple-5);

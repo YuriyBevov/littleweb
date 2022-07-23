@@ -5,11 +5,12 @@ block variables
     const title = "LittleWeb"
     const desc = "LittleWeb - сообщество людей НЕравнодушных к WEB"
     const keywords = ""
+    const footerType = "truncated";
 
 block page-content
 
   main(data-barba="container" data-barba-namespace="home")
-    .page-container.contacts-page-container
+    .page-container.contacts-page-container#contacts-page
       include ./sections/contacts-page/contacts
       include ./sections/common/request
 

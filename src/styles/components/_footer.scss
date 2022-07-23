@@ -1,0 +1,24 @@
+.footer {
+  border-top: 1px solid #FFFFFF;
+
+  &__wrapper {
+    padding: 30px 0;
+    padding-bottom: 60px;
+  }
+
+  &__top {
+
+  }
+
+  &__bottom {
+
+
+    &--truncated {
+      @extend .flex-centered-content;
+
+      .footer__info {
+        display: none;
+      }
+    }
+  }
+}
