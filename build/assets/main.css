@@ -1621,7 +1621,7 @@ h1, h2, h3, h4, h5, h6, p {
   bottom: 0;
   left: 0;
   width: 100px;
-  height: 7px;
+  height: clamp(5px, 1vw, 7px);
   content: "";
   background-color: var(--secondary-color);
 }
@@ -2063,7 +2063,7 @@ body:not(.loading) .loader {
 }
 
 .contacts-page-container .blob--right {
-  top: 10vh;
+  top: 40px;
   left: 83%;
 }
 @media (max-width: 1140px) {
@@ -2080,7 +2080,7 @@ body:not(.loading) .loader {
 }
 .contacts-page-container .blob--left {
   position: absolute;
-  top: 25vh;
+  top: 200px;
   left: -70px;
 }
 @media (max-width: 1140px) {

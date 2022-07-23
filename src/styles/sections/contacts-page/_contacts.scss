@@ -2,7 +2,7 @@
   &-page-container {
     .blob {
       &--right {
-        top: 10vh;
+        top: 40px;
         left: 83%;
 
         @include m-b-laptop-down {
@@ -17,7 +17,7 @@
 
       &--left {
         position: absolute;
-        top: 25vh;
+        top: 200px;
         left: -70px;
 
 
