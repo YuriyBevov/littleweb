@@ -2,10 +2,6 @@
   @extend .flex-wrap;
   margin-bottom: 30px;
 
-  @include m-b-laptop-down {
-    //flex-direction: column;
-  }
-
   &__item {
     flex-grow: 1;
 

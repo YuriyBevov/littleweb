@@ -1,0 +1,91 @@
+include ../../mixins/section-header
+
+-
+  const stackList = [
+    {
+      title: 'Основные технологии с которыми мы работаем',
+      list: [
+        {icon: 'noimage', desc: 'HTML5/PUG'},
+        {icon: 'noimage', desc: 'CSS3/Scss'},
+        {icon: 'noimage', desc: 'JavaScript'},
+        {icon: 'noimage', desc: 'PHP'},
+        {icon: 'noimage', desc: 'Vue.js'},
+        {icon: 'noimage', desc: 'GSAP'},
+        {icon: 'noimage', desc: 'Gulp'},
+        {icon: 'noimage', desc: 'Webpack'},
+      ]
+    },
+
+    {
+      title: 'Создаем макеты с помощью',
+      list: [
+        {icon: 'noimage', desc: 'Figma'},
+        {icon: 'noimage', desc: 'Photoshop'},
+        {icon: 'noimage', desc: 'Sketch'},
+        {icon: 'noimage', desc: 'Zeplin'}
+      ]
+    },
+
+    {
+      title: '"Натягиваем" проекты на',
+      list: [
+        {icon: 'noimage', desc: 'Bitrix'},
+        {icon: 'noimage', desc: 'Wordpress'},
+        {icon: 'noimage', desc: 'Modx Revo'},
+      ]
+    },
+
+    {
+      title: 'Для тестов используем',
+      list: [
+        {icon: 'noimage', desc: 'Jest'},
+        {icon: 'noimage', desc: 'Google Lighthouse'},
+        {icon: 'noimage', desc: 'Page Speed'},
+        {icon: 'noimage', desc: 'Browser Stack'}
+      ]
+    },
+
+    {
+      title: 'Работаем с',
+      list: [
+        {icon: 'noimage', desc: 'GitHub'},
+        {icon: 'noimage', desc: 'GitLab'},
+        {icon: 'noimage', desc: 'FTP'},
+      ]
+    },
+
+    {
+      title: 'А еще мы умеем подстраиваться под проект и выбирать необходимые для него инструменты.'
+    }
+  ]
+
+section.lw-section.stack
+  .container
+    .stack__wrapper
+      +section-header({
+        class: 'stack__header',
+        title: 'Услуги',
+        subtitle: 'Что мы <span>используем в работе</span>',
+        desc: 'Стек и набор инструментов мы подбираем в зависимости от проекта.'
+      })
+
+      .stack__content
+        picture
+          source(srcset="./assets/img/desktop-image@1x.png 1x, ./assets/img/desktop-image@2x.png 2x" type="image/webp")
+          img(src="./assets/img/desktop-image@1x.png" srcset="./assets/img/desktop-image@2x.png 2x" alt="Изображение компьютера" width="468" height="465")
+
+        ul.stack__list
+          each item in stackList
+            li.stack__list-item
+              span.lw-text-primary!= item.title
+              if item.list
+                ul.stack__tech
+                  each tech in item.list
+                    li.stack__tech-item
+                      svg(width="44" height="44")
+                        use(xlink:href=`./assets/sprite.svg#icon-${tech.icon}`)
+                      span.lw-text-xxs!= tech.desc
+
+
+
+

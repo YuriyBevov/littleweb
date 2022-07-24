@@ -22,10 +22,13 @@
 @import "./components/page-container";
 @import "./components/social";
 @import "./components/article-preview-card";
+@import "./components/service-card";
 
 /*sections*/
 @import "./sections/index-page/hero";
 @import "./sections/contacts-page/contacts";
 @import "./sections/articles-page/articles";
+@import "./sections/services-page/services";
+@import "./sections/services-page/stack";
 
 @import "./sections/common/request";

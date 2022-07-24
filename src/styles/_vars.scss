@@ -5,7 +5,7 @@
     // base
     --font-family: "MontserratAlternates", sans-serif;
     --content-width: 1410px;
-    --content-fluid-width: 1890px;
+    --content-fluid-width: 1720px;
     --container-offset: 15px;
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
     --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
@@ -45,6 +45,7 @@
     --text-xl  : clamp(28px, 5vw, 54px);
     --text-lg  : clamp(24px, 4vw, 40px);
     --text-md  : clamp(16px, 3.5vw, 28px);
+    --text-primary  : clamp(16px, 2vw, 24px);
     --text-sm  : clamp(16px, 3vw, 20px);
     --text-xs  : clamp(14px, 3vw, 18px);
     --text-xxs : 12px;
@@ -55,7 +56,7 @@
 
     //transition
     --main-t-rules: 0.25s 0.05s ease;
-    --slow-t-rules: 0.8s linear;
+    --slow-t-rules: 0.8s 0.1s linear;
 
     // clip=paths
     --hero-block-clip: circle(98.6% at 100% -16%);

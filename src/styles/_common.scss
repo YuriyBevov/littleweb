@@ -1,4 +1,9 @@
 .lw {
+  &-text-primary {
+    font-size: var(--text-primary);
+    font-weight: 400;
+  }
+
   &-text-xxl {
     font-size: var(--text-xxl);
     font-weight: 400;
@@ -43,6 +48,10 @@
     span {
       color: var(--secondary-color) !important;
     }
+  }
+
+  &-text-opacity {
+    opacity: 0.7;
   }
 
   &-fw-thin {
@@ -94,11 +103,7 @@
       color: var(--secondary-color);
     }
 
-    p,span {
-      color: var(--white-color);
-    }
-
-    p {
+    h2 {
       position: relative;
       display: inline-block;
       padding-bottom: 20px;
@@ -114,6 +119,10 @@
         content: '';
         background-color: var(--secondary-color);
       }
+    }
+
+    p {
+      line-height: 1.3;
     }
   }
 }
