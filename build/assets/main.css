@@ -2144,7 +2144,7 @@ body:not(.loading) .loader {
   position: relative;
   background-position: center;
   background-size: cover;
-  background-image: url("../assets/img/bg.png");
+  background-image: url("../assets/img/hero_bg@1x.png");
 }
 @media (max-width: 960px) {
   .hero {
