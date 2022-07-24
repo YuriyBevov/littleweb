@@ -19,6 +19,14 @@
       .footer__info {
         display: none;
       }
+
+      @include m-b-down(824px) {
+        justify-content: flex-start;
+      }
+
+      @include m-b-down(376px) {
+        justify-content: center;
+      }
     }
   }
 }

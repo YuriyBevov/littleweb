@@ -1,0 +1,26 @@
+include ../../mixins/section-header
+include ../../mixins/article-preview-card
+-
+  const articlePreviews = [
+    {img: 'article-preview-card-1', date: '24.07.2022', title: 'Система управления контентом(CMS). <br/> Что&nbsp;это&nbsp;такое и&nbsp;какую лучше выбрать&nbsp;?'},
+    {img: 'article-preview-card-1', date: '24.07.2022', title: '<a href="https://timeweb.com/ru/?i=50324" target="_blank">Timeweb.com</a> <br/> Наш хостинг&nbsp;-&nbsp;партнер.<br/>Почему&nbsp;мы выбираем&nbsp;его&nbsp;?'},
+    {img: 'article-preview-card-1', date: '24.07.2022', title: 'Анимации в WEB. <br/>Зачем они&nbsp;нужны и&nbsp;какую пользу&nbsp;несут&nbsp;?'},
+  ]
+
+section.lw-section.articles
+  .container
+    .articles__wrapper
+      +section-header({
+        class: 'articles__header',
+        title: 'Статьи',
+        desc: 'Вам может быть <span>интересно</span>',
+        underText: 'Здесь мы делемся мыслями'
+      })
+
+      .articles__content
+        ul.articles__list
+          each article in articlePreviews
+            li.articles__item
+              +article-preview-card(article)
+
+        button(type="button").lw-button-main Больше статей

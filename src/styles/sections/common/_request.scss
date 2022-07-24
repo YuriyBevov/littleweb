@@ -1,5 +1,10 @@
 .request {
   @extend .section-mb-100;
+  padding-top: 60px;
+
+  @include m-b-mobile-lg-down {
+    padding-top: 0;
+  }
 
   &__wrapper {
     position: relative;
@@ -60,6 +65,10 @@
 
   form {
     @extend .flex-wrap;
+
+    button {
+      min-width: 260px;
+    }
 
     fieldset {
       @extend .fieldset-default;

@@ -1,9 +1,9 @@
-.contacts {
+.articles {
   &-page-container {
     .blob {
       &--right {
-        top: 40px;
-        left: 83%;
+        top: 135px;
+        left: 65%;
 
         @include m-b-laptop-down {
           top: 0;
@@ -32,39 +32,30 @@
     @extend .section-padding-lg;
   }
 
-  &__header {
-    @extend .section-mb-100;
-  }
-
   &__content {
-    @extend .flex-wrap;
+    @extend .flex-column;
     @extend .section-mb-50;
+    align-items: center;
 
-    &-field {
-      @extend .flex-column;
-      margin-bottom: 40px;
-      width: 50%;
-      min-width: 300px;
-
-      & > span {
-        margin-bottom: 12px;
-      }
-
-      & > a {
-        color: var(--white-color);
-      }
+    button {
+      min-width: 260px;
     }
   }
 
-  .blob--right {
-    position: absolute;
-    top: 15vh;
-    left: 100%;
-  }
+  &__list {
+    @extend .section-mb-50;
 
-  .blob--left {
-    position: absolute;
-    top: 30vh;
-    left: -30%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+
+    @include m-b-tablet-lg-down {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include m-b-mobile-lg-down {
+      grid-template-columns: 1fr;
+    }
   }
 }

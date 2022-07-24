@@ -21,9 +21,11 @@
 @import "./components/cursor";
 @import "./components/page-container";
 @import "./components/social";
+@import "./components/article-preview-card";
 
 /*sections*/
 @import "./sections/index-page/hero";
 @import "./sections/contacts-page/contacts";
+@import "./sections/articles-page/articles";
 
 @import "./sections/common/request";
