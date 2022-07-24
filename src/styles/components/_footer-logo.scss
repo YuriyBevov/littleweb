@@ -1,6 +1,7 @@
 .footer-logo {
   @extend .flex-column;
   @extend .flex-centered-content;
+  padding: 0 10px;
 
   @include m-b-down(824px) {
     align-items: flex-start;

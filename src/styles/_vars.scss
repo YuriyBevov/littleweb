@@ -30,6 +30,7 @@
     --purple-3: #8468f6;
     --purple-4: #947bfb;
     --purple-5: #2B209B;
+    --purple-6: #7672FF;
 
     --main-bg-color       : var(--primary-color);
     --primary-text-color  : var(--white-color);
@@ -54,6 +55,7 @@
 
     //transition
     --main-t-rules: 0.25s 0.05s ease;
+    --slow-t-rules: 0.8s linear;
 
     // clip=paths
     --hero-block-clip: circle(98.6% at 100% -16%);
