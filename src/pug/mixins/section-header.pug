@@ -1,5 +1,6 @@
 mixin section-header(options)
   .lw-section-header(class= options.class? options.class : null)
-    h1.lw-text-sm.lw-fw-bold!= options.title
-    h2.lw-text-xl.lw-colored-text.lw-fw-bold!= options.subtitle
-    p.lw-text-xs.lw-fw-light.lw-text-opacity!= options.desc
+    span.lw-text-sm.lw-fw-bold!= options.pagename
+    h2.lw-text-xl.lw-colored-text.lw-fw-bold!= options.title
+    each desc in options.desc
+      p.lw-text-xs.lw-fw-light.lw-text-opacity!= desc

@@ -55,24 +55,24 @@ include ../../mixins/section-header
     },
 
     {
-      title: 'А еще мы умеем подстраиваться под проект и выбирать необходимые для него инструменты.'
+      title: 'А еще мы умеем подстраиваться под проект и подбирать необходимые для него инструменты.'
     }
   ]
 
 section.lw-section.stack
   .container
     .stack__wrapper
-      +section-header({
-        class: 'stack__header',
-        title: 'Услуги',
-        subtitle: 'Что мы <span>используем в работе</span>',
-        desc: 'Стек и набор инструментов мы подбираем в зависимости от проекта.'
-      })
-
-      .stack__content
+      .stack__field.stack__field--bg
         picture
           source(srcset="./assets/img/desktop-image@1x.png 1x, ./assets/img/desktop-image@2x.png 2x" type="image/webp")
-          img(src="./assets/img/desktop-image@1x.png" srcset="./assets/img/desktop-image@2x.png 2x" alt="Изображение компьютера" width="468" height="465")
+          img(src="./assets/img/desktop-image@1x.png" srcset="./assets/img/desktop-image@2x.png 2x" alt="Изображение компьютера" width="614" height="594")
+      .stack__field
+        +section-header({
+          class: 'stack__header',
+          pagename: 'Услуги',
+          title: 'Что мы <span>используем в работе</span>',
+          desc: ['Стек и набор инструментов мы подбираем в зависимости от проекта.']
+        })
 
         ul.stack__list
           each item in stackList
@@ -85,6 +85,8 @@ section.lw-section.stack
                       svg(width="44" height="44")
                         use(xlink:href=`./assets/sprite.svg#icon-${tech.icon}`)
                       span.lw-text-xxs!= tech.desc
+
+      //p.lw-fw-bold.lw-text-sm А еще мы умеем подстраиваться под проект и подбирать необходимые для него инструменты.
 
 
 

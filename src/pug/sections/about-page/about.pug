@@ -1,3 +1,31 @@
-section.about
-  .container-fluid
-    h1.lw-title-xxl This is about page
+include ../../mixins/section-header
+
+section.lw-section.about
+  .container
+    .about__wrapper
+      h1.visually-hidden О компании LittleWeb
+      +section-header({
+        class: 'about__header',
+        pagename: 'О нас',
+        title: 'Кто <span>мы</span>',
+        desc: ['Содружество людей НЕравнодушных к WEB.', 'Стараемся оперативно решать поставленные перед нами задачи, <br/>развиваться и быть в курсе последних тенденций разработки.']
+      })
+
+      ul.about__features
+        li.about__features-item
+          svg(width="150" height="98")
+            use(xlink:href="./assets/sprite.svg#icon-01")
+          p.lw-text-primary.lw-fw-bold Честность
+          span.lw-fw-light по отношению к себе и клиентам
+
+        li.about__features-item
+          svg(width="150" height="98")
+            use(xlink:href="./assets/sprite.svg#icon-02")
+          p.lw-text-primary.lw-fw-bold Порядочность?
+          span.lw-fw-light тут тоже что то написать
+
+        li.about__features-item
+          svg(width="150" height="98")
+            use(xlink:href="./assets/sprite.svg#icon-03")
+          p.lw-text-primary.lw-fw-bold Открытость?
+          span.lw-fw-light тут что то написать

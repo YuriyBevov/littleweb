@@ -1,0 +1,35 @@
+include ../../mixins/section-header
+
+-
+  const stuffList = [
+    {img: 'stuff', name: 'Константин Константинов', position: 'Фронтенд-разработчик'},
+    {img: 'stuff', name: 'Константин Константинов', position: 'Фронтенд-разработчик'},
+    {img: 'stuff', name: 'Константин Константинов', position: 'Фронтенд-разработчик'},
+    {img: 'stuff', name: 'Константин Константинов', position: 'Фронтенд-разработчик'},
+    {img: 'stuff', name: 'Константин Константинов', position: 'Фронтенд-разработчик'},
+    {img: 'stuff', name: 'Константин Константинов', position: 'Фронтенд-разработчик'},
+  ]
+
+section.lw-section.stuff
+  .container
+    .stuff__wrapper
+      +section-header({
+        class: 'stuff__header',
+        pagename: 'О нас',
+        title: 'Наша <span>команда</span>',
+        desc: ['Знакомьтесь! Это наша команда.']
+      })
+
+      ul.stuff__list
+        each stuff in stuffList
+          li.stuff__list-item
+            picture
+              source(srcset=`./assets/img/${stuff.img}@1x.webp 1x, ./assets/img/${stuff.img}@2x.webp 2x` type="image/webp")
+              img(src=`./assets/img/${stuff.img}@1x.jpg" srcset="./assets/img/${stuff.img}.jpg 2x` alt= stuff.name width="345" height="547")
+
+            .stuff__list-item-info
+              span.lw-text-primary.lw-fw-bold!= stuff.name
+              small.lw-fw-bold!= stuff.position
+
+
+

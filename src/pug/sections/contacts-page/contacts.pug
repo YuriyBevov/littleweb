@@ -2,11 +2,12 @@ include ../../mixins/section-header
 section.lw-section.contacts
   .container
     .contacts__wrapper
+      h1.visually-hidden Наши контакты
       +section-header({
         class: 'contacts__header',
-        title: 'Контакты',
-        subtitle: 'Как с нами <span>связаться</span>',
-        desc: 'Вы можете связаться с нами любым удобным способом.'
+        pagename: 'Контакты',
+        title: 'Как с нами <span>связаться</span>',
+        desc: ['Вы можете связаться с нами любым удобным способом.']
       })
 
       .contacts__content

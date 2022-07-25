@@ -10,11 +10,12 @@ include ../../mixins/article-preview-card
 section.lw-section.articles
   .container
     .articles__wrapper
+      h1.visually-hidden Немного статей о том, как мы работаем
       +section-header({
         class: 'articles__header',
-        title: 'Статьи',
-        subtitle: 'Вам может быть <span>интересно</span>',
-        desc: 'Здесь мы делимся мыслями'
+        pagename: 'Статьи',
+        title: 'Вам может быть <span>интересно</span>',
+        desc: ['Здесь мы делимся мыслями']
       })
 
       .articles__content

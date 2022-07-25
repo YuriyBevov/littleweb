@@ -4,26 +4,12 @@
       &--right {
         top: 150px;
         left: 80%;
-
-        /*@include m-b-laptop-down {
-          top: 0;
-          left: 55%;
-        }
-
-        @include m-b-mobile-lg-down {
-          left: 10%;
-          opacity: 0.5;
-        } */
       }
 
       &--left {
         position: absolute;
         top: 710px;
         left: -175px;
-
-        /*@include m-b-laptop-down {
-          display: none;
-        }*/
       }
 
       &--long {
@@ -40,11 +26,11 @@
 
     grid-template-columns: auto 700px;
     grid-template-rows: auto;
-    gap: 30px;
+    gap: 70px;
   }
 
   &__header {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   &__features {
@@ -68,8 +54,7 @@
       }
 
       p {
-        max-width: 540px;
-        line-height: 1.4;
+        max-width: 570px;
       }
     }
   }
@@ -84,6 +69,5 @@
     &-item:nth-child(odd) {
       margin-top: -70px;
     }
-
   }
 }
