@@ -62,18 +62,17 @@ include ../../mixins/section-header
 section.lw-section.stack
   .container
     .stack__wrapper
+      +section-header({
+        class: 'stack__header',
+        pagename: 'Услуги',
+        title: 'Что мы <span>используем в работе</span>',
+        desc: ['Стек и набор инструментов мы подбираем в зависимости от проекта.']
+      })
       .stack__field.stack__field--bg
         picture
           source(srcset="./assets/img/desktop-image@1x.png 1x, ./assets/img/desktop-image@2x.png 2x" type="image/webp")
-          img(src="./assets/img/desktop-image@1x.png" srcset="./assets/img/desktop-image@2x.png 2x" alt="Изображение компьютера" width="614" height="594")
+          img(src="./assets/img/desktop-image@1x.png" srcset="./assets/img/desktop-image@2x.png 2x" alt="Изображение компьютера" width="614" height="703")
       .stack__field
-        +section-header({
-          class: 'stack__header',
-          pagename: 'Услуги',
-          title: 'Что мы <span>используем в работе</span>',
-          desc: ['Стек и набор инструментов мы подбираем в зависимости от проекта.']
-        })
-
         ul.stack__list
           each item in stackList
             li.stack__list-item

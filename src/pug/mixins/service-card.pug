@@ -3,4 +3,4 @@ mixin service-card(service)
     svg(width="76" height="76")
       use(xlink:href=`./assets/sprite.svg#icon-${service.icon}`)
     h3.lw-text-primary!= service.title
-    p.lw-fw-light.lw-text-opacity!= service.desc
+    p.lw-text-sec.lw-fw-light.lw-text-opacity!= service.desc

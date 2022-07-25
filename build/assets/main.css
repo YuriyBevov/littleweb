@@ -1156,7 +1156,8 @@ button.swiper-pagination-bullet {
 /* stylelint-disable color-function-notation */
 /* stylelint-disable alpha-value-notation */
 :root {
-  --font-family: "MontserratAlternates", sans-serif;
+  --main-font-family: "MontserratAlternates", sans-serif;
+  --sec-font-family: "Lato", sans-serif;
   --content-width: 1410px;
   --content-fluid-width: 1720px;
   --container-offset: 15px;
@@ -1246,6 +1247,27 @@ button.swiper-pagination-bullet {
   font-display: swap;
   font-style: normal;
 }
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/../fonts/Lato-Regulat.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/../fonts/Lato-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/../fonts/Lato-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
 *,
 *::before,
 *::after {
@@ -1275,7 +1297,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-family: var(--font-family, sans-serif);
+  font-family: var(--main-font-family, sans-serif);
   font-weight: 400;
   line-height: 1.6;
   color: var(--primary-text-color);
@@ -1573,6 +1595,9 @@ h1, h2, h3, h4, h5, h6, p {
 .lw-text-primary {
   font-size: var(--text-primary);
   font-weight: 400;
+}
+.lw-text-sec {
+  font-family: "Lato";
 }
 .lw-text-xxl {
   font-size: var(--text-xxl);
@@ -2380,14 +2405,12 @@ body:not(.loading) .loader {
   left: 80%;
 }
 .services-page-container .blob--left {
-  position: absolute;
   top: 710px;
   left: -175px;
 }
 .services-page-container .blob--long {
-  position: absolute;
-  top: 900px;
-  left: 53%;
+  top: 1150px;
+  left: 68%;
 }
 .services__wrapper {
   display: -ms-grid;
@@ -2440,6 +2463,11 @@ body:not(.loading) .loader {
   -ms-grid-rows: auto;
   grid-template-rows: auto;
   gap: 70px;
+}
+.stack__header {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
 }
 .stack__list-item {
   margin-bottom: 20px;

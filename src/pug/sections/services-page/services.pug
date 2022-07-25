@@ -3,7 +3,7 @@ include ../../mixins/service-card
 
 -
   const servicesFeatures = [
-    {icon: 'desktop-info', title: "Наводим порядок <br/> в существующих проектах", desc: "Думаем о UX, добавляем анимации, создаем удобный адаптив, делаем редизайн, программируем необходимый функционал."},
+    {icon: 'desktop-info', title: "Наводим порядок <br/> в существующих проектах", desc: "Думаем о UX, добавляем анимации, создаем удобный адаптив,<br/> делаем редизайн, программируем необходимый функционал."},
     {icon: 'desktop-info', title: "Быстро запускаем <br/> новые проекты в работу", desc: " Тут поменять на примерно тоже самое!!<br/>У нас отлаженные процессы оценки проекта, согласования договора и NDA. Работаем с электронным документооборотом."},
     {icon: 'desktop-info', title: "Сокращаем расходы <br/>на производство", desc: "Тут не знаю что написать.. </br/>Стараемся быть гибкими. Подстраиваемся под ваши требования и процессы."}
   ]
@@ -36,7 +36,7 @@ section.lw-section.services
                 svg(width="60" height="60")
                   use(xlink:href=`./assets/sprite.svg#icon-${feature.icon}`)
                 h3.lw-text-primary!= feature.title
-                p.lw-fw-light.lw-text-opacity!= feature.desc
+                p.lw-text-sec.lw-fw-light.lw-text-opacity!= feature.desc
 
         button(type="button").lw-button-main Оставить заявку
       .services__field
