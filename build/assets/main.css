@@ -2573,6 +2573,7 @@ body:not(.loading) .loader {
   display: inline-block;
   max-width: 250px;
   margin-bottom: 8px;
+  line-height: 1;
 }
 .stuff__list-item small {
   font-size: 16px;
