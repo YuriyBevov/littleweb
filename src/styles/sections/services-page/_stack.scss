@@ -23,8 +23,6 @@
       }
 
       svg {
-        //stroke: var(--purple-4);
-        //fill: transparent;
         margin-bottom: 10px;
       }
     }
@@ -32,10 +30,27 @@
 
   &__tech {
     @extend .flex-wrap;
+    max-width: 600px;
     &-item {
       @extend .flex-centered-content;
       flex-direction: column;
       margin-right: 20px;
+    }
+
+    .text-svg {
+      overflow: visible;
+      margin-right: 15px;
+    }
+
+    .text {
+      font-family: "Lato";
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 0.02em;
+      fill: var(--white-color);
+      stroke: none;
+      transform: rotate(180deg);
+      transform-origin: 50% 50%;
     }
   }
 }

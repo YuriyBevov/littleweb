@@ -2,7 +2,9 @@
   @extend .flex-wrap;
 
   &__item {
-    margin-right: clamp(10px, 5vw, 30px);
+    &:not(:last-child) {
+      margin-right: clamp(10px, 5vw, 30px);
+    }
 
     a {
       @extend .flex-centered-content;

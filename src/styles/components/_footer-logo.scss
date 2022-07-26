@@ -3,16 +3,9 @@
   @extend .flex-centered-content;
   padding: 0 10px;
 
-  @include m-b-down(824px) {
-    align-items: flex-start;
-  }
-
-  @include m-b-down(376px) {
-    align-items: center;
-  }
-
   a {
-    margin-bottom: 12px;
+    @extend .flex-centered-content;
+    margin-bottom: 10px;
   }
 
   span {

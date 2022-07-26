@@ -10,11 +10,7 @@
       padding: 10px;
       color: var(--white-color);
 
-      @include m-b-laptop-down {
-        justify-content: flex-start;
-      }
-
-      @include m-b-down(376px) {
+      @include m-b-down(824px) {
         justify-content: center;
       }
     }
@@ -26,10 +22,6 @@
     }
 
     @include m-b-down(824px) {
-      width: calc(100% / 3);
-    }
-
-    @include m-b-mobile-lg-down {
       width: 50%;
     }
 

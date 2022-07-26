@@ -1,0 +1,20 @@
+footer.footer
+  .container
+    .footer__wrapper
+      .footer__top
+        include ../components/footer-nav
+
+      .footer__bottom
+        .footer__bottom-field.footer__bottom-field--logo
+          include ../components/footer-logo
+        .footer__bottom-field
+          span.lw-fw-light.lw-text-sec.lw-text-opacity Телефон:
+          a(href="tel:89062723744").lw-text-sm.lw-fw-bold 8 (906) 272-37-44
+
+        .footer__bottom-field
+          span.lw-fw-light.lw-text-sec.lw-text-opacity Электронная почта:
+          a(href="mailto: info@littleweb.ru").lw-text-sm.lw-fw-bold info@littleweb.ru
+
+        .footer__bottom-field.footer__bottom-field--social
+          span.lw-fw-light.lw-text-sec.lw-text-opacity Мы в соцсетях:
+          include ../components/social

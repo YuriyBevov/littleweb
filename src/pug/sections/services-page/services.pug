@@ -1,22 +1,8 @@
 include ../../mixins/section-header
 include ../../mixins/service-card
+include ../../content/service-types
+include ../../content/service-features
 
--
-  const servicesFeatures = [
-    {icon: 'desktop-info', title: "Наводим порядок <br/> в существующих проектах", desc: "Думаем о UX, добавляем анимации, создаем удобный адаптив,<br/> делаем редизайн, программируем необходимый функционал."},
-    {icon: 'desktop-info', title: "Быстро запускаем <br/> новые проекты в работу", desc: " Тут поменять на примерно тоже самое!!<br/>У нас отлаженные процессы оценки проекта, согласования договора и NDA. Работаем с электронным документооборотом."},
-    {icon: 'desktop-info', title: "Сокращаем расходы <br/>на производство", desc: "Тут не знаю что написать.. </br/>Стараемся быть гибкими. Подстраиваемся под ваши требования и процессы."}
-  ]
-
--
-  const servicesTypes = [
-    {icon: 'desktop-info', title: 'Лендинги', desc: 'Короткие и длинные. Адаптив, скорость загрузки, микроанимации, семантика и SEO-френдли разметка.'},
-    {icon: 'desktop-info', title: 'Сайт-визитка', desc: 'Короткие и длинные. Адаптив, скорость загрузки, микроанимации, семантика и SEO-френдли разметка.'},
-    {icon: 'desktop-info', title: 'Корпоративные сайты', desc: 'Короткие и длинные. Адаптив, скорость загрузки, микроанимации, семантика и SEO-френдли разметка.'},
-    {icon: 'desktop-info', title: 'Интернет магазины', desc: 'Короткие и длинные. Адаптив, скорость загрузки, микроанимации, семантика и SEO-френдли разметка.'},
-    {icon: 'desktop-info', title: 'Web-приложения', desc: 'Короткие и длинные. Адаптив, скорость загрузки, микроанимации, семантика и SEO-френдли разметка.'},
-    {icon: 'desktop-info', title: 'Системы автоматизации', desc: 'CRM, ERP, CMS и все такое...'},
-  ]
 section.lw-section.services
   .container
     .services__wrapper
@@ -31,7 +17,7 @@ section.lw-section.services
 
         .services__features
           ul.services__features-list
-            each feature in servicesFeatures
+            each feature in serviceFeatures
               li.services__features-item
                 svg(width="60" height="60")
                   use(xlink:href=`./assets/sprite.svg#icon-${feature.icon}`)
@@ -41,6 +27,6 @@ section.lw-section.services
         button(type="button").lw-button-main Оставить заявку
       .services__field
         ul.services__type
-          each service in servicesTypes
+          each serviceType in serviceTypes
             li.services__type-item
-              +service-card(service)
+              +service-card(serviceType)
