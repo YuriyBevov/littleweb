@@ -1,0 +1,11 @@
+<svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="28" cy="28" r="27.5"/>
+    <path d="M49.5 28c0 11.874-9.626 21.5-21.5 21.5S6.5 39.874 6.5 28 16.126 6.5 28 6.5 49.5 16.126 49.5 28Z"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="m27.994 38.96 4.416-13.485h-8.832l4.416 13.486Z"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M27.996 38.96 23.58 25.476h-6.19l10.606 13.486Z"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="m17.39 25.475-1.341 4.098a.903.903 0 0 0 .332 1.015l11.615 8.373L17.39 25.475Z"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M17.39 25.475h6.19l-2.66-8.123c-.137-.418-.733-.417-.87 0l-2.66 8.123Z"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="m27.996 38.96 4.416-13.485h6.189L27.996 38.961Z"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="m38.601 25.475 1.342 4.098a.903.903 0 0 1-.332 1.015L27.996 38.96l10.605-13.486Z"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M38.6 25.475h-6.19l2.66-8.123c.137-.418.733-.417.87 0l2.66 8.123Z"/>
+</svg>

@@ -2353,7 +2353,10 @@ body:not(.loading) .loader {
   font-family: "Lato";
   font-size: 12px;
   font-weight: 300;
+  letter-spacing: 0.1em;
   fill: #ffffff;
+  stroke: none;
+  color: #ffffff;
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
@@ -2495,8 +2498,6 @@ body:not(.loading) .loader {
   margin-bottom: 24px;
 }
 .stack__list-item svg {
-  stroke: var(--purple-4);
-  fill: transparent;
   margin-bottom: 10px;
 }
 .stack__tech-item {
