@@ -2351,7 +2351,7 @@ body:not(.loading) .loader {
 
 .text {
   font-family: "Lato";
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 300;
   fill: #ffffff;
   -webkit-transform: rotate(180deg);
