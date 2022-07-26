@@ -17,10 +17,9 @@
     &-field {
       @extend .flex-column;
 
-      &:not(&--logo) {
-        flex-grow: 1;
-        align-items: center;
-      }
+
+      flex-grow: 1;
+      align-items: center;
 
       &:not(&--logo):not(&--social) {
         span {
