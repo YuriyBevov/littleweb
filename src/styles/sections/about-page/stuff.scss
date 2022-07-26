@@ -1,4 +1,4 @@
-.stuff {
+/*.stuff {
   &__wrapper {
     @extend .section-padding-lg;
   }
@@ -62,6 +62,121 @@
       &:nth-child(2),
       &:nth-child(5) {
         transform: translateY(-100px);
+      }
+
+      &:hover,
+      &:focus {
+        picture::before {
+          background-color: transparent;
+        }
+
+        img {
+          transform: scale(1.1);
+        }
+
+        .stuff__list-item-info {
+          opacity: 1;
+          transform: translateY(-50px);
+        }
+      }
+    }
+  }
+}*/
+
+
+.stuff {
+  &__wrapper {
+    @extend .section-padding-lg;
+  }
+
+  &__header {
+    @include m-b-tablet-up {
+      margin-bottom: clamp(180px, 20vw, 300px);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 5vw;
+    grid-row-gap: 5vw;
+
+    @include m-b-laptop-down {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include m-b-mobile-lg-down {
+      grid-template-columns: 1fr;
+    }
+
+    &-item {
+      position: relative;
+      @extend .flex-column;
+
+      padding-left: 60px;
+
+      picture {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+
+        @extend .blur-mask;
+
+        width: 100%;
+        max-width: 345px;
+
+        img {
+          width: 100%;
+          max-height: 547px;
+          transition: transform var(--slow-t-rules);
+        }
+      }
+
+      &-info {
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        opacity: 0.5;
+        @extend .flex-column;
+        transform: translateY(-30px);
+        transition: transform var(--slow-t-rules), opacity var(--slow-t-rules);
+      }
+
+      span {
+        display: inline-block;
+        max-width: 250px;
+        margin-bottom: 8px;
+        line-height: 1;
+      }
+
+      small {
+        font-size: 16px;
+        color: var(--purple-3);
+      }
+
+
+      @include m-b-tablet-up {
+        &:nth-child(odd) {
+          transform: translateY(-200px);
+        }
+      }
+
+      @include m-b-laptop-up {
+        &:nth-child(1),
+        &:nth-child(4) {
+          transform: translateY(-200px);
+        }
+
+        &:nth-child(2),
+        &:nth-child(5) {
+          transform: translateY(-100px);
+        }
+
+        &:nth-child(3),
+        &:nth-child(6) {
+          transform: translateY(0);
+        }
       }
 
       &:hover,

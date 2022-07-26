@@ -1,4 +1,5 @@
 include ../../mixins/section-header
+include ../../content/workflow-steps
 
 section.lw-section.workflow
   .container
@@ -9,3 +10,27 @@ section.lw-section.workflow
         title: 'Рабочий <span>процесс</span>',
         desc: ['Как мы создаем успешные проекты']
       })
+
+      .workflow__container
+        ul.workflow__list
+          each step in workflowStepList
+            li.workflow__list-item
+              h3.lw-text-primary.lw-fw-bold!= step.title
+              p.lw-text-sec.lw-fw-light.lw-text-opacity!= step.desc
+
+        .workflow__steps
+          .workflow__steps-line(aria-hidden="true")
+            .workflow__steps-dots
+              .workflow__steps-dot
+                .workflow__steps-inner-dot
+              .workflow__steps-dot
+                .workflow__steps-inner-dot
+              .workflow__steps-dot
+                .workflow__steps-inner-dot
+              .workflow__steps-dot
+                .workflow__steps-inner-dot
+              .workflow__steps-dot
+                .workflow__steps-inner-dot
+              .workflow__steps-dot
+                .workflow__steps-inner-dot
+
