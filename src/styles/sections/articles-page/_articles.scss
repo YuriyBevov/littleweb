@@ -1,3 +1,18 @@
+//#test{visibility:hidden;}
+.text-svg {
+  overflow: visible;
+  margin-right: 20px;
+}
+
+.text {
+  font-family: "Lato";
+  font-size: 16px;
+  font-weight: 300;
+  fill:#ffffff;
+  transform: rotate(180deg);
+  transform-origin: 50% 50%;
+}
+
 .articles {
   &-page-container {
     .blob {

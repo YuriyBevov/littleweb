@@ -9555,6 +9555,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_heroContentAnimation_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/heroContentAnimation.js */ "./src/scripts/modules/heroContentAnimation.js");
 /* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
 /* harmony import */ var _modules_preloader_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/preloader.js */ "./src/scripts/modules/preloader.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 
 
 
@@ -9569,6 +9570,76 @@ import { animateHeroContent } from "./modules/heroContentAnimation.js";
 animateHeroContent();
 
 */
+
+ //rest of your script...
+//gsap.set("#text-svg", { autoAlpha: 1 });
+
+/*const textIcons = document.querySelectorAll('.text-svg');
+let timeline = null;
+
+let activeIcon = null;
+
+function onMouseEnterHandler(evt) {
+  console.log('enter', evt.currentTarget)
+  evt.currentTarget.removeEventListener('mouseenter', onMouseEnterHandler);
+
+  let textPath = evt.currentTarget.querySelector('.circle');
+  console.log(timeline, textPath);
+  timeline = gsap.timeline({ repeat: -1, paused: true });
+  console.log(timeline);
+  timeline.play();
+
+  timeline.to(textPath, {
+    duration: 3,
+    ease: 'linear',
+    rotate: '360deg',
+    repeat: -1,
+    transformOrigin: "center center",
+  })
+
+  evt.currentTarget.addEventListener('mouseleave', onMouseLeaveHandler);
+}
+
+function onMouseLeaveHandler(evt) {
+  timeline.progress(1);
+  timeline.kill();
+  timeline = null;
+
+  evt.currentTarget.removeEventListener('mouseleave', onMouseLeaveHandler);
+  evt.currentTarget.addEventListener('mouseenter', onMouseEnterHandler);
+}
+
+textIcons.forEach(icon => {
+  gsap.set(icon, { autoAlpha: 1 });
+  icon.addEventListener('mouseenter', onMouseEnterHandler);
+})*/
+
+var textIcons = document.querySelectorAll('.text-svg');
+textIcons.forEach(function (icon, i) {
+  gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.set(icon, {
+    autoAlpha: 1
+  });
+  var textPath = icon.querySelector('.circle');
+  var timeline = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline({
+    repeat: -1,
+    paused: true
+  });
+  timeline.to(textPath, {
+    duration: 10,
+    ease: 'linear',
+    rotate: '360deg',
+    repeat: -1,
+    transformOrigin: "center center"
+  });
+  icon.addEventListener('mouseenter', function () {
+    //timeline.progress(0).play();
+    timeline.resume();
+  });
+  icon.addEventListener('mouseleave', function () {
+    //timeline.progress(1).pause();
+    timeline.pause();
+  });
+});
 })();
 
 /******/ })()
