@@ -429,56 +429,75 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
   footer.setAttribute('data-lag', 0.3);
 }*/
 
-var scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
-  smooth: 1.5,
-  // how long (in seconds) it takes to "catch up" to the native scroll position
-  effects: true,
-  // looks for data-speed and data-lag attributes on elements
-  smoothTouch: true,
-  // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-  normalizeScroll: true
+var scroller = null;
+/* = ScrollSmoother.create({
+smooth: 1.5,               // how long (in seconds) it takes to "catch up" to the native scroll position
+effects: true,           // looks for data-speed and data-lag attributes on elements
+smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+normalizeScroll: true,
+});*/
+
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.matchMedia({
+  "(min-width: 769px)": function minWidth769px() {
+    if (scroller === null) {
+      scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
+        smooth: 1.5,
+        // how long (in seconds) it takes to "catch up" to the native scroll position
+        effects: true // looks for data-speed and data-lag attributes on elements
+        //smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+        //normalizeScroll: true,
+
+      });
+      initScrollerElements();
+    }
+  },
+  "(max-width: 768px)": function maxWidth768px() {
+    if (scroller !== null) {
+      scroller.kill();
+      scroller = null;
+    }
+  }
 });
-var footer = document.querySelector('.footer');
 
-if (footer) {
-  scroller.effects(footer, {
-    lag: 1.5,
-    ease: 'linear'
-  });
-}
+function initScrollerElements() {
+  var footer = document.querySelector('.footer');
 
-var stackBackground = document.querySelector('.stack__field--bg');
-
-if (stackBackground) {
-  scroller.effects(stackBackground, {
-    speed: 1.2
-  });
-}
-
-var serviceTypeItems = document.querySelectorAll('.services__type-item');
-
-if (serviceTypeItems) {
-  serviceTypeItems.forEach(function (item, i) {
-    scroller.effects(item, {
-      speed: "".concat(1.025 + 0.01 * i)
+  if (footer) {
+    scroller.effects(footer, {
+      lag: 1.5,
+      ease: 'linear'
     });
-  });
-}
+  }
 
-var blobs = document.querySelectorAll('.blob');
-console.log(blobs);
+  var stackBackground = document.querySelector('.stack__field--bg');
 
-if (blobs) {
-  blobs.forEach(function (item, i) {
-    scroller.effects(item, {
-      speed: 1.2 * (i + 0.5)
+  if (stackBackground) {
+    scroller.effects(stackBackground, {
+      speed: 1.2
     });
-  });
+  }
+
+  var serviceTypeItems = document.querySelectorAll('.services__type-item');
+
+  if (serviceTypeItems) {
+    serviceTypeItems.forEach(function (item, i) {
+      scroller.effects(item, {
+        speed: "".concat(1.025 + 0.01 * i)
+      });
+    });
+  }
+
+  var blobs = document.querySelectorAll('.blob');
+
+  if (blobs) {
+    blobs.forEach(function (item, i) {
+      console.log(1.2 + i / 3.85);
+      scroller.effects(item, {
+        speed: 1.2 + i / 3.85
+      });
+    });
+  }
 }
-/*let longBlob = document.querySelector('.blob--long');
-if(longBlob) {
-  scroller.effects(longBlob, {speed: -1.05});
-}*/
 
 /***/ }),
 
