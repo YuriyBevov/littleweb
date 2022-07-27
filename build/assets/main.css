@@ -2058,6 +2058,8 @@ body:not(.loading) .loader {
 .page-container .blob {
   position: absolute;
   z-index: -1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .social__item:not(:last-child) {
@@ -2526,9 +2528,8 @@ body:not(.loading) .loader {
   content: "";
   top: 480px;
   left: 50%;
-  -webkit-transform: translate(-30%, -25%);
-  -ms-transform: translate(-30%, -25%);
-  transform: translate(-30%, -25%);
+  -webkit-transform: translate3d(-30%, -25%, 0);
+  transform: translate3d(-30%, -25%, 0);
   width: 1028px;
   height: 874px;
   background-image: url("../assets/img/about_bg@1x.png");
@@ -2617,9 +2618,8 @@ body:not(.loading) .loader {
   z-index: -1;
   bottom: -175px;
   left: 22%;
-  -webkit-transform: translate(-20%, -25%);
-  -ms-transform: translate(-20%, -25%);
-  transform: translate(-20%, -25%);
+  -webkit-transform: translate3d(-20%, -25%, 0);
+  transform: translate3d(-20%, -25%, 0);
   width: 1450px;
   height: 762px;
   background-image: url("../assets/img/stuff_bg@1x.png");

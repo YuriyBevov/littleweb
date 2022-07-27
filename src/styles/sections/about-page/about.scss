@@ -1,12 +1,13 @@
 .about {
   position: relative;
+
   &::before {
     position: absolute;
     content: '';
 
     top: 480px;
     left: 50%;
-    transform: translate(-30%, -25%);
+    transform: translate3d(-30%, -25%, 0);
     width: 1028px;
     height: 874px;
     background-image: url("../assets/img/about_bg@1x.png");
@@ -15,6 +16,7 @@
 
     z-index: -1;
   }
+
   &-page-container {
     position: relative;
 
