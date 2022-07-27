@@ -1565,10 +1565,10 @@ h1, h2, h3, h4, h5, h6, p {
   overflow: hidden;
 }
 
-.blur-mask, .article-preview-card__header {
+.blur-mask, .stuff__list-item picture, .article-preview-card__header {
   position: relative;
 }
-.blur-mask::before, .article-preview-card__header::before {
+.blur-mask::before, .stuff__list-item picture::before, .article-preview-card__header::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -1580,9 +1580,11 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-filter: blur(300px);
   filter: blur(300px);
   z-index: 3;
-  -webkit-transition: background-color var(--slow-t-rules);
-  -o-transition: background-color var(--slow-t-rules);
-  transition: background-color var(--slow-t-rules);
+  -webkit-transition: -webkit-transform var(--slow-t-rules);
+  transition: -webkit-transform var(--slow-t-rules);
+  -o-transition: transform var(--slow-t-rules);
+  transition: transform var(--slow-t-rules);
+  transition: transform var(--slow-t-rules), -webkit-transform var(--slow-t-rules);
 }
 
 .overlay-filter, .about__features-item, .service-card {
@@ -2088,8 +2090,6 @@ body:not(.loading) .loader {
 }
 .article-preview-card__header picture {
   overflow: hidden;
-  /*box-shadow: 96px 165px 76px rgba(3, 10, 104, 0.03), 54px 93px 65px rgba(3, 10, 104, 0.1), 24px 41px 48px rgba(3, 10, 104, 0.17), 6px 10px 26px rgba(3, 10, 104, 0.2), 0px 0px 0px rgba(3, 10, 104, 0.2);
-  backdrop-filter: blur(50px);*/
 }
 .article-preview-card__header img {
   width: 100%;
@@ -2159,7 +2159,8 @@ body:not(.loading) .loader {
   fill: var(--warning-color);
 }
 .article-preview-card:hover .article-preview-card__header::before, .article-preview-card:focus .article-preview-card__header::before {
-  background-color: transparent;
+  -webkit-transform: translate3d(-100%, -100%, 0);
+  transform: translate3d(-100%, -100%, 0);
 }
 .article-preview-card:hover .article-preview-card__header img, .article-preview-card:focus .article-preview-card__header img {
   -webkit-transform: scale(1.1);
@@ -2720,6 +2721,10 @@ body:not(.loading) .loader {
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
+}
+.stuff__list-item:hover picture::before, .stuff__list-item:focus picture::before {
+  -webkit-transform: translate3d(-100%, -100%, 0);
+  transform: translate3d(-100%, -100%, 0);
 }
 .stuff__list-item:hover img, .stuff__list-item:focus img {
   -webkit-transform: translate3d(0, 0, 0) scale(1.1);

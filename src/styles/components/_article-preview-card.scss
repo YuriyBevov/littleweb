@@ -9,8 +9,6 @@
     picture {
       @extend .flex-centered-content;
       overflow: hidden;
-      /*box-shadow: 96px 165px 76px rgba(3, 10, 104, 0.03), 54px 93px 65px rgba(3, 10, 104, 0.1), 24px 41px 48px rgba(3, 10, 104, 0.17), 6px 10px 26px rgba(3, 10, 104, 0.2), 0px 0px 0px rgba(3, 10, 104, 0.2);
-      backdrop-filter: blur(50px);*/
     }
 
     img {
@@ -83,7 +81,7 @@
   &:focus {
     .article-preview-card__header {
       &::before {
-        background-color: transparent;
+        transform: translate3d(-100%, -100%, 0);
       }
 
       img {
