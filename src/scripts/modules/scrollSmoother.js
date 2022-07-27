@@ -28,9 +28,9 @@ ScrollTrigger.matchMedia({
       scroller !== null ?
       scroller.kill() : null;
       scroller = ScrollSmoother.create({
-        smooth: 1,               // how long (in seconds) it takes to "catch up" to the native scroll position
+        smooth: 1.5,               // how long (in seconds) it takes to "catch up" to the native scroll position
         effects: false,           // looks for data-speed and data-lag attributes on elements
-        //smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+        smoothTouch: false,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
         //normalizeScroll: true,
       });
     }
