@@ -5,25 +5,14 @@ import {ScrollSmoother} from 'gsap/ScrollSmoother';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 
-
-/*if(footer) {
-  console.log();
-  //footer.style.marginTop = '174px';
-  footer.setAttribute('data-lag', 0.3);
-}*/
-
-
-let scroller = null;/* = ScrollSmoother.create({
-  smooth: 1.5,               // how long (in seconds) it takes to "catch up" to the native scroll position
-  effects: true,           // looks for data-speed and data-lag attributes on elements
-  smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-  normalizeScroll: true,
-});*/
+let scroller = null;
 
 
 ScrollTrigger.matchMedia({
   "(min-width: 769px)": function() {
-    if(scroller === null) {
+      if(scroller !== null) {
+        scroller.kill();
+      }
       scroller = ScrollSmoother.create({
         smooth: 1.5,               // how long (in seconds) it takes to "catch up" to the native scroll position
         effects: true,           // looks for data-speed and data-lag attributes on elements
@@ -31,17 +20,21 @@ ScrollTrigger.matchMedia({
         //normalizeScroll: true,
       });
 
-      initScrollerElements();
-    }
   },
   "(max-width: 768px)": function() {
     if(scroller !== null) {
       scroller.kill();
-      scroller = null;
     }
+      scroller = ScrollSmoother.create({
+        smooth: 1.5,               // how long (in seconds) it takes to "catch up" to the native scroll position
+        effects: false,           // looks for data-speed and data-lag attributes on elements
+        //smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+        //normalizeScroll: true,
+      });
   }
 });
 
+initScrollerElements();
 function initScrollerElements(){
   let footer = document.querySelector('.footer');
   if(footer) {

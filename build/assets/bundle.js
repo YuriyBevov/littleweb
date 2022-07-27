@@ -423,41 +423,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger, gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother);
-/*if(footer) {
-  console.log();
-  //footer.style.marginTop = '174px';
-  footer.setAttribute('data-lag', 0.3);
-}*/
-
 var scroller = null;
-/* = ScrollSmoother.create({
-smooth: 1.5,               // how long (in seconds) it takes to "catch up" to the native scroll position
-effects: true,           // looks for data-speed and data-lag attributes on elements
-smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-normalizeScroll: true,
-});*/
-
 gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.matchMedia({
   "(min-width: 769px)": function minWidth769px() {
-    if (scroller === null) {
-      scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
-        smooth: 1.5,
-        // how long (in seconds) it takes to "catch up" to the native scroll position
-        effects: true // looks for data-speed and data-lag attributes on elements
-        //smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-        //normalizeScroll: true,
-
-      });
-      initScrollerElements();
+    if (scroller !== null) {
+      scroller.kill();
     }
+
+    scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
+      smooth: 1.5,
+      // how long (in seconds) it takes to "catch up" to the native scroll position
+      effects: true // looks for data-speed and data-lag attributes on elements
+      //smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+      //normalizeScroll: true,
+
+    });
   },
   "(max-width: 768px)": function maxWidth768px() {
     if (scroller !== null) {
       scroller.kill();
-      scroller = null;
     }
+
+    scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
+      smooth: 1.5,
+      // how long (in seconds) it takes to "catch up" to the native scroll position
+      effects: false // looks for data-speed and data-lag attributes on elements
+      //smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+      //normalizeScroll: true,
+
+    });
   }
 });
+initScrollerElements();
 
 function initScrollerElements() {
   var footer = document.querySelector('.footer');
