@@ -13,11 +13,13 @@ html(lang="ru")
   +head(title, desc, keywords)
 
   body(data-barba="wrapper").nojs
-    include ./inner-header
+    #smooth-wrapper
+      #smooth-content
+        include ./inner-header
 
-    block page-content
+        block page-content
 
-    include ./main-footer
+        include ./main-footer
 
     include ../components/barba_transition
     include ../components/custom_cursor

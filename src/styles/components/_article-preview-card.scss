@@ -4,6 +4,7 @@
   height: 100%;
 
   &__header {
+    overflow: hidden;
     @extend .blur-mask;
 
     picture {

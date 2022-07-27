@@ -1856,6 +1856,7 @@ body:not(.loading) .loader {
 }
 
 .footer {
+  background-color: var(--main-bg-color);
   border-top: 1px solid var(--white-color);
 }
 .footer__wrapper {
@@ -2083,6 +2084,9 @@ body:not(.loading) .loader {
   -ms-flex-direction: column;
   flex-direction: column;
   height: 100%;
+}
+.article-preview-card__header {
+  overflow: hidden;
 }
 .article-preview-card__header picture {
   overflow: hidden;
