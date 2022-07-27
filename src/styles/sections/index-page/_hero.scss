@@ -5,9 +5,10 @@
   min-height: 768px;
   overflow: hidden;
   position: relative;
+  background-image: url('../assets/img/hero_bg@1x.png');
   background-position: center;
   background-size: cover;
-  background-image: url('../assets/img/hero_bg@1x.png');
+  background-repeat: no-repeat;
 
   @include m-b-tablet-lg-down {
     min-height: 534px;

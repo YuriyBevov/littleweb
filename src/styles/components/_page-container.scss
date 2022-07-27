@@ -2,6 +2,8 @@
   position: relative;
   overflow: hidden;
 
+  padding-top: clamp(30px, 7.5vw, 50px);
+
   .blob {
     position: absolute;
     z-index: -1;

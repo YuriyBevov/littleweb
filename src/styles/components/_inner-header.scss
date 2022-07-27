@@ -2,9 +2,11 @@
   position: sticky;
   top: 0;
   left: 0;
+  padding: 30px 0;
+  background-color: rgba(21, 27, 83, 0.3);
   z-index: 99;
 
-  padding: 30px 0;
+  transition: padding var(--main-t-rules);
 
   &__wrapper {
     @extend .flex-wrap;
@@ -14,5 +16,9 @@
   &__logo {
     @extend .flex-centered-content;
     margin-right: auto;
+  }
+
+  &.scrolled {
+    padding: 20px 0;
   }
 }

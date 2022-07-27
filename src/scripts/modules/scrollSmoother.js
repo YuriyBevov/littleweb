@@ -26,4 +26,6 @@ ScrollSmoother.create({
   effects: true,           // looks for data-speed and data-lag attributes on elements
   //smoothTouch: 1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
   //normalizeScroll: true,
+  scrollTop: '200px',
+  scrollBottom: '300px',
 });
