@@ -15,8 +15,9 @@ html(lang="ru")
   body(data-barba="wrapper").loading.nojs
 
     include ./main-header
-
-    block page-content
+    #smooth-wrapper
+      #smooth-content
+        block page-content
 
     include ../components/barba_transition
     include ../components/custom_cursor

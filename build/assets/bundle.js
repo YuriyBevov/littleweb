@@ -432,7 +432,7 @@ if (stackBackground) {
 }
 
 if (footer) {
-  footer.setAttribute('data-speed', 0.85);
+  footer.setAttribute('data-speed', 0.75); //footer.setAttribute('data-lag', 0.5);
 }
 
 if (serviceTypeItems) {
@@ -446,8 +446,8 @@ gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
   // how long (in seconds) it takes to "catch up" to the native scroll position
   effects: true,
   // looks for data-speed and data-lag attributes on elements
-  smoothTouch: 0.1 // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-
+  //smoothTouch: 1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+  normalizeScroll: true
 });
 
 /***/ }),
