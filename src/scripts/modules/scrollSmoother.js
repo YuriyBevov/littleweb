@@ -12,7 +12,7 @@ if(stackBackground) {
   stackBackground.setAttribute('data-speed', 1.2);
 }
 if(footer) {
-  footer.setAttribute('data-speed', 0.75);
+  //footer.setAttribute('data-speed', 0.75);
   //footer.setAttribute('data-lag', 0.5);
 }
 if(serviceTypeItems) {
@@ -25,5 +25,5 @@ ScrollSmoother.create({
   smooth: 1.5,               // how long (in seconds) it takes to "catch up" to the native scroll position
   effects: true,           // looks for data-speed and data-lag attributes on elements
   //smoothTouch: 1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-  normalizeScroll: true,
+  //normalizeScroll: true,
 });
