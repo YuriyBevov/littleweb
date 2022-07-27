@@ -81,7 +81,7 @@
   &:focus {
     .article-preview-card__header {
       &::before {
-        transform: translate3d(-100%, -100%, 0);
+        background-color: transparent;
       }
 
       img {

@@ -30,7 +30,8 @@ svg(style="overflow: visible;" width="40" height="40" viewBox="0 0 40 40").curso
 */
  //console.log(Cursor)
 
-if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {//new Cursor(document.querySelectorAll('.cursor'), '.gsap-cursor-trigger, label, input, a, button');
+if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  new _utils_Cursor_js__WEBPACK_IMPORTED_MODULE_0__.Cursor(document.querySelectorAll('.cursor'), '.gsap-cursor-trigger, label, input, a, button');
 } else {
   document.querySelector('.custom-cursor-container').classList.add('hidden');
 }
