@@ -423,34 +423,61 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger, gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother);
+/*if(footer) {
+  console.log();
+  //footer.style.marginTop = '174px';
+  footer.setAttribute('data-lag', 0.3);
+}*/
+
+var scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
+  smooth: 1.5,
+  // how long (in seconds) it takes to "catch up" to the native scroll position
+  effects: true // looks for data-speed and data-lag attributes on elements
+  //smoothTouch: 1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+  //normalizeScroll: true,
+
+});
 var footer = document.querySelector('.footer');
-var stackBackground = document.querySelector('.stack__field--bg');
-var serviceTypeItems = document.querySelectorAll('.services__type-item');
 
-if (stackBackground) {
-  stackBackground.setAttribute('data-speed', 1.2);
-}
-
-if (footer) {//footer.setAttribute('data-speed', 0.75);
-  //footer.setAttribute('data-lag', 0.5);
-}
-
-if (serviceTypeItems) {
-  serviceTypeItems.forEach(function (item, i) {
-    item.setAttribute('data-speed', "".concat(1.025 + 0.01 * i));
+if (footer) {
+  scroller.effects(footer, {
+    lag: 1.5,
+    ease: 'linear'
   });
 }
 
-gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
-  smooth: 1.5,
-  // how long (in seconds) it takes to "catch up" to the native scroll position
-  effects: true,
-  // looks for data-speed and data-lag attributes on elements
-  //smoothTouch: 1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-  //normalizeScroll: true,
-  scrollTop: '200px',
-  scrollBottom: '300px'
-});
+var stackBackground = document.querySelector('.stack__field--bg');
+
+if (stackBackground) {
+  scroller.effects(stackBackground, {
+    speed: 1.2
+  });
+}
+
+var serviceTypeItems = document.querySelectorAll('.services__type-item');
+
+if (serviceTypeItems) {
+  serviceTypeItems.forEach(function (item, i) {
+    scroller.effects(item, {
+      speed: "".concat(1.025 + 0.01 * i)
+    });
+  });
+}
+
+var blobs = document.querySelectorAll('.blob');
+console.log(blobs);
+
+if (blobs) {
+  blobs.forEach(function (item, i) {
+    scroller.effects(item, {
+      speed: 0.55 * (i + 0.35)
+    });
+  });
+}
+/*let longBlob = document.querySelector('.blob--long');
+if(longBlob) {
+  scroller.effects(longBlob, {speed: -1.05});
+}*/
 
 /***/ }),
 

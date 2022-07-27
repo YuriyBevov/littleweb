@@ -1178,6 +1178,9 @@ button.swiper-pagination-bullet {
   --purple-7: #151B53;
   --main-bg-color: var(--primary-color);
   --primary-text-color: var(--white-color);
+  --transparent-color: transparent;
+  --header-scrolled-bg-color: rgba(21, 27, 83, 0.3);
+  --header-bg-color: rgba(21, 27, 83, 0.3);
   --main-scrollbar-width: 6px;
   --main-scrollbar-color: var(--primary-4);
   --main-scrollbar-thumb-color: var(--purple-4);
@@ -1566,24 +1569,26 @@ h1, h2, h3, h4, h5, h6, p {
   overflow: hidden;
 }
 
-.blur-mask {
+.blur-mask, .stuff__list-item picture, .article-preview-card__header picture {
+  overflow: hidden;
   position: relative;
 }
-.blur-mask::before {
+.blur-mask::before, .stuff__list-item picture::before, .article-preview-card__header picture::before {
   position: absolute;
   top: 0;
   left: 0;
   content: "";
   width: 100%;
   height: 100%;
-  background-color: var(--purple-6);
-  mix-blend-mode: multiply;
-  -webkit-filter: blur(300px);
-  filter: blur(300px);
+  background-color: rgba(21, 27, 83, 0.3);
   z-index: 3;
-  -webkit-transition: background-color var(--slow-t-rules);
-  -o-transition: background-color var(--slow-t-rules);
-  transition: background-color var(--slow-t-rules);
+  -webkit-transition: background-color 0.5s 0.1s ease-in;
+  -o-transition: background-color 0.5s 0.1s ease-in;
+  transition: background-color 0.5s 0.1s ease-in;
+}
+
+.blur-mask-hovered, .stuff__list-item:hover picture::before, .stuff__list-item:focus picture::before, .article-preview-card:hover .article-preview-card__header picture::before, .article-preview-card:focus .article-preview-card__header picture::before {
+  background-color: transparent;
 }
 
 .overlay-filter, .about__features-item, .service-card {
@@ -1854,11 +1859,11 @@ body:not(.loading) .loader {
   top: 0;
   left: 0;
   padding: 30px 0;
-  background-color: rgba(21, 27, 83, 0.3);
+  background-color: var(--header-bg-color);
   z-index: 99;
-  -webkit-transition: padding var(--main-t-rules);
-  -o-transition: padding var(--main-t-rules);
-  transition: padding var(--main-t-rules);
+  -webkit-transition: padding var(--slow-t-rules), background-color var(--slow-t-rules);
+  -o-transition: padding var(--slow-t-rules), background-color var(--slow-t-rules);
+  transition: padding var(--slow-t-rules), background-color var(--slow-t-rules);
 }
 .inner-header__wrapper {
   -webkit-box-align: center;
@@ -1870,6 +1875,7 @@ body:not(.loading) .loader {
 }
 .inner-header.scrolled {
   padding: 20px 0;
+  background-color: var(--header-scrolled-bg-color);
 }
 
 main {
@@ -2112,23 +2118,6 @@ main {
 .article-preview-card__header {
   overflow: hidden;
 }
-.article-preview-card__header picture {
-  overflow: hidden;
-  position: relative;
-}
-.article-preview-card__header picture::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: rgba(21, 27, 83, 0.3);
-  z-index: 3;
-  -webkit-transition: background-color 0.5s 0.1s ease-in;
-  -o-transition: background-color 0.5s 0.1s ease-in;
-  transition: background-color 0.5s 0.1s ease-in;
-}
 .article-preview-card__header img {
   width: 100%;
   -webkit-transition: -webkit-transform var(--slow-t-rules);
@@ -2195,9 +2184,6 @@ main {
 .article-preview-card__footer a svg {
   margin-left: 20px;
   fill: var(--warning-color);
-}
-.article-preview-card:hover .article-preview-card__header picture::before, .article-preview-card:focus .article-preview-card__header picture::before {
-  background-color: transparent;
 }
 .article-preview-card:hover .article-preview-card__header img, .article-preview-card:focus .article-preview-card__header img {
   -webkit-transform: scale(1.1);
@@ -2697,11 +2683,9 @@ main {
   padding-left: 60px;
 }
 .stuff__list-item picture {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
   width: 100%;
   max-width: 345px;
 }
@@ -2761,11 +2745,6 @@ main {
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
-}
-.stuff__list-item:hover, .stuff__list-item:focus {
-  /*picture::before {
-    background-color: transparent;
-  }*/
 }
 .stuff__list-item:hover img, .stuff__list-item:focus img {
   -webkit-transform: scale(1.1);

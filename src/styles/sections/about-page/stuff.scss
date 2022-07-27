@@ -46,11 +46,9 @@
       padding-left: 60px;
 
       picture {
-        position: relative;
         display: flex;
-        overflow: hidden;
 
-        //@extend .blur-mask;
+        @extend .blur-mask;
 
         width: 100%;
         max-width: 345px;
@@ -109,9 +107,9 @@
 
       &:hover,
       &:focus {
-        /*picture::before {
-          background-color: transparent;
-        }*/
+        picture::before {
+          @extend .blur-mask-hovered;
+        }
 
         img {
           transform: scale(1.1);

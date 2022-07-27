@@ -9,22 +9,7 @@
 
     picture {
       @extend .flex-centered-content;
-      overflow: hidden;
-
-      position: relative;
-
-
-      &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: '';
-        width: 100%;
-        height: 100%;
-        background-color: rgba(21, 27, 83, 0.3);
-        z-index: 3;
-        transition: background-color 0.5s 0.1s ease-in;
-      }
+      @extend .blur-mask;
     }
 
     img {
@@ -97,7 +82,7 @@
   &:focus {
     .article-preview-card__header {
       & picture::before {
-        background-color: transparent;
+        @extend .blur-mask-hovered;
       }
 
       img {

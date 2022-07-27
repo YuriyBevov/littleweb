@@ -36,6 +36,10 @@
 
     --main-bg-color       : var(--primary-color);
     --primary-text-color  : var(--white-color);
+    --transparent-color: transparent;
+
+    --header-scrolled-bg-color: rgba(21, 27, 83, 0.3);
+    --header-bg-color: rgba(21, 27, 83, 0.3);
 
     // scrollbar
     --main-scrollbar-width: 6px;
@@ -51,6 +55,7 @@
     --text-sm  : clamp(16px, 3vw, 20px);
     --text-xs  : clamp(14px, 3vw, 18px);
     --text-xxs : 12px;
+
 
     //buttons
 

@@ -204,6 +204,7 @@
 }
 
 .blur-mask {
+  overflow: hidden;
   position: relative;
 
   &::before {
@@ -213,15 +214,14 @@
     content: '';
     width: 100%;
     height: 100%;
-
-    background-color: var(--purple-6);
-    mix-blend-mode: multiply;
-    filter: blur(300px);
-
+    background-color: rgba(21, 27, 83, 0.3);
     z-index: 3;
-
-    transition: background-color var(--slow-t-rules);
+    transition: background-color 0.5s 0.1s ease-in;
   }
+}
+
+.blur-mask-hovered {
+  background-color: transparent;
 }
 
 .overlay-filter {
