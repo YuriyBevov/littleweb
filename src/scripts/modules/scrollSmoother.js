@@ -4,39 +4,42 @@ import {ScrollSmoother} from 'gsap/ScrollSmoother';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-
 let scroller = null;
-
+let device = null;
 
 ScrollTrigger.matchMedia({
   "(min-width: 769px)": function() {
-      if(scroller !== null) {
-        scroller.kill();
-      }
+    console.log('init')
+    if(device === 'mobile' || device === null) {
+      device = 'desktop';
+      scroller !== null ?
+      scroller.kill() : null;
       scroller = ScrollSmoother.create({
-        smooth: 1.5,               // how long (in seconds) it takes to "catch up" to the native scroll position
-        effects: true,           // looks for data-speed and data-lag attributes on elements
-        //smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-        //normalizeScroll: true,
+        smooth: 1.5,
+        effects: true,
       });
-
-  },
-  "(max-width: 768px)": function() {
-    if(scroller !== null) {
-      scroller.kill();
+      initScrollerElements();
     }
+  },
+
+  "(max-width: 768px)": function() {
+    if(device !== 'mobile') {
+      device = 'mobile'
+      scroller !== null ?
+      scroller.kill() : null;
       scroller = ScrollSmoother.create({
-        smooth: 1.5,               // how long (in seconds) it takes to "catch up" to the native scroll position
+        smooth: 1,               // how long (in seconds) it takes to "catch up" to the native scroll position
         effects: false,           // looks for data-speed and data-lag attributes on elements
-        //smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-        //normalizeScroll: true,
+        smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+        normalizeScroll: true,
       });
-  }
+    }
+  },
 });
 
-initScrollerElements();
+
 function initScrollerElements(){
-  let footer = document.querySelector('.footer');
+  let footer = document.querySelector('footer');
   if(footer) {
     scroller.effects(footer, {lag: 1.5, ease: 'linear'});
   }
