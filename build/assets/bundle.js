@@ -432,10 +432,11 @@ gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
 var scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
   smooth: 1.5,
   // how long (in seconds) it takes to "catch up" to the native scroll position
-  effects: true // looks for data-speed and data-lag attributes on elements
-  //smoothTouch: 1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-  //normalizeScroll: true,
-
+  effects: true,
+  // looks for data-speed and data-lag attributes on elements
+  smoothTouch: true,
+  // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+  normalizeScroll: true
 });
 var footer = document.querySelector('.footer');
 
@@ -470,7 +471,7 @@ console.log(blobs);
 if (blobs) {
   blobs.forEach(function (item, i) {
     scroller.effects(item, {
-      speed: 0.55 * (i + 0.35)
+      speed: 1.2 * (i + 0.5)
     });
   });
 }

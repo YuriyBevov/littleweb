@@ -16,8 +16,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 let scroller = ScrollSmoother.create({
   smooth: 1.5,               // how long (in seconds) it takes to "catch up" to the native scroll position
   effects: true,           // looks for data-speed and data-lag attributes on elements
-  //smoothTouch: 1,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-  //normalizeScroll: true,
+  smoothTouch: true,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+  normalizeScroll: true,
 });
 
 let footer = document.querySelector('.footer');
@@ -42,7 +42,7 @@ let blobs = document.querySelectorAll('.blob');
 console.log(blobs)
 if(blobs) {
   blobs.forEach((item,i) => {
-    scroller.effects(item, {speed: 0.55 * (i+0.35)});
+    scroller.effects(item, {speed: 1.2 * (i + 0.5)});
   });
 }
 /*let longBlob = document.querySelector('.blob--long');
