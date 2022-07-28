@@ -1714,10 +1714,10 @@ main {
   background: linear-gradient(90deg, #F5DFA0 0%, #EC9A29 68.75%);
   color: var(--primary-color);
 }
-.lw-button-filtered {
+.lw-button-shadow {
   position: relative;
 }
-.lw-button-filtered::before {
+.lw-button-shadow::before {
   position: absolute;
   top: 60%;
   left: 50%;
