@@ -1357,6 +1357,16 @@ main {
   overflow: hidden;
   padding-top: 70px;
 }
+@media (max-width: 1140px) {
+  main {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    padding-top: 0;
+  }
+}
 
 .end-separator {
   width: 100vw;
@@ -1627,6 +1637,7 @@ main {
 .blob, .stack .stack__field .blob, .services .blob {
   position: absolute;
   z-index: -1;
+  will-change: auto;
 }
 
 .lw {

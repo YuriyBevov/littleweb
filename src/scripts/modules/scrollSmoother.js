@@ -27,10 +27,10 @@ ScrollTrigger.matchMedia({
       device = 'mobile'
       scroller !== null ?
       scroller.kill() : null;
-      scroller = ScrollSmoother.create({
+      /*scroller = ScrollSmoother.create({
         effects: false,           // looks for data-speed and data-lag attributes on elements
         smoothTouch: false,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-      });
+      });*/
     }
   },
 });

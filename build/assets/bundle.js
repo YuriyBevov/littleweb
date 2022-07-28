@@ -443,12 +443,10 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.matchMedia({
     if (device !== 'mobile') {
       device = 'mobile';
       scroller !== null ? scroller.kill() : null;
-      scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
-        effects: false,
-        // looks for data-speed and data-lag attributes on elements
-        smoothTouch: false // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-
-      });
+      /*scroller = ScrollSmoother.create({
+        effects: false,           // looks for data-speed and data-lag attributes on elements
+        smoothTouch: false,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+      });*/
     }
   }
 });

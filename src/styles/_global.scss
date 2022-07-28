@@ -76,6 +76,14 @@ main {
   background-color: var(--main-bg-color);
   overflow: hidden;
   padding-top: 70px;
+
+  @include m-b-laptop-down {
+    padding-top: 100px;
+  }
+
+  @include m-b-tablet-down {
+    padding-top: 0;
+  }
 }
 
 .end-separator {
