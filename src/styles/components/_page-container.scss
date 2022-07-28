@@ -1,4 +1,4 @@
-.page-container {
+/*.page-container {
   position: relative;
   overflow: hidden;
 
@@ -8,4 +8,15 @@
     position: absolute;
     z-index: -1;
   }
-}
+} */
+
+/*.page-container {
+  position: relative;
+  padding-top: clamp(30px, 7.5vw, 50px);
+
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid red;
+  max-width: 2200px;
+  margin: 0 auto;
+}*/

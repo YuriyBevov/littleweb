@@ -1,9 +1,12 @@
 .service-card {
   @extend .flex-column;
-
   padding: 32px;
 
   @extend .overlay-filter;
+
+  @include m-b-desktop-down {
+    height: 100%;
+  }
 
   svg {
     margin-bottom: 16px;

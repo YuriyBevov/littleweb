@@ -5,9 +5,14 @@
     @extend .section-padding;
     display: grid;
 
-    grid-template-columns: auto 700px;
+    grid-template-columns: auto 45%;
     grid-template-rows: auto;
     gap: 70px;
+
+    @include m-b-tablet-lg-down {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
   }
 
   &__header {
@@ -31,6 +36,11 @@
   &__tech {
     @extend .flex-wrap;
     max-width: 600px;
+
+    @include m-b-tablet-lg-down {
+      max-width: 100%;
+    }
+
     &-item {
       @extend .flex-centered-content;
       flex-direction: column;
@@ -51,6 +61,34 @@
       stroke: none;
       transform: rotate(180deg);
       transform-origin: 50% 50%;
+    }
+  }
+
+  .stack__field {
+    position: relative;
+
+    .blob {
+      @extend .blob;
+
+      &--long {
+        top: -85%;
+        left: 35%;
+
+        @include m-b-tablet-down {
+          top: -35%;
+          left: 50%;
+        }
+
+        @include m-b-mobile-lg-down {
+          left: 120%;
+        }
+      }
+    }
+
+    @include m-b-tablet-lg-down {
+      &--bg {
+        display: none;
+      }
     }
   }
 }

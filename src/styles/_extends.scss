@@ -173,6 +173,10 @@
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  @include m-b-mobile-lg-down {
+    padding: 0 var(--container-offset-mobile);
+  }
 }
 
 .container-fluid {
@@ -180,6 +184,10 @@
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-fluid-width);
+
+  @include m-b-mobile-lg-down {
+    padding: 0 var(--container-offset-mobile);
+  }
 }
 
 /*elements*/
@@ -228,4 +236,9 @@
   background: rgba(67, 21, 255, 0.2);
   box-shadow: 96px 165px 76px rgba(3, 10, 104, 0.03), 54px 93px 65px rgba(3, 10, 104, 0.1), 24px 41px 48px rgba(3, 10, 104, 0.17), 6px 10px 26px rgba(3, 10, 104, 0.2), 0px 0px 0px rgba(3, 10, 104, 0.2);
   backdrop-filter: blur(50px);
+}
+
+.blob {
+  position: absolute;
+  z-index: -1;
 }

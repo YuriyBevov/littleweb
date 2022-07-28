@@ -15,7 +15,7 @@
 
     z-index: -1;
   }
-  &-page-container {
+  /*&-page-container {
     position: relative;
 
     .blob {
@@ -34,7 +34,7 @@
         right: -400px;
       }
     }
-  }
+  }*/
 
   &__wrapper {
     @extend .section-padding-lg;

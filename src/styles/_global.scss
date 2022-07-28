@@ -5,8 +5,6 @@
   border-radius: 0;
 
   @extend .main-scroll;
-
-  // cursor: none;
 }
 
 html {
@@ -70,4 +68,18 @@ ul {
 
 h1,h2,h3,h4,h5,h6,p {
   margin: 0;
+}
+
+main {
+  position: relative;
+  z-index: 2;
+  background-color: var(--main-bg-color);
+  overflow: hidden;
+  padding-top: 70px;
+}
+
+.end-separator {
+  width: 100vw;
+  height: 1px;
+  background-color: var(--white-color);
 }

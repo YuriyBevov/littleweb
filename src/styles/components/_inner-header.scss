@@ -16,6 +16,19 @@
   &__logo {
     @extend .flex-centered-content;
     margin-right: auto;
+
+    svg {
+      width: 221px;
+      height: 46px;
+
+      @include m-b-tablet-down {
+        height: 43px;
+      }
+
+      @include m-b-mobile-lg-down {
+        height: 36px;
+      }
+    }
   }
 
   &.scrolled {
