@@ -2370,6 +2370,7 @@ body:not(.loading) .loader {
   width: 100%;
   height: 100%;
   z-index: 2;
+  will-change: transform;
 }
 
 .hero__blobs {
@@ -2387,6 +2388,7 @@ body:not(.loading) .loader {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  will-change: transform;
 }
 .hero__blobs .blob--right {
   width: 500px;
