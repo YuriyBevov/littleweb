@@ -1355,17 +1355,6 @@ main {
   z-index: 2;
   background-color: var(--main-bg-color);
   overflow: hidden;
-  padding-top: 70px;
-}
-@media (max-width: 1140px) {
-  main {
-    padding-top: 100px;
-  }
-}
-@media (max-width: 768px) {
-  main {
-    padding-top: 0;
-  }
 }
 
 .end-separator {
@@ -1724,6 +1713,19 @@ main {
   background: -o-linear-gradient(left, #F5DFA0 0%, #EC9A29 68.75%);
   background: linear-gradient(90deg, #F5DFA0 0%, #EC9A29 68.75%);
   color: var(--primary-color);
+}
+.lw-page-top {
+  padding-top: 70px;
+}
+@media (max-width: 1140px) {
+  .lw-page-top {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .lw-page-top {
+    padding-top: 0;
+  }
 }
 .lw-section-header {
   padding: 30px 0;
