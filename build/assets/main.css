@@ -1714,6 +1714,25 @@ main {
   background: linear-gradient(90deg, #F5DFA0 0%, #EC9A29 68.75%);
   color: var(--primary-color);
 }
+.lw-button-filtered {
+  position: relative;
+}
+.lw-button-filtered::before {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  content: "";
+  width: 200px;
+  height: 25px;
+  background: var(--warning-color);
+  -webkit-filter: blur(30.6338px);
+  filter: blur(10.6338px);
+  border-radius: 44.1127px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: -1;
+}
 .lw-page-top {
   padding-top: 70px;
 }
