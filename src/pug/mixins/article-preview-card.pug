@@ -1,18 +1,19 @@
 mixin article-preview-card(article)
   .article-preview-card
-    .article-preview-card__header
-      picture
-        source(srcset=`./assets/img/${article.img}@1x.webp 1x, ./assets/img/${article.img}@2x.webp 2x` type="image/webp")
-        img(src=`./assets/img/${article.img}@1x.jpg` srcset=`./assets/img/${article.img}.jpg 2x` alt= article.title width="450" height="320")
+    a(href= article.link aria-label= article.title)
+      .article-preview-card__header
+        picture
+          source(srcset=`./assets/img/${article.img}@1x.webp 1x, ./assets/img/${article.img}@2x.webp 2x` type="image/webp")
+          img(src=`./assets/img/${article.img}@1x.jpg` srcset=`./assets/img/${article.img}.jpg 2x` alt= article.title width="450" height="320")
 
-    .article-preview-card__body
-      .article-preview-card__body-info
-        span.lw-text-sec.lw-fw-bold Статья
-        time.lw-text-sec.lw-fw-light= article.date
-      .article-preview-card__body-title
-        h2.lw-text-primary.lw-fw-bold!= article.title
-    .article-preview-card__footer
-      a(href="#").lw-text-sm.lw-fw-bold
-        | Читать
-        svg(width="24" height="24")
-          use(xlink:href="./assets/sprite.svg#icon-arrow")
+      .article-preview-card__body
+        .article-preview-card__body-info
+          span.lw-text-sec.lw-fw-bold Статья
+          time.lw-text-sec.lw-fw-light= article.date
+        .article-preview-card__body-title
+          h2.lw-text-primary.lw-fw-bold!= article.title
+      .article-preview-card__footer
+        span.lw-text-sm.lw-fw-bold
+          | Читать
+          svg(width="24" height="24")
+            use(xlink:href="./assets/sprite.svg#icon-arrow")

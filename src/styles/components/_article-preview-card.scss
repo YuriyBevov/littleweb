@@ -1,11 +1,14 @@
 .article-preview-card {
-  display: flex;
-  flex-direction: column;
   height: 100%;
+
+  & > a {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 
   &__header {
     overflow: hidden;
-    //@extend .blur-mask;
 
     picture {
       @extend .flex-centered-content;
@@ -58,7 +61,7 @@
   &__footer {
     margin-top: auto;
 
-    a {
+    span {
       display: flex;
       align-items: center;
       letter-spacing: 0.1em;
@@ -67,7 +70,6 @@
       background: linear-gradient(90deg, #F5DFA0 0%, #EC9A29 68.75%), #EC9A29;
 
       background-clip: text;
-      //text-fill-color: transparent;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 

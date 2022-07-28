@@ -1,11 +1,7 @@
 include ../../mixins/section-header
 include ../../mixins/article-preview-card
--
-  const articlePreviews = [
-    {img: 'article-preview-card-1', date: '24.07.2022', title: 'Система управления контентом(CMS). <br/> Что&nbsp;это&nbsp;такое и&nbsp;какую лучше выбрать&nbsp;?'},
-    {img: 'article-preview-card-1', date: '24.07.2022', title: '<a href="https://timeweb.com/ru/?i=50324" target="_blank">Timeweb.com</a> <br/> Наш хостинг&nbsp;-&nbsp;партнер.<br/>Почему&nbsp;мы выбираем&nbsp;его&nbsp;?'},
-    {img: 'article-preview-card-1', date: '24.07.2022', title: 'Анимации в WEB. <br/>Зачем они&nbsp;нужны и&nbsp;какую пользу&nbsp;несут&nbsp;?'},
-  ]
+
+include ../../content/article-preview-cards
 
 section.lw-page-top.lw-section.articles
   .container
@@ -24,4 +20,4 @@ section.lw-page-top.lw-section.articles
             li.articles__item
               +article-preview-card(article)
 
-        button(type="button").lw-button-main Больше статей
+        button(type="button").lw-button-main.lw-button-shadow Больше статей
