@@ -1,0 +1,13 @@
+extends layouts/test-layout.pug
+
+block variables
+  -
+    const title = "LittleWeb"
+    const desc = "LittleWeb - создание сайтов под ключ."
+    const keywords = ""
+
+block page-content
+  main(data-barba="container" data-barba-namespace="home").lw-bottom-lined.no-border
+    include ./sections/parallax-hero-page/parallax-hero
+
+block modals

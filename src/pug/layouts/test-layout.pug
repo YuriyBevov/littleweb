@@ -1,0 +1,24 @@
+include ./head
+
+doctype html
+
+block variables
+  -
+    const title = ""
+    const desc = ""
+    const keywords = ""
+    const namespace = ""
+
+html(lang="ru")
+  +head(title, desc, keywords)
+
+  body(data-barba="wrapper").loading.nojs
+
+    #smooth-wrapper
+      #smooth-content
+        block page-content
+
+        include ../components/custom_cursor
+        include ../components/loader
+
+    block modals

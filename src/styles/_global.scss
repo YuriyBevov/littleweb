@@ -3,8 +3,14 @@
 *::after {
   box-sizing: inherit;
   border-radius: 0;
-
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  box-sizing: border-box;
+  appearance: none;
+  text-size-adjust: none;
   @extend .main-scroll;
+  outline: 0;
 }
 
 html {
@@ -15,7 +21,6 @@ html,
 body {
   width: 100%;
   min-height: 100vh;
-  -webkit-text-size-adjust: none;
 }
 
 body {
@@ -75,4 +80,12 @@ main {
   z-index: 2;
   background-color: var(--main-bg-color);
   overflow: hidden;
+  overflow-y: auto;
+}
+
+
+#smooth-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
