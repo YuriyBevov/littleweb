@@ -3371,6 +3371,11 @@ body:not(.loading) .loader {
   width: 100vw;
   z-index: 3;
 }
+.parallax .logo {
+  margin: 0 auto;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
 .parallax__mask {
   position: relative;
   background-color: #f0ff3d;

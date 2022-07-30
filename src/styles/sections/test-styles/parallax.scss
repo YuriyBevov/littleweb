@@ -20,6 +20,11 @@
     z-index: 3;
   }
 
+  .logo {
+    margin: 0 auto;
+    transform: translate3d(0,0,0);
+  }
+
   &__mask {
     position: relative;
     background-color: #f0ff3d;
