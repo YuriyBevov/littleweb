@@ -72,6 +72,8 @@
 
   form {
     @extend .flex-wrap;
+    position: relative;
+    z-index: 2;
 
     button {
       min-width: 260px;

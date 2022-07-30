@@ -1177,6 +1177,7 @@ button.swiper-pagination-bullet {
   --purple-5: #2B209B;
   --purple-6: #7672FF;
   --purple-7: #151B53;
+  --purple-8: #6E52E0;
   --main-bg-color: var(--primary-color);
   --primary-text-color: var(--white-color);
   --transparent-color: transparent;
@@ -1368,6 +1369,17 @@ main {
   background-color: var(--main-bg-color);
   overflow: hidden;
   overflow-y: auto;
+}
+
+.content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
 }
 
 /*section*/
@@ -2353,14 +2365,9 @@ body:not(.loading) .loader {
   background-size: cover;
   background-repeat: no-repeat;
 }
-@media (max-width: 960px) {
-  .hero {
-    min-height: 534px;
-  }
-}
 @media (max-width: 534px) {
   .hero {
-    min-height: 434px;
+    min-height: 534px;
   }
 }
 .hero .container, .hero__wrapper {
@@ -2419,6 +2426,20 @@ body:not(.loading) .loader {
 }
 .hero__btn {
   width: 240px;
+}
+.hero__social {
+  position: absolute;
+  bottom: 3vh;
+  left: 10vw;
+  z-index: 4;
+}
+.hero__social .social__item a {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.hero__social .social__item a svg {
+  width: clamp(30px, 5vw, 40px);
+  height: clamp(30px, 5vw, 40px);
+  fill: var(--purple-8);
 }
 
 .wave-bg {
@@ -3278,6 +3299,10 @@ body:not(.loading) .loader {
 .request p {
   font-size: 16px;
   margin-bottom: 40px;
+}
+.request form {
+  position: relative;
+  z-index: 2;
 }
 .request form button {
   min-width: 260px;

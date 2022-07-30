@@ -83,3 +83,8 @@ main {
   overflow-y: auto;
 }
 
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

@@ -10,12 +10,8 @@
   background-size: cover;
   background-repeat: no-repeat;
 
-  @include m-b-tablet-lg-down {
-    min-height: 534px;
-  }
-
   @include m-b-mobile-lg-down {
-    min-height: 434px;
+    min-height: 534px;
   }
 
   .container,
@@ -81,6 +77,24 @@
 
   &__btn {
     width: 240px;
+  }
+
+  &__social {
+    position: absolute;
+    bottom: 3vh;
+    left: 10vw;
+
+    z-index: 4;
+
+    .social__item a {
+      background-color: rgba(255,255,255,.4);
+
+      svg {
+        width: clamp(30px, 5vw, 40px);
+        height: clamp(30px, 5vw, 40px);
+        fill: var(--purple-8);
+      }
+    }
   }
 }
 
