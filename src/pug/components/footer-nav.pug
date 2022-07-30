@@ -1,9 +1,9 @@
 -
   const footerNav = [
-    { link: 'Главная', url: 'index.html' },
+    { link: 'Главная', url: 'index.html', class: 'footer-nav__item--offset-left'},
     { link: 'Услуги', url: 'services.html' },
     { link: 'Портфолио', url: 'portfolio.html' },
-    { link: 'О нас', url: 'about.html' },
+    { link: 'О нас', url: 'about.html', class: 'footer-nav__item--offset-right'},
     { link: 'Контакты', url: 'contacts.html' },
     { link: 'Статьи', url: 'articles.html' },
     { link: 'Вакансии', url: 'vacancies.html' },
@@ -12,5 +12,5 @@
 
 ul.footer-nav
   each item in footerNav
-    li.footer-nav__item
+    li.footer-nav__item(class= item.class ? item.class : null)
       a(href= item.url).lw-text-sm.lw-fw-bold= item.link
