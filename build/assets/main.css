@@ -1179,6 +1179,7 @@ button.swiper-pagination-bullet {
   --purple-7: #151B53;
   --purple-8: #6E52E0;
   --main-bg-color: var(--primary-color);
+  --hero-bg-color: rgb(148,123,251);
   --primary-text-color: var(--white-color);
   --transparent-color: transparent;
   --header-scrolled-bg-color: rgba(21, 27, 83, 0.3);
@@ -1326,16 +1327,7 @@ body.body-locked {
   overflow: hidden;
 }
 body.hero-body {
-  position: relative;
-}
-body.hero-body::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  content: "";
-  background-color: rgb(148, 123, 251);
+  background-color: var(--hero-bg-color);
 }
 
 h1, h2 {
