@@ -18,7 +18,7 @@
 
   position: relative;
   &::after {
-    position: absolute;
+    position: fixed;
     top: 100%;
     left: 0;
     width: 100%;
@@ -26,6 +26,7 @@
     content: '';
     background-color: rgb(148, 123, 251);
     z-index: 3;
+    transform: translate3d(0,0,0);
   }
 
   .container,
