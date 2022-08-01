@@ -2365,27 +2365,14 @@ body:not(.loading) .loader {
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(var(--vh, 1vh) * 100);
-  -webkit-transition: height 0.4s ease-in;
-  -o-transition: height 0.4s ease-in;
-  transition: height 0.4s ease-in;
-  position: relative;
+  -webkit-transition: height 0.4s linear;
+  -o-transition: height 0.4s linear;
+  transition: height 0.4s linear;
 }
 @media (max-width: 534px) {
   .hero {
     min-height: 534px;
   }
-}
-.hero::after {
-  position: fixed;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  content: "";
-  background-color: rgb(148, 123, 251);
-  z-index: 3;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
 }
 .hero .container, .hero__wrapper {
   height: inherit;
@@ -2461,12 +2448,14 @@ body:not(.loading) .loader {
 
 .wave-bg {
   position: absolute;
-  top: 0;
+  top: 35px;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
   will-change: transform;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .hero__blobs {
