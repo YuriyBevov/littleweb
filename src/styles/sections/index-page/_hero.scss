@@ -9,6 +9,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  height: calc(var(--vh, 1vh) * 100);
 
   @include m-b-mobile-lg-down {
     min-height: 534px;

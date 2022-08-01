@@ -1304,7 +1304,6 @@ html,
 body {
   width: 100%;
   min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 body {
@@ -2365,6 +2364,7 @@ body:not(.loading) .loader {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  height: calc(var(--vh, 1vh) * 100);
 }
 @media (max-width: 534px) {
   .hero {
