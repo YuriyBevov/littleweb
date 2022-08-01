@@ -459,7 +459,7 @@ var scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.c
   smooth: 1.5,
   effects: true,
   //normalizeScroll: true
-  smoothTouch: 0.5
+  smoothTouch: 0.2
 });
 initScrollerElements();
 /*ScrollTrigger.matchMedia({
