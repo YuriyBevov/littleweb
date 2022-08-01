@@ -2365,6 +2365,9 @@ body:not(.loading) .loader {
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(var(--vh, 1vh) * 100);
+  -webkit-transition: height 0.4s ease-in;
+  -o-transition: height 0.4s ease-in;
+  transition: height 0.4s ease-in;
 }
 @media (max-width: 534px) {
   .hero {

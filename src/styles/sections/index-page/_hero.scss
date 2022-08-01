@@ -10,6 +10,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: calc(var(--vh, 1vh) * 100);
+  transition: height 0.4s ease-in;
 
   @include m-b-mobile-lg-down {
     min-height: 534px;
