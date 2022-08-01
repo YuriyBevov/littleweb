@@ -799,7 +799,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "setVieportHeight": () => (/* binding */ setVieportHeight),
 /* harmony export */   "toggleClass": () => (/* binding */ toggleClass)
 /* harmony export */ });
-// работа с классами эл-та
+// работа с root
 var root = document.querySelector(':root');
 
 function getCssPropertyValue(name) {
@@ -811,11 +811,12 @@ function setCssProperty(name, value) {
 }
 
 function setVieportHeight() {
-  var vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+  var vh = window.innerHeight * 0.01; //document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  setCssProperty('--vh', "".concat(vh, "px"));
   window.addEventListener('resize', function () {
     var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
+    setCssProperty('--vh', "".concat(vh, "px"));
   });
 }
 
@@ -13547,6 +13548,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
 /* harmony import */ var _modules_scrollSmoother_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/scrollSmoother.js */ "./src/scripts/modules/scrollSmoother.js");
 /* harmony import */ var _modules_stackIconsAnimation_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/stackIconsAnimation.js */ "./src/scripts/modules/stackIconsAnimation.js");
+/* harmony import */ var _utils_functions_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/functions.js */ "./src/scripts/utils/functions.js");
+
 
 
 
@@ -13563,6 +13566,8 @@ import { animateHeroContent } from "./modules/heroContentAnimation.js";
 animateHeroContent();
 
 */
+
+(0,_utils_functions_js__WEBPACK_IMPORTED_MODULE_6__.setVieportHeight)();
 })();
 
 /******/ })()

@@ -1,4 +1,4 @@
-// работа с классами эл-та
+// работа с root
 
 const root = document.querySelector(':root');
 
@@ -12,11 +12,12 @@ function setCssProperty(name, value) {
 
 function setVieportHeight() {
   let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
+  //document.documentElement.style.setProperty('--vh', `${vh}px`);
+  setCssProperty('--vh', `${vh}px`);
 
   window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    setCssProperty('--vh', `${vh}px`);
   });
 }
 

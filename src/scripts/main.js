@@ -7,6 +7,8 @@ import "./modules/preloader.js";
 import "./modules/scrollSmoother.js";
 import "./modules/stackIconsAnimation.js";
 
+import {setVieportHeight} from "./utils/functions.js";
+
 document.querySelector('.nojs').classList.remove('nojs');
 preloader();
 
@@ -17,3 +19,5 @@ import { animateHeroContent } from "./modules/heroContentAnimation.js";
 animateHeroContent();
 
 */
+
+setVieportHeight();
