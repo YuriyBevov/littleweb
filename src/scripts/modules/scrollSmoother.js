@@ -56,7 +56,6 @@ function initScrollerElements(){
   let blobs = document.querySelectorAll('.blob');
   if(blobs) {
     blobs.forEach((item,i) => {
-      console.log(1.2 + (i / 3.85))
       scroller.effects(item, {speed: 1.2 + (i / 3.85)});
     });
   }

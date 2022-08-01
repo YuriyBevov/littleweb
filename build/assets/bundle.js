@@ -483,7 +483,6 @@ function initScrollerElements() {
 
   if (blobs) {
     blobs.forEach(function (item, i) {
-      console.log(1.2 + i / 3.85);
       scroller.effects(item, {
         speed: 1.2 + i / 3.85
       });
