@@ -423,55 +423,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger, gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother);
-/*let scroller = null;
-let device = null;*/
-
-/*ScrollTrigger.matchMedia({
-  "(min-width: 769px)": function() {
-
-    if(device === 'mobile' || device === null) {
-      device = 'desktop';
-      scroller !== null ?
-      scroller.kill() : null;
-      scroller = ScrollSmoother.create({
-        smooth: 1.5,
-        effects: true,
-      });
-      initScrollerElements();
-    }
-  },
-
-  "(max-width: 768px)": function() {
-    if(device !== 'mobile') {
-      device = 'mobile'
-      scroller !== null ?
-      scroller.kill() : null;
-      /*scroller = ScrollSmoother.create({
-        effects: false,           // looks for data-speed and data-lag attributes on elements
-        smoothTouch: false,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-      });*/
-
-/*}
-},
-});*/
-
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.config({
+  ignoreMobileResize: true
+});
 var scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
-  smooth: 1.5,
+  smooth: 3,
   effects: true //normalizeScroll: true
   //smoothTouch: 0.2
 
 });
 initScrollerElements();
-/*ScrollTrigger.matchMedia({
-  "(min-width: 769px)": function() {
-
-    scroller.normalizeScroll = false;
-  },
-
-  "(max-width: 768px)": function() {
-    scroller.normalizeScroll = true;
-  },
-});*/
 
 function initScrollerElements() {
   var footer = document.querySelector('footer');
