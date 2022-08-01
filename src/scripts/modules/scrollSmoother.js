@@ -4,7 +4,7 @@ import {ScrollSmoother} from 'gsap/ScrollSmoother';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-//ScrollTrigger.config({ ignoreMobileResize: true });
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 let scroller = ScrollSmoother.create({
   smooth: 3,
