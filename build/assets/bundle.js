@@ -422,10 +422,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger, gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother);
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.config({
-  ignoreMobileResize: true
-});
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger, gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother); //ScrollTrigger.config({ ignoreMobileResize: true });
+
 var scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
   smooth: 3,
   effects: true
