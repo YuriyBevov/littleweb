@@ -8,9 +8,7 @@ ScrollTrigger.config({ ignoreMobileResize: true });
 
 let scroller = ScrollSmoother.create({
   smooth: 3,
-  effects: true,
-  //normalizeScroll: true
-  //smoothTouch: 0.2
+  effects: true
 });
 initScrollerElements();
 

@@ -428,9 +428,7 @@ gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.config({
 });
 var scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
   smooth: 3,
-  effects: true //normalizeScroll: true
-  //smoothTouch: 0.2
-
+  effects: true
 });
 initScrollerElements();
 
