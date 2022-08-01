@@ -4,12 +4,12 @@ import {ScrollSmoother} from 'gsap/ScrollSmoother';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-let scroller = null;
-let device = null;
+/*let scroller = null;
+let device = null;*/
 
-ScrollTrigger.matchMedia({
+/*ScrollTrigger.matchMedia({
   "(min-width: 769px)": function() {
-    console.log('init')
+
     if(device === 'mobile' || device === null) {
       device = 'desktop';
       scroller !== null ?
@@ -31,14 +31,34 @@ ScrollTrigger.matchMedia({
         effects: false,           // looks for data-speed and data-lag attributes on elements
         smoothTouch: false,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
       });*/
-    }
+    /*}
   },
+});*/
+
+let scroller = ScrollSmoother.create({
+  smooth: 1.5,
+  effects: true,
+  //normalizeScroll: true
+  smoothTouch: 0.5
 });
+initScrollerElements();
+
+/*ScrollTrigger.matchMedia({
+  "(min-width: 769px)": function() {
+
+    scroller.normalizeScroll = false;
+  },
+
+  "(max-width: 768px)": function() {
+    scroller.normalizeScroll = true;
+  },
+});*/
 
 function initScrollerElements(){
   let footer = document.querySelector('footer');
   if(footer) {
-    scroller.effects(footer, {lag: 1.5, ease: 'linear'});
+    scroller.effects('.footer__container', {speed: 0.5, ease: 'linear'});
+    scroller.effects(footer, {speed: 1.5, ease: 'linear'});
   }
 
   let stackBackground = document.querySelector('.stack__field--bg');

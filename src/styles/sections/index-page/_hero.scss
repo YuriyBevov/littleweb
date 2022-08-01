@@ -3,14 +3,15 @@
   width: 100vw;
   height: 100vh;
   min-height: 768px;
+  height: calc(var(--vh, 1vh) * 100);
+  transition: height 0.4s linear;
+
   overflow: hidden;
   position: relative;
   background-image: url('../assets/img/hero_bg@1x.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: calc(var(--vh, 1vh) * 100);
-  transition: height 0.4s linear;
 
   @include m-b-mobile-lg-down {
     min-height: 534px;

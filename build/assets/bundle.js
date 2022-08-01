@@ -423,40 +423,66 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger, gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother);
-var scroller = null;
-var device = null;
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.matchMedia({
-  "(min-width: 769px)": function minWidth769px() {
-    console.log('init');
+/*let scroller = null;
+let device = null;*/
 
-    if (device === 'mobile' || device === null) {
+/*ScrollTrigger.matchMedia({
+  "(min-width: 769px)": function() {
+
+    if(device === 'mobile' || device === null) {
       device = 'desktop';
-      scroller !== null ? scroller.kill() : null;
-      scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
+      scroller !== null ?
+      scroller.kill() : null;
+      scroller = ScrollSmoother.create({
         smooth: 1.5,
-        effects: true
+        effects: true,
       });
       initScrollerElements();
     }
   },
-  "(max-width: 768px)": function maxWidth768px() {
-    if (device !== 'mobile') {
-      device = 'mobile';
-      scroller !== null ? scroller.kill() : null;
+
+  "(max-width: 768px)": function() {
+    if(device !== 'mobile') {
+      device = 'mobile'
+      scroller !== null ?
+      scroller.kill() : null;
       /*scroller = ScrollSmoother.create({
         effects: false,           // looks for data-speed and data-lag attributes on elements
         smoothTouch: false,        // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
       });*/
-    }
-  }
+
+/*}
+},
+});*/
+
+var scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
+  smooth: 1.5,
+  effects: true,
+  //normalizeScroll: true
+  smoothTouch: 0.5
 });
+initScrollerElements();
+/*ScrollTrigger.matchMedia({
+  "(min-width: 769px)": function() {
+
+    scroller.normalizeScroll = false;
+  },
+
+  "(max-width: 768px)": function() {
+    scroller.normalizeScroll = true;
+  },
+});*/
 
 function initScrollerElements() {
   var footer = document.querySelector('footer');
 
   if (footer) {
+    scroller.effects('.footer__container', {
+      speed: 0.5,
+      ease: 'linear'
+    });
     scroller.effects(footer, {
-      lag: 1.5,
+      speed: 1.5,
       ease: 'linear'
     });
   }
@@ -13542,12 +13568,12 @@ var __webpack_exports__ = {};
   \*****************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_preloader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/preloader.js */ "./src/scripts/modules/preloader.js");
-/* harmony import */ var _modules_custom_cursor_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/custom_cursor.js */ "./src/scripts/modules/custom_cursor.js");
-/* harmony import */ var _modules_heroContentAnimation_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/heroContentAnimation.js */ "./src/scripts/modules/heroContentAnimation.js");
-/* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
-/* harmony import */ var _modules_scrollSmoother_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/scrollSmoother.js */ "./src/scripts/modules/scrollSmoother.js");
-/* harmony import */ var _modules_stackIconsAnimation_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/stackIconsAnimation.js */ "./src/scripts/modules/stackIconsAnimation.js");
-/* harmony import */ var _utils_functions_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./utils/functions.js */ "./src/scripts/utils/functions.js");
+/* harmony import */ var _utils_functions_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/functions.js */ "./src/scripts/utils/functions.js");
+/* harmony import */ var _modules_custom_cursor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/custom_cursor.js */ "./src/scripts/modules/custom_cursor.js");
+/* harmony import */ var _modules_heroContentAnimation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/heroContentAnimation.js */ "./src/scripts/modules/heroContentAnimation.js");
+/* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
+/* harmony import */ var _modules_scrollSmoother_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/scrollSmoother.js */ "./src/scripts/modules/scrollSmoother.js");
+/* harmony import */ var _modules_stackIconsAnimation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/stackIconsAnimation.js */ "./src/scripts/modules/stackIconsAnimation.js");
 
 
 
@@ -13558,6 +13584,7 @@ __webpack_require__.r(__webpack_exports__);
 
 document.querySelector('.nojs').classList.remove('nojs');
 (0,_modules_preloader_js__WEBPACK_IMPORTED_MODULE_0__.preloader)();
+(0,_utils_functions_js__WEBPACK_IMPORTED_MODULE_1__.setVieportHeight)();
 /*
 для Барбы !
 import { animateHeroContent } from "./modules/heroContentAnimation.js";
@@ -13565,8 +13592,6 @@ import { animateHeroContent } from "./modules/heroContentAnimation.js";
 animateHeroContent();
 
 */
-
-(0,_utils_functions_js__WEBPACK_IMPORTED_MODULE_6__.setVieportHeight)();
 })();
 
 /******/ })()
