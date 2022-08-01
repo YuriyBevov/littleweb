@@ -39,7 +39,7 @@ let scroller = ScrollSmoother.create({
   smooth: 1.5,
   effects: true,
   //normalizeScroll: true
-  smoothTouch: 0.2
+  //smoothTouch: 0.2
 });
 initScrollerElements();
 
