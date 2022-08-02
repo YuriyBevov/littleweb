@@ -1328,7 +1328,6 @@ body.body-locked {
 }
 body.hero-body {
   background-color: var(--hero-bg-color);
-  max-height: calc(var(--vh, 1vh) * 100);
 }
 
 h1, h2 {
