@@ -1185,8 +1185,8 @@ button.swiper-pagination-bullet {
   --header-scrolled-bg-color: rgba(21, 27, 83, 0.3);
   --header-bg-color: rgba(21, 27, 83, 0.3);
   --main-scrollbar-width: 6px;
-  --main-scrollbar-color: var(--primary-4);
-  --main-scrollbar-thumb-color: var(--purple-4);
+  --main-scrollbar-color: var(--purple-4);
+  --main-scrollbar-thumb-color: var(--primary-color);
   --text-xxl: clamp(36px, 7.5vw, 80px);
   --text-xl: clamp(28px, 5vw, 54px);
   --text-lg: clamp(24px, 4vw, 40px);
@@ -1650,7 +1650,7 @@ main {
   }
 }
 
-.blob, .stack .stack__field .blob, .services .blob {
+.blob, .stuff .blob, .stuff .stack .stack__field .blob, .stack .stack__field .stuff .blob, .services .stuff .blob, .stuff .services .blob, .services .stuff .stack .stack__field .blob, .stuff .stack .stack__field .services .blob, .services .stack .stack__field .stuff .blob, .stack .stack__field .stuff .services .blob, .stuff .services .stack .stack__field .blob, .stack .stack__field .services .stuff .blob, .about .stuff .blob, .stuff .about .blob, .about .stuff .stack .stack__field .blob, .stuff .stack .stack__field .about .blob, .about .stack .stack__field .stuff .blob, .stack .stack__field .stuff .about .blob, .stuff .about .stack .stack__field .blob, .stack .stack__field .about .stuff .blob, .services .about .stuff .blob, .stuff .services .about .blob, .services .about .stuff .stack .stack__field .blob, .stuff .stack .stack__field .services .about .blob, .services .about .stack .stack__field .stuff .blob, .stack .stack__field .stuff .services .about .blob, .about .services .stuff .blob, .stuff .about .services .blob, .about .services .stuff .stack .stack__field .blob, .stuff .stack .stack__field .about .services .blob, .about .services .stack .stack__field .stuff .blob, .stack .stack__field .stuff .about .services .blob, .stuff .services .about .stack .stack__field .blob, .about .stack .stack__field .services .stuff .blob, .stuff .about .stack .stack__field .services .blob, .about .stuff .stack .stack__field .services .blob, .about .stack .stack__field .stuff .services .blob, .services .stack .stack__field .about .stuff .blob, .stuff .services .stack .stack__field .about .blob, .services .stuff .stack .stack__field .about .blob, .services .stack .stack__field .stuff .about .blob, .stack .stack__field .about .services .stuff .blob, .stuff .about .services .stack .stack__field .blob, .stack .stack__field .services .about .stuff .blob, .about .stack .stack__field .about .stuff .blob, .stuff .about .stack .stack__field .about .blob, .about .stuff .stack .stack__field .about .blob, .about .stack .stack__field .stuff .about .blob, .stuff .stack .stack__field .stuff .blob, .about .blob, .about .stuff .blob, .stuff .about .blob, .about .stuff .stack .stack__field .blob, .stuff .stack .stack__field .about .blob, .about .stack .stack__field .stuff .blob, .stack .stack__field .stuff .about .blob, .about .services .stuff .blob, .services .stuff .about .blob, .about .stuff .services .blob, .stuff .services .about .blob, .about .services .stuff .stack .stack__field .blob, .services .stuff .stack .stack__field .about .blob, .about .stuff .stack .stack__field .services .blob, .stuff .stack .stack__field .services .about .blob, .about .services .stack .stack__field .stuff .blob, .services .stack .stack__field .stuff .about .blob, .about .stack .stack__field .stuff .services .blob, .stack .stack__field .stuff .services .about .blob, .about .stuff .services .stack .stack__field .blob, .stuff .services .stack .stack__field .about .blob, .about .stack .stack__field .services .stuff .blob, .stack .stack__field .services .stuff .about .blob, .about .stuff .blob, .stuff .about .blob, .about .stuff .stack .stack__field .blob, .stuff .stack .stack__field .about .blob, .about .stack .stack__field .stuff .blob, .stack .stack__field .stuff .about .blob, .stuff .about .stack .stack__field .blob, .stack .stack__field .about .stuff .blob, .services .about .stuff .blob, .stuff .services .about .blob, .services .about .stuff .stack .stack__field .blob, .stuff .stack .stack__field .services .about .blob, .services .about .stack .stack__field .stuff .blob, .stack .stack__field .stuff .services .about .blob, .about .services .stuff .blob, .stuff .about .services .blob, .about .services .stuff .stack .stack__field .blob, .stuff .stack .stack__field .about .services .blob, .about .services .stack .stack__field .stuff .blob, .stack .stack__field .stuff .about .services .blob, .stuff .services .about .stack .stack__field .blob, .about .stack .stack__field .services .stuff .blob, .stuff .about .stack .stack__field .services .blob, .about .stuff .stack .stack__field .services .blob, .about .stack .stack__field .stuff .services .blob, .services .stack .stack__field .about .stuff .blob, .stuff .services .stack .stack__field .about .blob, .services .stuff .stack .stack__field .about .blob, .services .stack .stack__field .stuff .about .blob, .stack .stack__field .about .services .stuff .blob, .stuff .about .services .stack .stack__field .blob, .stack .stack__field .services .about .stuff .blob, .about .stack .stack__field .about .stuff .blob, .stuff .about .stack .stack__field .about .blob, .about .stuff .stack .stack__field .about .blob, .about .stack .stack__field .stuff .about .blob, .about .stuff .stack .stack__field .stuff .blob, .stuff .stack .stack__field .stuff .about .blob, .stack .stack__field .blob, .stack .stack__field .stuff .blob, .stuff .stack .stack__field .blob, .stuff .stack .stack__field .blob, .stack .stack__field .stuff .blob, .stack .stack__field .services .stuff .blob, .services .stuff .stack .stack__field .blob, .stack .stack__field .stuff .services .blob, .stuff .services .stack .stack__field .blob, .services .stuff .stack .stack__field .blob, .stuff .stack .stack__field .services .blob, .services .stack .stack__field .stuff .blob, .stack .stack__field .stuff .services .blob, .stuff .services .stack .stack__field .blob, .stack .stack__field .services .stuff .blob, .stack .stack__field .about .stuff .blob, .about .stuff .stack .stack__field .blob, .stack .stack__field .stuff .about .blob, .stuff .about .stack .stack__field .blob, .about .stuff .stack .stack__field .blob, .stuff .stack .stack__field .about .blob, .about .stack .stack__field .stuff .blob, .stack .stack__field .stuff .about .blob, .stuff .about .stack .stack__field .blob, .stack .stack__field .about .stuff .blob, .stack .stack__field .services .about .stuff .blob, .services .about .stuff .stack .stack__field .blob, .stack .stack__field .stuff .services .about .blob, .stuff .services .about .stack .stack__field .blob, .services .about .stuff .stack .stack__field .blob, .stuff .stack .stack__field .services .about .blob, .services .about .stack .stack__field .stuff .blob, .stack .stack__field .stuff .services .about .blob, .stack .stack__field .about .services .stuff .blob, .about .services .stuff .stack .stack__field .blob, .stack .stack__field .stuff .about .services .blob, .stuff .about .services .stack .stack__field .blob, .about .services .stuff .stack .stack__field .blob, .stuff .stack .stack__field .about .services .blob, .about .services .stack .stack__field .stuff .blob, .stack .stack__field .stuff .about .services .blob, .stuff .services .about .stack .stack__field .blob, .about .stack .stack__field .services .stuff .blob, .stuff .about .stack .stack__field .services .blob, .about .stuff .stack .stack__field .services .blob, .about .stack .stack__field .stuff .services .blob, .services .stack .stack__field .about .stuff .blob, .stuff .services .stack .stack__field .about .blob, .services .stuff .stack .stack__field .about .blob, .services .stack .stack__field .stuff .about .blob, .stack .stack__field .about .services .stuff .blob, .stuff .about .services .stack .stack__field .blob, .stack .stack__field .services .about .stuff .blob, .about .stack .stack__field .about .stuff .blob, .stuff .about .stack .stack__field .about .blob, .about .stuff .stack .stack__field .about .blob, .about .stack .stack__field .stuff .about .blob, .stuff .stack .stack__field .stuff .blob, .services .blob, .services .stuff .blob, .stuff .services .blob, .services .stuff .stack .stack__field .blob, .stuff .stack .stack__field .services .blob, .services .stack .stack__field .stuff .blob, .stack .stack__field .stuff .services .blob, .services .stuff .blob, .stuff .services .blob, .services .stuff .stack .stack__field .blob, .stuff .stack .stack__field .services .blob, .services .stack .stack__field .stuff .blob, .stack .stack__field .stuff .services .blob, .stuff .services .stack .stack__field .blob, .stack .stack__field .services .stuff .blob, .services .about .stuff .blob, .about .stuff .services .blob, .services .stuff .about .blob, .stuff .about .services .blob, .services .about .stuff .stack .stack__field .blob, .about .stuff .stack .stack__field .services .blob, .services .stuff .stack .stack__field .about .blob, .stuff .stack .stack__field .about .services .blob, .services .about .stack .stack__field .stuff .blob, .about .stack .stack__field .stuff .services .blob, .services .stack .stack__field .stuff .about .blob, .stack .stack__field .stuff .about .services .blob, .services .stuff .about .stack .stack__field .blob, .stuff .about .stack .stack__field .services .blob, .services .stack .stack__field .about .stuff .blob, .stack .stack__field .about .stuff .services .blob, .services .about .stuff .blob, .stuff .services .about .blob, .services .about .stuff .stack .stack__field .blob, .stuff .stack .stack__field .services .about .blob, .services .about .stack .stack__field .stuff .blob, .stack .stack__field .stuff .services .about .blob, .about .services .stuff .blob, .stuff .about .services .blob, .about .services .stuff .stack .stack__field .blob, .stuff .stack .stack__field .about .services .blob, .about .services .stack .stack__field .stuff .blob, .stack .stack__field .stuff .about .services .blob, .stuff .services .about .stack .stack__field .blob, .about .stack .stack__field .services .stuff .blob, .stuff .about .stack .stack__field .services .blob, .about .stuff .stack .stack__field .services .blob, .about .stack .stack__field .stuff .services .blob, .services .stack .stack__field .about .stuff .blob, .stuff .services .stack .stack__field .about .blob, .services .stuff .stack .stack__field .about .blob, .services .stack .stack__field .stuff .about .blob, .stack .stack__field .about .services .stuff .blob, .stuff .about .services .stack .stack__field .blob, .stack .stack__field .services .about .stuff .blob, .services .about .stack .stack__field .about .stuff .blob, .about .stack .stack__field .about .stuff .services .blob, .services .stuff .about .stack .stack__field .about .blob, .stuff .about .stack .stack__field .about .services .blob, .services .about .stuff .stack .stack__field .about .blob, .about .stuff .stack .stack__field .about .services .blob, .services .about .stack .stack__field .stuff .about .blob, .about .stack .stack__field .stuff .about .services .blob, .services .stuff .stack .stack__field .stuff .blob, .stuff .stack .stack__field .stuff .services .blob {
   position: absolute;
   z-index: -1;
   will-change: auto;
@@ -1800,13 +1800,6 @@ main {
   border-bottom: 1px solid var(--white-color);
 }
 
-.grid-layout-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto 1fr auto;
-  grid-template-rows: auto 1fr auto;
-}
-
 /*gsap start*/
 body:not(.nojs) .hero__title span span {
   -webkit-transform: translateY(120%);
@@ -1927,23 +1920,7 @@ body:not(.loading) .loader {
   left: 0;
   width: 100%;
   padding: 30px 0;
-  /*position: sticky;
-  top: 0;
-  left: 0;
   z-index: 99;
-  padding: 30px 0;*/
-  z-index: 99;
-}
-.main-header__menu {
-  margin-left: auto;
-  background: var(--white-color);
-  border-radius: 45px;
-  min-width: 115px;
-}
-@media (max-width: 768px) {
-  .main-header__menu {
-    display: none;
-  }
 }
 
 .inner-header {
@@ -1982,6 +1959,18 @@ body:not(.loading) .loader {
 .inner-header.scrolled {
   padding: 20px 0;
   background-color: var(--header-scrolled-bg-color);
+}
+
+.burger {
+  margin-left: auto;
+  background: var(--white-color);
+  border-radius: 45px;
+  min-width: 115px;
+}
+@media (max-width: 768px) {
+  .burger {
+    display: none;
+  }
 }
 
 .footer {
@@ -2471,7 +2460,7 @@ body:not(.loading) .loader {
   overflow: hidden;
   z-index: 2;
 }
-.hero__blobs .blob, .hero__blobs .stack .stack__field .blob, .stack .stack__field .hero__blobs .blob {
+.hero__blobs .blob, .hero__blobs .stuff .blob, .stuff .hero__blobs .blob, .hero__blobs .stuff .stack .stack__field .blob, .stuff .stack .stack__field .hero__blobs .blob, .hero__blobs .stack .stack__field .stuff .blob, .stack .stack__field .stuff .hero__blobs .blob, .hero__blobs .services .stuff .blob, .services .stuff .hero__blobs .blob, .hero__blobs .stuff .services .blob, .stuff .services .hero__blobs .blob, .hero__blobs .services .stuff .stack .stack__field .blob, .services .stuff .stack .stack__field .hero__blobs .blob, .hero__blobs .stuff .stack .stack__field .services .blob, .stuff .stack .stack__field .services .hero__blobs .blob, .hero__blobs .services .stack .stack__field .stuff .blob, .services .stack .stack__field .stuff .hero__blobs .blob, .hero__blobs .stack .stack__field .stuff .services .blob, .stack .stack__field .stuff .services .hero__blobs .blob, .hero__blobs .stuff .services .stack .stack__field .blob, .stuff .services .stack .stack__field .hero__blobs .blob, .hero__blobs .stack .stack__field .services .stuff .blob, .stack .stack__field .services .stuff .hero__blobs .blob, .hero__blobs .about .stuff .blob, .about .stuff .hero__blobs .blob, .hero__blobs .stuff .about .blob, .stuff .about .hero__blobs .blob, .hero__blobs .about .stuff .stack .stack__field .blob, .about .stuff .stack .stack__field .hero__blobs .blob, .hero__blobs .stuff .stack .stack__field .about .blob, .stuff .stack .stack__field .about .hero__blobs .blob, .hero__blobs .about .stack .stack__field .stuff .blob, .about .stack .stack__field .stuff .hero__blobs .blob, .hero__blobs .stack .stack__field .stuff .about .blob, .stack .stack__field .stuff .about .hero__blobs .blob, .hero__blobs .stuff .about .stack .stack__field .blob, .stuff .about .stack .stack__field .hero__blobs .blob, .hero__blobs .stack .stack__field .about .stuff .blob, .stack .stack__field .about .stuff .hero__blobs .blob, .hero__blobs .services .about .stuff .blob, .services .about .stuff .hero__blobs .blob, .hero__blobs .stuff .services .about .blob, .stuff .services .about .hero__blobs .blob, .hero__blobs .services .about .stuff .stack .stack__field .blob, .services .about .stuff .stack .stack__field .hero__blobs .blob, .hero__blobs .stuff .stack .stack__field .services .about .blob, .stuff .stack .stack__field .services .about .hero__blobs .blob, .hero__blobs .services .about .stack .stack__field .stuff .blob, .services .about .stack .stack__field .stuff .hero__blobs .blob, .hero__blobs .stack .stack__field .stuff .services .about .blob, .stack .stack__field .stuff .services .about .hero__blobs .blob, .hero__blobs .about .services .stuff .blob, .about .services .stuff .hero__blobs .blob, .hero__blobs .stuff .about .services .blob, .stuff .about .services .hero__blobs .blob, .hero__blobs .about .services .stuff .stack .stack__field .blob, .about .services .stuff .stack .stack__field .hero__blobs .blob, .hero__blobs .stuff .stack .stack__field .about .services .blob, .stuff .stack .stack__field .about .services .hero__blobs .blob, .hero__blobs .about .services .stack .stack__field .stuff .blob, .about .services .stack .stack__field .stuff .hero__blobs .blob, .hero__blobs .stack .stack__field .stuff .about .services .blob, .stack .stack__field .stuff .about .services .hero__blobs .blob, .hero__blobs .stuff .services .about .stack .stack__field .blob, .stuff .services .about .stack .stack__field .hero__blobs .blob, .hero__blobs .about .stack .stack__field .services .stuff .blob, .about .stack .stack__field .services .stuff .hero__blobs .blob, .hero__blobs .stuff .about .stack .stack__field .services .blob, .stuff .about .stack .stack__field .services .hero__blobs .blob, .hero__blobs .about .stuff .stack .stack__field .services .blob, .about .stuff .stack .stack__field .services .hero__blobs .blob, .hero__blobs .about .stack .stack__field .stuff .services .blob, .about .stack .stack__field .stuff .services .hero__blobs .blob, .hero__blobs .services .stack .stack__field .about .stuff .blob, .services .stack .stack__field .about .stuff .hero__blobs .blob, .hero__blobs .stuff .services .stack .stack__field .about .blob, .stuff .services .stack .stack__field .about .hero__blobs .blob, .hero__blobs .services .stuff .stack .stack__field .about .blob, .services .stuff .stack .stack__field .about .hero__blobs .blob, .hero__blobs .services .stack .stack__field .stuff .about .blob, .services .stack .stack__field .stuff .about .hero__blobs .blob, .hero__blobs .stack .stack__field .about .services .stuff .blob, .stack .stack__field .about .services .stuff .hero__blobs .blob, .hero__blobs .stuff .about .services .stack .stack__field .blob, .stuff .about .services .stack .stack__field .hero__blobs .blob, .hero__blobs .stack .stack__field .services .about .stuff .blob, .stack .stack__field .services .about .stuff .hero__blobs .blob, .hero__blobs .about .stack .stack__field .about .stuff .blob, .about .stack .stack__field .about .stuff .hero__blobs .blob, .hero__blobs .stuff .about .stack .stack__field .about .blob, .stuff .about .stack .stack__field .about .hero__blobs .blob, .hero__blobs .about .stuff .stack .stack__field .about .blob, .about .stuff .stack .stack__field .about .hero__blobs .blob, .hero__blobs .about .stack .stack__field .stuff .about .blob, .about .stack .stack__field .stuff .about .hero__blobs .blob, .hero__blobs .stuff .stack .stack__field .stuff .blob, .stuff .stack .stack__field .stuff .hero__blobs .blob, .hero__blobs .stack .stack__field .blob, .hero__blobs .stack .stack__field .stuff .blob, .stuff .hero__blobs .stack .stack__field .blob, .hero__blobs .stuff .stack .stack__field .blob, .stuff .hero__blobs .stack .stack__field .blob, .hero__blobs .stack .stack__field .stuff .blob, .hero__blobs .stack .stack__field .services .stuff .blob, .services .stuff .hero__blobs .stack .stack__field .blob, .hero__blobs .stack .stack__field .stuff .services .blob, .stuff .services .hero__blobs .stack .stack__field .blob, .hero__blobs .services .stuff .stack .stack__field .blob, .services .stuff .hero__blobs .stack .stack__field .blob, .hero__blobs .stuff .stack .stack__field .services .blob, .stuff .hero__blobs .stack .stack__field .services .blob, .hero__blobs .services .stack .stack__field .stuff .blob, .services .hero__blobs .stack .stack__field .stuff .blob, .hero__blobs .stack .stack__field .stuff .services .blob, .hero__blobs .stuff .services .stack .stack__field .blob, .stuff .services .hero__blobs .stack .stack__field .blob, .hero__blobs .stack .stack__field .services .stuff .blob, .hero__blobs .stack .stack__field .about .stuff .blob, .about .stuff .hero__blobs .stack .stack__field .blob, .hero__blobs .stack .stack__field .stuff .about .blob, .stuff .about .hero__blobs .stack .stack__field .blob, .hero__blobs .about .stuff .stack .stack__field .blob, .about .stuff .hero__blobs .stack .stack__field .blob, .hero__blobs .stuff .stack .stack__field .about .blob, .stuff .hero__blobs .stack .stack__field .about .blob, .hero__blobs .about .stack .stack__field .stuff .blob, .about .hero__blobs .stack .stack__field .stuff .blob, .hero__blobs .stack .stack__field .stuff .about .blob, .hero__blobs .stuff .about .stack .stack__field .blob, .stuff .about .hero__blobs .stack .stack__field .blob, .hero__blobs .stack .stack__field .about .stuff .blob, .hero__blobs .stack .stack__field .services .about .stuff .blob, .services .about .stuff .hero__blobs .stack .stack__field .blob, .hero__blobs .stack .stack__field .stuff .services .about .blob, .stuff .services .about .hero__blobs .stack .stack__field .blob, .hero__blobs .services .about .stuff .stack .stack__field .blob, .services .about .stuff .hero__blobs .stack .stack__field .blob, .hero__blobs .stuff .stack .stack__field .services .about .blob, .stuff .hero__blobs .stack .stack__field .services .about .blob, .hero__blobs .services .about .stack .stack__field .stuff .blob, .services .about .hero__blobs .stack .stack__field .stuff .blob, .hero__blobs .stack .stack__field .stuff .services .about .blob, .hero__blobs .stack .stack__field .about .services .stuff .blob, .about .services .stuff .hero__blobs .stack .stack__field .blob, .hero__blobs .stack .stack__field .stuff .about .services .blob, .stuff .about .services .hero__blobs .stack .stack__field .blob, .hero__blobs .about .services .stuff .stack .stack__field .blob, .about .services .stuff .hero__blobs .stack .stack__field .blob, .hero__blobs .stuff .stack .stack__field .about .services .blob, .stuff .hero__blobs .stack .stack__field .about .services .blob, .hero__blobs .about .services .stack .stack__field .stuff .blob, .about .services .hero__blobs .stack .stack__field .stuff .blob, .hero__blobs .stack .stack__field .stuff .about .services .blob, .hero__blobs .stuff .services .about .stack .stack__field .blob, .stuff .services .about .hero__blobs .stack .stack__field .blob, .hero__blobs .about .stack .stack__field .services .stuff .blob, .about .hero__blobs .stack .stack__field .services .stuff .blob, .hero__blobs .stuff .about .stack .stack__field .services .blob, .stuff .about .hero__blobs .stack .stack__field .services .blob, .hero__blobs .about .stuff .stack .stack__field .services .blob, .about .stuff .hero__blobs .stack .stack__field .services .blob, .hero__blobs .about .stack .stack__field .stuff .services .blob, .about .hero__blobs .stack .stack__field .stuff .services .blob, .hero__blobs .services .stack .stack__field .about .stuff .blob, .services .hero__blobs .stack .stack__field .about .stuff .blob, .hero__blobs .stuff .services .stack .stack__field .about .blob, .stuff .services .hero__blobs .stack .stack__field .about .blob, .hero__blobs .services .stuff .stack .stack__field .about .blob, .services .stuff .hero__blobs .stack .stack__field .about .blob, .hero__blobs .services .stack .stack__field .stuff .about .blob, .services .hero__blobs .stack .stack__field .stuff .about .blob, .hero__blobs .stack .stack__field .about .services .stuff .blob, .hero__blobs .stuff .about .services .stack .stack__field .blob, .stuff .about .services .hero__blobs .stack .stack__field .blob, .hero__blobs .stack .stack__field .services .about .stuff .blob, .hero__blobs .about .stack .stack__field .about .stuff .blob, .about .hero__blobs .stack .stack__field .about .stuff .blob, .hero__blobs .stuff .about .stack .stack__field .about .blob, .stuff .about .hero__blobs .stack .stack__field .about .blob, .hero__blobs .about .stuff .stack .stack__field .about .blob, .about .stuff .hero__blobs .stack .stack__field .about .blob, .hero__blobs .about .stack .stack__field .stuff .about .blob, .about .hero__blobs .stack .stack__field .stuff .about .blob, .hero__blobs .stuff .stack .stack__field .stuff .blob, .stuff .hero__blobs .stack .stack__field .stuff .blob, .stack .stack__field .hero__blobs .blob, .stack .stack__field .hero__blobs .stuff .blob, .stuff .stack .stack__field .hero__blobs .blob, .stuff .stack .stack__field .hero__blobs .blob, .stack .stack__field .hero__blobs .stuff .blob, .stack .stack__field .stuff .hero__blobs .blob, .stack .stack__field .hero__blobs .services .stuff .blob, .services .stuff .stack .stack__field .hero__blobs .blob, .stack .stack__field .hero__blobs .stuff .services .blob, .stuff .services .stack .stack__field .hero__blobs .blob, .services .stuff .stack .stack__field .hero__blobs .blob, .stuff .stack .stack__field .hero__blobs .services .blob, .stuff .stack .stack__field .services .hero__blobs .blob, .services .stack .stack__field .hero__blobs .stuff .blob, .services .stack .stack__field .stuff .hero__blobs .blob, .stack .stack__field .hero__blobs .stuff .services .blob, .stack .stack__field .stuff .services .hero__blobs .blob, .stuff .services .stack .stack__field .hero__blobs .blob, .stack .stack__field .hero__blobs .services .stuff .blob, .stack .stack__field .services .stuff .hero__blobs .blob, .stack .stack__field .hero__blobs .about .stuff .blob, .about .stuff .stack .stack__field .hero__blobs .blob, .stack .stack__field .hero__blobs .stuff .about .blob, .stuff .about .stack .stack__field .hero__blobs .blob, .about .stuff .stack .stack__field .hero__blobs .blob, .stuff .stack .stack__field .hero__blobs .about .blob, .stuff .stack .stack__field .about .hero__blobs .blob, .about .stack .stack__field .hero__blobs .stuff .blob, .about .stack .stack__field .stuff .hero__blobs .blob, .stack .stack__field .hero__blobs .stuff .about .blob, .stack .stack__field .stuff .about .hero__blobs .blob, .stuff .about .stack .stack__field .hero__blobs .blob, .stack .stack__field .hero__blobs .about .stuff .blob, .stack .stack__field .about .stuff .hero__blobs .blob, .stack .stack__field .hero__blobs .services .about .stuff .blob, .services .about .stuff .stack .stack__field .hero__blobs .blob, .stack .stack__field .hero__blobs .stuff .services .about .blob, .stuff .services .about .stack .stack__field .hero__blobs .blob, .services .about .stuff .stack .stack__field .hero__blobs .blob, .stuff .stack .stack__field .hero__blobs .services .about .blob, .stuff .stack .stack__field .services .about .hero__blobs .blob, .services .about .stack .stack__field .hero__blobs .stuff .blob, .services .about .stack .stack__field .stuff .hero__blobs .blob, .stack .stack__field .hero__blobs .stuff .services .about .blob, .stack .stack__field .stuff .services .about .hero__blobs .blob, .stack .stack__field .hero__blobs .about .services .stuff .blob, .about .services .stuff .stack .stack__field .hero__blobs .blob, .stack .stack__field .hero__blobs .stuff .about .services .blob, .stuff .about .services .stack .stack__field .hero__blobs .blob, .about .services .stuff .stack .stack__field .hero__blobs .blob, .stuff .stack .stack__field .hero__blobs .about .services .blob, .stuff .stack .stack__field .about .services .hero__blobs .blob, .about .services .stack .stack__field .hero__blobs .stuff .blob, .about .services .stack .stack__field .stuff .hero__blobs .blob, .stack .stack__field .hero__blobs .stuff .about .services .blob, .stack .stack__field .stuff .about .services .hero__blobs .blob, .stuff .services .about .stack .stack__field .hero__blobs .blob, .about .stack .stack__field .hero__blobs .services .stuff .blob, .about .stack .stack__field .services .stuff .hero__blobs .blob, .stuff .about .stack .stack__field .hero__blobs .services .blob, .stuff .about .stack .stack__field .services .hero__blobs .blob, .about .stuff .stack .stack__field .hero__blobs .services .blob, .about .stuff .stack .stack__field .services .hero__blobs .blob, .about .stack .stack__field .hero__blobs .stuff .services .blob, .about .stack .stack__field .stuff .services .hero__blobs .blob, .services .stack .stack__field .hero__blobs .about .stuff .blob, .services .stack .stack__field .about .stuff .hero__blobs .blob, .stuff .services .stack .stack__field .hero__blobs .about .blob, .stuff .services .stack .stack__field .about .hero__blobs .blob, .services .stuff .stack .stack__field .hero__blobs .about .blob, .services .stuff .stack .stack__field .about .hero__blobs .blob, .services .stack .stack__field .hero__blobs .stuff .about .blob, .services .stack .stack__field .stuff .about .hero__blobs .blob, .stack .stack__field .hero__blobs .about .services .stuff .blob, .stack .stack__field .about .services .stuff .hero__blobs .blob, .stuff .about .services .stack .stack__field .hero__blobs .blob, .stack .stack__field .hero__blobs .services .about .stuff .blob, .stack .stack__field .services .about .stuff .hero__blobs .blob, .about .stack .stack__field .hero__blobs .about .stuff .blob, .about .stack .stack__field .about .stuff .hero__blobs .blob, .stuff .about .stack .stack__field .hero__blobs .about .blob, .stuff .about .stack .stack__field .about .hero__blobs .blob, .about .stuff .stack .stack__field .hero__blobs .about .blob, .about .stuff .stack .stack__field .about .hero__blobs .blob, .about .stack .stack__field .hero__blobs .stuff .about .blob, .about .stack .stack__field .stuff .about .hero__blobs .blob, .stuff .stack .stack__field .hero__blobs .stuff .blob, .stuff .stack .stack__field .stuff .hero__blobs .blob {
   position: absolute;
   overflow: visible;
   -webkit-transform: translate(-50%, -50%);
@@ -2863,26 +2852,10 @@ body:not(.loading) .loader {
 
 .about {
   position: relative;
-  /*&-page-container {
-    position: relative;
-
-    .blob {
-      &--right {
-        top: 200px;
-        left: 80%;
-      }
-
-      &--left {
-        top: 950px;
-        left: -150px;
-      }
-
-      &--long {
-        top: 1500px;
-        right: -400px;
-      }
-    }
-  }*/
+}
+.about .blob--right {
+  top: 40%;
+  right: -60px;
 }
 .about::before {
   position: absolute;
@@ -2956,6 +2929,14 @@ body:not(.loading) .loader {
 
 .stuff {
   position: relative;
+}
+.stuff .blob--left {
+  top: 100px;
+  left: -30px;
+}
+.stuff .blob--long {
+  bottom: 0;
+  right: -30%;
 }
 .stuff::after {
   position: absolute;
@@ -3089,6 +3070,11 @@ body:not(.loading) .loader {
   width: 100%;
   padding: 80px 0;
 }
+@media (max-width: 1140px) {
+  .workflow__steps {
+    display: none;
+  }
+}
 .workflow__steps-line {
   position: relative;
   width: 100%;
@@ -3188,10 +3174,74 @@ body:not(.loading) .loader {
   grid-template-columns: repeat(12, 1fr);
   grid-row-gap: 240px;
 }
+@media (max-width: 1140px) {
+  .workflow__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    grid-row-gap: 0;
+  }
+}
 .workflow__list-item {
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media (max-width: 1140px) {
+  .workflow__list-item {
+    position: relative;
+    padding-left: 60px;
+    padding-bottom: 40px;
+    padding-top: 5px;
+  }
+  .workflow__list-item p {
+    max-width: 550px;
+  }
+  .workflow__list-item::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    content: "";
+    background-color: var(--purple-3);
+    border: 2px solid var(--purple-3);
+    -webkit-box-shadow: inset 0 0 0 8px var(--primary-color);
+    box-shadow: inset 0 0 0 8px var(--primary-color);
+    border-radius: 50%;
+  }
+  .workflow__list-item:not(:last-child)::after {
+    position: absolute;
+    top: 30px;
+    left: 14px;
+    width: 2px;
+    height: calc(100% - 30px);
+    content: "";
+    background-color: var(--purple-3);
+  }
+}
+.workflow__list-item:nth-child(even) {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+@media (max-width: 1140px) {
+  .workflow__list-item:nth-child(even) {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
 }
 .workflow__list-item h3 {
   margin-bottom: 16px;

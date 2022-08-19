@@ -340,6 +340,62 @@ if (leftBlob) {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/parallaxBlobs.js":
+/*!**********************************************!*\
+  !*** ./src/scripts/modules/parallaxBlobs.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "initParallaxBlobs": () => (/* binding */ initParallaxBlobs)
+/* harmony export */ });
+function initParallaxBlobs(scroller) {
+  var footer = document.querySelector('footer');
+
+  if (footer) {
+    scroller.effects('.footer__container', {
+      speed: 0.5,
+      ease: 'linear'
+    });
+    scroller.effects(footer, {
+      speed: 1.5,
+      ease: 'linear'
+    });
+  }
+
+  var stackBackground = document.querySelector('.stack__field--bg');
+
+  if (stackBackground) {
+    scroller.effects(stackBackground, {
+      speed: 1.2
+    });
+  }
+
+  var serviceTypeItems = document.querySelectorAll('.services__type-item');
+
+  if (serviceTypeItems) {
+    serviceTypeItems.forEach(function (item, i) {
+      scroller.effects(item, {
+        speed: "".concat(1.025 + 0.01 * i)
+      });
+    });
+  }
+
+  var blobs = document.querySelectorAll('.blob');
+
+  if (blobs) {
+    blobs.forEach(function (item, i) {
+      scroller.effects(item, {
+        speed: 1.2 + i / 3.85
+      });
+    });
+  }
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/preloader.js":
 /*!******************************************!*\
   !*** ./src/scripts/modules/preloader.js ***!
@@ -416,64 +472,23 @@ export const preloader = _ => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
-/* harmony import */ var gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollSmoother */ "./node_modules/gsap/ScrollSmoother.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap/ScrollSmoother */ "./node_modules/gsap/ScrollSmoother.js");
+/* harmony import */ var _parallaxBlobs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./parallaxBlobs.js */ "./src/scripts/modules/parallaxBlobs.js");
 
 
 
-gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger, gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother);
-gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger.config({
+
+gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger, gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_3__.ScrollSmoother);
+gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.config({
   ignoreMobileResize: true
 });
-var scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_2__.ScrollSmoother.create({
+var scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_3__.ScrollSmoother.create({
   smooth: 3,
   effects: true
 });
-initScrollerElements();
-
-function initScrollerElements() {
-  var footer = document.querySelector('footer');
-
-  if (footer) {
-    scroller.effects('.footer__container', {
-      speed: 0.5,
-      ease: 'linear'
-    });
-    scroller.effects(footer, {
-      speed: 1.5,
-      ease: 'linear'
-    });
-  }
-
-  var stackBackground = document.querySelector('.stack__field--bg');
-
-  if (stackBackground) {
-    scroller.effects(stackBackground, {
-      speed: 1.2
-    });
-  }
-
-  var serviceTypeItems = document.querySelectorAll('.services__type-item');
-
-  if (serviceTypeItems) {
-    serviceTypeItems.forEach(function (item, i) {
-      scroller.effects(item, {
-        speed: "".concat(1.025 + 0.01 * i)
-      });
-    });
-  }
-
-  var blobs = document.querySelectorAll('.blob');
-
-  if (blobs) {
-    blobs.forEach(function (item, i) {
-      scroller.effects(item, {
-        speed: 1.2 + i / 3.85
-      });
-    });
-  }
-}
+(0,_parallaxBlobs_js__WEBPACK_IMPORTED_MODULE_0__.initParallaxBlobs)(scroller);
 
 /***/ }),
 

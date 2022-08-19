@@ -1,5 +1,15 @@
 .about {
   position: relative;
+
+  .blob {
+    @extend .blob;
+
+    &--right {
+      top: 40%;
+      right: -60px;
+    }
+  }
+
   &::before {
     position: absolute;
     content: '';
@@ -15,26 +25,6 @@
 
     z-index: -1;
   }
-  /*&-page-container {
-    position: relative;
-
-    .blob {
-      &--right {
-        top: 200px;
-        left: 80%;
-      }
-
-      &--left {
-        top: 950px;
-        left: -150px;
-      }
-
-      &--long {
-        top: 1500px;
-        right: -400px;
-      }
-    }
-  }*/
 
   &__wrapper {
     @extend .section-padding-lg;

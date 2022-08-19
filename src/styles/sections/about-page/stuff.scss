@@ -1,5 +1,20 @@
 .stuff {
   position: relative;
+
+  .blob {
+    @extend .blob;
+
+    &--left {
+      top: 100px;
+      left: -30px;
+    }
+
+    &--long {
+      bottom: 0;
+      right: -30%;
+    }
+  }
+
   &::after {
     position: absolute;
     content: '';

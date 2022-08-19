@@ -1,0 +1,11 @@
+.burger {
+  margin-left: auto;
+  background: var(--white-color);
+  border-radius: 45px;
+  min-width: 115px;
+
+  //temp
+  @include m-b-tablet-down {
+    display: none;
+  }
+}
