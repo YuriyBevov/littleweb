@@ -7,6 +7,7 @@ import "./modules/heroShapesAnimation.js";
 import "./modules/preloader.js";
 import "./modules/scrollSmoother.js";
 import "./modules/stackIconsAnimation.js";
+import "./modules/nav.js";
 
 document.querySelector('.nojs').classList.remove('nojs');
 preloader();

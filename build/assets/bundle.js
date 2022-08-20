@@ -340,6 +340,121 @@ if (leftBlob) {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/nav.js":
+/*!************************************!*\
+  !*** ./src/scripts/modules/nav.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+
+var burger = document.querySelector('.nav-opener');
+
+if (burger) {
+  var navCloser = document.querySelector('.nav__closer');
+  var nav = document.querySelector('.nav');
+  var navWrapper = nav.querySelector('.nav__wrapper');
+  var navItems = navWrapper.querySelectorAll('.nav__list-item');
+  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(nav, {
+    opacity: 0
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(navWrapper, {
+    x: '100vw',
+    opacity: 0
+  });
+  navItems.forEach(function (item) {
+    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(item, {
+      y: 50,
+      opacity: 0
+    });
+  });
+
+  function navOpeningAnimation() {
+    (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(true);
+    (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.focusTrap)(nav);
+    nav.classList.add('opened');
+    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(nav, {
+      opacity: 1,
+      ease: 'ease-in',
+      duration: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(navWrapper, {
+      x: 0,
+      opacity: 1,
+      ease: 'ease-in-out',
+      duration: 1
+    });
+    navItems.forEach(function (item, i) {
+      gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(item, {
+        y: 0,
+        opacity: 1,
+        ease: 'ease',
+        delay: 0.15 * (i + 0.25)
+      });
+    });
+    burger.removeEventListener('click', onClickOpenNav);
+    navCloser.addEventListener('click', onClickCloseNav);
+    document.addEventListener('click', onClickByOverlayCloseNav);
+    document.addEventListener('keydown', onClickByEscCloseNav);
+  }
+
+  function navClosingAnimation() {
+    navItems.forEach(function (item, i) {
+      gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(item, {
+        y: 50,
+        opacity: 0,
+        ease: 'ease',
+        delay: 0.5
+      });
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(navWrapper, {
+      x: '100vw',
+      opacity: 0,
+      ease: 'ease-in-out',
+      duration: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(nav, {
+      opacity: 0,
+      ease: 'ease-in',
+      duration: 1
+    });
+    (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(false);
+    setTimeout(function () {
+      nav.classList.remove('opened');
+      burger.addEventListener('click', onClickOpenNav);
+      navCloser.removeEventListener('click', onClickCloseNav);
+    }, 1050);
+  }
+
+  var onClickOpenNav = function onClickOpenNav() {
+    navOpeningAnimation();
+  };
+
+  var onClickCloseNav = function onClickCloseNav() {
+    navClosingAnimation();
+  };
+
+  var onClickByEscCloseNav = function onClickByEscCloseNav(evt) {
+    if (evt.key === "Escape") {
+      navClosingAnimation();
+    }
+  };
+
+  var onClickByOverlayCloseNav = function onClickByOverlayCloseNav(evt) {
+    if (evt.target === nav) {
+      navClosingAnimation();
+    }
+  };
+
+  burger.addEventListener('click', onClickOpenNav);
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/parallaxBlobs.js":
 /*!**********************************************!*\
   !*** ./src/scripts/modules/parallaxBlobs.js ***!
@@ -787,6 +902,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "addClass": () => (/* binding */ addClass),
 /* harmony export */   "bodyLocker": () => (/* binding */ bodyLocker),
 /* harmony export */   "checkClass": () => (/* binding */ checkClass),
+/* harmony export */   "focusTrap": () => (/* binding */ focusTrap),
 /* harmony export */   "getBoundingClientRect": () => (/* binding */ getBoundingClientRect),
 /* harmony export */   "getCssPropertyValue": () => (/* binding */ getCssPropertyValue),
 /* harmony export */   "getMousePos": () => (/* binding */ getMousePos),
@@ -874,6 +990,41 @@ function bodyLocker(bool) {
     body.style.overflow = 'auto';
     body.style.paddingRight = '0px';
   }
+}
+
+function focusTrap(el) {
+  var focusableElements = ['a[href]', 'input', 'select', 'textarea', 'button', 'iframe', '[contenteditable]', '[tabindex]:not([tabindex^="-"])'];
+  var firstFocusableElement = el.querySelectorAll(focusableElements)[0];
+  var focusableContent = el.querySelectorAll(focusableElements);
+  var lastFocusableElement = focusableContent[focusableContent.length - 1];
+
+  var onBtnClickHandler = function onBtnClickHandler(evt) {
+    var isTabPressed = evt.key === 'Tab' || evt.key === 9;
+
+    if (evt.key === 'Escape') {
+      document.removeEventListener('keydown', onBtnClickHandler);
+      console.log('ESC');
+    }
+
+    if (!isTabPressed) {
+      return;
+    }
+
+    if (evt.shiftKey) {
+      if (document.activeElement === firstFocusableElement) {
+        lastFocusableElement.focus();
+        evt.preventDefault();
+      }
+    } else {
+      if (document.activeElement === lastFocusableElement) {
+        firstFocusableElement.focus();
+        evt.preventDefault();
+      }
+    }
+  };
+
+  document.addEventListener('keydown', onBtnClickHandler);
+  firstFocusableElement.focus();
 } // вычисление поз-и/размеров эл-та
 
 
@@ -13548,6 +13699,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
 /* harmony import */ var _modules_scrollSmoother_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/scrollSmoother.js */ "./src/scripts/modules/scrollSmoother.js");
 /* harmony import */ var _modules_stackIconsAnimation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/stackIconsAnimation.js */ "./src/scripts/modules/stackIconsAnimation.js");
+/* harmony import */ var _modules_nav_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/nav.js */ "./src/scripts/modules/nav.js");
+
 
 
 

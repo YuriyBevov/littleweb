@@ -1,7 +1,9 @@
 .inner-header {
-  position: sticky;
+  //position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   padding: 30px 0;
   background-color: var(--header-bg-color);
   z-index: 99;

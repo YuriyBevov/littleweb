@@ -13,7 +13,33 @@
   <body class="loading nojs hero-body" data-barba="wrapper">
     <header class="main-header">
       <div class="container-fluid">
-        <button class="lw-button-main burger" type="button">Меню</button>
+        <!--.burger
+        .burger__line.burger__line--top
+        .burger__line.burger__line--middle
+        .burger__line.burger__line--bottom
+        
+        
+        -->
+        <button class="lw-button-main burger nav-opener" type="button" data-modal-anchor="main-modal">Меню</button>
+        <nav class="nav">
+          <button class="nav__closer" type="button">
+            <svg width="64" height="64">
+              <use xlink:href="./assets/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <div class="nav__wrapper">
+            <ul class="nav__list">
+              <li class="nav__list-item"><a class="lw-text-xl" href="index.html">Главная</a></li>
+              <li class="nav__list-item"><a class="lw-text-xl" href="services.html">Услуги</a></li>
+              <li class="nav__list-item"><a class="lw-text-xl" href="portfolio.html">Портфолио</a></li>
+              <li class="nav__list-item"><a class="lw-text-xl" href="about.html">О нас</a></li>
+              <li class="nav__list-item"><a class="lw-text-xl" href="contacts.html">Контакты</a></li>
+              <li class="nav__list-item"><a class="lw-text-xl" href="articles.html">Статьи</a></li>
+              <li class="nav__list-item"><a class="lw-text-xl" href="vacancies.html">Вакансии</a></li>
+              <li class="nav__list-item"><a class="lw-text-xl" href="prices.html">Цены</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
     <div id="smooth-wrapper">

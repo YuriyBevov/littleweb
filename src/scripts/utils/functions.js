@@ -75,6 +75,50 @@ function bodyLocker(bool) {
   }
 }
 
+function focusTrap(el) {
+  const focusableElements = [
+    'a[href]',
+    'input',
+    'select',
+    'textarea',
+    'button',
+    'iframe',
+    '[contenteditable]',
+    '[tabindex]:not([tabindex^="-"])'
+  ];
+  const firstFocusableElement = el.querySelectorAll(focusableElements)[0];
+  const focusableContent = el.querySelectorAll(focusableElements);
+  const lastFocusableElement = focusableContent[focusableContent.length - 1];
+
+  let onBtnClickHandler = (evt) => {
+      let isTabPressed = evt.key === 'Tab' || evt.key === 9;
+
+      if(evt.key === 'Escape') {
+          document.removeEventListener('keydown', onBtnClickHandler);
+          console.log('ESC')
+      }
+
+      if (!isTabPressed) {
+          return;
+      }
+
+      if (evt.shiftKey) {
+          if (document.activeElement === firstFocusableElement) {
+              lastFocusableElement.focus();
+              evt.preventDefault();
+          }
+      } else {
+          if (document.activeElement === lastFocusableElement) {
+              firstFocusableElement.focus();
+              evt.preventDefault();
+          }
+      }
+  }
+
+  document.addEventListener('keydown', onBtnClickHandler);
+  firstFocusableElement.focus();
+}
+
 // вычисление поз-и/размеров эл-та
 function getBoundingClientRect(elem, side) {
   if(side === 'height') {
@@ -110,4 +154,4 @@ function getBoundingClientRect(elem, side) {
   }
 }
 
-export  { setVieportHeight, getCssPropertyValue, setCssProperty, lerp, getMousePos, getRadians,limitStr, addClass, removeClass, checkClass, toggleClass, bodyLocker, getBoundingClientRect }
+export  { focusTrap, setVieportHeight, getCssPropertyValue, setCssProperty, lerp, getMousePos, getRadians,limitStr, addClass, removeClass, checkClass, toggleClass, bodyLocker, getBoundingClientRect }

@@ -27,7 +27,33 @@
 <path d="M190.597 28.457C191.322 28.457 191.978 28.5252 192.598 28.6633L192.944 28.7314C193.048 28.7655 193.185 28.7996 193.289 28.8354C197.119 29.9364 199.914 33.4117 199.914 37.5415C199.914 37.7818 199.879 38.0238 199.879 38.2641C199.811 38.9527 199.673 39.6055 199.466 40.2259C197.912 39.4691 196.188 39.0908 194.359 39.0908C192.53 39.0908 190.804 39.4691 189.184 40.1918V36.166C191.117 35.6155 192.875 35.4434 194.325 35.4434C194.636 35.4434 194.911 35.4774 195.222 35.4774C194.566 33.998 192.91 32.5868 190.599 32.5868C187.804 32.5868 185.526 34.823 185.526 37.5415C185.526 40.2941 187.873 42.4621 190.599 42.4621C192.014 42.4621 193.221 41.9797 194.222 40.9827C194.947 41.7735 196.189 43.1166 197.121 44.1136C195.499 45.6271 193.222 46.5918 190.599 46.5918C185.353 46.5918 181.316 42.4621 181.316 37.5415C181.315 32.4828 185.456 28.457 190.597 28.457Z" fill="white"/>
 <path d="M206.611 22.0918V37.5081C206.611 40.6731 208.785 42.8411 211.684 42.8411C214.617 42.8411 216.756 40.1567 216.756 37.5081C216.756 34.8935 214.721 32.175 211.684 32.175C210.959 32.175 210.269 32.3131 209.648 32.5534C209.371 31.8989 208.406 29.5247 208.233 29.0781C209.303 28.6657 210.441 28.4594 211.684 28.4594C217.032 28.4594 221 32.6233 221 37.5098C221 42.6025 216.756 46.5942 211.684 46.5942C206.543 46.5942 202.401 42.5684 202.401 37.5098V22.0935H206.611V22.0918Z" fill="white"/>
 </svg></a>
-          <button class="lw-button-main burger" type="button">Меню</button>
+          <!--.burger
+          .burger__line.burger__line--top
+          .burger__line.burger__line--middle
+          .burger__line.burger__line--bottom
+          
+          
+          -->
+          <button class="lw-button-main burger nav-opener" type="button" data-modal-anchor="main-modal">Меню</button>
+          <nav class="nav">
+            <button class="nav__closer" type="button">
+              <svg width="64" height="64">
+                <use xlink:href="./assets/sprite.svg#icon-close"></use>
+              </svg>
+            </button>
+            <div class="nav__wrapper">
+              <ul class="nav__list">
+                <li class="nav__list-item"><a class="lw-text-xl" href="index.html">Главная</a></li>
+                <li class="nav__list-item"><a class="lw-text-xl" href="services.html">Услуги</a></li>
+                <li class="nav__list-item"><a class="lw-text-xl" href="portfolio.html">Портфолио</a></li>
+                <li class="nav__list-item"><a class="lw-text-xl" href="about.html">О нас</a></li>
+                <li class="nav__list-item"><a class="lw-text-xl" href="contacts.html">Контакты</a></li>
+                <li class="nav__list-item"><a class="lw-text-xl" href="articles.html">Статьи</a></li>
+                <li class="nav__list-item"><a class="lw-text-xl" href="vacancies.html">Вакансии</a></li>
+                <li class="nav__list-item"><a class="lw-text-xl" href="prices.html">Цены</a></li>
+              </ul>
+            </div>
+          </nav>
         </div>
       </div>
     </header>
@@ -197,7 +223,7 @@
                     <label class="visually-hidden" for="user_phone">Ваш контактный номер:</label>
                     <input type="tel" id="user_phone" name="user_phone" autocomplete="off" placeholder="Ваш контактный номер">
                   </fieldset>
-                  <button class="lw-button-main lw-button-shadow" type="button">Оставить заявку</button>
+                  <button class="lw-button-main" type="button">Оставить заявку</button>
                 </form>
               </div>
             </div>

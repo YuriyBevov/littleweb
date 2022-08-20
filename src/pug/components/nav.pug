@@ -1,0 +1,21 @@
+-
+  const navList = [
+    {url: 'index.html', title: 'Главная'},
+    {url: 'services.html', title: 'Услуги'},
+    {url: 'portfolio.html', title: 'Портфолио'},
+    {url: 'about.html', title: 'О нас'},
+    {url: 'contacts.html', title: 'Контакты'},
+    {url: 'articles.html', title: 'Статьи'},
+    {url: 'vacancies.html', title: 'Вакансии'},
+    {url: 'prices.html', title: 'Цены'}
+  ]
+
+nav.nav
+  button(type="button").nav__closer
+    svg(width="64" height="64")
+      use(xlink:href="./assets/sprite.svg#icon-close")
+  .nav__wrapper
+    ul.nav__list
+      each item in navList
+        li.nav__list-item
+          a(href= item.url).lw-text-xl= item.title

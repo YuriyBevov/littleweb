@@ -1464,7 +1464,7 @@ main {
   flex-wrap: wrap;
 }
 
-.flex-centered-content, .stack__tech-item, .hero__content, .article-preview-card__header picture, .social__item a, .footer-logo a, .footer-logo, .footer-nav__item a, .inner-header__logo, .loader, .button, .lw-button-main {
+.flex-centered-content, .stack__tech-item, .hero__content, .article-preview-card__header picture, .social__item a, .footer-logo a, .footer-logo, .footer-nav__item a, .nav__closer, .inner-header__logo, .loader, .button, .lw-button-main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1766,7 +1766,7 @@ main {
 }
 @media (max-width: 768px) {
   .lw-page-top {
-    padding-top: 0;
+    padding-top: 60px;
   }
 }
 .lw-section-header {
@@ -1915,7 +1915,7 @@ body:not(.loading) .loader {
   }
 }
 .main-header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -1924,9 +1924,10 @@ body:not(.loading) .loader {
 }
 
 .inner-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   padding: 30px 0;
   background-color: var(--header-bg-color);
   z-index: 99;
@@ -1971,6 +1972,119 @@ body:not(.loading) .loader {
   .burger {
     display: none;
   }
+}
+
+.nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.nav.opened {
+  display: block;
+}
+.nav__closer {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 2;
+  stroke: var(--primary-color);
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .nav__closer {
+    width: 44px;
+    height: 44px;
+  }
+}
+@media (max-width: 534px) {
+  .nav__closer {
+    width: 36px;
+    height: 36px;
+  }
+}
+.nav__wrapper {
+  position: relative;
+  left: 50vw;
+  top: 0;
+  background-color: var(--purple-3);
+  width: 50vw;
+  height: 100%;
+  background-image: url("../assets/img/nav-bg@1x.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: -10px 0px 5px -10px rgba(34, 60, 80, 0.6);
+  box-shadow: -10px 0px 5px -10px rgba(34, 60, 80, 0.6);
+}
+@media (max-width: 768px) {
+  .nav__wrapper {
+    left: 25vw;
+    width: 75vw;
+  }
+}
+@media (max-width: 534px) {
+  .nav__wrapper {
+    left: 5vw;
+    width: 95vw;
+  }
+}
+.nav__list {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: clamp(20px, 3vw, 50px);
+  padding-left: clamp(50px, 7vw, 150px);
+}
+.nav__list-item {
+  margin: 15px 0;
+}
+.nav__list-item a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100%;
+  font-weight: 500;
+  color: var(--primary-color);
+  overflow: hidden;
+  -webkit-transition: padding 0.2s 0.1s ease-in;
+  -o-transition: padding 0.2s 0.1s ease-in;
+  transition: padding 0.2s 0.1s ease-in;
+}
+.nav__list-item a::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 30px;
+  height: clamp(3px, 0.6vw, 5px);
+  content: "";
+  background-color: var(--primary-color);
+  -webkit-transform: translateX(-100px);
+  -ms-transform: translateX(-100px);
+  transform: translateX(-100px);
+  -webkit-transition: -webkit-transform 0.4s 0.1s ease-in;
+  transition: -webkit-transform 0.4s 0.1s ease-in;
+  -o-transition: transform 0.4s 0.1s ease-in;
+  transition: transform 0.4s 0.1s ease-in;
+  transition: transform 0.4s 0.1s ease-in, -webkit-transform 0.4s 0.1s ease-in;
+}
+.nav__list-item a:hover, .nav__list-item a:focus {
+  padding-left: 50px;
+}
+.nav__list-item a:hover::before, .nav__list-item a:focus::before {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
 }
 
 .footer {
@@ -2193,7 +2307,7 @@ body:not(.loading) .loader {
     left: 0;
     display: block;
     pointer-events: none;
-    z-index: 98;
+    z-index: 198;
     fill: var(--warning-color);
     stroke: var(--warning-color);
     mix-blend-mode: difference;
