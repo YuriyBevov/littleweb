@@ -2024,6 +2024,12 @@ body:not(.loading) .loader {
   height: 100vh;
   overflow: hidden;
 }
+.nav__blobs-container .nav-blob {
+  overflow: visible;
+  will-change: auto;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
 .nav__blobs-container .nav-blob--middle {
   position: absolute;
   top: 20%;
