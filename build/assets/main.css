@@ -1968,8 +1968,37 @@ body:not(.loading) .loader {
   border-radius: 45px;
   min-width: 115px;
 }
+.burger svg {
+  margin-right: 10px;
+  fill: var(--purple-4);
+}
 @media (max-width: 768px) {
   .burger {
+    min-width: -webkit-fit-content;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    background-color: transparent;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: 1px solid red;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+  }
+  .burger svg {
+    margin-right: 0;
+  }
+  .burger span {
     display: none;
   }
 }
@@ -1988,25 +2017,27 @@ body:not(.loading) .loader {
 }
 .nav__closer {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 0;
+  left: -64px;
   z-index: 2;
   stroke: var(--primary-color);
   border: none;
   padding: 0;
-  background-color: transparent;
+  background-color: var(--purple-3);
   cursor: pointer;
 }
 @media (max-width: 768px) {
   .nav__closer {
     width: 44px;
     height: 44px;
+    left: -44px;
   }
 }
 @media (max-width: 534px) {
   .nav__closer {
     width: 36px;
     height: 36px;
+    left: -36px;
   }
 }
 .nav__wrapper {
@@ -2019,6 +2050,7 @@ body:not(.loading) .loader {
   background-image: url("../assets/img/nav-bg@1x.png");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   -webkit-box-shadow: -10px 0px 5px -10px rgba(34, 60, 80, 0.6);
   box-shadow: -10px 0px 5px -10px rgba(34, 60, 80, 0.6);
 }
@@ -2030,8 +2062,8 @@ body:not(.loading) .loader {
 }
 @media (max-width: 534px) {
   .nav__wrapper {
-    left: 5vw;
-    width: 95vw;
+    left: 50px;
+    width: calc(100vw - 50px);
   }
 }
 .nav__list {
@@ -2040,10 +2072,21 @@ body:not(.loading) .loader {
   overflow: hidden;
   overflow-y: auto;
   padding: clamp(20px, 3vw, 50px);
-  padding-left: clamp(50px, 7vw, 150px);
+  padding-left: clamp(20px, 7vw, 150px);
+  padding-top: 64px;
+}
+@media (max-width: 768px) {
+  .nav__list {
+    padding-top: 44px;
+  }
+}
+@media (max-width: 534px) {
+  .nav__list {
+    padding-top: 36px;
+  }
 }
 .nav__list-item {
-  margin: 15px 0;
+  margin-bottom: 30px;
 }
 .nav__list-item a {
   position: relative;
@@ -2060,6 +2103,8 @@ body:not(.loading) .loader {
   -webkit-transition: padding 0.2s 0.1s ease-in;
   -o-transition: padding 0.2s 0.1s ease-in;
   transition: padding 0.2s 0.1s ease-in;
+  font-size: clamp(20px, 5vw, 54px);
+  line-height: 1;
 }
 .nav__list-item a::before {
   position: absolute;

@@ -14,25 +14,29 @@
   &__closer{
     @extend .flex-centered-content;
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 0;
+    left: -64px;
     z-index: 2;
 
     stroke: var(--primary-color);
     border: none;
     padding: 0;
-    background-color: transparent;
+    background-color: var(--purple-3);
 
     cursor: pointer;
 
     @include m-b-tablet-down {
       width: 44px;
       height: 44px;
+
+      left: -44px;
     }
 
     @include m-b-mobile-lg-down {
       width: 36px;
       height: 36px;
+
+      left: -36px;
     }
   }
 
@@ -46,6 +50,7 @@
     background-image: url("../assets/img/nav-bg@1x.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     box-shadow: -10px 0px 5px -10px rgba(34, 60, 80, 0.6);
 
     @include m-b-tablet-down {
@@ -54,8 +59,8 @@
     }
 
     @include m-b-mobile-lg-down {
-      left: 5vw;
-      width: 95vw;
+      left: 50px;
+      width: calc(100vw - 50px);
     }
   }
 
@@ -65,10 +70,20 @@
     overflow: hidden;
     overflow-y: auto;
     padding: clamp(20px, 3vw, 50px);
-    padding-left: clamp(50px, 7vw, 150px);
+    padding-left: clamp(20px, 7vw, 150px);
+
+    padding-top: 64px;
+
+    @include m-b-tablet-down {
+      padding-top: 44px;
+    }
+
+    @include m-b-mobile-lg-down {
+      padding-top: 36px;
+    }
 
     &-item {
-      margin: 15px 0;
+      margin-bottom: 30px;
 
       a {
         position: relative;
@@ -79,6 +94,8 @@
         color: var(--primary-color);
         overflow: hidden;
         transition: padding 0.2s 0.1s ease-in;
+        font-size  : clamp(20px, 5vw, 54px);
+        line-height: 1;
 
         &::before {
           position: absolute;

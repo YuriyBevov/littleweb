@@ -4,8 +4,30 @@
   border-radius: 45px;
   min-width: 115px;
 
+  svg {
+    margin-right: 10px;
+    fill: var(--purple-4);
+  }
+
   //temp
   @include m-b-tablet-down {
-    display: none;
+    min-width: fit-content;
+
+    background-color: transparent;
+    padding: 0;
+    box-shadow: none;
+    outline: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    svg {
+      margin-right: 0;
+    }
+    span {
+      display: none;
+    }
   }
 }
