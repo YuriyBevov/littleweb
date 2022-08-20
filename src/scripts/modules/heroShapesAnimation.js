@@ -95,7 +95,7 @@ if(wave) {
 * Blobs animations function
 */
 
- function blobAnimation(option) {
+function blobAnimation(option) {
 
   gsap.to(option.pathFrom, {
     ease: option.ease ? option.ease : 'elastic',
