@@ -17,9 +17,9 @@ if(burger) {
 
   gsap.set(nav, {opacity: 0});
 
-  navBlobs.forEach(blob => {
+  /*navBlobs.forEach(blob => {
     gsap.set(blob, {scale: 0.5});
-  })
+  })*/
 
   function navOpeningAnimation() {
     if(!nav.classList.contains('opened')) {
@@ -34,12 +34,12 @@ if(burger) {
 
       navBlobs.forEach(blob => {
 
-        gsap.to(blob, {
+        /*gsap.to(blob, {
           scale: 1,
           ease: 'elastic',
           duration: 1,
           transformOrigin: 'center',
-        });
+        });*/
 
         gsap.to(blob, {
           rotate: '360deg',

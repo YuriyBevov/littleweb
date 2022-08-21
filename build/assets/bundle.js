@@ -370,11 +370,9 @@ if (burger) {
   gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(nav, {
     opacity: 0
   });
-  navBlobs.forEach(function (blob) {
-    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(blob, {
-      scale: 0.5
-    });
-  });
+  /*navBlobs.forEach(blob => {
+    gsap.set(blob, {scale: 0.5});
+  })*/
 
   function navOpeningAnimation() {
     if (!nav.classList.contains('opened')) {
@@ -386,12 +384,12 @@ if (burger) {
         duration: 1
       });
       navBlobs.forEach(function (blob) {
-        gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(blob, {
+        /*gsap.to(blob, {
           scale: 1,
           ease: 'elastic',
           duration: 1,
-          transformOrigin: 'center'
-        });
+          transformOrigin: 'center',
+        });*/
         gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(blob, {
           rotate: '360deg',
           ease: 'linear',
