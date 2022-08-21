@@ -106,12 +106,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "setDebounce": () => (/* binding */ setDebounce)
 /* harmony export */ });
 var debounce = false;
-function setDebounce() {
+function setDebounce(timeoutTime) {
   debounce = true;
   setTimeout(function () {
     debounce = false;
-  }, 1000);
+  }, timeoutTime);
 }
+
+/***/ }),
+
+/***/ "./src/scripts/modules/headerSticky.js":
+/*!*********************************************!*\
+  !*** ./src/scripts/modules/headerSticky.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/nodesHelper */ "./src/scripts/utils/nodesHelper.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+console.log('header');
+
+
+
+gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger);
+
+function scrollTriggerOpt(opt) {
+  return {
+    trigger: opt.triggerEl ? opt.triggerEl : null,
+    start: opt.start ? opt.start : 'top top',
+    end: opt.end ? opt.end : null,
+    scrub: opt.scrub ? opt.scrub : false,
+    markers: opt.markers ? opt.markers : false
+  };
+}
+
+var headerHideTimeline = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+  scrollTrigger: {
+    start: '+=500',
+    end: '+=500',
+    scrub: true
+  }
+});
+headerHideTimeline.to(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__.header, {
+  y: '-100%',
+  opacity: 0
+}).to(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__.header, {
+  padding: '15px',
+  backgroundColor: 'rgba(21, 27, 83, 0.9)',
+  opacity: 1
+}).to(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__.header, {
+  y: 0
+});
 
 /***/ }),
 
@@ -426,39 +473,41 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
 /* harmony import */ var _burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./burgerMenuAnimation */ "./src/scripts/modules/burgerMenuAnimation.js");
 /* harmony import */ var _debounce_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./debounce.js */ "./src/scripts/modules/debounce.js");
-/* harmony import */ var _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/nodesHelper */ "./src/scripts/utils/nodesHelper.js");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gsap/MorphSVGPlugin */ "./node_modules/gsap/MorphSVGPlugin.js");
+/* harmony import */ var _scrollSmoother_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scrollSmoother.js */ "./src/scripts/modules/scrollSmoother.js");
+/* harmony import */ var _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/nodesHelper */ "./src/scripts/utils/nodesHelper.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! gsap/MorphSVGPlugin */ "./node_modules/gsap/MorphSVGPlugin.js");
 
 
 
 
 
 
-gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.registerPlugin(gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_5__.MorphSVGPlugin);
 
-if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger) {
-  var navBlobs = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.querySelectorAll('.nav-blob');
-  var navItems = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.querySelectorAll('.nav__list-item a');
+gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.registerPlugin(gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_6__.MorphSVGPlugin);
+
+if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
+  var navBlobs = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.querySelectorAll('.nav-blob');
+  var navItems = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.querySelectorAll('.nav__list-item a');
   /**
   * prepare option
   */
 
   navItems.forEach(function (item) {
-    gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.set(item, {
+    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.set(item, {
       y: 100,
       opacity: 0
     });
   });
-  gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.set(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav, {
+  gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.set(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav, {
     opacity: 0
   });
   /**
   * nav, nav items animation
   */
 
-  var navTimeline = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline().pause();
-  navTimeline.to(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav, {
+  var navTimeline = gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.timeline().pause();
+  navTimeline.to(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav, {
     opacity: 1,
     ease: 'ease-in',
     duration: 0.6
@@ -474,7 +523,7 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger) {
   * blobs rotation animation
   */
 
-  var blobsTimeline = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline().pause();
+  var blobsTimeline = gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.timeline().pause();
   blobsTimeline.to(navBlobs, {
     rotate: '360deg',
     ease: 'linear',
@@ -485,8 +534,8 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger) {
   * blobs morph animation
   */
 
-  var middleBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline().pause();
-  var middleBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.querySelector('.nav-blob--middle > path');
+  var middleBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.timeline().pause();
+  var middleBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.querySelector('.nav-blob--middle > path');
   var middleBlobPathTo = middleBlobPath.dataset.pathTo;
   middleBlobTimeline.to(middleBlobPath, {
     ease: 'linear',
@@ -498,8 +547,8 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger) {
       type: 'rotational'
     }
   });
-  var leftBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline().pause();
-  var leftBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.querySelector('.nav-blob--left > path');
+  var leftBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.timeline().pause();
+  var leftBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.querySelector('.nav-blob--left > path');
   var leftBlobPathTo = leftBlobPath.dataset.pathTo;
   leftBlobTimeline.to(leftBlobPath, {
     ease: 'linear',
@@ -511,8 +560,8 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger) {
       type: 'rotational'
     }
   });
-  var rightBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline().pause();
-  var rightBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.querySelector('.nav-blob--left > path');
+  var rightBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.timeline().pause();
+  var rightBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.querySelector('.nav-blob--left > path');
   var rightBlobPathTo = rightBlobPath.dataset.pathTo;
   rightBlobTimeline.to(rightBlobPath, {
     ease: 'linear',
@@ -529,12 +578,12 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger) {
   */
 
   function navOpeningAnimation() {
-    if (!_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.classList.contains('opened')) {
-      (0,_debounce_js__WEBPACK_IMPORTED_MODULE_2__.setDebounce)();
-      _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.classList.add('opened');
+    if (!_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.classList.contains('opened')) {
+      (0,_debounce_js__WEBPACK_IMPORTED_MODULE_2__.setDebounce)(1000);
+      _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.classList.add('opened');
       (0,_burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_1__.burgerLinesAnimationIn)();
-      (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(true);
-      (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.focusTrap)(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.header, _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger);
+      _scrollSmoother_js__WEBPACK_IMPORTED_MODULE_3__.smoothScroller.paused(true);
+      (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.focusTrap)(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.header, _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger);
       navTimeline.play();
       blobsTimeline.play();
       leftBlobTimeline.play();
@@ -542,7 +591,7 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger) {
       rightBlobTimeline.play();
       document.addEventListener('keydown', onClickByEscCloseNav);
     } else {
-      (0,_debounce_js__WEBPACK_IMPORTED_MODULE_2__.setDebounce)();
+      (0,_debounce_js__WEBPACK_IMPORTED_MODULE_2__.setDebounce)(1000);
       navClosingAnimation();
     }
   }
@@ -554,8 +603,8 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger) {
     navTimeline.reverse();
     (0,_burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_1__.burgerLinesAnimationOut)();
     setTimeout(function () {
-      _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.classList.remove('opened');
-      (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(false);
+      _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.classList.remove('opened');
+      _scrollSmoother_js__WEBPACK_IMPORTED_MODULE_3__.smoothScroller.paused(false);
       blobsTimeline.restart().pause();
       leftBlobTimeline.restart().pause();
       middleBlobTimeline.restart().pause();
@@ -577,7 +626,7 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger) {
     }
   };
 
-  _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger.addEventListener('click', onClickOpenNav);
+  _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger.addEventListener('click', onClickOpenNav);
 }
 
 /***/ }),
@@ -714,6 +763,9 @@ export const preloader = _ => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "smoothScroller": () => (/* binding */ smoothScroller)
+/* harmony export */ });
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 /* harmony import */ var gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! gsap/ScrollSmoother */ "./node_modules/gsap/ScrollSmoother.js");
@@ -726,11 +778,12 @@ gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPAC
 gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_2__.ScrollTrigger.config({
   ignoreMobileResize: true
 });
-var scroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_3__.ScrollSmoother.create({
+var smoothScroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_3__.ScrollSmoother.create({
   smooth: 3,
   effects: true
 });
-(0,_parallaxBlobs_js__WEBPACK_IMPORTED_MODULE_0__.initParallaxBlobs)(scroller);
+(0,_parallaxBlobs_js__WEBPACK_IMPORTED_MODULE_0__.initParallaxBlobs)(smoothScroller);
+
 
 /***/ }),
 
@@ -911,8 +964,7 @@ var CursorElement = /*#__PURE__*/function () {
 
     _defineProperty(this, "DOM", {
       cursor: null,
-      innerCursor: null,
-      feTurbulence: null
+      innerCursor: null
     });
 
     _defineProperty(this, "renderedStyles", {
@@ -943,7 +995,6 @@ var CursorElement = /*#__PURE__*/function () {
 
     this.DOM.cursor = elem;
     this.DOM.innerCursor = this.DOM.cursor.querySelector('.cursor-inner');
-    this.DOM.feTurbulence = document.querySelector("".concat(this.filterID, " > feTurbulence"));
     this.DOM.cursor.style.opacity = 0;
     this.bounds = this.DOM.cursor.getBoundingClientRect();
 
@@ -1003,7 +1054,6 @@ var CursorElement = /*#__PURE__*/function () {
       }
 
       this.DOM.cursor.style.transform = "translateX(".concat(this.renderedStyles['tx'].previous, "px) translateY(").concat(this.renderedStyles['ty'].previous, "px)");
-      this.DOM.feTurbulence.setAttribute('baseFrequency', this.filterValues.turbulence * Math.random());
       this.renderedStyles['tx'].current = cursorCoords.x - this.bounds.width / 2;
       this.renderedStyles['ty'].current = cursorCoords.y - this.bounds.height / 2;
       requestAnimationFrame(function () {
@@ -1121,11 +1171,10 @@ function bodyLocker(bool) {
 
 function focusTrap(el) {
   var initialFocusedEl = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  console.log(initialFocusedEl);
   var focusableElements = ['a[href]', 'input', 'select', 'textarea', 'button', 'iframe', '[contenteditable]', '[tabindex]:not([tabindex^="-"])'];
   var firstFocusableElement = el.querySelectorAll(focusableElements)[0];
   var focusableContent = el.querySelectorAll(focusableElements);
-  var lastFocusableElement = focusableContent[focusableContent.length - 1]; //const initialFocusedElement = initialFocusedEl;
+  var lastFocusableElement = focusableContent[focusableContent.length - 1];
 
   var onBtnClickHandler = function onBtnClickHandler(evt) {
     var isTabPressed = evt.key === 'Tab' || evt.key === 9;
@@ -13848,9 +13897,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_custom_cursor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/custom_cursor.js */ "./src/scripts/modules/custom_cursor.js");
 /* harmony import */ var _modules_heroContentAnimation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/heroContentAnimation.js */ "./src/scripts/modules/heroContentAnimation.js");
 /* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
-/* harmony import */ var _modules_scrollSmoother_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/scrollSmoother.js */ "./src/scripts/modules/scrollSmoother.js");
-/* harmony import */ var _modules_stackIconsAnimation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/stackIconsAnimation.js */ "./src/scripts/modules/stackIconsAnimation.js");
-/* harmony import */ var _modules_nav_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/nav.js */ "./src/scripts/modules/nav.js");
+/* harmony import */ var _modules_headerSticky_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/headerSticky.js */ "./src/scripts/modules/headerSticky.js");
+/* harmony import */ var _modules_scrollSmoother_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/scrollSmoother.js */ "./src/scripts/modules/scrollSmoother.js");
+/* harmony import */ var _modules_stackIconsAnimation_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/stackIconsAnimation.js */ "./src/scripts/modules/stackIconsAnimation.js");
+/* harmony import */ var _modules_nav_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/nav.js */ "./src/scripts/modules/nav.js");
+
 
 
 

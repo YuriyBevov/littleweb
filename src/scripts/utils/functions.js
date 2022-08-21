@@ -76,8 +76,6 @@ function bodyLocker(bool) {
 }
 
 function focusTrap(el, initialFocusedEl = null) {
-  console.log(initialFocusedEl);
-
   const focusableElements = [
     'a[href]',
     'input',
@@ -92,8 +90,6 @@ function focusTrap(el, initialFocusedEl = null) {
   const firstFocusableElement = el.querySelectorAll(focusableElements)[0];
   const focusableContent = el.querySelectorAll(focusableElements);
   const lastFocusableElement = focusableContent[focusableContent.length - 1];
-
-  //const initialFocusedElement = initialFocusedEl;
 
   let onBtnClickHandler = (evt) => {
       let isTabPressed = evt.key === 'Tab' || evt.key === 9;

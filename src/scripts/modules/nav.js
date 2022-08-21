@@ -1,6 +1,7 @@
-import { bodyLocker, focusTrap } from "../utils/functions";
+import { focusTrap } from "../utils/functions";
 import { burgerLinesAnimationIn, burgerLinesAnimationOut } from "./burgerMenuAnimation";
 import { debounce, setDebounce } from "./debounce.js";
+import { smoothScroller } from "./scrollSmoother.js";
 
 import { burger, nav, header } from "../utils/nodesHelper";
 
@@ -103,11 +104,11 @@ if(burger) {
 
   function navOpeningAnimation() {
     if(!nav.classList.contains('opened')) {
-      setDebounce();
+      setDebounce(1000);
 
       nav.classList.add('opened');
       burgerLinesAnimationIn();
-      bodyLocker(true);
+      smoothScroller.paused(true);
       focusTrap(header, burger);
 
       navTimeline.play();
@@ -118,7 +119,7 @@ if(burger) {
 
       document.addEventListener('keydown', onClickByEscCloseNav);
     } else {
-      setDebounce();
+      setDebounce(1000);
       navClosingAnimation();
     }
   };
@@ -130,7 +131,7 @@ if(burger) {
 
     setTimeout(() => {
       nav.classList.remove('opened');
-      bodyLocker(false);
+      smoothScroller.paused(false);
 
       blobsTimeline.restart().pause();
       leftBlobTimeline.restart().pause();

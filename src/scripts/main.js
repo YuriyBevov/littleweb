@@ -5,6 +5,7 @@ import "./modules/custom_cursor.js";
 import "./modules/heroContentAnimation.js";
 import "./modules/heroShapesAnimation.js";
 import "./modules/preloader.js";
+import "./modules/headerSticky.js";
 import "./modules/scrollSmoother.js";
 import "./modules/stackIconsAnimation.js";
 import "./modules/nav.js";

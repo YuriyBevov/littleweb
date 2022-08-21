@@ -1,33 +1,4 @@
 .articles {
-  /*&-page-container {
-    .blob {
-      &--right {
-        top: 135px;
-        left: 65%;
-
-        @include m-b-laptop-down {
-          top: 0;
-          left: 55%;
-        }
-
-        @include m-b-mobile-lg-down {
-          left: 10%;
-          opacity: 0.5;
-        }
-      }
-
-      &--left {
-        position: absolute;
-        top: 200px;
-        left: -70px;
-
-        @include m-b-laptop-down {
-          display: none;
-        }
-      }
-    }
-  }*/
-
   &__wrapper {
     @extend .section-padding-lg;
   }
@@ -39,6 +10,22 @@
 
     button {
       min-width: 260px;
+    }
+
+    .blob {
+      &--left {
+        top: 50%;
+        left: -5%;
+
+        @include m-b-mobile-lg-down {
+          left: -20%;
+        }
+      }
+
+      &--right {
+        top: 15%;
+        left: 75%;
+      }
     }
   }
 

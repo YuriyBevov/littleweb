@@ -7,9 +7,11 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 ScrollTrigger.config({ ignoreMobileResize: true });
 
-let scroller = ScrollSmoother.create({
+let smoothScroller = ScrollSmoother.create({
   smooth: 3,
   effects: true
 });
 
-initParallaxBlobs(scroller);
+initParallaxBlobs(smoothScroller);
+
+export { smoothScroller };

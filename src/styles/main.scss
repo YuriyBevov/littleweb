@@ -6,17 +6,14 @@
 @import "global";
 @import "extends";
 @import "common";
-//@import "grid-layout";
 @import "_gsap-prestyles";
 
 /* components */
 // @import "./components/barba-transitions";
 @import "./components/loader";
 @import "./components/header";
-@import "./components/burger-menu";
-//@import "./components/burger";
-//@import "./components/nav";
-@import "./components/nav2";
+@import "./components/burger";
+@import "./components/nav";
 @import "./components/footer";
 @import "./components/footer-nav";
 @import "./components/footer-logo";

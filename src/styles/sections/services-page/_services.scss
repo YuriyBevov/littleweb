@@ -1,12 +1,5 @@
 .services {
-  .blob {
-    @extend .blob;
 
-    &--left {
-      top: 100px;
-      left: -480px;
-    }
-  }
 
   &__wrapper {
     @extend .section-padding;
@@ -32,6 +25,15 @@
 
   &__features {
     position: relative;
+
+    .blob {
+      @extend .blob;
+
+      &--left {
+        top: 100px;
+        left: -480px;
+      }
+    }
 
     button {
       @include m-b-desktop-up {

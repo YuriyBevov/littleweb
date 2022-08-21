@@ -7,8 +7,6 @@
   background-color: var(--header-bg-color);
   z-index: 99;
 
-  transition: padding var(--slow-t-rules), background-color var(--slow-t-rules);
-
   &__wrapper {
     @extend .flex-wrap;
     align-items: center;
@@ -43,10 +41,5 @@
     }
 
     @extend .hover-opacity;
-  }
-
-  &.scrolled {
-    padding: 20px 0;
-    background-color: var(--header-scrolled-bg-color);
   }
 }

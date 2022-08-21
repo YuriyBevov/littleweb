@@ -35,7 +35,8 @@ export class Cursor {
 class CursorElement {
   DOM = {
     cursor: null,
-    innerCursor: null
+    innerCursor: null,
+    feTurbulence: null
   };
 
   renderedStyles = {
@@ -51,6 +52,7 @@ class CursorElement {
   constructor(elem) {
     this.DOM.cursor = elem;
     this.DOM.innerCursor = this.DOM.cursor.querySelector('.cursor-inner');
+    this.DOM.feTurbulence = document.querySelector(`${this.filterID} > feTurbulence`);
 
 		this.DOM.cursor.style.opacity = 0;
 		this.bounds = this.DOM.cursor.getBoundingClientRect();
@@ -105,6 +107,7 @@ class CursorElement {
     }
 
 		this.DOM.cursor.style.transform = `translateX(${(this.renderedStyles['tx'].previous)}px) translateY(${this.renderedStyles['ty'].previous}px)`;
+    this.DOM.feTurbulence.setAttribute('baseFrequency', this.filterValues.turbulence * Math.random());
 
     this.renderedStyles['tx'].current = cursorCoords.x - this.bounds.width/2;
 		this.renderedStyles['ty'].current = cursorCoords.y - this.bounds.height/2;

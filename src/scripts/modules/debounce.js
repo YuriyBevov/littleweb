@@ -1,8 +1,8 @@
 export let debounce = false;
 
-export function setDebounce() {
+export function setDebounce(timeoutTime) {
   debounce = true;
   setTimeout(() => {
     debounce = false;
-  }, 1000);
+  }, timeoutTime);
 }

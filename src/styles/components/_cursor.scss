@@ -7,17 +7,17 @@
   .custom-cursor-container.hidden {
     display: none;
   }
+
 	.cursor {
 		position: fixed;
 		top: 0;
 		left: 0;
 		display: block;
 		pointer-events: none;
-		z-index: 198;
+		z-index: 501;
 
-    fill: var(--warning-color);
-		stroke: var(--warning-color);
-		mix-blend-mode: difference;
+    stroke: var(--purple-3);
+    mix-blend-mode: difference;
 	}
 
 	.no-js .cursor {
