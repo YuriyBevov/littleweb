@@ -1,10 +1,11 @@
 .nav {
   display: none;
   position: absolute;
-  top: 0;
+  //top: 0;
+  top: 100px; //header-height вычислить и поменять цвет шапки , если открыта
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 100px); // 100vh
 
   background-color: rgba(0,0,0,.9);
 
@@ -57,8 +58,10 @@
   }
 
   &__list {
+    position: relative;
     height: 100%;
-    min-height: 768px;
+    //min-height: 768px;
+    min-height: 512px;
 
     @extend .flex-centered-content;
     flex-direction: column;

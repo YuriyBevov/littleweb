@@ -1952,6 +1952,7 @@ body:not(.loading) .loader {
 @media (max-width: 768px) {
   .header__logo svg {
     height: 43px;
+    width: 190px;
   }
 }
 @media (max-width: 534px) {
@@ -1991,9 +1992,9 @@ body:not(.loading) .loader {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -2019,10 +2020,10 @@ body:not(.loading) .loader {
 .nav {
   display: none;
   position: absolute;
-  top: 0;
+  top: 100px;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 100px);
   background-color: rgba(0, 0, 0, 0.9);
 }
 .nav.opened {
@@ -2065,8 +2066,9 @@ body:not(.loading) .loader {
   overflow-y: auto;
 }
 .nav__list {
+  position: relative;
   height: 100%;
-  min-height: 768px;
+  min-height: 512px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;

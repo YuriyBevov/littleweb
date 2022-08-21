@@ -153,7 +153,7 @@ headerHideTimeline.to(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__.header, {
   y: '-100%',
   opacity: 0
 }).to(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__.header, {
-  padding: '15px',
+  padding: '15px 0',
   backgroundColor: 'rgba(21, 27, 83, 0.9)',
   opacity: 1
 }).to(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__.header, {

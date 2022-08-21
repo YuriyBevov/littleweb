@@ -28,7 +28,7 @@ headerHideTimeline.to(header, {
   y: '-100%',
   opacity: 0,
 }).to(header, {
-  padding: '15px',
+  padding: '15px 0',
   backgroundColor: 'rgba(21, 27, 83, 0.9)',
   opacity: 1
 }).to(header, {

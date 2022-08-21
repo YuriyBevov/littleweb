@@ -29,7 +29,7 @@
 
   @include m-b-tablet-down {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     width: 40px;
     min-width: fit-content;
