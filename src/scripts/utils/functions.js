@@ -75,7 +75,9 @@ function bodyLocker(bool) {
   }
 }
 
-function focusTrap(el) {
+function focusTrap(el, initialFocusedEl = null) {
+  console.log(initialFocusedEl);
+
   const focusableElements = [
     'a[href]',
     'input',
@@ -86,9 +88,12 @@ function focusTrap(el) {
     '[contenteditable]',
     '[tabindex]:not([tabindex^="-"])'
   ];
+
   const firstFocusableElement = el.querySelectorAll(focusableElements)[0];
   const focusableContent = el.querySelectorAll(focusableElements);
   const lastFocusableElement = focusableContent[focusableContent.length - 1];
+
+  //const initialFocusedElement = initialFocusedEl;
 
   let onBtnClickHandler = (evt) => {
       let isTabPressed = evt.key === 'Tab' || evt.key === 9;
@@ -116,7 +121,8 @@ function focusTrap(el) {
   }
 
   document.addEventListener('keydown', onBtnClickHandler);
-  firstFocusableElement.focus();
+  initialFocusedEl !== null ?
+  initialFocusedEl.focus() : firstFocusableElement.focus();
 }
 
 // вычисление поз-и/размеров эл-та

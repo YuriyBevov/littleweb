@@ -1,104 +1,155 @@
 import { bodyLocker, focusTrap } from "../utils/functions";
-import { gsap } from "gsap";
+import { burgerLinesAnimationIn, burgerLinesAnimationOut } from "./burgerMenuAnimation";
+import { debounce, setDebounce } from "./debounce.js";
 
-const burger = document.querySelector('.nav-opener');
+import { burger, nav, header } from "../utils/nodesHelper";
+
+import { gsap } from "gsap";
+import {MorphSVGPlugin} from 'gsap/MorphSVGPlugin';
+
+gsap.registerPlugin( MorphSVGPlugin );
 
 if(burger) {
-  const navCloser = document.querySelector('.nav__closer');
-  const nav = document.querySelector('.nav');
-  const navWrapper = nav.querySelector('.nav__wrapper');
-  const navItems = navWrapper.querySelectorAll('.nav__list-item');
+  const navBlobs = nav.querySelectorAll('.nav-blob');
+  const navItems = nav.querySelectorAll('.nav__list-item a');
 
-  gsap.set(nav, {opacity: 0});
-  gsap.set(navWrapper, {x: '100vw', opacity: 0});
-
+  /**
+  * prepare option
+  */
   navItems.forEach(item => {
-    gsap.set(item, { y: 50, opacity: 0});
+    gsap.set(item, { y: 100, opacity: 0});
+  });
+  gsap.set(nav, {opacity: 0});
+
+  /**
+  * nav, nav items animation
+  */
+  const navTimeline = gsap.timeline().pause();
+  navTimeline.to(nav, {
+    opacity: 1,
+    ease: 'ease-in',
+    duration: 0.6
+  }).to(navItems, {
+    y: 0,
+    opacity: 1,
+    ease: 'ease',
+    duration: 0.5,
+    delay: 0.35,
+    stagger: 0.025
+  }, "-=0.7")
+
+  /**
+  * blobs rotation animation
+  */
+  const blobsTimeline = gsap.timeline().pause();
+  blobsTimeline.to(navBlobs, {
+    rotate: '360deg',
+    ease: 'linear',
+    duration: 120,
+    repeat: -1,
+  })
+
+  /**
+  * blobs morph animation
+  */
+  const middleBlobTimeline = gsap.timeline().pause();
+  const middleBlobPath = nav.querySelector('.nav-blob--middle > path');
+  const middleBlobPathTo = middleBlobPath.dataset.pathTo;
+
+  middleBlobTimeline.to(middleBlobPath, {
+    ease: 'linear',
+    duration: 36,
+    yoyo: true,
+    repeat: -1,
+    morphSVG: {
+      shape: middleBlobPathTo,
+      type: 'rotational',
+    }
   });
 
+  const leftBlobTimeline = gsap.timeline().pause();
+  const leftBlobPath = nav.querySelector('.nav-blob--left > path');
+  const leftBlobPathTo = leftBlobPath.dataset.pathTo;
+
+  leftBlobTimeline.to(leftBlobPath, {
+    ease: 'linear',
+    duration: 12,
+    yoyo: true,
+    repeat: -1,
+    morphSVG: {
+      shape: leftBlobPathTo,
+      type: 'rotational',
+    }
+  });
+
+  const rightBlobTimeline = gsap.timeline().pause();
+  const rightBlobPath = nav.querySelector('.nav-blob--left > path');
+  const rightBlobPathTo = rightBlobPath.dataset.pathTo;
+
+  rightBlobTimeline.to(rightBlobPath, {
+    ease: 'linear',
+    duration: 24,
+    yoyo: true,
+    repeat: -1,
+    morphSVG: {
+      shape: rightBlobPathTo,
+      type: 'rotational',
+    }
+  });
+
+  /**
+  * functions
+  */
+
   function navOpeningAnimation() {
-    bodyLocker(true);
-    focusTrap(nav);
-    nav.classList.add('opened');
+    if(!nav.classList.contains('opened')) {
+      setDebounce();
 
-    gsap.to(nav, {
-      opacity: 1,
-      ease: 'ease-in',
-      duration: 1
-    });
+      nav.classList.add('opened');
+      burgerLinesAnimationIn();
+      bodyLocker(true);
+      focusTrap(header, burger);
 
-    gsap.to(navWrapper, {
-      x: 0,
-      opacity: 1,
-      ease: 'ease-in-out',
-      duration: 1
-    });
+      navTimeline.play();
+      blobsTimeline.play();
+      leftBlobTimeline.play();
+      middleBlobTimeline.play();
+      rightBlobTimeline.play();
 
-    navItems.forEach((item, i) => {
-      gsap.to(item, {
-        y: 0,
-        opacity: 1,
-        ease: 'ease',
-        delay: 0.15 * (i + 0.25)
-      })
-    });
-
-    burger.removeEventListener('click', onClickOpenNav);
-    navCloser.addEventListener('click', onClickCloseNav);
-    document.addEventListener('click', onClickByOverlayCloseNav);
-    document.addEventListener('keydown', onClickByEscCloseNav);
-  }
+      document.addEventListener('keydown', onClickByEscCloseNav);
+    } else {
+      setDebounce();
+      navClosingAnimation();
+    }
+  };
 
   function navClosingAnimation() {
-    navItems.forEach((item, i) => {
-      gsap.to(item, {
-        y: 50,
-        opacity: 0,
-        ease: 'ease',
-        delay: 0.5
-      })
-    });
+    document.removeEventListener('keydown', onClickByEscCloseNav);
+    navTimeline.reverse();
+    burgerLinesAnimationOut();
 
-    gsap.to(navWrapper, {
-      x: '100vw',
-      opacity: 0,
-      ease: 'ease-in-out',
-      duration: 1
-    });
-
-    gsap.to(nav, {
-      opacity: 0,
-      ease: 'ease-in',
-      duration: 1
-    });
-
-    bodyLocker(false);
     setTimeout(() => {
       nav.classList.remove('opened');
-      burger.addEventListener('click', onClickOpenNav);
-      navCloser.removeEventListener('click', onClickCloseNav);
-    }, 1050);
-  }
+      bodyLocker(false);
 
-  const onClickOpenNav = () =>{
-    navOpeningAnimation();
-  }
+      blobsTimeline.restart().pause();
+      leftBlobTimeline.restart().pause();
+      middleBlobTimeline.restart().pause();
+      rightBlobTimeline.restart().pause();
+    }, 1000);
+  };
 
-  const onClickCloseNav = () => {
-    navClosingAnimation();
-  }
+  const onClickOpenNav = () => {
+    if(!debounce) {
+      navOpeningAnimation();
+    }
+  };
 
   const onClickByEscCloseNav = (evt) => {
-    if (evt.key === "Escape") {
+    if (evt.key === "Escape" && !debounce) {
       navClosingAnimation();
     }
-  }
-
-  const onClickByOverlayCloseNav = (evt) => {
-    if(evt.target === nav) {
-      navClosingAnimation();
-    }
-  }
+  };
 
   burger.addEventListener('click', onClickOpenNav);
 }

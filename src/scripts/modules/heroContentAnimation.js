@@ -9,7 +9,7 @@ export function animateHeroContent() {
     const desc = content.querySelector('.hero__desc');
     const button = content.querySelector('.hero__btn');
     const buttonText = button.querySelector('span');
-    const header = document.querySelector('.main-header');
+    const header = document.querySelector('.header--main');
 
     let tl = gsap.timeline();
 

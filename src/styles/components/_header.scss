@@ -1,5 +1,4 @@
-.inner-header {
-  //position: sticky;
+.header {
   position: fixed;
   top: 0;
   left: 0;
@@ -13,6 +12,16 @@
   &__wrapper {
     @extend .flex-wrap;
     align-items: center;
+  }
+
+  &--main {
+    .header__logo {
+      svg {
+        path:not(:first-child):not(:nth-child(2)) {
+          display: none;
+        }
+      }
+    }
   }
 
   &__logo {
@@ -32,6 +41,8 @@
         height: 36px;
       }
     }
+
+    @extend .hover-opacity;
   }
 
   &.scrolled {

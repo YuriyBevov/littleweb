@@ -13,8 +13,9 @@ html(lang="ru")
   +head(title, desc, keywords)
 
   body(data-barba="wrapper").loading.nojs.hero-body
+    include ./header
+    +header('header--main')
 
-    include ./main-header
     #smooth-wrapper
       #smooth-content
         block page-content

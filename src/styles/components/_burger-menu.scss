@@ -6,28 +6,45 @@
   position: relative;
   z-index: 101;
 
-  svg {
+  .burger__lines {
+    @extend .flex-column;
+
+    width: 30px;
+    height: fit-content;
     margin-right: 10px;
-    fill: var(--purple-4);
+
+    .burger-line {
+      width: 100%;
+      height: 2px;
+      margin: 3px 0;
+
+      background-color: var(--purple-4);
+
+      &--middle {
+        width: 75%;
+        align-self: flex-end;
+      }
+    }
   }
 
-  //temp
   @include m-b-tablet-down {
-    min-width: fit-content;
-
-    background-color: transparent;
-    padding: 0;
-    box-shadow: none;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
+    min-width: fit-content;
     height: 40px;
+    padding: 0;
+
+    background-color: transparent;
     border-radius: 0;
-    svg {
+    box-shadow: none;
+
+    .burger__lines {
       margin-right: 0;
     }
-    span {
+
+    .burger__title {
       display: none;
     }
   }

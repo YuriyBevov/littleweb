@@ -1,6 +1,61 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/scripts/modules/burgerMenuAnimation.js":
+/*!****************************************************!*\
+  !*** ./src/scripts/modules/burgerMenuAnimation.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "burgerLinesAnimationIn": () => (/* binding */ burgerLinesAnimationIn),
+/* harmony export */   "burgerLinesAnimationOut": () => (/* binding */ burgerLinesAnimationOut)
+/* harmony export */ });
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/nodesHelper */ "./src/scripts/utils/nodesHelper.js");
+
+
+var burgerLineTop = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__.burger.querySelector('.burger-line--top');
+var burgerLineMiddle = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__.burger.querySelector('.burger-line--middle');
+var burgerLineBottom = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__.burger.querySelector('.burger-line--bottom');
+var burgerLinesTimeline = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline().pause();
+burgerLinesTimeline.to(burgerLineTop, {
+  y: 8,
+  duration: 0.3,
+  delay: 0.05,
+  ease: 'ease-in'
+}).to(burgerLineMiddle, {
+  opacity: 0,
+  duration: 0.3,
+  delay: 0.05,
+  ease: 'ease-in'
+}, "-=0.35").to(burgerLineBottom, {
+  y: -8,
+  duration: 0.3,
+  delay: 0.05,
+  ease: 'ease-in'
+}, "-=0.35").to(burgerLineTop, {
+  rotate: '45deg',
+  duration: 0.3,
+  delay: 0.05,
+  ease: 'ease-in'
+}).to(burgerLineBottom, {
+  rotate: '-45deg',
+  duration: 0.3,
+  delay: 0.05,
+  ease: 'ease-in'
+}, "-=0.35");
+function burgerLinesAnimationIn() {
+  burgerLinesTimeline.play();
+}
+function burgerLinesAnimationOut() {
+  burgerLinesTimeline.reverse();
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/custom_cursor.js":
 /*!**********************************************!*\
   !*** ./src/scripts/modules/custom_cursor.js ***!
@@ -34,6 +89,28 @@ if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
   new _utils_Cursor_js__WEBPACK_IMPORTED_MODULE_0__.Cursor(document.querySelectorAll('.cursor'), '.gsap-cursor-trigger, label, input, a, button');
 } else {
   document.querySelector('.custom-cursor-container').classList.add('hidden');
+}
+
+/***/ }),
+
+/***/ "./src/scripts/modules/debounce.js":
+/*!*****************************************!*\
+  !*** ./src/scripts/modules/debounce.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "debounce": () => (/* binding */ debounce),
+/* harmony export */   "setDebounce": () => (/* binding */ setDebounce)
+/* harmony export */ });
+var debounce = false;
+function setDebounce() {
+  debounce = true;
+  setTimeout(function () {
+    debounce = false;
+  }, 1000);
 }
 
 /***/ }),
@@ -73,7 +150,7 @@ function animateHeroContent() {
     var desc = content.querySelector('.hero__desc');
     var button = content.querySelector('.hero__btn');
     var buttonText = button.querySelector('span');
-    var header = document.querySelector('.main-header');
+    var header = document.querySelector('.header--main');
     var tl = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline();
 
     var _iterator = _createForOfIteratorHelper(titleTexts.entries()),
@@ -148,13 +225,11 @@ animateHeroContent();
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/MorphSVGPlugin */ "./node_modules/gsap/MorphSVGPlugin.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/MorphSVGPlugin */ "./node_modules/gsap/MorphSVGPlugin.js");
 
 
-
-gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_2__.MorphSVGPlugin);
+gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_1__.MorphSVGPlugin);
 /**
 * Wave animation
 */
@@ -167,17 +242,17 @@ if (wave) {
   var wave2 = document.querySelector('#wave2');
   var wave2PathMiddle = wave2.dataset.pathMiddle;
   var wave2Path = wave2.getAttribute('d');
-  var waveTimeline = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+  var waveTimeline = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
     repeat: -1,
     repeatDelay: 1,
     delay: 2.5
   });
-  var wave2Timeline = gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.timeline({
+  var wave2Timeline = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
     repeat: -1,
     repeatDelay: 1,
     delay: 3
   });
-  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave, {
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(wave, {
     ease: 'elastic',
     duration: 2,
     delay: 0.3,
@@ -186,7 +261,7 @@ if (wave) {
       type: 'rotational'
     }
   });
-  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(wave2, {
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(wave2, {
     ease: 'elastic',
     duration: 2,
     delay: 0.3,
@@ -250,7 +325,7 @@ if (wave) {
 
 
 function blobAnimation(option) {
-  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(option.pathFrom, {
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.to(option.pathFrom, {
     ease: option.ease ? option.ease : 'elastic',
     duration: option.duration ? option.duration : 3,
     delay: option.delay ? option.delay : 0,
@@ -271,7 +346,7 @@ var rightBlob = document.querySelector('.blob-path--right');
 if (rightBlob) {
   var rightBlobPathFrom = rightBlob.getAttribute('d');
   var rightBlobPathTo = rightBlob.dataset.pathTo;
-  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(rightBlob, {
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(rightBlob, {
     scale: 0
   });
   blobAnimation({
@@ -307,7 +382,7 @@ var leftBlob = document.querySelector('.blob-path--left');
 if (leftBlob) {
   var leftBlobPathFrom = leftBlob.getAttribute('d');
   var leftBlobPathTo = leftBlob.dataset.pathTo;
-  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(leftBlob, {
+  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set(leftBlob, {
     scale: 0
   });
   blobAnimation({
@@ -340,157 +415,169 @@ if (leftBlob) {
 
 /***/ }),
 
-/***/ "./src/scripts/modules/nav2.js":
-/*!*************************************!*\
-  !*** ./src/scripts/modules/nav2.js ***!
-  \*************************************/
+/***/ "./src/scripts/modules/nav.js":
+/*!************************************!*\
+  !*** ./src/scripts/modules/nav.js ***!
+  \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/MorphSVGPlugin */ "./node_modules/gsap/MorphSVGPlugin.js");
+/* harmony import */ var _burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./burgerMenuAnimation */ "./src/scripts/modules/burgerMenuAnimation.js");
+/* harmony import */ var _debounce_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./debounce.js */ "./src/scripts/modules/debounce.js");
+/* harmony import */ var _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../utils/nodesHelper */ "./src/scripts/utils/nodesHelper.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gsap/MorphSVGPlugin */ "./node_modules/gsap/MorphSVGPlugin.js");
 
 
 
-gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.registerPlugin(gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_2__.MorphSVGPlugin);
-var burger = document.querySelector('.nav-opener');
 
-if (burger) {
-  var nav = document.querySelector('.nav');
-  var navBlobs = nav.querySelectorAll('.nav-blob');
-  var navItems = nav.querySelectorAll('.nav__list-item a');
+
+
+gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.registerPlugin(gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_5__.MorphSVGPlugin);
+
+if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger) {
+  var navBlobs = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.querySelectorAll('.nav-blob');
+  var navItems = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.querySelectorAll('.nav__list-item a');
+  /**
+  * prepare option
+  */
+
   navItems.forEach(function (item) {
-    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(item, {
+    gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.set(item, {
       y: 100,
       opacity: 0
     });
   });
-  gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(nav, {
+  gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.set(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav, {
     opacity: 0
   });
-  /*navBlobs.forEach(blob => {
-    gsap.set(blob, {scale: 0.5});
-  })*/
+  /**
+  * nav, nav items animation
+  */
+
+  var navTimeline = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline().pause();
+  navTimeline.to(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav, {
+    opacity: 1,
+    ease: 'ease-in',
+    duration: 0.6
+  }).to(navItems, {
+    y: 0,
+    opacity: 1,
+    ease: 'ease',
+    duration: 0.5,
+    delay: 0.35,
+    stagger: 0.025
+  }, "-=0.7");
+  /**
+  * blobs rotation animation
+  */
+
+  var blobsTimeline = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline().pause();
+  blobsTimeline.to(navBlobs, {
+    rotate: '360deg',
+    ease: 'linear',
+    duration: 120,
+    repeat: -1
+  });
+  /**
+  * blobs morph animation
+  */
+
+  var middleBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline().pause();
+  var middleBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.querySelector('.nav-blob--middle > path');
+  var middleBlobPathTo = middleBlobPath.dataset.pathTo;
+  middleBlobTimeline.to(middleBlobPath, {
+    ease: 'linear',
+    duration: 36,
+    yoyo: true,
+    repeat: -1,
+    morphSVG: {
+      shape: middleBlobPathTo,
+      type: 'rotational'
+    }
+  });
+  var leftBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline().pause();
+  var leftBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.querySelector('.nav-blob--left > path');
+  var leftBlobPathTo = leftBlobPath.dataset.pathTo;
+  leftBlobTimeline.to(leftBlobPath, {
+    ease: 'linear',
+    duration: 12,
+    yoyo: true,
+    repeat: -1,
+    morphSVG: {
+      shape: leftBlobPathTo,
+      type: 'rotational'
+    }
+  });
+  var rightBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_4__.gsap.timeline().pause();
+  var rightBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.querySelector('.nav-blob--left > path');
+  var rightBlobPathTo = rightBlobPath.dataset.pathTo;
+  rightBlobTimeline.to(rightBlobPath, {
+    ease: 'linear',
+    duration: 24,
+    yoyo: true,
+    repeat: -1,
+    morphSVG: {
+      shape: rightBlobPathTo,
+      type: 'rotational'
+    }
+  });
+  /**
+  * functions
+  */
 
   function navOpeningAnimation() {
-    if (!nav.classList.contains('opened')) {
-      nav.classList.add('opened');
+    if (!_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.classList.contains('opened')) {
+      (0,_debounce_js__WEBPACK_IMPORTED_MODULE_2__.setDebounce)();
+      _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.classList.add('opened');
+      (0,_burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_1__.burgerLinesAnimationIn)();
       (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(true);
-      gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(nav, {
-        opacity: 1,
-        ease: 'ease-in',
-        duration: 1
-      });
-      navBlobs.forEach(function (blob) {
-        /*gsap.to(blob, {
-          scale: 1,
-          ease: 'elastic',
-          duration: 1,
-          transformOrigin: 'center',
-        });*/
-        gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(blob, {
-          rotate: '360deg',
-          ease: 'linear',
-          duration: 60,
-          repeat: -1
-        });
-        var path = blob.querySelector('path');
-        var blobPathTo = path.dataset.pathTo;
-        gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(path, {
-          ease: 'linear',
-          duration: 12,
-          yoyo: true,
-          repeat: -1,
-          morphSVG: {
-            shape: blobPathTo,
-            type: 'rotational'
-          }
-        });
-        navItems.forEach(function (item, i) {
-          gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(item, {
-            y: 0,
-            opacity: 1,
-            ease: 'ease',
-            duration: 0.5,
-            delay: 0.15 * (i + 0.25)
-          });
-        });
-      });
+      (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.focusTrap)(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.header, _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger);
+      navTimeline.play();
+      blobsTimeline.play();
+      leftBlobTimeline.play();
+      middleBlobTimeline.play();
+      rightBlobTimeline.play();
+      document.addEventListener('keydown', onClickByEscCloseNav);
     } else {
-      navItems.forEach(function (item, i) {
-        gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(item, {
-          opacity: 0,
-          duration: 0.3
-        });
-        gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(item, {
-          y: 100,
-          opacity: 0,
-          ease: 'ease',
-          delay: 0.4
-        });
-      });
-      gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(nav, {
-        opacity: 0,
-        ease: 'ease-in',
-        duration: 0.5
-      });
-      setTimeout(function () {
-        nav.classList.remove('opened');
-        (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(false);
-      }, 500);
+      (0,_debounce_js__WEBPACK_IMPORTED_MODULE_2__.setDebounce)();
+      navClosingAnimation();
     }
-    /*gsap.to(option.pathFrom, {
-      ease: option.ease ? option.ease : 'elastic',
-      duration: option.duration ? option.duration : 3,
-      delay: option.delay ? option.delay : 0,
-      scale: option.scale ? option.scale : 1,
-      morphSVG: {
-        shape: option.pathTo,
-        type: 'rotational',
-      }
-    });*/
-
-    /*gsap.to(navBlobPath, {
-      ease: 'linear',
-      duration: 7,
-      yoyo: true,
-      repeat: -1,
-      morphSVG: {
-        shape: blob1PathTo,
-        type: 'rotational',
-      }
-    });*/
-
-    /*gsap.to(navWrapper, {
-      x: 0,
-      opacity: 1,
-      ease: 'ease-in-out',
-      duration: 1
-    });
-     navItems.forEach((item, i) => {
-      gsap.to(item, {
-        y: 0,
-        opacity: 1,
-        ease: 'ease',
-        delay: 0.15 * (i + 0.25)
-      })
-    });*/
-
-    /*burger.removeEventListener('click', onClickOpenNav);
-    navCloser.addEventListener('click', onClickCloseNav);
-    document.addEventListener('click', onClickByOverlayCloseNav);
-    document.addEventListener('keydown', onClickByEscCloseNav);*/
-
   }
 
+  ;
+
+  function navClosingAnimation() {
+    document.removeEventListener('keydown', onClickByEscCloseNav);
+    navTimeline.reverse();
+    (0,_burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_1__.burgerLinesAnimationOut)();
+    setTimeout(function () {
+      _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.nav.classList.remove('opened');
+      (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(false);
+      blobsTimeline.restart().pause();
+      leftBlobTimeline.restart().pause();
+      middleBlobTimeline.restart().pause();
+      rightBlobTimeline.restart().pause();
+    }, 1000);
+  }
+
+  ;
+
   var onClickOpenNav = function onClickOpenNav() {
-    console.log('opener');
-    navOpeningAnimation();
+    if (!_debounce_js__WEBPACK_IMPORTED_MODULE_2__.debounce) {
+      navOpeningAnimation();
+    }
   };
 
-  burger.addEventListener('click', onClickOpenNav);
+  var onClickByEscCloseNav = function onClickByEscCloseNav(evt) {
+    if (evt.key === "Escape" && !_debounce_js__WEBPACK_IMPORTED_MODULE_2__.debounce) {
+      navClosingAnimation();
+    }
+  };
+
+  _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_3__.burger.addEventListener('click', onClickOpenNav);
 }
 
 /***/ }),
@@ -506,15 +593,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "initParallaxBlobs": () => (/* binding */ initParallaxBlobs)
 /* harmony export */ });
-function initParallaxBlobs(scroller) {
-  var footer = document.querySelector('footer');
+/* harmony import */ var _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/nodesHelper */ "./src/scripts/utils/nodesHelper.js");
 
-  if (footer) {
+function initParallaxBlobs(scroller) {
+  if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__.footer) {
     scroller.effects('.footer__container', {
       speed: 0.5,
       ease: 'linear'
     });
-    scroller.effects(footer, {
+    scroller.effects(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__.footer, {
       speed: 1.5,
       ease: 'linear'
     });
@@ -1033,10 +1120,12 @@ function bodyLocker(bool) {
 }
 
 function focusTrap(el) {
+  var initialFocusedEl = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+  console.log(initialFocusedEl);
   var focusableElements = ['a[href]', 'input', 'select', 'textarea', 'button', 'iframe', '[contenteditable]', '[tabindex]:not([tabindex^="-"])'];
   var firstFocusableElement = el.querySelectorAll(focusableElements)[0];
   var focusableContent = el.querySelectorAll(focusableElements);
-  var lastFocusableElement = focusableContent[focusableContent.length - 1];
+  var lastFocusableElement = focusableContent[focusableContent.length - 1]; //const initialFocusedElement = initialFocusedEl;
 
   var onBtnClickHandler = function onBtnClickHandler(evt) {
     var isTabPressed = evt.key === 'Tab' || evt.key === 9;
@@ -1064,7 +1153,7 @@ function focusTrap(el) {
   };
 
   document.addEventListener('keydown', onBtnClickHandler);
-  firstFocusableElement.focus();
+  initialFocusedEl !== null ? initialFocusedEl.focus() : firstFocusableElement.focus();
 } // вычисление поз-и/размеров эл-та
 
 
@@ -1102,6 +1191,28 @@ function getBoundingClientRect(elem, side) {
   }
 }
 
+
+
+/***/ }),
+
+/***/ "./src/scripts/utils/nodesHelper.js":
+/*!******************************************!*\
+  !*** ./src/scripts/utils/nodesHelper.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "burger": () => (/* binding */ burger),
+/* harmony export */   "footer": () => (/* binding */ footer),
+/* harmony export */   "header": () => (/* binding */ header),
+/* harmony export */   "nav": () => (/* binding */ nav)
+/* harmony export */ });
+var burger = document.querySelector('.nav-opener');
+var nav = document.querySelector('.nav');
+var header = document.querySelector('header');
+var footer = document.querySelector('footer');
 
 
 /***/ }),
@@ -13739,7 +13850,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
 /* harmony import */ var _modules_scrollSmoother_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/scrollSmoother.js */ "./src/scripts/modules/scrollSmoother.js");
 /* harmony import */ var _modules_stackIconsAnimation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/stackIconsAnimation.js */ "./src/scripts/modules/stackIconsAnimation.js");
-/* harmony import */ var _modules_nav2_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/nav2.js */ "./src/scripts/modules/nav2.js");
+/* harmony import */ var _modules_nav_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/nav.js */ "./src/scripts/modules/nav.js");
 
 
 

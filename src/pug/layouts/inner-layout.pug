@@ -13,7 +13,8 @@ html(lang="ru")
   +head(title, desc, keywords)
 
   body(data-barba="wrapper").nojs
-    include ./inner-header
+    include ./header
+    +header('header--inner')
 
     #smooth-wrapper
       #smooth-content

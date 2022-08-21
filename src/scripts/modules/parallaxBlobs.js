@@ -1,5 +1,6 @@
+import { footer } from "../utils/nodesHelper";
+
 export function initParallaxBlobs(scroller){
-  let footer = document.querySelector('footer');
   if(footer) {
     scroller.effects('.footer__container', {speed: 0.5, ease: 'linear'});
     scroller.effects(footer, {speed: 1.5, ease: 'linear'});
