@@ -370,11 +370,9 @@ if (burger) {
   gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(nav, {
     opacity: 0
   });
-  navBlobs.forEach(function (blob) {
-    gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.set(blob, {
-      scale: -2
-    });
-  });
+  /*navBlobs.forEach(blob => {
+    gsap.set(blob, {scale: -2});
+  })*/
 
   function navOpeningAnimation() {
     if (!nav.classList.contains('opened')) {
@@ -429,7 +427,7 @@ if (burger) {
           y: 50,
           opacity: 0,
           ease: 'ease',
-          delay: 0.3
+          delay: 0.4
         });
       });
       gsap__WEBPACK_IMPORTED_MODULE_1__.gsap.to(nav, {

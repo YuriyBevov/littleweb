@@ -1942,6 +1942,7 @@ body:not(.loading) .loader {
 }
 .inner-header__logo {
   margin-right: auto;
+  z-index: 99;
 }
 .inner-header__logo svg {
   width: 221px;

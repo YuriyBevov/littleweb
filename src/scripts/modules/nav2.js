@@ -16,9 +16,9 @@ if(burger) {
   });
   gsap.set(nav, {opacity: 0});
 
-  navBlobs.forEach(blob => {
+  /*navBlobs.forEach(blob => {
     gsap.set(blob, {scale: -2});
-  })
+  })*/
 
   function navOpeningAnimation() {
     if(!nav.classList.contains('opened')) {
@@ -82,7 +82,7 @@ if(burger) {
           y: 50,
           opacity: 0,
           ease: 'ease',
-          delay: 0.3
+          delay: 0.4
         })
       });
 

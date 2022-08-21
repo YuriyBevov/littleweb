@@ -18,6 +18,7 @@
   &__logo {
     @extend .flex-centered-content;
     margin-right: auto;
+    z-index: 99;
 
     svg {
       width: 221px;
