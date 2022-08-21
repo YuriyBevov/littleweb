@@ -9,16 +9,17 @@ const burger = document.querySelector('.nav-opener');
 if(burger) {
   const nav = document.querySelector('.nav');
   const navBlobs = nav.querySelectorAll('.nav-blob');
-  const navItems = nav.querySelectorAll('.nav__list-item');
+  const navItems = nav.querySelectorAll('.nav__list-item a');
 
   navItems.forEach(item => {
-    gsap.set(item, { y: 50, opacity: 0});
+    gsap.set(item, { y: 100, opacity: 0});
   });
+
   gsap.set(nav, {opacity: 0});
 
-  /*navBlobs.forEach(blob => {
-    gsap.set(blob, {scale: -2});
-  })*/
+  navBlobs.forEach(blob => {
+    gsap.set(blob, {scale: 0.5});
+  })
 
   function navOpeningAnimation() {
     if(!nav.classList.contains('opened')) {
@@ -34,9 +35,9 @@ if(burger) {
       navBlobs.forEach(blob => {
 
         gsap.to(blob, {
-          scale: 1.4,
+          scale: 1,
           ease: 'elastic',
-          duration: 1.5,
+          duration: 1,
           transformOrigin: 'center',
         });
 
@@ -66,6 +67,7 @@ if(burger) {
             y: 0,
             opacity: 1,
             ease: 'ease',
+            duration: 0.5,
             delay: 0.15 * (i + 0.25)
           })
         });
@@ -79,7 +81,7 @@ if(burger) {
         })
 
         gsap.set(item, {
-          y: 50,
+          y: 100,
           opacity: 0,
           ease: 'ease',
           delay: 0.4

@@ -1,5 +1,5 @@
 .nav {
-  display: none;
+  //display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -8,9 +8,9 @@
 
   background-color: rgba(0,0,0,.9);
 
-  &.opened {
+  /*&.opened {
     display: block;
-  }
+  }*/
 
   &__blobs-container {
     position: fixed;
