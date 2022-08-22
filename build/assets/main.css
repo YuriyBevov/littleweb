@@ -1929,7 +1929,7 @@ body:not(.loading) .loader {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 30px 0;
+  padding: 20px 0;
   background-color: var(--header-bg-color);
   z-index: 99;
 }
@@ -2067,14 +2067,11 @@ body:not(.loading) .loader {
 }
 .nav__list {
   position: relative;
-  height: 100%;
-  min-height: 512px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   width: 100%;
-  height: 100%;
 }
 .nav__list-item a {
   display: -webkit-box;

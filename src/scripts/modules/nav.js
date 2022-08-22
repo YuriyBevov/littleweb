@@ -1,4 +1,4 @@
-import { focusTrap } from "../utils/functions";
+import { focusTrap, getBoundingClientRect } from "../utils/functions";
 import { burgerLinesAnimationIn, burgerLinesAnimationOut } from "./burgerMenuAnimation";
 import { debounce, setDebounce } from "./debounce.js";
 import { smoothScroller } from "./scrollSmoother.js";
@@ -21,17 +21,6 @@ if(burger) {
     gsap.set(item, { y: 100, opacity: 0});
   });
   gsap.set(nav, {opacity: 0});
-
-
-  /**
-  * nav, nav items animation
-  */
-   /*const headerTimeline = gsap.timeline().pause();
-   headerTimeline.to(header, {
-     backgroundColor: 'rgba(0,0,0,.9)',
-     ease: 'ease-in',
-     duration: 0.6
-   });*/
 
   /**
   * nav, nav items animation
@@ -118,11 +107,19 @@ if(burger) {
       setDebounce(1000);
 
       nav.classList.add('opened');
+
+      gsap.fromTo(header, {
+        backgroundColor: 'rgba(21,27,83,.3)',
+      },{
+        backgroundColor: 'rgba(0,0,0,0.9)',
+        duration: 0.6,
+        ease: 'ease-in'
+      });
+
       burgerLinesAnimationIn();
       smoothScroller.paused(true);
       focusTrap(header, burger);
 
-      //headerTimeline.play();
       navTimeline.play();
       blobsTimeline.play();
       leftBlobTimeline.play();
@@ -139,7 +136,16 @@ if(burger) {
   function navClosingAnimation() {
     document.removeEventListener('keydown', onClickByEscCloseNav);
     navTimeline.reverse();
-    //headerTimeline.reverse();
+
+    gsap.fromTo(header, {
+      backgroundColor: 'rgba(0,0,0,0.9)',
+    },{
+      backgroundColor: 'rgba(21,27,83,.3)',
+      duration: 1.1,
+      delay: .6,
+      ease: 'ease-out'
+    });
+
     burgerLinesAnimationOut();
 
     setTimeout(() => {
