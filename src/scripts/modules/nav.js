@@ -1,9 +1,10 @@
-import { focusTrap, getBoundingClientRect } from "../utils/functions";
+import "./navHeight.js";
+import { burger, nav, header } from "../utils/nodesHelper";
+
+import { focusTrap } from "../utils/functions";
 import { burgerLinesAnimationIn, burgerLinesAnimationOut } from "./burgerMenuAnimation";
 import { debounce, setDebounce } from "./debounce.js";
 import { smoothScroller } from "./scrollSmoother.js";
-
-import { burger, nav, header } from "../utils/nodesHelper";
 
 import { gsap } from "gsap";
 import {MorphSVGPlugin} from 'gsap/MorphSVGPlugin';

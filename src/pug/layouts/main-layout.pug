@@ -13,6 +13,7 @@ html(lang="ru")
   +head(title, desc, keywords)
 
   body(data-barba="wrapper").loading.nojs.hero-body
+    include ../components/loader
     include ./header
     +header('header--main')
 
@@ -22,6 +23,5 @@ html(lang="ru")
 
     include ../components/barba_transition
     include ../components/custom_cursor
-    include ../components/loader
 
     block modals

@@ -1,4 +1,5 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/scripts/modules/burgerMenuAnimation.js":
@@ -7,7 +8,6 @@
   \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "burgerLinesAnimationIn": () => (/* binding */ burgerLinesAnimationIn),
@@ -62,7 +62,6 @@ function burgerLinesAnimationOut() {
   \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_Cursor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/Cursor.js */ "./src/scripts/utils/Cursor.js");
 /*
@@ -99,7 +98,6 @@ if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "debounce": () => (/* binding */ debounce),
@@ -121,7 +119,6 @@ function setDebounce(timeoutTime) {
   \*****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "animateHeroContent": () => (/* binding */ animateHeroContent)
@@ -223,7 +220,6 @@ animateHeroContent();
   \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/MorphSVGPlugin */ "./node_modules/gsap/MorphSVGPlugin.js");
@@ -421,7 +417,6 @@ if (leftBlob) {
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_functions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions.js */ "./src/scripts/utils/functions.js");
 
@@ -436,7 +431,6 @@ document.querySelector('.nojs').classList.remove('nojs');
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_nodesHelper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/nodesHelper.js */ "./src/scripts/utils/nodesHelper.js");
 /* harmony import */ var _modules_scrollSmoother_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/scrollSmoother.js */ "./src/scripts/modules/scrollSmoother.js");
@@ -466,15 +460,15 @@ document.addEventListener('DOMContentLoaded', function () {
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
-/* harmony import */ var _burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./burgerMenuAnimation */ "./src/scripts/modules/burgerMenuAnimation.js");
-/* harmony import */ var _debounce_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./debounce.js */ "./src/scripts/modules/debounce.js");
-/* harmony import */ var _scrollSmoother_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scrollSmoother.js */ "./src/scripts/modules/scrollSmoother.js");
-/* harmony import */ var _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/nodesHelper */ "./src/scripts/utils/nodesHelper.js");
-/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! gsap/MorphSVGPlugin */ "./node_modules/gsap/MorphSVGPlugin.js");
+/* harmony import */ var _navHeight_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navHeight.js */ "./src/scripts/modules/navHeight.js");
+/* harmony import */ var _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/nodesHelper */ "./src/scripts/utils/nodesHelper.js");
+/* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
+/* harmony import */ var _burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./burgerMenuAnimation */ "./src/scripts/modules/burgerMenuAnimation.js");
+/* harmony import */ var _debounce_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./debounce.js */ "./src/scripts/modules/debounce.js");
+/* harmony import */ var _scrollSmoother_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scrollSmoother.js */ "./src/scripts/modules/scrollSmoother.js");
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! gsap/MorphSVGPlugin */ "./node_modules/gsap/MorphSVGPlugin.js");
 
 
 
@@ -482,30 +476,31 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.registerPlugin(gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_6__.MorphSVGPlugin);
 
-if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
-  var navBlobs = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.querySelectorAll('.nav-blob');
-  var navItems = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.querySelectorAll('.nav__list-item a');
+gsap__WEBPACK_IMPORTED_MODULE_6__.gsap.registerPlugin(gsap_MorphSVGPlugin__WEBPACK_IMPORTED_MODULE_7__.MorphSVGPlugin);
+
+if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.burger) {
+  var navBlobs = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.nav.querySelectorAll('.nav-blob');
+  var navItems = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.nav.querySelectorAll('.nav__list-item a');
   /**
   * prepare option
   */
 
   navItems.forEach(function (item) {
-    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.set(item, {
+    gsap__WEBPACK_IMPORTED_MODULE_6__.gsap.set(item, {
       y: 100,
       opacity: 0
     });
   });
-  gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.set(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav, {
+  gsap__WEBPACK_IMPORTED_MODULE_6__.gsap.set(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.nav, {
     opacity: 0
   });
   /**
   * nav, nav items animation
   */
 
-  var navTimeline = gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.timeline().pause();
-  navTimeline.to(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav, {
+  var navTimeline = gsap__WEBPACK_IMPORTED_MODULE_6__.gsap.timeline().pause();
+  navTimeline.to(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.nav, {
     opacity: 1,
     ease: 'ease-in',
     duration: 0.6
@@ -521,7 +516,7 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
   * blobs rotation animation
   */
 
-  var blobsTimeline = gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.timeline().pause();
+  var blobsTimeline = gsap__WEBPACK_IMPORTED_MODULE_6__.gsap.timeline().pause();
   blobsTimeline.to(navBlobs, {
     rotate: '360deg',
     ease: 'linear',
@@ -532,8 +527,8 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
   * blobs morph animation
   */
 
-  var middleBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.timeline().pause();
-  var middleBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.querySelector('.nav-blob--middle > path');
+  var middleBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_6__.gsap.timeline().pause();
+  var middleBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.nav.querySelector('.nav-blob--middle > path');
   var middleBlobPathTo = middleBlobPath.dataset.pathTo;
   middleBlobTimeline.to(middleBlobPath, {
     ease: 'linear',
@@ -545,8 +540,8 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
       type: 'rotational'
     }
   });
-  var leftBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.timeline().pause();
-  var leftBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.querySelector('.nav-blob--left > path');
+  var leftBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_6__.gsap.timeline().pause();
+  var leftBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.nav.querySelector('.nav-blob--left > path');
   var leftBlobPathTo = leftBlobPath.dataset.pathTo;
   leftBlobTimeline.to(leftBlobPath, {
     ease: 'linear',
@@ -558,8 +553,8 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
       type: 'rotational'
     }
   });
-  var rightBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.timeline().pause();
-  var rightBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.querySelector('.nav-blob--left > path');
+  var rightBlobTimeline = gsap__WEBPACK_IMPORTED_MODULE_6__.gsap.timeline().pause();
+  var rightBlobPath = _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.nav.querySelector('.nav-blob--left > path');
   var rightBlobPathTo = rightBlobPath.dataset.pathTo;
   rightBlobTimeline.to(rightBlobPath, {
     ease: 'linear',
@@ -576,19 +571,19 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
   */
 
   function navOpeningAnimation() {
-    if (!_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.classList.contains('opened')) {
-      (0,_debounce_js__WEBPACK_IMPORTED_MODULE_2__.setDebounce)(1000);
-      _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.classList.add('opened');
-      gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.fromTo(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.header, {
+    if (!_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.nav.classList.contains('opened')) {
+      (0,_debounce_js__WEBPACK_IMPORTED_MODULE_4__.setDebounce)(1000);
+      _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.nav.classList.add('opened');
+      gsap__WEBPACK_IMPORTED_MODULE_6__.gsap.fromTo(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.header, {
         backgroundColor: 'rgba(21,27,83,.3)'
       }, {
         backgroundColor: 'rgba(0,0,0,0.9)',
         duration: 0.6,
         ease: 'ease-in'
       });
-      (0,_burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_1__.burgerLinesAnimationIn)();
-      _scrollSmoother_js__WEBPACK_IMPORTED_MODULE_3__.smoothScroller.paused(true);
-      (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.focusTrap)(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.header, _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger);
+      (0,_burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_3__.burgerLinesAnimationIn)();
+      _scrollSmoother_js__WEBPACK_IMPORTED_MODULE_5__.smoothScroller.paused(true);
+      (0,_utils_functions__WEBPACK_IMPORTED_MODULE_2__.focusTrap)(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.header, _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.burger);
       navTimeline.play();
       blobsTimeline.play();
       leftBlobTimeline.play();
@@ -596,7 +591,7 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
       rightBlobTimeline.play();
       document.addEventListener('keydown', onClickByEscCloseNav);
     } else {
-      (0,_debounce_js__WEBPACK_IMPORTED_MODULE_2__.setDebounce)(1000);
+      (0,_debounce_js__WEBPACK_IMPORTED_MODULE_4__.setDebounce)(1000);
       navClosingAnimation();
     }
   }
@@ -606,7 +601,7 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
   function navClosingAnimation() {
     document.removeEventListener('keydown', onClickByEscCloseNav);
     navTimeline.reverse();
-    gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.fromTo(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.header, {
+    gsap__WEBPACK_IMPORTED_MODULE_6__.gsap.fromTo(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.header, {
       backgroundColor: 'rgba(0,0,0,0.9)'
     }, {
       backgroundColor: 'rgba(21,27,83,.3)',
@@ -614,10 +609,10 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
       delay: .6,
       ease: 'ease-out'
     });
-    (0,_burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_1__.burgerLinesAnimationOut)();
+    (0,_burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_3__.burgerLinesAnimationOut)();
     setTimeout(function () {
-      _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.classList.remove('opened');
-      _scrollSmoother_js__WEBPACK_IMPORTED_MODULE_3__.smoothScroller.paused(false);
+      _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.nav.classList.remove('opened');
+      _scrollSmoother_js__WEBPACK_IMPORTED_MODULE_5__.smoothScroller.paused(false);
       blobsTimeline.restart().pause();
       leftBlobTimeline.restart().pause();
       middleBlobTimeline.restart().pause();
@@ -628,18 +623,18 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
   ;
 
   var onClickOpenNav = function onClickOpenNav() {
-    if (!_debounce_js__WEBPACK_IMPORTED_MODULE_2__.debounce) {
+    if (!_debounce_js__WEBPACK_IMPORTED_MODULE_4__.debounce) {
       navOpeningAnimation();
     }
   };
 
   var onClickByEscCloseNav = function onClickByEscCloseNav(evt) {
-    if (evt.key === "Escape" && !_debounce_js__WEBPACK_IMPORTED_MODULE_2__.debounce) {
+    if (evt.key === "Escape" && !_debounce_js__WEBPACK_IMPORTED_MODULE_4__.debounce) {
       navClosingAnimation();
     }
   };
 
-  _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger.addEventListener('click', onClickOpenNav);
+  _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.burger.addEventListener('click', onClickOpenNav);
 }
 
 /***/ }),
@@ -650,7 +645,6 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
   \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/nodesHelper */ "./src/scripts/utils/nodesHelper.js");
 /* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
@@ -681,7 +675,6 @@ window.addEventListener('resize', function () {
   \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "initParallaxBlobs": () => (/* binding */ initParallaxBlobs)
@@ -731,81 +724,12 @@ function initParallaxBlobs(scroller) {
 
 /***/ }),
 
-/***/ "./src/scripts/modules/preloader.js":
-/*!******************************************!*\
-  !*** ./src/scripts/modules/preloader.js ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "preloader": () => (/* binding */ preloader)
-/* harmony export */ });
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-var imagesLoaded = __webpack_require__(/*! imagesloaded */ "./node_modules/imagesloaded/imagesloaded.js");
-
-var body = document.body;
-var preloader = function preloader(_) {
-  return new Promise(function (resolve) {
-    var imgwrap = document.createElement('div');
-    imgwrap.style.visibility = 'hidden';
-    body.appendChild(imgwrap);
-
-    _toConsumableArray(document.querySelectorAll('image')).forEach(function (el) {
-      var imgEl = document.createElement('img');
-      imgEl.style.width = 0;
-      imgEl.src = el.getAttribute('xlink:href');
-      imgEl.className = 'preload';
-      imgwrap.appendChild(imgEl);
-    });
-
-    var arrImg = [].concat(_toConsumableArray(document.querySelectorAll('.js-preload')), _toConsumableArray(document.querySelectorAll('.content__bg')));
-    imagesLoaded(arrImg, {
-      background: true
-    }, function (_) {
-      imgwrap.parentNode.removeChild(imgwrap);
-      body.classList.remove('loading');
-      resolve();
-    });
-  });
-};
-/*
-
-const imagesLoaded = require('imagesloaded');
-
-export const preloader = _ => {
-    return new Promise(resolve => {
-        const arrImg = [...document.querySelectorAll('.js-preload')];
-        imagesLoaded(arrImg, {background: true}, _ => {
-            document.body.classList.remove('loading');
-            resolve();
-        });
-    });
-};
-
-*/
-
-/***/ }),
-
 /***/ "./src/scripts/modules/scrollSmoother.js":
 /*!***********************************************!*\
   !*** ./src/scripts/modules/scrollSmoother.js ***!
   \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "smoothScroller": () => (/* binding */ smoothScroller)
@@ -837,7 +761,6 @@ var smoothScroller = gsap_ScrollSmoother__WEBPACK_IMPORTED_MODULE_3__.ScrollSmoo
   \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 
@@ -893,7 +816,6 @@ if (icons) {
   \*************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Cursor": () => (/* binding */ Cursor)
@@ -1117,7 +1039,6 @@ var CursorElement = /*#__PURE__*/function () {
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "addClass": () => (/* binding */ addClass),
@@ -1294,7 +1215,6 @@ function getBoundingClientRect(elem, side) {
   \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "body": () => (/* binding */ body),
@@ -1312,123 +1232,12 @@ var footer = document.querySelector('footer');
 
 /***/ }),
 
-/***/ "./node_modules/ev-emitter/ev-emitter.js":
-/*!***********************************************!*\
-  !*** ./node_modules/ev-emitter/ev-emitter.js ***!
-  \***********************************************/
-/***/ (function(module) {
-
-/**
- * EvEmitter v2.1.1
- * Lil' event emitter
- * MIT License
- */
-
-( function( global, factory ) {
-  // universal module definition
-  if (  true && module.exports ) {
-    // CommonJS - Browserify, Webpack
-    module.exports = factory();
-  } else {
-    // Browser globals
-    global.EvEmitter = factory();
-  }
-
-}( typeof window != 'undefined' ? window : this, function() {
-
-function EvEmitter() {}
-
-let proto = EvEmitter.prototype;
-
-proto.on = function( eventName, listener ) {
-  if ( !eventName || !listener ) return this;
-
-  // set events hash
-  let events = this._events = this._events || {};
-  // set listeners array
-  let listeners = events[ eventName ] = events[ eventName ] || [];
-  // only add once
-  if ( !listeners.includes( listener ) ) {
-    listeners.push( listener );
-  }
-
-  return this;
-};
-
-proto.once = function( eventName, listener ) {
-  if ( !eventName || !listener ) return this;
-
-  // add event
-  this.on( eventName, listener );
-  // set once flag
-  // set onceEvents hash
-  let onceEvents = this._onceEvents = this._onceEvents || {};
-  // set onceListeners object
-  let onceListeners = onceEvents[ eventName ] = onceEvents[ eventName ] || {};
-  // set flag
-  onceListeners[ listener ] = true;
-
-  return this;
-};
-
-proto.off = function( eventName, listener ) {
-  let listeners = this._events && this._events[ eventName ];
-  if ( !listeners || !listeners.length ) return this;
-
-  let index = listeners.indexOf( listener );
-  if ( index != -1 ) {
-    listeners.splice( index, 1 );
-  }
-
-  return this;
-};
-
-proto.emitEvent = function( eventName, args ) {
-  let listeners = this._events && this._events[ eventName ];
-  if ( !listeners || !listeners.length ) return this;
-
-  // copy over to avoid interference if .off() in listener
-  listeners = listeners.slice( 0 );
-  args = args || [];
-  // once stuff
-  let onceListeners = this._onceEvents && this._onceEvents[ eventName ];
-
-  for ( let listener of listeners ) {
-    let isOnce = onceListeners && onceListeners[ listener ];
-    if ( isOnce ) {
-      // remove listener
-      // remove before trigger to prevent recursion
-      this.off( eventName, listener );
-      // unset once flag
-      delete onceListeners[ listener ];
-    }
-    // trigger listener
-    listener.apply( this, args );
-  }
-
-  return this;
-};
-
-proto.allOff = function() {
-  delete this._events;
-  delete this._onceEvents;
-  return this;
-};
-
-return EvEmitter;
-
-} ) );
-
-
-/***/ }),
-
 /***/ "./node_modules/gsap/CSSPlugin.js":
 /*!****************************************!*\
   !*** ./node_modules/gsap/CSSPlugin.js ***!
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "CSSPlugin": () => (/* binding */ CSSPlugin),
@@ -2859,7 +2668,6 @@ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(CSSPlugin);
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "MorphSVGPlugin": () => (/* binding */ MorphSVGPlugin),
@@ -3948,7 +3756,6 @@ _getGSAP() && gsap.registerPlugin(MorphSVGPlugin);
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Observer": () => (/* binding */ Observer),
@@ -4641,7 +4448,6 @@ _getGSAP() && gsap.registerPlugin(Observer);
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ScrollSmoother": () => (/* binding */ ScrollSmoother),
@@ -5450,7 +5256,6 @@ _getGSAP() && gsap.registerPlugin(ScrollSmoother);
   \********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ScrollTrigger": () => (/* binding */ ScrollTrigger),
@@ -7797,7 +7602,6 @@ _getGSAP() && gsap.registerPlugin(ScrollTrigger);
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Animation": () => (/* binding */ Animation),
@@ -11973,7 +11777,6 @@ var Power0 = _easeMap.Power0,
   \************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Back": () => (/* reexport safe */ _gsap_core_js__WEBPACK_IMPORTED_MODULE_0__.Back),
@@ -12019,7 +11822,6 @@ TweenMaxWithCSS = gsapWithCSS.core.Tween;
   \******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "bezierToPoints": () => (/* binding */ bezierToPoints),
@@ -13527,351 +13329,6 @@ export function pointToScreen(svgElement, point) {
 
 */
 
-/***/ }),
-
-/***/ "./node_modules/imagesloaded/imagesloaded.js":
-/*!***************************************************!*\
-  !*** ./node_modules/imagesloaded/imagesloaded.js ***!
-  \***************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
-
-/*!
- * imagesLoaded v5.0.0
- * JavaScript is all like "You images are done yet or what?"
- * MIT License
- */
-
-( function( window, factory ) {
-  // universal module definition
-  if (  true && module.exports ) {
-    // CommonJS
-    module.exports = factory( window, __webpack_require__(/*! ev-emitter */ "./node_modules/ev-emitter/ev-emitter.js") );
-  } else {
-    // browser global
-    window.imagesLoaded = factory( window, window.EvEmitter );
-  }
-
-} )( typeof window !== 'undefined' ? window : this,
-    function factory( window, EvEmitter ) {
-
-let $ = window.jQuery;
-let console = window.console;
-
-// -------------------------- helpers -------------------------- //
-
-// turn element or nodeList into an array
-function makeArray( obj ) {
-  // use object if already an array
-  if ( Array.isArray( obj ) ) return obj;
-
-  let isArrayLike = typeof obj == 'object' && typeof obj.length == 'number';
-  // convert nodeList to array
-  if ( isArrayLike ) return [ ...obj ];
-
-  // array of single index
-  return [ obj ];
-}
-
-// -------------------------- imagesLoaded -------------------------- //
-
-/**
- * @param {[Array, Element, NodeList, String]} elem
- * @param {[Object, Function]} options - if function, use as callback
- * @param {Function} onAlways - callback function
- * @returns {ImagesLoaded}
- */
-function ImagesLoaded( elem, options, onAlways ) {
-  // coerce ImagesLoaded() without new, to be new ImagesLoaded()
-  if ( !( this instanceof ImagesLoaded ) ) {
-    return new ImagesLoaded( elem, options, onAlways );
-  }
-  // use elem as selector string
-  let queryElem = elem;
-  if ( typeof elem == 'string' ) {
-    queryElem = document.querySelectorAll( elem );
-  }
-  // bail if bad element
-  if ( !queryElem ) {
-    console.error(`Bad element for imagesLoaded ${queryElem || elem}`);
-    return;
-  }
-
-  this.elements = makeArray( queryElem );
-  this.options = {};
-  // shift arguments if no options set
-  if ( typeof options == 'function' ) {
-    onAlways = options;
-  } else {
-    Object.assign( this.options, options );
-  }
-
-  if ( onAlways ) this.on( 'always', onAlways );
-
-  this.getImages();
-  // add jQuery Deferred object
-  if ( $ ) this.jqDeferred = new $.Deferred();
-
-  // HACK check async to allow time to bind listeners
-  setTimeout( this.check.bind( this ) );
-}
-
-ImagesLoaded.prototype = Object.create( EvEmitter.prototype );
-
-ImagesLoaded.prototype.getImages = function() {
-  this.images = [];
-
-  // filter & find items if we have an item selector
-  this.elements.forEach( this.addElementImages, this );
-};
-
-const elementNodeTypes = [ 1, 9, 11 ];
-
-/**
- * @param {Node} elem
- */
-ImagesLoaded.prototype.addElementImages = function( elem ) {
-  // filter siblings
-  if ( elem.nodeName === 'IMG' ) {
-    this.addImage( elem );
-  }
-  // get background image on element
-  if ( this.options.background === true ) {
-    this.addElementBackgroundImages( elem );
-  }
-
-  // find children
-  // no non-element nodes, #143
-  let { nodeType } = elem;
-  if ( !nodeType || !elementNodeTypes.includes( nodeType ) ) return;
-
-  let childImgs = elem.querySelectorAll('img');
-  // concat childElems to filterFound array
-  for ( let img of childImgs ) {
-    this.addImage( img );
-  }
-
-  // get child background images
-  if ( typeof this.options.background == 'string' ) {
-    let children = elem.querySelectorAll( this.options.background );
-    for ( let child of children ) {
-      this.addElementBackgroundImages( child );
-    }
-  }
-};
-
-const reURL = /url\((['"])?(.*?)\1\)/gi;
-
-ImagesLoaded.prototype.addElementBackgroundImages = function( elem ) {
-  let style = getComputedStyle( elem );
-  // Firefox returns null if in a hidden iframe https://bugzil.la/548397
-  if ( !style ) return;
-
-  // get url inside url("...")
-  let matches = reURL.exec( style.backgroundImage );
-  while ( matches !== null ) {
-    let url = matches && matches[2];
-    if ( url ) {
-      this.addBackground( url, elem );
-    }
-    matches = reURL.exec( style.backgroundImage );
-  }
-};
-
-/**
- * @param {Image} img
- */
-ImagesLoaded.prototype.addImage = function( img ) {
-  let loadingImage = new LoadingImage( img );
-  this.images.push( loadingImage );
-};
-
-ImagesLoaded.prototype.addBackground = function( url, elem ) {
-  let background = new Background( url, elem );
-  this.images.push( background );
-};
-
-ImagesLoaded.prototype.check = function() {
-  this.progressedCount = 0;
-  this.hasAnyBroken = false;
-  // complete if no images
-  if ( !this.images.length ) {
-    this.complete();
-    return;
-  }
-
-  /* eslint-disable-next-line func-style */
-  let onProgress = ( image, elem, message ) => {
-    // HACK - Chrome triggers event before object properties have changed. #83
-    setTimeout( () => {
-      this.progress( image, elem, message );
-    } );
-  };
-
-  this.images.forEach( function( loadingImage ) {
-    loadingImage.once( 'progress', onProgress );
-    loadingImage.check();
-  } );
-};
-
-ImagesLoaded.prototype.progress = function( image, elem, message ) {
-  this.progressedCount++;
-  this.hasAnyBroken = this.hasAnyBroken || !image.isLoaded;
-  // progress event
-  this.emitEvent( 'progress', [ this, image, elem ] );
-  if ( this.jqDeferred && this.jqDeferred.notify ) {
-    this.jqDeferred.notify( this, image );
-  }
-  // check if completed
-  if ( this.progressedCount === this.images.length ) {
-    this.complete();
-  }
-
-  if ( this.options.debug && console ) {
-    console.log( `progress: ${message}`, image, elem );
-  }
-};
-
-ImagesLoaded.prototype.complete = function() {
-  let eventName = this.hasAnyBroken ? 'fail' : 'done';
-  this.isComplete = true;
-  this.emitEvent( eventName, [ this ] );
-  this.emitEvent( 'always', [ this ] );
-  if ( this.jqDeferred ) {
-    let jqMethod = this.hasAnyBroken ? 'reject' : 'resolve';
-    this.jqDeferred[ jqMethod ]( this );
-  }
-};
-
-// --------------------------  -------------------------- //
-
-function LoadingImage( img ) {
-  this.img = img;
-}
-
-LoadingImage.prototype = Object.create( EvEmitter.prototype );
-
-LoadingImage.prototype.check = function() {
-  // If complete is true and browser supports natural sizes,
-  // try to check for image status manually.
-  let isComplete = this.getIsImageComplete();
-  if ( isComplete ) {
-    // report based on naturalWidth
-    this.confirm( this.img.naturalWidth !== 0, 'naturalWidth' );
-    return;
-  }
-
-  // If none of the checks above matched, simulate loading on detached element.
-  this.proxyImage = new Image();
-  // add crossOrigin attribute. #204
-  if ( this.img.crossOrigin ) {
-    this.proxyImage.crossOrigin = this.img.crossOrigin;
-  }
-  this.proxyImage.addEventListener( 'load', this );
-  this.proxyImage.addEventListener( 'error', this );
-  // bind to image as well for Firefox. #191
-  this.img.addEventListener( 'load', this );
-  this.img.addEventListener( 'error', this );
-  this.proxyImage.src = this.img.currentSrc || this.img.src;
-};
-
-LoadingImage.prototype.getIsImageComplete = function() {
-  // check for non-zero, non-undefined naturalWidth
-  // fixes Safari+InfiniteScroll+Masonry bug infinite-scroll#671
-  return this.img.complete && this.img.naturalWidth;
-};
-
-LoadingImage.prototype.confirm = function( isLoaded, message ) {
-  this.isLoaded = isLoaded;
-  let { parentNode } = this.img;
-  // emit progress with parent <picture> or self <img>
-  let elem = parentNode.nodeName === 'PICTURE' ? parentNode : this.img;
-  this.emitEvent( 'progress', [ this, elem, message ] );
-};
-
-// ----- events ----- //
-
-// trigger specified handler for event type
-LoadingImage.prototype.handleEvent = function( event ) {
-  let method = 'on' + event.type;
-  if ( this[ method ] ) {
-    this[ method ]( event );
-  }
-};
-
-LoadingImage.prototype.onload = function() {
-  this.confirm( true, 'onload' );
-  this.unbindEvents();
-};
-
-LoadingImage.prototype.onerror = function() {
-  this.confirm( false, 'onerror' );
-  this.unbindEvents();
-};
-
-LoadingImage.prototype.unbindEvents = function() {
-  this.proxyImage.removeEventListener( 'load', this );
-  this.proxyImage.removeEventListener( 'error', this );
-  this.img.removeEventListener( 'load', this );
-  this.img.removeEventListener( 'error', this );
-};
-
-// -------------------------- Background -------------------------- //
-
-function Background( url, element ) {
-  this.url = url;
-  this.element = element;
-  this.img = new Image();
-}
-
-// inherit LoadingImage prototype
-Background.prototype = Object.create( LoadingImage.prototype );
-
-Background.prototype.check = function() {
-  this.img.addEventListener( 'load', this );
-  this.img.addEventListener( 'error', this );
-  this.img.src = this.url;
-  // check if image is already complete
-  let isComplete = this.getIsImageComplete();
-  if ( isComplete ) {
-    this.confirm( this.img.naturalWidth !== 0, 'naturalWidth' );
-    this.unbindEvents();
-  }
-};
-
-Background.prototype.unbindEvents = function() {
-  this.img.removeEventListener( 'load', this );
-  this.img.removeEventListener( 'error', this );
-};
-
-Background.prototype.confirm = function( isLoaded, message ) {
-  this.isLoaded = isLoaded;
-  this.emitEvent( 'progress', [ this, this.element, message ] );
-};
-
-// -------------------------- jQuery -------------------------- //
-
-ImagesLoaded.makeJQueryPlugin = function( jQuery ) {
-  jQuery = jQuery || window.jQuery;
-  if ( !jQuery ) return;
-
-  // set local variable
-  $ = jQuery;
-  // $().imagesLoaded()
-  $.fn.imagesLoaded = function( options, onAlways ) {
-    let instance = new ImagesLoaded( this, options, onAlways );
-    return instance.jqDeferred.promise( $( this ) );
-  };
-};
-// try making plugin
-ImagesLoaded.makeJQueryPlugin();
-
-// --------------------------  -------------------------- //
-
-return ImagesLoaded;
-
-} );
-
-
 /***/ })
 
 /******/ 	});
@@ -13894,7 +13351,7 @@ return ImagesLoaded;
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -13931,9 +13388,8 @@ return ImagesLoaded;
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-"use strict";
 /*!*****************************!*\
   !*** ./src/scripts/main.js ***!
   \*****************************/
@@ -13943,13 +13399,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_custom_cursor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/custom_cursor.js */ "./src/scripts/modules/custom_cursor.js");
 /* harmony import */ var _modules_heroContentAnimation_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/heroContentAnimation.js */ "./src/scripts/modules/heroContentAnimation.js");
 /* harmony import */ var _modules_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/heroShapesAnimation.js */ "./src/scripts/modules/heroShapesAnimation.js");
-/* harmony import */ var _modules_preloader_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/preloader.js */ "./src/scripts/modules/preloader.js");
-/* harmony import */ var _modules_scrollSmoother_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/scrollSmoother.js */ "./src/scripts/modules/scrollSmoother.js");
-/* harmony import */ var _modules_stackIconsAnimation_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/stackIconsAnimation.js */ "./src/scripts/modules/stackIconsAnimation.js");
-/* harmony import */ var _modules_navHeight_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/navHeight.js */ "./src/scripts/modules/navHeight.js");
-/* harmony import */ var _modules_nav_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/nav.js */ "./src/scripts/modules/nav.js");
-
-
+/* harmony import */ var _modules_scrollSmoother_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/scrollSmoother.js */ "./src/scripts/modules/scrollSmoother.js");
+/* harmony import */ var _modules_stackIconsAnimation_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/stackIconsAnimation.js */ "./src/scripts/modules/stackIconsAnimation.js");
+/* harmony import */ var _modules_nav_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/nav.js */ "./src/scripts/modules/nav.js");
 
 
 

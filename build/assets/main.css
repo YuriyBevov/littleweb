@@ -1848,7 +1848,7 @@ body:not(.nojs) .hero__logo {
   height: 100vh;
   overflow: hidden;
   background-color: var(--primary-color);
-  z-index: 99;
+  z-index: 501;
   overflow: hidden;
 }
 .loader-dot {
@@ -2316,7 +2316,7 @@ body:not(.loading) .loader {
     left: 0;
     display: block;
     pointer-events: none;
-    z-index: 501;
+    z-index: 499;
     stroke: var(--purple-3);
     mix-blend-mode: difference;
   }

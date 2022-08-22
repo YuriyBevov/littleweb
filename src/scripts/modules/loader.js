@@ -1,5 +1,5 @@
 import { body } from "../utils/nodesHelper.js";
-import {smoothScroller} from "../modules/scrollSmoother.js";
+import { smoothScroller } from "../modules/scrollSmoother.js";
 
 smoothScroller.paused(true);
 
