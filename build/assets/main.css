@@ -2020,10 +2020,10 @@ body:not(.loading) .loader {
 .nav {
   display: none;
   position: absolute;
-  top: 100px;
+  top: 0;
   left: 0;
   width: 100vw;
-  height: calc(100vh - 100px);
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.9);
 }
 .nav.opened {

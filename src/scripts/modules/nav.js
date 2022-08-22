@@ -22,6 +22,17 @@ if(burger) {
   });
   gsap.set(nav, {opacity: 0});
 
+
+  /**
+  * nav, nav items animation
+  */
+   /*const headerTimeline = gsap.timeline().pause();
+   headerTimeline.to(header, {
+     backgroundColor: 'rgba(0,0,0,.9)',
+     ease: 'ease-in',
+     duration: 0.6
+   });*/
+
   /**
   * nav, nav items animation
   */
@@ -111,6 +122,7 @@ if(burger) {
       smoothScroller.paused(true);
       focusTrap(header, burger);
 
+      //headerTimeline.play();
       navTimeline.play();
       blobsTimeline.play();
       leftBlobTimeline.play();
@@ -127,6 +139,7 @@ if(burger) {
   function navClosingAnimation() {
     document.removeEventListener('keydown', onClickByEscCloseNav);
     navTimeline.reverse();
+    //headerTimeline.reverse();
     burgerLinesAnimationOut();
 
     setTimeout(() => {

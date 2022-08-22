@@ -506,6 +506,17 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
   * nav, nav items animation
   */
 
+  /*const headerTimeline = gsap.timeline().pause();
+  headerTimeline.to(header, {
+    backgroundColor: 'rgba(0,0,0,.9)',
+    ease: 'ease-in',
+    duration: 0.6
+  });*/
+
+  /**
+  * nav, nav items animation
+  */
+
   var navTimeline = gsap__WEBPACK_IMPORTED_MODULE_5__.gsap.timeline().pause();
   navTimeline.to(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav, {
     opacity: 1,
@@ -583,7 +594,8 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
       _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.classList.add('opened');
       (0,_burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_1__.burgerLinesAnimationIn)();
       _scrollSmoother_js__WEBPACK_IMPORTED_MODULE_3__.smoothScroller.paused(true);
-      (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.focusTrap)(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.header, _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger);
+      (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.focusTrap)(_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.header, _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger); //headerTimeline.play();
+
       navTimeline.play();
       blobsTimeline.play();
       leftBlobTimeline.play();
@@ -600,7 +612,8 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.burger) {
 
   function navClosingAnimation() {
     document.removeEventListener('keydown', onClickByEscCloseNav);
-    navTimeline.reverse();
+    navTimeline.reverse(); //headerTimeline.reverse();
+
     (0,_burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_1__.burgerLinesAnimationOut)();
     setTimeout(function () {
       _utils_nodesHelper__WEBPACK_IMPORTED_MODULE_4__.nav.classList.remove('opened');
