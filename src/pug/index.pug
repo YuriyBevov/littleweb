@@ -7,8 +7,12 @@ block variables
     const keywords = ""
 
 block page-content
-
-  main(data-barba="container" data-barba-namespace="home")
-    include ./sections/index-page/hero
+  include ./layouts/header
+  +header('header--main')
+  #smooth-wrapper
+    #smooth-content
+      main.lw-bottom-lined(data-barba="container" data-barba-namespace="home-page")
+        include ./sections/index-page/hero
+      include ./layouts/main-footer
 
 block modals

@@ -10,13 +10,17 @@
     <link rel="stylesheet" href="./assets/main.css"/>
     <script defer="defer" src="./assets/bundle.js"></script>
   </head>
-  <body class="loading nojs" data-barba="wrapper">
+  <body class="loading nojs hero-body" data-barba="wrapper">
     <div class="loader" aria-hidden="true">
       <div class="loader-dot loader-dot--left"></div>
       <div class="loader-dot loader-dot--middle"></div>
       <div class="loader-dot loader-dot--right"></div>
     </div>
-        <header class="header header--inner">
+    <!--include ./header-->
+    <!--+header('header--main')-->
+    <!--#smooth-wrapper#smooth-content
+    -->
+        <header class="header header--main">
           <div class="container-fluid">
             <div class="header__wrapper"><a class="header__logo" href="index.html" aria-label="Littleweb.ru - сайты под ключ"><svg preserveAspectRatio="xMinYMin meet" width="221" height="43" viewBox="0 0 221 47" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M57.8928 11.1015C53.515 4.81387 46.6853 1.05652 38.1472 0.164763C24.4822 -1.2635 8.26296 6.51401 8.26296 26.6239L12.0385 26.6619C12.0385 7.24627 27.8692 2.94697 37.478 4.01455C63.5198 6.91095 60.2834 37.1256 53.9742 40.8866C43.8671 46.9132 41.2869 35.2823 41.2869 35.2823H37.5877C37.5877 35.2823 36.1804 43.1051 29.0384 41.9125C24.3651 41.1331 23.0303 36.2828 22.6679 34.5718C33.0779 29.1542 32.6615 17.1263 32.6615 17.1263L23.6271 14.4456C23.6271 14.4456 17.7268 23.6949 18.106 32.375C9.04558 34.956 2.79584 28.7445 2.77167 28.721L0 31.2277C0.109677 31.3419 7.6049 39.5145 18.87 36.0109C19.3013 37.6929 21.3331 44.5587 28.3562 45.7314C34.4479 46.7483 37.9929 43.2845 39.1733 41.4883C40.7571 44.053 43.7909 46.2226 48.2226 46.4202C48.3472 46.4256 48.4717 46.422 48.5981 46.4293C54.6025 46.6975 61.5307 41.5753 62.6405 30.3957C63.3283 23.4574 61.5977 16.4249 57.8928 11.1015ZM25.5455 18.9696L28.5793 19.8505C28.3748 21.2226 27.7818 26.8831 22.205 30.3903C22.4578 25.4023 24.4041 21.1954 25.5455 18.9696Z" fill="#EC9A29"/>
@@ -62,126 +66,78 @@
         </header>
     <div id="smooth-wrapper">
       <div id="smooth-content">
-        <main class="lw-bottom-lined" data-barba="container" data-barba-namespace="articles-page">
-          <section class="lw-page-top lw-section articles">
-            <div class="container">
-              <div class="articles__wrapper">
-                <h1 class="visually-hidden">Немного статей о том, как мы работаем</h1>
-                          <div class="lw-section-header articles__header"><span class="lw-text-sm lw-fw-bold">Статьи</span>
-                            <h2 class="lw-text-xl lw-colored-text lw-fw-bold">Вам может быть <span>интересно</span></h2>
-                            <p class="lw-text-sec lw-text-xs lw-fw-light lw-text-opacity">Здесь мы делимся мыслями</p>
-                          </div>
-                <div class="articles__content">
-                  <ul class="articles__list">
-                    <li class="articles__item">
-                                <div class="article-preview-card"><a href="#" aria-label="Система управления контентом(CMS). &lt;br/&gt; Что&amp;nbsp;это&amp;nbsp;такое и&amp;nbsp;какую лучше выбрать&amp;nbsp;?">
-                                    <div class="article-preview-card__header">
-                                      <picture>
-                                        <source srcset="./assets/img/article-preview-card-1@1x.webp 1x, ./assets/img/article-preview-card-1@2x.webp 2x" type="image/webp"><img src="./assets/img/article-preview-card-1@1x.jpg" srcset="./assets/img/article-preview-card-1.jpg 2x" alt="Система управления контентом(CMS). &lt;br/&gt; Что&amp;nbsp;это&amp;nbsp;такое и&amp;nbsp;какую лучше выбрать&amp;nbsp;?" width="450" height="320">
-                                      </picture>
-                                    </div>
-                                    <div class="article-preview-card__body">
-                                      <div class="article-preview-card__body-info"><span class="lw-text-sec lw-fw-bold">Статья</span>
-                                        <time class="lw-text-sec lw-fw-light">24.07.2022</time>
-                                      </div>
-                                      <div class="article-preview-card__body-title">
-                                        <h2 class="lw-text-primary lw-fw-bold">Система управления контентом(CMS). <br/> Что&nbsp;это&nbsp;такое и&nbsp;какую лучше выбрать&nbsp;?</h2>
-                                      </div>
-                                    </div>
-                                    <div class="article-preview-card__footer"><span class="lw-text-sm lw-fw-bold">Читать
-                                        <svg width="24" height="24">
-                                          <use xlink:href="./assets/sprite.svg#icon-arrow"></use>
-                                        </svg></span></div></a></div>
-                    </li>
-                    <li class="articles__item">
-                                <div class="article-preview-card"><a href="#" aria-label="Timeweb.com &lt;br/&gt; Наш хостинг&amp;nbsp;-&amp;nbsp;партнер.&lt;br/&gt;Почему&amp;nbsp;мы выбираем&amp;nbsp;его&amp;nbsp;?">
-                                    <div class="article-preview-card__header">
-                                      <picture>
-                                        <source srcset="./assets/img/article-preview-card-1@1x.webp 1x, ./assets/img/article-preview-card-1@2x.webp 2x" type="image/webp"><img src="./assets/img/article-preview-card-1@1x.jpg" srcset="./assets/img/article-preview-card-1.jpg 2x" alt="Timeweb.com &lt;br/&gt; Наш хостинг&amp;nbsp;-&amp;nbsp;партнер.&lt;br/&gt;Почему&amp;nbsp;мы выбираем&amp;nbsp;его&amp;nbsp;?" width="450" height="320">
-                                      </picture>
-                                    </div>
-                                    <div class="article-preview-card__body">
-                                      <div class="article-preview-card__body-info"><span class="lw-text-sec lw-fw-bold">Статья</span>
-                                        <time class="lw-text-sec lw-fw-light">24.07.2022</time>
-                                      </div>
-                                      <div class="article-preview-card__body-title">
-                                        <h2 class="lw-text-primary lw-fw-bold">Timeweb.com <br/> Наш хостинг&nbsp;-&nbsp;партнер.<br/>Почему&nbsp;мы выбираем&nbsp;его&nbsp;?</h2>
-                                      </div>
-                                    </div>
-                                    <div class="article-preview-card__footer"><span class="lw-text-sm lw-fw-bold">Читать
-                                        <svg width="24" height="24">
-                                          <use xlink:href="./assets/sprite.svg#icon-arrow"></use>
-                                        </svg></span></div></a></div>
-                    </li>
-                    <li class="articles__item">
-                                <div class="article-preview-card"><a href="#" aria-label="Анимации в WEB. &lt;br/&gt;Зачем они&amp;nbsp;нужны и&amp;nbsp;какую пользу&amp;nbsp;несут&amp;nbsp;?">
-                                    <div class="article-preview-card__header">
-                                      <picture>
-                                        <source srcset="./assets/img/article-preview-card-1@1x.webp 1x, ./assets/img/article-preview-card-1@2x.webp 2x" type="image/webp"><img src="./assets/img/article-preview-card-1@1x.jpg" srcset="./assets/img/article-preview-card-1.jpg 2x" alt="Анимации в WEB. &lt;br/&gt;Зачем они&amp;nbsp;нужны и&amp;nbsp;какую пользу&amp;nbsp;несут&amp;nbsp;?" width="450" height="320">
-                                      </picture>
-                                    </div>
-                                    <div class="article-preview-card__body">
-                                      <div class="article-preview-card__body-info"><span class="lw-text-sec lw-fw-bold">Статья</span>
-                                        <time class="lw-text-sec lw-fw-light">24.07.2022</time>
-                                      </div>
-                                      <div class="article-preview-card__body-title">
-                                        <h2 class="lw-text-primary lw-fw-bold">Анимации в WEB. <br/>Зачем они&nbsp;нужны и&nbsp;какую пользу&nbsp;несут&nbsp;?</h2>
-                                      </div>
-                                    </div>
-                                    <div class="article-preview-card__footer"><span class="lw-text-sm lw-fw-bold">Читать
-                                        <svg width="24" height="24">
-                                          <use xlink:href="./assets/sprite.svg#icon-arrow"></use>
-                                        </svg></span></div></a></div>
-                    </li>
-                  </ul>
-                  <button class="lw-button-main" type="button">Больше статей</button><svg aria-hidden="true" class="blob blob--left" width="371" height="471" viewBox="0 0 371 471" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M46.4457 57.6349C73.2339 -20.5478 126.223 -1.88343 149.368 17.2216C441.707 189.162 393.756 396.032 292.268 452.261C142.535 535.219 -74.9284 319.616 25.7423 238.304C126.413 156.991 12.9604 155.363 46.4457 57.6349Z" fill="#4A3FA0"/>
+        <div class="main-content" data-barba="container" data-barba-namespace="home">
+          <main>
+            <section class="lw-section hero">
+              <svg class="wave-bg" viewBox="0 0 900 675" preserveAspectRatio="none">
+                <path id="wave" data-path-middle="M 0,675 C 0,675 0,495 0,495 C 62.526315789473685,499.39234449760767 125.05263157894737,503.78468899521533 190,513 C 254.94736842105263,522.2153110047847 322.31578947368416,536.2535885167464 381,525 C 439.68421052631584,513.7464114832536 489.68421052631584,477.20095693779894 544,468 C 598.3157894736842,458.79904306220106 656.9473684210526,476.94258373205747 717,486 C 777.0526315789474,495.05741626794253 838.5263157894738,495.02870813397124 900,495 C 900,495 900,675 900,675 Z" d="M 0,675 C 0,675 0,495 0,495 C 42.038277511961724,503.555023923445 84.07655502392345,512.11004784689 152,515 C 219.92344497607655,517.88995215311 313.732057416268,515.1148325358851 380,506 C 446.267942583732,496.88516746411494 484.9952153110047,481.43062200956945 533,486 C 581.0047846889953,490.56937799043055 638.2870813397129,515.1626794258374 701,520 C 763.7129186602871,524.8373205741626 831.8564593301435,509.9186602870813 900,495 C 900,495 900,675 900,675 Z" fill="#8468F6"></path>
+                <path id="wave2" data-path-middle="M 0,675 C 0,675 0,585 0,585 C 57.856459330143565,572.6267942583731 115.71291866028713,560.2535885167464 182,567 C 248.28708133971287,573.7464114832536 323.0047846889951,599.6124401913876 380,596 C 436.9952153110049,592.3875598086124 476.2679425837322,559.2966507177033 524,556 C 571.7320574162678,552.7033492822967 627.9234449760766,579.2009569377991 692,589 C 756.0765550239234,598.7990430622009 828.0382775119617,591.8995215311004 900,585 C 900,585 900,675 900,675 Z" d="M 0,675 C 0,675 0,585 0,585 C 70.45933014354065,579.6124401913876 140.9186602870813,574.2248803827752 199,581 C 257.0813397129187,587.7751196172248 302.78468899521533,606.7129186602871 353,606 C 403.21531100478467,605.2870813397129 457.9425837320574,584.9234449760764 513,579 C 568.0574162679426,573.0765550239236 623.4449760765551,581.5933014354067 688,585 C 752.5550239234449,588.4066985645933 826.2775119617224,586.7033492822966 900,585 C 900,585 900,675 900,675 Z" fill="#947BFB"></path>
+              </svg>
+              <div class="container">
+                <div class="hero__wrapper">
+                  <div class="hero__content"><a class="hero__logo" href="index.html" aria-label="Обновить"><svg width="266" height="56" viewBox="0 0 266 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M69.681 13.3418C64.4118 5.78531 56.1914 1.26973 45.9148 0.198013C29.4672 -1.51848 9.94547 7.82854 9.94547 31.9966L14.4897 32.0424C14.4897 8.70857 33.5439 3.54168 45.1093 4.82469C76.4538 8.30559 72.5584 44.6176 64.9644 49.1375C52.7994 56.3803 49.6938 42.4023 49.6938 42.4023H45.2413C45.2413 42.4023 43.5475 51.8038 34.9512 50.3705C29.3263 49.4338 27.7198 43.6047 27.2835 41.5484C39.8132 35.0375 39.3121 20.5824 39.3121 20.5824L28.438 17.3607C28.438 17.3607 21.3364 28.4765 21.7928 38.9083C10.8874 42.0102 3.36513 34.5452 3.33604 34.5169L0 37.5295C0.13201 37.6667 9.15342 47.4886 22.7124 43.278C23.2315 45.2994 25.677 53.5508 34.1301 54.9601C41.4622 56.1821 45.7291 52.0194 47.1498 49.8607C49.0562 52.943 52.7077 55.5504 58.0418 55.7878C58.1917 55.7944 58.3416 55.79 58.4937 55.7987C65.7207 56.1211 74.0597 49.9653 75.3954 36.5296C76.2233 28.1911 74.1402 19.7394 69.681 13.3418ZM30.7471 22.7977L34.3986 23.8564C34.1525 25.5053 33.4387 32.3081 26.7264 36.5231C27.0307 30.5285 29.3733 25.4727 30.7471 22.7977Z" fill="#EC9A29"/>
+<path d="M21.5556 18.6302L17.6992 22.3184L20.6596 25.2523L24.516 21.5642L21.5556 18.6302Z" fill="#EC9A29"/>
+<path d="M106.903 25.0617L103.357 28.5298L106.079 31.2887L109.625 27.8206L106.903 25.0617Z" fill="#EC9A29"/>
+<path d="M84.8028 27.0894H89.8696V43.3409C89.8696 47.8494 93.9819 50.9506 99.0898 50.9506H101.54V55.9956H98.7566C91.0319 55.9956 84.8008 50.4549 84.8008 43.5888V27.0894H84.8028Z" fill="white"/>
+<path d="M109.02 35.3198V55.9979H103.953V35.3198H109.02Z" fill="white"/>
+<path d="M112.48 31.1431H117.546V37.8022H120.537V42.7654H117.546V47.0239C117.546 49.2156 119.373 51.0346 121.574 51.0346H122.821V55.9977H121.574C116.549 55.9977 112.478 51.8621 112.478 46.8989V31.1431H112.48Z" fill="white"/>
+<path d="M125.099 31.1431H130.166V37.8022H133.157V42.7654H130.166V47.0239C130.166 49.2156 131.992 51.0346 134.193 51.0346H135.44V55.9977H134.193C129.168 55.9977 125.097 51.8621 125.097 46.8989V31.1431H125.099Z" fill="white"/>
+<path d="M137.544 55.9976V27.0483H142.652V55.9976H137.544Z" fill="white"/>
+<path d="M157.059 34.2031C157.931 34.2031 158.721 34.2851 159.468 34.451L159.884 34.5329C160.009 34.5739 160.174 34.6148 160.299 34.6579C164.909 35.9811 168.273 40.1577 168.273 45.1208C168.273 45.4096 168.232 45.7005 168.232 45.9893C168.149 46.8168 167.983 47.6014 167.734 48.347C165.864 47.4375 163.788 46.9828 161.587 46.9828C159.386 46.9828 157.308 47.4375 155.358 48.306V43.4678C157.684 42.8062 159.801 42.5993 161.546 42.5993C161.92 42.5993 162.251 42.6403 162.626 42.6403C161.836 40.8623 159.842 39.1663 157.061 39.1663C153.698 39.1663 150.955 41.8537 150.955 45.1208C150.955 48.4289 153.78 51.0344 157.061 51.0344C158.764 51.0344 160.217 50.4547 161.422 49.2564C162.295 50.2069 163.79 51.821 164.911 53.0192C162.959 54.8382 160.219 55.9975 157.061 55.9975C150.748 55.9975 145.889 51.0344 145.889 45.1208C145.887 39.0413 150.871 34.2031 157.059 34.2031Z" fill="white"/>
+<path d="M171.683 26.4688H176.694V43.8387C176.694 47.6855 179.856 51.0346 184.005 51.0346C188.072 51.0346 191.316 47.8494 191.316 43.8387V26.4688H196.327V43.8387C196.327 47.6855 199.448 51.0346 203.597 51.0346C207.664 51.0346 210.909 47.8494 210.909 43.8387V26.4688H215.92V43.8387C215.92 50.6618 210.335 55.9977 203.597 55.9977C199.613 55.9977 196.081 54.1788 193.822 51.2005C191.522 54.1788 187.99 55.9977 184.005 55.9977C177.188 55.9977 171.683 50.5798 171.683 43.8387V26.4688Z" fill="white"/>
+<path d="M229.407 34.2031C230.279 34.2031 231.069 34.2851 231.816 34.451L232.231 34.5329C232.357 34.5739 232.521 34.6148 232.647 34.6579C237.257 35.9811 240.62 40.1577 240.62 45.1208C240.62 45.4096 240.579 45.7005 240.579 45.9893C240.497 46.8168 240.33 47.6014 240.081 48.347C238.211 47.4375 236.136 46.9828 233.935 46.9828C231.733 46.9828 229.656 47.4375 227.705 48.306V43.4678C230.032 42.8062 232.149 42.5993 233.893 42.5993C234.268 42.5993 234.599 42.6403 234.973 42.6403C234.183 40.8623 232.19 39.1663 229.409 39.1663C226.045 39.1663 223.303 41.8537 223.303 45.1208C223.303 48.4289 226.128 51.0344 229.409 51.0344C231.112 51.0344 232.564 50.4547 233.77 49.2564C234.642 50.2069 236.138 51.821 237.259 53.0192C235.307 54.8382 232.567 55.9975 229.409 55.9975C223.095 55.9975 218.236 51.0344 218.236 45.1208C218.234 39.0413 223.219 34.2031 229.407 34.2031Z" fill="white"/>
+<path d="M248.68 26.5527V45.08C248.68 48.8838 251.297 51.4893 254.786 51.4893C258.316 51.4893 260.891 48.2632 260.891 45.08C260.891 41.9379 258.441 38.6708 254.786 38.6708C253.913 38.6708 253.082 38.8367 252.336 39.1255C252.002 38.3389 250.84 35.4856 250.632 34.9489C251.92 34.4532 253.29 34.2054 254.786 34.2054C261.223 34.2054 265.999 39.2095 265.999 45.0821C265.999 51.2026 260.891 55.9998 254.786 55.9998C248.598 55.9998 243.613 51.1616 243.613 45.0821V26.5548H248.68V26.5527Z" fill="white"/>
+</svg></a>
+                    <h1 class="lw-text-xxl hero__title"><span><span>Наш креатив</span></span><span><span>для вашего</span></span><span><span>успеха</span></span></h1>
+                    <p class="lw-text-md hero__desc">Создание сайтов по ключ</p>
+                    <button class="lw-button-main hero__btn" type="button"><span>Оставить заявку</span></button>
+                  </div>
+                  <div class="hero__social">
+                    <ul class="social">
+                      <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы в телеграме">
+                          <svg width="70" height="70">
+                            <use xlink:href="./assets/sprite.svg#icon-tg"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы вКонтакте">
+                          <svg width="70" height="70">
+                            <use xlink:href="./assets/sprite.svg#icon-vk"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы в whatsapp">
+                          <svg width="70" height="70">
+                            <use xlink:href="./assets/sprite.svg#icon-whapp"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                  <div class="hero__blobs"><svg class="blob blob--left js-preload" viewBox="45 85 400 400" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path class="blob-path blob-path--left" data-path-to="M442.5,315.5Q430,381,369,404.5Q308,428,244.5,446Q181,464,116,429.5Q51,395,46,322.5Q41,250,63.5,190.5Q86,131,152,140.5Q218,150,256.5,130.5Q295,111,346.5,127Q398,143,426.5,196.5Q455,250,442.5,315.5Z" d="M454,318Q438,386,376,417Q314,448,246,460Q178,472,114,433.5Q50,395,38.5,322.5Q27,250,50,186Q73,122,138,113Q203,104,254.5,91Q306,78,361,104Q416,130,443,190Q470,250,454,318Z" fill="rgba(74, 63, 160, 0.1)"></path>
 </svg>
-<svg aria-hidden="true" class="blob blob--right" width="560" height="432" viewBox="0 0 560 432" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M32.4489 165.969C-65.0436 224.477 80.2426 352.852 165.072 409.726C268.18 478.854 386.962 374.382 520.967 233.167C688.473 56.6477 256.179 -47.4019 189.904 22.2408C123.629 91.8835 154.314 92.8338 32.4489 165.969Z" fill="#947BFB"/>
+<svg class="blob blob--right js-preload" viewBox="45 65 400 400" preserveAspectRatio="xMinYMin slice" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path class="blob-path blob-path--right" data-path-to="M369.5,303Q335,356,278,365.5Q221,375,157.5,350Q94,325,94,250Q94,175,152.5,126.5Q211,78,292.5,86Q374,94,389,172Q404,250,369.5,303Z" d="M365,280.5Q345,311,319,327.5Q293,344,260.5,375Q228,406,187,388Q146,370,120.5,333Q95,296,82,246.5Q69,197,105,160.5Q141,124,182,92.5Q223,61,287,45Q351,29,375.5,91.5Q400,154,392.5,202Q385,250,365,280.5Z" fill="rgba(67, 21, 255, 0.2)"></path>
 </svg>
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
-          <section class="lw-page-top lw-section request">
-            <div class="container">
-              <div class="request__wrapper">
-                <h2 class="lw-text-lg lw-colored-text">Давайте работать вместе <span>над&nbsp;следующим проектом</span></h2>
-                <p class="lw-text-sec lw-fw-light">Оставьте свой номер телефона, и мы свяжимся с вами.</p>
-                <form action="#">
-                  <fieldset>
-                    <label class="visually-hidden" for="user_name">Ваше имя:</label>
-                    <input type="text" id="user_name" name="user_name" autocomplete="off" placeholder="Ваше имя">
-                  </fieldset>
-                  <fieldset>
-                    <label class="visually-hidden" for="user_phone">Ваш контактный номер:</label>
-                    <input type="tel" id="user_phone" name="user_phone" autocomplete="off" placeholder="Ваш контактный номер">
-                  </fieldset>
-                  <button class="lw-button-main" type="button">Оставить заявку</button>
-                </form>
-              </div>
-            </div>
-          </section>
-        </main>
-        <footer class="footer">
-          <div class="container footer__container">
-            <div class="footer__wrapper">
-              <div class="footer__top">
-                <ul class="footer-nav">
-                  <li class="footer-nav__item footer-nav__item--offset-left"><a class="lw-text-sm lw-fw-bold" href="index.html">Главная</a></li>
-                  <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="services.html">Услуги</a></li>
-                  <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="portfolio.html">Портфолио</a></li>
-                  <li class="footer-nav__item footer-nav__item--offset-right"><a class="lw-text-sm lw-fw-bold" href="about.html">О нас</a></li>
-                  <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="contacts.html">Контакты</a></li>
-                  <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="articles.html">Статьи</a></li>
-                  <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="vacancies.html">Вакансии</a></li>
-                  <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="prices.html">Цены</a></li>
-                </ul>
-              </div>
-              <div class="footer__bottom">
-                <div class="footer__bottom-field footer__bottom-field--logo">
-                  <div class="footer-logo"><a href="index.html" aria-label="Littleweb.ru - сайты под ключ"><svg width="166" height="35" viewBox="0 0 166 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            </section>
+          </main>
+          <footer class="footer">
+            <div class="container footer__container">
+              <div class="footer__wrapper">
+                <div class="footer__top">
+                  <ul class="footer-nav">
+                    <li class="footer-nav__item footer-nav__item--offset-left"><a class="lw-text-sm lw-fw-bold" href="index.html">Главная</a></li>
+                    <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="services.html">Услуги</a></li>
+                    <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="portfolio.html">Портфолио</a></li>
+                    <li class="footer-nav__item footer-nav__item--offset-right"><a class="lw-text-sm lw-fw-bold" href="about.html">О нас</a></li>
+                    <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="contacts.html">Контакты</a></li>
+                    <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="articles.html">Статьи</a></li>
+                    <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="vacancies.html">Вакансии</a></li>
+                    <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="prices.html">Цены</a></li>
+                  </ul>
+                </div>
+                <div class="footer__bottom">
+                  <div class="footer__bottom-field footer__bottom-field--logo">
+                    <div class="footer-logo"><a href="index.html" aria-label="Littleweb.ru - сайты под ключ"><svg width="166" height="35" viewBox="0 0 166 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M43.4851 8.33867C40.1968 3.61585 35.0668 0.793586 28.6536 0.123759C18.3893 -0.949054 6.20657 4.89287 6.20657 19.998L9.04246 20.0266C9.04246 5.4429 20.9334 2.21356 28.1509 3.01545C47.7117 5.19103 45.2807 27.8862 40.5417 30.7112C32.95 35.238 31.0119 26.5016 31.0119 26.5016H28.2333C28.2333 26.5016 27.1763 32.3776 21.8117 31.4818C18.3014 30.8963 17.2988 27.2531 17.0265 25.9679C24.8458 21.8986 24.5331 12.8641 24.5331 12.8641L17.747 10.8505C17.747 10.8505 13.3152 17.7979 13.6 24.3179C6.79441 26.2566 2.10004 21.5909 2.08189 21.5732L0 23.4561C0.0823819 23.5419 5.71228 29.6806 14.1739 27.0489C14.4978 28.3123 16.024 33.4695 21.2992 34.3503C25.8749 35.1141 28.5377 32.5124 29.4243 31.1632C30.614 33.0896 32.8927 34.7193 36.2215 34.8677C36.3151 34.8717 36.4086 34.869 36.5036 34.8745C41.0136 35.076 46.2177 31.2285 47.0513 22.8312C47.5679 17.6196 46.2679 12.3372 43.4851 8.33867ZM19.188 14.2487L21.4668 14.9103C21.3132 15.9409 20.8678 20.1927 16.6789 22.8271C16.8688 19.0804 18.3307 15.9205 19.188 14.2487Z" fill="#EC9A29"/>
 <path d="M13.4516 11.6441L11.0449 13.9492L12.8924 15.7829L15.299 13.4778L13.4516 11.6441Z" fill="#EC9A29"/>
 <path d="M66.7137 15.6644L64.501 17.832L66.1996 19.5564L68.4123 17.3888L66.7137 15.6644Z" fill="#EC9A29"/>
@@ -195,29 +151,30 @@
 <path d="M143.163 21.377C143.708 21.377 144.201 21.4282 144.667 21.5319L144.926 21.5831C145.004 21.6087 145.107 21.6343 145.185 21.6612C148.062 22.4882 150.161 25.0986 150.161 28.2006C150.161 28.3811 150.136 28.5629 150.136 28.7434C150.084 29.2606 149.98 29.7509 149.825 30.2169C148.658 29.6485 147.363 29.3643 145.989 29.3643C144.615 29.3643 143.319 29.6485 142.102 30.1913V27.1674C143.554 26.7539 144.875 26.6246 145.963 26.6246C146.197 26.6246 146.404 26.6502 146.637 26.6502C146.144 25.539 144.9 24.4789 143.165 24.4789C141.066 24.4789 139.354 26.1586 139.354 28.2006C139.354 30.2681 141.117 31.8966 143.165 31.8966C144.228 31.8966 145.134 31.5343 145.886 30.7853C146.431 31.3794 147.364 32.3882 148.064 33.1371C146.845 34.274 145.135 34.9986 143.165 34.9986C139.225 34.9986 136.192 31.8966 136.192 28.2006C136.191 24.4008 139.302 21.377 143.163 21.377Z" fill="white"/>
 <path d="M155.191 16.5957V28.1754C155.191 30.5527 156.824 32.1812 159.002 32.1812C161.205 32.1812 162.812 30.1648 162.812 28.1754C162.812 26.2115 161.283 24.1695 159.002 24.1695C158.457 24.1695 157.939 24.2732 157.473 24.4537C157.265 23.9621 156.539 22.1788 156.41 21.8434C157.213 21.5335 158.068 21.3786 159.002 21.3786C163.019 21.3786 165.999 24.5062 165.999 28.1766C165.999 32.002 162.812 35.0002 159.002 35.0002C155.14 35.0002 152.029 31.9763 152.029 28.1766V16.597H155.191V16.5957Z" fill="white"/>
 </svg></a><span class="lw-text-sec lw-fw-thin">© 2022. Все права защищены</span></div>
-                </div>
-                <div class="footer__bottom-field"><span class="lw-fw-light lw-text-sec lw-text-opacity">Телефон:</span><a class="lw-text-sm lw-fw-bold" href="tel:89062723744">8 (906) 272-37-44</a></div>
-                <div class="footer__bottom-field"><span class="lw-fw-light lw-text-sec lw-text-opacity">Электронная почта:</span><a class="lw-text-sm lw-fw-bold" href="mailto: info@littleweb.ru">info@littleweb.ru</a></div>
-                <div class="footer__bottom-field footer__bottom-field--social"><span class="lw-fw-light lw-text-sec lw-text-opacity">Мы в соцсетях:</span>
-                  <ul class="social">
-                    <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы в телеграме">
-                        <svg width="70" height="70">
-                          <use xlink:href="./assets/sprite.svg#icon-tg"></use>
-                        </svg></a></li>
-                    <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы вКонтакте">
-                        <svg width="70" height="70">
-                          <use xlink:href="./assets/sprite.svg#icon-vk"></use>
-                        </svg></a></li>
-                    <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы в whatsapp">
-                        <svg width="70" height="70">
-                          <use xlink:href="./assets/sprite.svg#icon-whapp"></use>
-                        </svg></a></li>
-                  </ul>
+                  </div>
+                  <div class="footer__bottom-field"><span class="lw-fw-light lw-text-sec lw-text-opacity">Телефон:</span><a class="lw-text-sm lw-fw-bold" href="tel:89062723744">8 (906) 272-37-44</a></div>
+                  <div class="footer__bottom-field"><span class="lw-fw-light lw-text-sec lw-text-opacity">Электронная почта:</span><a class="lw-text-sm lw-fw-bold" href="mailto: info@littleweb.ru">info@littleweb.ru</a></div>
+                  <div class="footer__bottom-field footer__bottom-field--social"><span class="lw-fw-light lw-text-sec lw-text-opacity">Мы в соцсетях:</span>
+                    <ul class="social">
+                      <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы в телеграме">
+                          <svg width="70" height="70">
+                            <use xlink:href="./assets/sprite.svg#icon-tg"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы вКонтакте">
+                          <svg width="70" height="70">
+                            <use xlink:href="./assets/sprite.svg#icon-vk"></use>
+                          </svg></a></li>
+                      <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы в whatsapp">
+                          <svg width="70" height="70">
+                            <use xlink:href="./assets/sprite.svg#icon-whapp"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </footer>
+          </footer>
+        </div>
       </div>
     </div>
     <div class="transition-overlay">

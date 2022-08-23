@@ -1326,10 +1326,6 @@ body {
 body.body-locked {
   overflow: hidden;
 }
-body.hero-body {
-  background-color: var(--hero-bg-color);
-}
-
 h1, h2 {
   line-height: 1.2;
 }
@@ -1807,7 +1803,7 @@ main {
   margin-bottom: 20px;
 }
 .lw-bottom-lined {
-  border-bottom: 1px solid var(--white-color);
+  border-bottom: 3px solid var(--white-color);
 }
 
 /*gsap start*/

@@ -1,4 +1,4 @@
-extends layouts/inner-layout.pug
+extends layouts/main-layout.pug
 
 block variables
   -
@@ -7,12 +7,15 @@ block variables
     const keywords = ""
 
 block page-content
-
-  main(data-barba="container" data-barba-namespace="about").lw-bottom-lined
-    include ./sections/about-page/about
-    include ./sections/about-page/stuff
-    include ./sections/about-page/workflow
-    include ./sections/common/request
+  include ./layouts/header
+  +header('header--inner')
+  #smooth-wrapper
+    #smooth-content
+      main.lw-bottom-lined(data-barba="container" data-barba-namespace="about-page")
+        include ./sections/about-page/about
+        include ./sections/about-page/stuff
+        include ./sections/about-page/workflow
+        include ./sections/common/request
+      include ./layouts/main-footer
 
 block modals
-

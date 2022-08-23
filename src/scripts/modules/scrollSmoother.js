@@ -1,7 +1,8 @@
 import {gsap} from "gsap";
 import {ScrollTrigger} from 'gsap/ScrollTrigger';
 import {ScrollSmoother} from 'gsap/ScrollSmoother';
-import {initParallaxBlobs} from './parallaxBlobs.js';
+import { smoothFooterInit } from "./smoothFooter.js";
+import { parallaxBackgroundFiguresInit } from './parallaxBackgroundFigures.js';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -12,6 +13,7 @@ let smoothScroller = ScrollSmoother.create({
   effects: true
 });
 
-initParallaxBlobs(smoothScroller);
+smoothFooterInit(smoothScroller);
+parallaxBackgroundFiguresInit(smoothScroller);
 
-export { smoothScroller };
+export { smoothScroller, ScrollTrigger };

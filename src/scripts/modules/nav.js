@@ -173,4 +173,10 @@ if(burger) {
   };
 
   burger.addEventListener('click', onClickOpenNav);
+  //barba
+  navItems.forEach(item => {
+    item.addEventListener('click',() => {
+      navClosingAnimation();
+    })
+  })
 }

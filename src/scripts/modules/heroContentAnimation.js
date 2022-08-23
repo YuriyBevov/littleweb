@@ -1,15 +1,15 @@
 import {gsap} from "gsap";
 
-const content = document.querySelector('.hero__content');
+export function heroContentAnimationInit() {
+  const content = document.querySelector('.hero__content');
 
-export function animateHeroContent() {
   if(content) {
     const logo = content.querySelector('.hero__logo');
     const titleTexts = content.querySelectorAll('.hero__title span > span');
     const desc = content.querySelector('.hero__desc');
     const button = content.querySelector('.hero__btn');
     const buttonText = button.querySelector('span');
-    const header = document.querySelector('.header--main');
+    const header = document.querySelector('.header');
 
     let tl = gsap.timeline();
 
@@ -62,4 +62,4 @@ export function animateHeroContent() {
   };
 };
 
-animateHeroContent();
+heroContentAnimationInit();

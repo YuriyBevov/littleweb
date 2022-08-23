@@ -1,16 +1,21 @@
-extends layouts/inner-layout.pug
+extends layouts/main-layout.pug
 
 block variables
   -
     const title = "LittleWeb"
     const desc = "LittleWeb - создание сайтов под ключ."
     const keywords = ""
-    const footerType = "truncated"
 
 block page-content
-
-  main(data-barba="container" data-barba-namespace="home").lw-bottom-lined
-    include ./sections/articles-page/articles
-    include ./sections/common/request
+  include ./layouts/header
+  +header('header--inner')
+  #smooth-wrapper
+    #smooth-content
+      main.lw-bottom-lined(data-barba="container" data-barba-namespace="articles-page")
+        include ./sections/articles-page/articles
+        include ./sections/common/request
+      include ./layouts/main-footer
 
 block modals
+
+
