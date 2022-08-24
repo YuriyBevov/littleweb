@@ -27,7 +27,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _parallaxBackgroundFigures_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./parallaxBackgroundFigures.js */ "./src/scripts/modules/parallaxBackgroundFigures.js");
 /* harmony import */ var _stackIconsAnimation_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./stackIconsAnimation.js */ "./src/scripts/modules/stackIconsAnimation.js");
 /* harmony import */ var _smoothFooter_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./smoothFooter.js */ "./src/scripts/modules/smoothFooter.js");
-/* harmony import */ var _updateCurrentPage_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./updateCurrentPage.js */ "./src/scripts/modules/updateCurrentPage.js");
+/* harmony import */ var _updatePageUrl_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./updatePageUrl.js */ "./src/scripts/modules/updatePageUrl.js");
 /* harmony import */ var _barba_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @barba/core */ "./node_modules/@barba/core/dist/barba.umd.js");
 /* harmony import */ var _barba_core__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_barba_core__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
@@ -40,7 +40,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-(0,_updateCurrentPage_js__WEBPACK_IMPORTED_MODULE_6__.updateCurrentPage)();
+(0,_updatePageUrl_js__WEBPACK_IMPORTED_MODULE_6__.updatePageUrl)();
 
 function animationLeave(current) {
   return gsap__WEBPACK_IMPORTED_MODULE_8__.gsap.to(current, {
@@ -101,7 +101,7 @@ _barba_core__WEBPACK_IMPORTED_MODULE_7___default().hooks.enter(function (data) {
   }
 });
 _barba_core__WEBPACK_IMPORTED_MODULE_7___default().hooks.after(function (data) {
-  (0,_updateCurrentPage_js__WEBPACK_IMPORTED_MODULE_6__.updateCurrentPage)();
+  (0,_updatePageUrl_js__WEBPACK_IMPORTED_MODULE_6__.updatePageUrl)();
   (0,_parallaxBackgroundFigures_js__WEBPACK_IMPORTED_MODULE_3__.parallaxBackgroundFiguresInit)(_scrollSmoother_js__WEBPACK_IMPORTED_MODULE_0__.smoothScroller);
   (0,_smoothFooter_js__WEBPACK_IMPORTED_MODULE_5__.smoothFooterInit)();
   (0,_heroShapesAnimation_js__WEBPACK_IMPORTED_MODULE_2__.heroShapesAnimationInit)();
@@ -1030,18 +1030,18 @@ stackIconsAnimationInit();
 
 /***/ }),
 
-/***/ "./src/scripts/modules/updateCurrentPage.js":
-/*!**************************************************!*\
-  !*** ./src/scripts/modules/updateCurrentPage.js ***!
-  \**************************************************/
+/***/ "./src/scripts/modules/updatePageUrl.js":
+/*!**********************************************!*\
+  !*** ./src/scripts/modules/updatePageUrl.js ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "updateCurrentPage": () => (/* binding */ updateCurrentPage)
+/* harmony export */   "updatePageUrl": () => (/* binding */ updatePageUrl)
 /* harmony export */ });
-function updateCurrentPage() {
+function updatePageUrl() {
   var navLinks = document.querySelectorAll('.footer-nav__item a, .nav__list-item a');
   console.log('update page');
   navLinks.forEach(function (item) {

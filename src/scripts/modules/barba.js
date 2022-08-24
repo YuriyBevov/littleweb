@@ -4,13 +4,13 @@ import { heroShapesAnimationInit } from "./heroShapesAnimation.js";
 import { parallaxBackgroundFiguresInit } from './parallaxBackgroundFigures.js';
 import { stackIconsAnimationInit } from "./stackIconsAnimation.js";
 import { smoothFooterInit } from "./smoothFooter.js";
-import { updateCurrentPage } from "./updateCurrentPage.js";
+import { updatePageUrl } from "./updatePageUrl.js";
 
 import barba from '@barba/core';
 
 import {gsap} from 'gsap';
 
-updateCurrentPage();
+updatePageUrl();
 
 function animationLeave(current) {
   return gsap.to(current, {
@@ -74,7 +74,7 @@ barba.hooks.enter((data) => {
 });
 
 barba.hooks.after((data) => {
-  updateCurrentPage();
+  updatePageUrl();
 
   parallaxBackgroundFiguresInit(smoothScroller);
   smoothFooterInit();

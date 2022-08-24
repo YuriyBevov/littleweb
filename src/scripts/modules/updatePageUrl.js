@@ -1,4 +1,4 @@
-export function updateCurrentPage() {
+export function updatePageUrl() {
   const navLinks = document.querySelectorAll('.footer-nav__item a, .nav__list-item a');
   console.log('update page')
   navLinks.forEach(item => {
