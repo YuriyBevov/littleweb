@@ -16,7 +16,6 @@ export function parallaxBackgroundFiguresInit(scroller){
   if(blobs) {
 
     blobs.forEach((item,i) => {
-      console.log('init blobs');
       scroller.effects(item, {speed: 1.2 + (i / 3.85)});
     });
   }

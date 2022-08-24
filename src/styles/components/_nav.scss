@@ -77,6 +77,10 @@
         line-height: 1.2;
         margin: 15px 0;
 
+        &.active-nav {
+          color: var(--warning-color);
+        }
+
         &:hover,
         &:focus {
           color: var(--warning-color);

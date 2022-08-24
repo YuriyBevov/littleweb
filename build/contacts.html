@@ -62,19 +62,99 @@
         </header>
     <div id="smooth-wrapper">
       <div id="smooth-content">
-        <main class="lw-bottom-lined" data-barba="container" data-barba-namespace="contacts-page">
-          <section class="lw-page-top lw-section contacts">
-            <div class="container">
-              <div class="contacts__wrapper">
-                <h1 class="visually-hidden">Наши контакты</h1>
-                          <div class="lw-section-header contacts__header"><span class="lw-text-sm lw-fw-bold">Контакты</span>
-                            <h2 class="lw-text-xl lw-colored-text lw-fw-bold">Как с нами <span>связаться</span></h2>
-                            <p class="lw-text-sec lw-text-xs lw-fw-light lw-text-opacity">Вы можете связаться с нами любым удобным способом.</p>
-                          </div>
-                <div class="contacts__content">
-                  <div class="contacts__content-field"><span class="lw-text-sec lw-text-xs lw-fw-light">Телефон:</span><a class="lw-text-lg lw-fw-bold contacts__link" href="tel:89062723744">8 906 272 37 44</a></div>
-                  <div class="contacts__content-field"><span class="lw-text-sec lw-text-xs lw-fw-light">Электронная почта:</span><a class="lw-text-lg lw-fw-bold contacts__link" href="mailto:info@littleweb.ru">info@littleweb.ru</a></div>
-                  <div class="contacts__content-field"><span class="lw-text-sec lw-text-xs lw-fw-light">Мы в соцсетях:</span>
+        <div class="barba-container" data-barba="container" data-barba-namespace="contacts-page">
+          <main class="lw-bottom-lined" data-barba="container" data-barba-namespace="contacts-page">
+            <section class="lw-page-top lw-section contacts">
+              <div class="container">
+                <div class="contacts__wrapper">
+                  <h1 class="visually-hidden">Наши контакты</h1>
+                              <div class="lw-section-header contacts__header"><span class="lw-text-sm lw-fw-bold">Контакты</span>
+                                <h2 class="lw-text-xl lw-colored-text lw-fw-bold">Как с нами <span>связаться</span></h2>
+                                <p class="lw-text-sec lw-text-xs lw-fw-light lw-text-opacity">Вы можете связаться с нами любым удобным способом.</p>
+                              </div>
+                  <div class="contacts__content">
+                    <div class="contacts__content-field"><span class="lw-text-sec lw-text-xs lw-fw-light">Телефон:</span><a class="lw-text-lg lw-fw-bold contacts__link" href="tel:89062723744">8 906 272 37 44</a></div>
+                    <div class="contacts__content-field"><span class="lw-text-sec lw-text-xs lw-fw-light">Электронная почта:</span><a class="lw-text-lg lw-fw-bold contacts__link" href="mailto:info@littleweb.ru">info@littleweb.ru</a></div>
+                    <div class="contacts__content-field"><span class="lw-text-sec lw-text-xs lw-fw-light">Мы в соцсетях:</span>
+                      <ul class="social">
+                        <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы в телеграме">
+                            <svg width="70" height="70">
+                              <use xlink:href="./assets/sprite.svg#icon-tg"></use>
+                            </svg></a></li>
+                        <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы вКонтакте">
+                            <svg width="70" height="70">
+                              <use xlink:href="./assets/sprite.svg#icon-vk"></use>
+                            </svg></a></li>
+                        <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы в whatsapp">
+                            <svg width="70" height="70">
+                              <use xlink:href="./assets/sprite.svg#icon-whapp"></use>
+                            </svg></a></li>
+                      </ul>
+                    </div><svg aria-hidden="true" class="blob blob--left" width="371" height="471" viewBox="0 0 371 471" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M46.4457 57.6349C73.2339 -20.5478 126.223 -1.88343 149.368 17.2216C441.707 189.162 393.756 396.032 292.268 452.261C142.535 535.219 -74.9284 319.616 25.7423 238.304C126.413 156.991 12.9604 155.363 46.4457 57.6349Z" fill="#4A3FA0"/>
+</svg>
+<svg aria-hidden="true" class="blob blob--right" width="560" height="432" viewBox="0 0 560 432" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.4489 165.969C-65.0436 224.477 80.2426 352.852 165.072 409.726C268.18 478.854 386.962 374.382 520.967 233.167C688.473 56.6477 256.179 -47.4019 189.904 22.2408C123.629 91.8835 154.314 92.8338 32.4489 165.969Z" fill="#947BFB"/>
+</svg>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="lw-page-top lw-section request">
+              <div class="container">
+                <div class="request__wrapper">
+                  <h2 class="lw-text-lg lw-colored-text">Давайте работать вместе <span>над&nbsp;следующим проектом</span></h2>
+                  <p class="lw-text-sec lw-fw-light">Оставьте свой номер телефона, и мы свяжимся с вами.</p>
+                  <form action="#">
+                    <fieldset>
+                      <label class="visually-hidden" for="user_name">Ваше имя:</label>
+                      <input type="text" id="user_name" name="user_name" autocomplete="off" placeholder="Ваше имя">
+                    </fieldset>
+                    <fieldset>
+                      <label class="visually-hidden" for="user_phone">Ваш контактный номер:</label>
+                      <input type="tel" id="user_phone" name="user_phone" autocomplete="off" placeholder="Ваш контактный номер">
+                    </fieldset>
+                    <button class="lw-button-main" type="button">Оставить заявку</button>
+                  </form>
+                </div>
+              </div>
+            </section>
+          </main>
+          <footer class="footer">
+            <div class="container footer__container">
+              <div class="footer__wrapper">
+                <div class="footer__top">
+                  <ul class="footer-nav">
+                    <li class="footer-nav__item footer-nav__item--offset-left"><a class="lw-text-sm lw-fw-bold" href="index.html">Главная</a></li>
+                    <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="services.html">Услуги</a></li>
+                    <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="portfolio.html">Портфолио</a></li>
+                    <li class="footer-nav__item footer-nav__item--offset-right"><a class="lw-text-sm lw-fw-bold" href="about.html">О нас</a></li>
+                    <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="contacts.html">Контакты</a></li>
+                    <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="articles.html">Статьи</a></li>
+                    <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="vacancies.html">Вакансии</a></li>
+                    <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="prices.html">Цены</a></li>
+                  </ul>
+                </div>
+                <div class="footer__bottom">
+                  <div class="footer__bottom-field footer__bottom-field--logo">
+                    <div class="footer-logo"><a href="index.html" aria-label="Littleweb.ru - сайты под ключ"><svg width="166" height="35" viewBox="0 0 166 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M43.4851 8.33867C40.1968 3.61585 35.0668 0.793586 28.6536 0.123759C18.3893 -0.949054 6.20657 4.89287 6.20657 19.998L9.04246 20.0266C9.04246 5.4429 20.9334 2.21356 28.1509 3.01545C47.7117 5.19103 45.2807 27.8862 40.5417 30.7112C32.95 35.238 31.0119 26.5016 31.0119 26.5016H28.2333C28.2333 26.5016 27.1763 32.3776 21.8117 31.4818C18.3014 30.8963 17.2988 27.2531 17.0265 25.9679C24.8458 21.8986 24.5331 12.8641 24.5331 12.8641L17.747 10.8505C17.747 10.8505 13.3152 17.7979 13.6 24.3179C6.79441 26.2566 2.10004 21.5909 2.08189 21.5732L0 23.4561C0.0823819 23.5419 5.71228 29.6806 14.1739 27.0489C14.4978 28.3123 16.024 33.4695 21.2992 34.3503C25.8749 35.1141 28.5377 32.5124 29.4243 31.1632C30.614 33.0896 32.8927 34.7193 36.2215 34.8677C36.3151 34.8717 36.4086 34.869 36.5036 34.8745C41.0136 35.076 46.2177 31.2285 47.0513 22.8312C47.5679 17.6196 46.2679 12.3372 43.4851 8.33867ZM19.188 14.2487L21.4668 14.9103C21.3132 15.9409 20.8678 20.1927 16.6789 22.8271C16.8688 19.0804 18.3307 15.9205 19.188 14.2487Z" fill="#EC9A29"/>
+<path d="M13.4516 11.6441L11.0449 13.9492L12.8924 15.7829L15.299 13.4778L13.4516 11.6441Z" fill="#EC9A29"/>
+<path d="M66.7137 15.6644L64.501 17.832L66.1996 19.5564L68.4123 17.3888L66.7137 15.6644Z" fill="#EC9A29"/>
+<path d="M52.9222 16.9316H56.0842V27.089C56.0842 29.9067 58.6505 31.845 61.8381 31.845H63.3671V34.9982H61.6301C56.8095 34.9982 52.9209 31.5352 52.9209 27.2439V16.9316H52.9222Z" fill="white"/>
+<path d="M68.035 22.0742V34.9981H64.873V22.0742H68.035Z" fill="white"/>
+<path d="M70.1946 19.4648H73.3566V23.6269H75.2233V26.7288H73.3566V29.3904C73.3566 30.7603 74.4966 31.8971 75.8703 31.8971H76.6483V34.9991H75.8703C72.734 34.9991 70.1934 32.4143 70.1934 29.3123V19.4648H70.1946Z" fill="white"/>
+<path d="M78.0696 19.4648H81.2316V23.6269H83.0983V26.7288H81.2316V29.3904C81.2316 30.7603 82.3716 31.8971 83.7453 31.8971H84.5233V34.9991H83.7453C80.609 34.9991 78.0684 32.4143 78.0684 29.3123V19.4648H78.0696Z" fill="white"/>
+<path d="M85.8359 34.9997V16.9062H89.0236V34.9997H85.8359Z" fill="white"/>
+<path d="M98.014 21.377C98.5583 21.377 99.0513 21.4282 99.5173 21.5319L99.7766 21.5831C99.8549 21.6087 99.9576 21.6343 100.036 21.6612C102.913 22.4882 105.012 25.0986 105.012 28.2006C105.012 28.3811 104.986 28.5629 104.986 28.7434C104.935 29.2606 104.831 29.7509 104.676 30.2169C103.509 29.6485 102.213 29.3643 100.84 29.3643C99.4659 29.3643 98.1693 29.6485 96.9523 30.1913V27.1674C98.4042 26.7539 99.7253 26.6246 100.814 26.6246C101.048 26.6246 101.254 26.6502 101.488 26.6502C100.995 25.539 99.7509 24.4789 98.0152 24.4789C95.9162 24.4789 94.2049 26.1586 94.2049 28.2006C94.2049 30.2681 95.9676 31.8966 98.0152 31.8966C99.0782 31.8966 99.9846 31.5343 100.737 30.7853C101.281 31.3794 102.215 32.3882 102.914 33.1371C101.696 34.274 99.9859 34.9986 98.0152 34.9986C94.0753 34.9986 91.043 31.8966 91.043 28.2006C91.0417 24.4008 94.1523 21.377 98.014 21.377Z" fill="white"/>
+<path d="M107.141 16.543H110.268V27.3993C110.268 29.8036 112.241 31.8967 114.831 31.8967C117.369 31.8967 119.393 29.906 119.393 27.3993V16.543H122.52V27.3993C122.52 29.8036 124.468 31.8967 127.057 31.8967C129.595 31.8967 131.62 29.906 131.62 27.3993V16.543H134.747V27.3993C134.747 31.6637 131.262 34.9987 127.057 34.9987C124.571 34.9987 122.366 33.8619 120.957 32.0004C119.522 33.8619 117.317 34.9987 114.831 34.9987C110.576 34.9987 107.141 31.6125 107.141 27.3993V16.543Z" fill="white"/>
+<path d="M143.163 21.377C143.708 21.377 144.201 21.4282 144.667 21.5319L144.926 21.5831C145.004 21.6087 145.107 21.6343 145.185 21.6612C148.062 22.4882 150.161 25.0986 150.161 28.2006C150.161 28.3811 150.136 28.5629 150.136 28.7434C150.084 29.2606 149.98 29.7509 149.825 30.2169C148.658 29.6485 147.363 29.3643 145.989 29.3643C144.615 29.3643 143.319 29.6485 142.102 30.1913V27.1674C143.554 26.7539 144.875 26.6246 145.963 26.6246C146.197 26.6246 146.404 26.6502 146.637 26.6502C146.144 25.539 144.9 24.4789 143.165 24.4789C141.066 24.4789 139.354 26.1586 139.354 28.2006C139.354 30.2681 141.117 31.8966 143.165 31.8966C144.228 31.8966 145.134 31.5343 145.886 30.7853C146.431 31.3794 147.364 32.3882 148.064 33.1371C146.845 34.274 145.135 34.9986 143.165 34.9986C139.225 34.9986 136.192 31.8966 136.192 28.2006C136.191 24.4008 139.302 21.377 143.163 21.377Z" fill="white"/>
+<path d="M155.191 16.5957V28.1754C155.191 30.5527 156.824 32.1812 159.002 32.1812C161.205 32.1812 162.812 30.1648 162.812 28.1754C162.812 26.2115 161.283 24.1695 159.002 24.1695C158.457 24.1695 157.939 24.2732 157.473 24.4537C157.265 23.9621 156.539 22.1788 156.41 21.8434C157.213 21.5335 158.068 21.3786 159.002 21.3786C163.019 21.3786 165.999 24.5062 165.999 28.1766C165.999 32.002 162.812 35.0002 159.002 35.0002C155.14 35.0002 152.029 31.9763 152.029 28.1766V16.597H155.191V16.5957Z" fill="white"/>
+</svg></a><span class="lw-text-sec lw-fw-thin">© 2022. Все права защищены</span></div>
+                  </div>
+                  <div class="footer__bottom-field"><span class="lw-fw-light lw-text-sec lw-text-opacity">Телефон:</span><a class="lw-text-sm lw-fw-bold" href="tel:89062723744">8 (906) 272-37-44</a></div>
+                  <div class="footer__bottom-field"><span class="lw-fw-light lw-text-sec lw-text-opacity">Электронная почта:</span><a class="lw-text-sm lw-fw-bold" href="mailto: info@littleweb.ru">info@littleweb.ru</a></div>
+                  <div class="footer__bottom-field footer__bottom-field--social"><span class="lw-fw-light lw-text-sec lw-text-opacity">Мы в соцсетях:</span>
                     <ul class="social">
                       <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы в телеграме">
                           <svg width="70" height="70">
@@ -89,90 +169,12 @@
                             <use xlink:href="./assets/sprite.svg#icon-whapp"></use>
                           </svg></a></li>
                     </ul>
-                  </div><svg aria-hidden="true" class="blob blob--left" width="371" height="471" viewBox="0 0 371 471" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M46.4457 57.6349C73.2339 -20.5478 126.223 -1.88343 149.368 17.2216C441.707 189.162 393.756 396.032 292.268 452.261C142.535 535.219 -74.9284 319.616 25.7423 238.304C126.413 156.991 12.9604 155.363 46.4457 57.6349Z" fill="#4A3FA0"/>
-</svg>
-<svg aria-hidden="true" class="blob blob--right" width="560" height="432" viewBox="0 0 560 432" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M32.4489 165.969C-65.0436 224.477 80.2426 352.852 165.072 409.726C268.18 478.854 386.962 374.382 520.967 233.167C688.473 56.6477 256.179 -47.4019 189.904 22.2408C123.629 91.8835 154.314 92.8338 32.4489 165.969Z" fill="#947BFB"/>
-</svg>
+                  </div>
                 </div>
               </div>
             </div>
-          </section>
-          <section class="lw-page-top lw-section request">
-            <div class="container">
-              <div class="request__wrapper">
-                <h2 class="lw-text-lg lw-colored-text">Давайте работать вместе <span>над&nbsp;следующим проектом</span></h2>
-                <p class="lw-text-sec lw-fw-light">Оставьте свой номер телефона, и мы свяжимся с вами.</p>
-                <form action="#">
-                  <fieldset>
-                    <label class="visually-hidden" for="user_name">Ваше имя:</label>
-                    <input type="text" id="user_name" name="user_name" autocomplete="off" placeholder="Ваше имя">
-                  </fieldset>
-                  <fieldset>
-                    <label class="visually-hidden" for="user_phone">Ваш контактный номер:</label>
-                    <input type="tel" id="user_phone" name="user_phone" autocomplete="off" placeholder="Ваш контактный номер">
-                  </fieldset>
-                  <button class="lw-button-main" type="button">Оставить заявку</button>
-                </form>
-              </div>
-            </div>
-          </section>
-        </main>
-        <footer class="footer">
-          <div class="container footer__container">
-            <div class="footer__wrapper">
-              <div class="footer__top">
-                <ul class="footer-nav">
-                  <li class="footer-nav__item footer-nav__item--offset-left"><a class="lw-text-sm lw-fw-bold" href="index.html">Главная</a></li>
-                  <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="services.html">Услуги</a></li>
-                  <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="portfolio.html">Портфолио</a></li>
-                  <li class="footer-nav__item footer-nav__item--offset-right"><a class="lw-text-sm lw-fw-bold" href="about.html">О нас</a></li>
-                  <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="contacts.html">Контакты</a></li>
-                  <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="articles.html">Статьи</a></li>
-                  <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="vacancies.html">Вакансии</a></li>
-                  <li class="footer-nav__item"><a class="lw-text-sm lw-fw-bold" href="prices.html">Цены</a></li>
-                </ul>
-              </div>
-              <div class="footer__bottom">
-                <div class="footer__bottom-field footer__bottom-field--logo">
-                  <div class="footer-logo"><a href="index.html" aria-label="Littleweb.ru - сайты под ключ"><svg width="166" height="35" viewBox="0 0 166 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M43.4851 8.33867C40.1968 3.61585 35.0668 0.793586 28.6536 0.123759C18.3893 -0.949054 6.20657 4.89287 6.20657 19.998L9.04246 20.0266C9.04246 5.4429 20.9334 2.21356 28.1509 3.01545C47.7117 5.19103 45.2807 27.8862 40.5417 30.7112C32.95 35.238 31.0119 26.5016 31.0119 26.5016H28.2333C28.2333 26.5016 27.1763 32.3776 21.8117 31.4818C18.3014 30.8963 17.2988 27.2531 17.0265 25.9679C24.8458 21.8986 24.5331 12.8641 24.5331 12.8641L17.747 10.8505C17.747 10.8505 13.3152 17.7979 13.6 24.3179C6.79441 26.2566 2.10004 21.5909 2.08189 21.5732L0 23.4561C0.0823819 23.5419 5.71228 29.6806 14.1739 27.0489C14.4978 28.3123 16.024 33.4695 21.2992 34.3503C25.8749 35.1141 28.5377 32.5124 29.4243 31.1632C30.614 33.0896 32.8927 34.7193 36.2215 34.8677C36.3151 34.8717 36.4086 34.869 36.5036 34.8745C41.0136 35.076 46.2177 31.2285 47.0513 22.8312C47.5679 17.6196 46.2679 12.3372 43.4851 8.33867ZM19.188 14.2487L21.4668 14.9103C21.3132 15.9409 20.8678 20.1927 16.6789 22.8271C16.8688 19.0804 18.3307 15.9205 19.188 14.2487Z" fill="#EC9A29"/>
-<path d="M13.4516 11.6441L11.0449 13.9492L12.8924 15.7829L15.299 13.4778L13.4516 11.6441Z" fill="#EC9A29"/>
-<path d="M66.7137 15.6644L64.501 17.832L66.1996 19.5564L68.4123 17.3888L66.7137 15.6644Z" fill="#EC9A29"/>
-<path d="M52.9222 16.9316H56.0842V27.089C56.0842 29.9067 58.6505 31.845 61.8381 31.845H63.3671V34.9982H61.6301C56.8095 34.9982 52.9209 31.5352 52.9209 27.2439V16.9316H52.9222Z" fill="white"/>
-<path d="M68.035 22.0742V34.9981H64.873V22.0742H68.035Z" fill="white"/>
-<path d="M70.1946 19.4648H73.3566V23.6269H75.2233V26.7288H73.3566V29.3904C73.3566 30.7603 74.4966 31.8971 75.8703 31.8971H76.6483V34.9991H75.8703C72.734 34.9991 70.1934 32.4143 70.1934 29.3123V19.4648H70.1946Z" fill="white"/>
-<path d="M78.0696 19.4648H81.2316V23.6269H83.0983V26.7288H81.2316V29.3904C81.2316 30.7603 82.3716 31.8971 83.7453 31.8971H84.5233V34.9991H83.7453C80.609 34.9991 78.0684 32.4143 78.0684 29.3123V19.4648H78.0696Z" fill="white"/>
-<path d="M85.8359 34.9997V16.9062H89.0236V34.9997H85.8359Z" fill="white"/>
-<path d="M98.014 21.377C98.5583 21.377 99.0513 21.4282 99.5173 21.5319L99.7766 21.5831C99.8549 21.6087 99.9576 21.6343 100.036 21.6612C102.913 22.4882 105.012 25.0986 105.012 28.2006C105.012 28.3811 104.986 28.5629 104.986 28.7434C104.935 29.2606 104.831 29.7509 104.676 30.2169C103.509 29.6485 102.213 29.3643 100.84 29.3643C99.4659 29.3643 98.1693 29.6485 96.9523 30.1913V27.1674C98.4042 26.7539 99.7253 26.6246 100.814 26.6246C101.048 26.6246 101.254 26.6502 101.488 26.6502C100.995 25.539 99.7509 24.4789 98.0152 24.4789C95.9162 24.4789 94.2049 26.1586 94.2049 28.2006C94.2049 30.2681 95.9676 31.8966 98.0152 31.8966C99.0782 31.8966 99.9846 31.5343 100.737 30.7853C101.281 31.3794 102.215 32.3882 102.914 33.1371C101.696 34.274 99.9859 34.9986 98.0152 34.9986C94.0753 34.9986 91.043 31.8966 91.043 28.2006C91.0417 24.4008 94.1523 21.377 98.014 21.377Z" fill="white"/>
-<path d="M107.141 16.543H110.268V27.3993C110.268 29.8036 112.241 31.8967 114.831 31.8967C117.369 31.8967 119.393 29.906 119.393 27.3993V16.543H122.52V27.3993C122.52 29.8036 124.468 31.8967 127.057 31.8967C129.595 31.8967 131.62 29.906 131.62 27.3993V16.543H134.747V27.3993C134.747 31.6637 131.262 34.9987 127.057 34.9987C124.571 34.9987 122.366 33.8619 120.957 32.0004C119.522 33.8619 117.317 34.9987 114.831 34.9987C110.576 34.9987 107.141 31.6125 107.141 27.3993V16.543Z" fill="white"/>
-<path d="M143.163 21.377C143.708 21.377 144.201 21.4282 144.667 21.5319L144.926 21.5831C145.004 21.6087 145.107 21.6343 145.185 21.6612C148.062 22.4882 150.161 25.0986 150.161 28.2006C150.161 28.3811 150.136 28.5629 150.136 28.7434C150.084 29.2606 149.98 29.7509 149.825 30.2169C148.658 29.6485 147.363 29.3643 145.989 29.3643C144.615 29.3643 143.319 29.6485 142.102 30.1913V27.1674C143.554 26.7539 144.875 26.6246 145.963 26.6246C146.197 26.6246 146.404 26.6502 146.637 26.6502C146.144 25.539 144.9 24.4789 143.165 24.4789C141.066 24.4789 139.354 26.1586 139.354 28.2006C139.354 30.2681 141.117 31.8966 143.165 31.8966C144.228 31.8966 145.134 31.5343 145.886 30.7853C146.431 31.3794 147.364 32.3882 148.064 33.1371C146.845 34.274 145.135 34.9986 143.165 34.9986C139.225 34.9986 136.192 31.8966 136.192 28.2006C136.191 24.4008 139.302 21.377 143.163 21.377Z" fill="white"/>
-<path d="M155.191 16.5957V28.1754C155.191 30.5527 156.824 32.1812 159.002 32.1812C161.205 32.1812 162.812 30.1648 162.812 28.1754C162.812 26.2115 161.283 24.1695 159.002 24.1695C158.457 24.1695 157.939 24.2732 157.473 24.4537C157.265 23.9621 156.539 22.1788 156.41 21.8434C157.213 21.5335 158.068 21.3786 159.002 21.3786C163.019 21.3786 165.999 24.5062 165.999 28.1766C165.999 32.002 162.812 35.0002 159.002 35.0002C155.14 35.0002 152.029 31.9763 152.029 28.1766V16.597H155.191V16.5957Z" fill="white"/>
-</svg></a><span class="lw-text-sec lw-fw-thin">© 2022. Все права защищены</span></div>
-                </div>
-                <div class="footer__bottom-field"><span class="lw-fw-light lw-text-sec lw-text-opacity">Телефон:</span><a class="lw-text-sm lw-fw-bold" href="tel:89062723744">8 (906) 272-37-44</a></div>
-                <div class="footer__bottom-field"><span class="lw-fw-light lw-text-sec lw-text-opacity">Электронная почта:</span><a class="lw-text-sm lw-fw-bold" href="mailto: info@littleweb.ru">info@littleweb.ru</a></div>
-                <div class="footer__bottom-field footer__bottom-field--social"><span class="lw-fw-light lw-text-sec lw-text-opacity">Мы в соцсетях:</span>
-                  <ul class="social">
-                    <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы в телеграме">
-                        <svg width="70" height="70">
-                          <use xlink:href="./assets/sprite.svg#icon-tg"></use>
-                        </svg></a></li>
-                    <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы вКонтакте">
-                        <svg width="70" height="70">
-                          <use xlink:href="./assets/sprite.svg#icon-vk"></use>
-                        </svg></a></li>
-                    <li class="social__item"><a href="#" rel="noopener noreferrer nofollow" aria-label="Мы в whatsapp">
-                        <svg width="70" height="70">
-                          <use xlink:href="./assets/sprite.svg#icon-whapp"></use>
-                        </svg></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+          </footer>
+        </div>
       </div>
     </div>
     <div class="transition-overlay">

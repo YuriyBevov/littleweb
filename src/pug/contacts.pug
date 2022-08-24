@@ -11,10 +11,11 @@ block page-content
   +header('header--inner')
   #smooth-wrapper
     #smooth-content
-      main.lw-bottom-lined(data-barba="container" data-barba-namespace="contacts-page")
-        include ./sections/contacts-page/contacts
-        include ./sections/common/request
-      include ./layouts/main-footer
+      .barba-container(data-barba="container" data-barba-namespace="contacts-page")
+        main.lw-bottom-lined(data-barba="container" data-barba-namespace="contacts-page")
+          include ./sections/contacts-page/contacts
+          include ./sections/common/request
+        include ./layouts/main-footer
 
 block modals
 

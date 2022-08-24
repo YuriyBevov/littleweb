@@ -137,6 +137,7 @@ if(burger) {
   function navClosingAnimation() {
     document.removeEventListener('keydown', onClickByEscCloseNav);
     navTimeline.reverse();
+    smoothScroller.paused(false);
 
     gsap.fromTo(header, {
       backgroundColor: 'rgba(0,0,0,0.9)',
@@ -177,6 +178,6 @@ if(burger) {
   navItems.forEach(item => {
     item.addEventListener('click',() => {
       navClosingAnimation();
-    })
-  })
+    });
+  });
 }

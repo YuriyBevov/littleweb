@@ -20,6 +20,10 @@
       @extend .flex-centered-content;
       padding: 10px;
       color: var(--white-color);
+
+      &.active-nav {
+        color: var(--warning-color);
+      }
     }
 
     @include m-b-tablet-lg-down {

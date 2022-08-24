@@ -11,8 +11,9 @@ block page-content
   +header('header--main')
   #smooth-wrapper
     #smooth-content
-      main.lw-bottom-lined(data-barba="container" data-barba-namespace="home-page")
-        include ./sections/index-page/hero
-      include ./layouts/main-footer
+      .barba-container(data-barba="container" data-barba-namespace="home-page")
+        main.lw-bottom-lined
+          include ./sections/index-page/hero
+        include ./layouts/main-footer
 
 block modals

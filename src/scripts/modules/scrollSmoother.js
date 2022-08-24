@@ -13,7 +13,7 @@ let smoothScroller = ScrollSmoother.create({
   effects: true
 });
 
-smoothFooterInit(smoothScroller);
+//smoothFooterInit(smoothScroller);
 parallaxBackgroundFiguresInit(smoothScroller);
 
 export { smoothScroller, ScrollTrigger };

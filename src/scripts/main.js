@@ -9,3 +9,5 @@ import "./modules/heroShapesAnimation.js";
 import "./modules/scrollSmoother.js";
 import "./modules/stackIconsAnimation.js";
 import "./modules/nav.js";
+
+import "./modules/smoothFooter.js"
