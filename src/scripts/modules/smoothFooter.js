@@ -16,7 +16,7 @@ import {ScrollTrigger} from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export function smoothFooterInit() {
-  gsap.set('.footer__wrapper', { y: '-150px' })
+  /*gsap.set('.footer__wrapper', { y: '-150px' })
 
   let tl = gsap.timeline({
     scrollTrigger: {
@@ -30,7 +30,7 @@ export function smoothFooterInit() {
   tl.to('.footer__wrapper', {
     y: 0,
     ease: 'none',
-  });
+  });*/
 }
 
 smoothFooterInit();

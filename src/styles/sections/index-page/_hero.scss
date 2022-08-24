@@ -3,6 +3,7 @@
   width: 100vw;
   height: 100vh;
   min-height: 768px;
+  height: calc(var(--vh, 1vh) * 100);
 
   overflow: hidden;
   position: relative;

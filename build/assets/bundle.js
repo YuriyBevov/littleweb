@@ -563,11 +563,13 @@ heroShapesAnimationInit();
 /*!*************************************!*\
   !*** ./src/scripts/modules/init.js ***!
   \*************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-//import {setVieportHeight} from "../utils/functions.js";
-//setVieportHeight();
-//document.querySelector('.nojs').classList.remove('nojs');
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_functions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions.js */ "./src/scripts/utils/functions.js");
+
+(0,_utils_functions_js__WEBPACK_IMPORTED_MODULE_0__.setVieportHeight)(); //document.querySelector('.nojs').classList.remove('nojs');
 //import { smoothScroller, ScrollTrigger } from "./scrollSmoother.js";
 
 /*window.addEventListener('resize', () => {
@@ -945,21 +947,19 @@ __webpack_require__.r(__webpack_exports__);
 
 gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__.ScrollTrigger);
 function smoothFooterInit() {
-  gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.set('.footer__wrapper', {
-    y: '-150px'
-  });
-  var tl = gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.timeline({
+  /*gsap.set('.footer__wrapper', { y: '-150px' })
+   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: '.footer__container',
       start: "top bottom",
       end: "+=25%",
-      scrub: true
-    }
+      scrub: true,
+    },
   });
-  tl.to('.footer__wrapper', {
+   tl.to('.footer__wrapper', {
     y: 0,
-    ease: 'none'
-  });
+    ease: 'none',
+  });*/
 }
 smoothFooterInit();
 
@@ -13670,7 +13670,6 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_loader_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/loader.js */ "./src/scripts/modules/loader.js");
 /* harmony import */ var _modules_init_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/init.js */ "./src/scripts/modules/init.js");
-/* harmony import */ var _modules_init_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_init_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_custom_cursor_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/custom_cursor.js */ "./src/scripts/modules/custom_cursor.js");
 /* harmony import */ var _modules_barba_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/barba.js */ "./src/scripts/modules/barba.js");
 /* harmony import */ var _modules_heroContentAnimation_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/heroContentAnimation.js */ "./src/scripts/modules/heroContentAnimation.js");

@@ -1,6 +1,6 @@
-//import {setVieportHeight} from "../utils/functions.js";
+import {setVieportHeight} from "../utils/functions.js";
 
-//setVieportHeight();
+setVieportHeight();
 //document.querySelector('.nojs').classList.remove('nojs');
 
 //import { smoothScroller, ScrollTrigger } from "./scrollSmoother.js";
