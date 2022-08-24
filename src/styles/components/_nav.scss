@@ -66,6 +66,7 @@
     overflow: hidden;
 
     &-item {
+      //overflow: hidden;
       a {
         display: flex;
         width: fit-content;
@@ -78,6 +79,7 @@
         margin: 15px 0;
 
         &.active-nav {
+          opacity: 0.6;
           color: var(--warning-color);
         }
 

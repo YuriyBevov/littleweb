@@ -4,23 +4,10 @@ import { heroShapesAnimationInit } from "./heroShapesAnimation.js";
 import { parallaxBackgroundFiguresInit } from './parallaxBackgroundFigures.js';
 import { stackIconsAnimationInit } from "./stackIconsAnimation.js";
 import { smoothFooterInit } from "./smoothFooter.js";
-
+import { updateCurrentPage } from "./updateCurrentPage.js";
 import barba from '@barba/core';
 
 import {gsap} from 'gsap';
-
-function updateCurrentPage() {
-  const navItems = document.querySelectorAll('.footer-nav__item a, .nav__list-item a');
-
-  navItems.forEach(item => {
-    if(`/${item.getAttribute('href')}` === window.location.pathname) {
-      item.classList.add('active-nav');
-    } else {
-      item.classList.contains('active-nav') ?
-      item.classList.remove('active-nav') : null;
-    }
-  })
-}
 
 updateCurrentPage();
 
@@ -110,13 +97,11 @@ barba.hooks.enter((data) => {
 barba.hooks.after((data) => {
   updateCurrentPage();
 
-
   parallaxBackgroundFiguresInit(smoothScroller);
   smoothFooterInit();
-  //heroContentAnimationInit();
   heroShapesAnimationInit();
   stackIconsAnimationInit();
-  //
+
   ScrollTrigger.refresh();
 
 });
