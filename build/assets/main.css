@@ -2061,6 +2061,8 @@ body:not(.loading) .loader {
   width: 100%;
   padding-top: 50px;
   overflow: hidden;
+  margin: auto 0;
+  height: 100%;
 }
 .nav__list-item a {
   display: -webkit-box;
