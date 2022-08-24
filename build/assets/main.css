@@ -2090,6 +2090,9 @@ body:not(.loading) .loader {
 .footer {
   position: relative;
   background-color: var(--main-bg-color);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
 }
 .footer__wrapper {
   padding: 30px 0;
