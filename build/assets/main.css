@@ -2489,6 +2489,9 @@ body:not(.loading) .loader {
   height: 100vh;
   min-height: 768px;
   height: calc(var(--vh, 1vh) * 100);
+  -webkit-transition: height 0.4s ease-in;
+  -o-transition: height 0.4s ease-in;
+  transition: height 0.4s ease-in;
   overflow: hidden;
   position: relative;
   background-image: url("../assets/img/hero_bg@1x.png");
