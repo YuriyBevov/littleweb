@@ -1045,6 +1045,8 @@ function updatePageUrl() {
   var navLinks = document.querySelectorAll('.footer-nav__item a, .nav__list-item a');
   console.log('update page');
   navLinks.forEach(function (item) {
+    console.log(item.getAttribute('href'), window.location.pathname);
+
     if ("/".concat(item.getAttribute('href')) === window.location.pathname) {
       item.classList.add('active-nav');
       item.style.opacity = '0.6';
