@@ -20,6 +20,18 @@
       @extend .flex-centered-content;
       padding: 10px;
       color: var(--white-color);
+
+      &.active-nav {
+        opacity: 0.6;
+        color: var(--warning-color);
+      }
+
+      transition: color var(--main-t-rules);
+
+      &:hover,
+      &:focus {
+        color: var(--warning-color);
+      }
     }
 
     @include m-b-tablet-lg-down {

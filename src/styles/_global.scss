@@ -23,6 +23,14 @@ body {
   min-height: 100vh;
 }
 
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+}
+
 body {
   position: relative;
   display: flex;
@@ -37,10 +45,6 @@ body {
 
   &.body-locked {
     overflow: hidden;
-  }
-
-  &.hero-body {
-    background-color: var(--hero-bg-color);
   }
 }
 

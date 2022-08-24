@@ -1307,6 +1307,14 @@ body {
   min-height: 100vh;
 }
 
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+}
+
 body {
   position: relative;
   display: -webkit-box;
@@ -1325,9 +1333,6 @@ body {
 }
 body.body-locked {
   overflow: hidden;
-}
-body.hero-body {
-  background-color: var(--hero-bg-color);
 }
 
 h1, h2 {
@@ -1807,38 +1812,9 @@ main {
   margin-bottom: 20px;
 }
 .lw-bottom-lined {
-  border-bottom: 1px solid var(--white-color);
+  border-bottom: 3px solid var(--white-color);
 }
 
-/*gsap start*/
-body:not(.nojs) .hero__title span span {
-  -webkit-transform: translateY(120%);
-  -ms-transform: translateY(120%);
-  transform: translateY(120%);
-}
-body:not(.nojs) .hero__desc {
-  opacity: 0;
-}
-body:not(.nojs) .main-header {
-  opacity: 0;
-}
-body:not(.nojs) .hero__btn {
-  width: 20px;
-  -webkit-transform: translateY(100vh);
-  -ms-transform: translateY(100vh);
-  transform: translateY(100vh);
-}
-body:not(.nojs) .hero__btn span {
-  opacity: 0;
-}
-body:not(.nojs) .hero__logo {
-  opacity: 0;
-  -webkit-transform: translateY(50px);
-  -ms-transform: translateY(50px);
-  transform: translateY(50px);
-}
-
-/*gsap end*/
 /* components */
 .loader {
   position: fixed;
@@ -2092,11 +2068,16 @@ body:not(.loading) .loader {
   line-height: 1.2;
   margin: 15px 0;
 }
+.nav__list-item a.active-nav {
+  opacity: 0.6;
+  color: var(--warning-color);
+}
 .nav__list-item a:hover, .nav__list-item a:focus {
   color: var(--warning-color);
 }
 
 .footer {
+  position: relative;
   background-color: var(--main-bg-color);
 }
 .footer__wrapper {
@@ -2177,6 +2158,16 @@ body:not(.loading) .loader {
   }
 }
 
+.footer-trigger {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: red;
+}
+
 .footer-nav {
   margin-bottom: 30px;
 }
@@ -2206,6 +2197,16 @@ body:not(.loading) .loader {
 .footer-nav__item a {
   padding: 10px;
   color: var(--white-color);
+  -webkit-transition: color var(--main-t-rules);
+  -o-transition: color var(--main-t-rules);
+  transition: color var(--main-t-rules);
+}
+.footer-nav__item a.active-nav {
+  opacity: 0.6;
+  color: var(--warning-color);
+}
+.footer-nav__item a:hover, .footer-nav__item a:focus {
+  color: var(--warning-color);
 }
 @media (max-width: 960px) {
   .footer-nav__item {
@@ -2473,10 +2474,6 @@ body:not(.loading) .loader {
   width: 100vw;
   height: 100vh;
   min-height: 768px;
-  height: calc(var(--vh, 1vh) * 100);
-  -webkit-transition: height 0.4s linear;
-  -o-transition: height 0.4s linear;
-  transition: height 0.4s linear;
   overflow: hidden;
   position: relative;
   background-image: url("../assets/img/hero_bg@1x.png");

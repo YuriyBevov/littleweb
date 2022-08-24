@@ -66,6 +66,7 @@
     overflow: hidden;
 
     &-item {
+      //overflow: hidden;
       a {
         display: flex;
         width: fit-content;
@@ -76,6 +77,11 @@
         font-size  : clamp(20px, 5vw, 54px);
         line-height: 1.2;
         margin: 15px 0;
+
+        &.active-nav {
+          opacity: 0.6;
+          color: var(--warning-color);
+        }
 
         &:hover,
         &:focus {

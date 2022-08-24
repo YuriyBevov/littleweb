@@ -13,13 +13,13 @@ gsap.registerPlugin( MorphSVGPlugin );
 
 if(burger) {
   const navBlobs = nav.querySelectorAll('.nav-blob');
-  const navItems = nav.querySelectorAll('.nav__list-item a');
+  const navLinks = nav.querySelectorAll('.nav__list-item a');
 
   /**
   * prepare option
   */
-  navItems.forEach(item => {
-    gsap.set(item, { y: 100, opacity: 0});
+  navLinks.forEach(item => {
+    gsap.set(item, { y: 100, /*opacity: 0*/});
   });
   gsap.set(nav, {opacity: 0});
 
@@ -31,12 +31,11 @@ if(burger) {
     opacity: 1,
     ease: 'ease-in',
     duration: 0.6
-  }).to(navItems, {
-    y: 0,
-    opacity: 1,
+  }).to(navLinks, {
+    y: -15,
+    //opacity: 1,
     ease: 'ease',
     duration: 0.5,
-    delay: 0.35,
     stagger: 0.025
   }, "-=0.7")
 
@@ -137,6 +136,7 @@ if(burger) {
   function navClosingAnimation() {
     document.removeEventListener('keydown', onClickByEscCloseNav);
     navTimeline.reverse();
+    smoothScroller.paused(false);
 
     gsap.fromTo(header, {
       backgroundColor: 'rgba(0,0,0,0.9)',
@@ -173,4 +173,12 @@ if(burger) {
   };
 
   burger.addEventListener('click', onClickOpenNav);
+  //barba
+  navLinks.forEach(item => {
+    item.addEventListener('click',() => {
+      if(!item.classList.contains('active-nav')) {
+        navClosingAnimation();
+      }
+    });
+  });
 }

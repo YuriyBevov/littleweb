@@ -1,10 +1,4 @@
-import { footer } from "../utils/nodesHelper";
-
-export function initParallaxBlobs(scroller){
-  if(footer) {
-    scroller.effects('.footer__container', {speed: 0.5, ease: 'linear'});
-    scroller.effects(footer, {speed: 1.5, ease: 'linear'});
-  }
+export function parallaxBackgroundFiguresInit(scroller){
 
   let stackBackground = document.querySelector('.stack__field--bg');
   if(stackBackground) {
@@ -20,6 +14,7 @@ export function initParallaxBlobs(scroller){
 
   let blobs = document.querySelectorAll('.blob');
   if(blobs) {
+
     blobs.forEach((item,i) => {
       scroller.effects(item, {speed: 1.2 + (i / 3.85)});
     });

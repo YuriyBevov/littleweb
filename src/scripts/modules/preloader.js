@@ -1,4 +1,4 @@
-const imagesLoaded = require('imagesloaded');
+/*const imagesLoaded = require('imagesloaded');
 
 const body = document.body;
 
@@ -24,7 +24,7 @@ export const preloader = _ => {
             resolve();
         });
     });
-};
+};*/
 
 /*
 
