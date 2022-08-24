@@ -41,52 +41,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 (0,_updateCurrentPage_js__WEBPACK_IMPORTED_MODULE_6__.updateCurrentPage)();
-/*barba.init({
-  views: [{
-    namespace: 'home-page',
-    beforeEnter() {
-      console.log('beforeEnter');
-    },
-    afterEnter() {
-      console.log('AFTER ENT');
-    }
-  }],
-
-  transitions: [{
-    //name: 'custom-transition',
-    sync: true,
-    preventRunning: true,
-
-    leave(data) {
-      /*return gsap.to(data.current.container, {
-        opacity: 0,
-        duration: 1.2
-      });*/
-
-/*},
-enter(data) {
-  if(!nav.classList.contains('opened')) {
-    data.next.container.classList.add('fixed');
-    return gsap.fromTo(data.next.container, {
-      opacity: 0,
-      clipPath: "circle(0% at 0% 0%)"
-    }, {
-      opacity: 1,
-      clipPath: "circle(140% at 0% 0%)",
-      duration: 2,
-      onComplete: () => {
-        data.next.container.classList.remove('fixed');
-        data.next.container.style.clipPath = "none";
-      }
-    });
-  }
-}
-}]
-});*/
-
-/*barba.hooks.leave((data) => {
-  smoothScroller.scrollTop(0);
-})*/
 
 function animationLeave(current) {
   return gsap__WEBPACK_IMPORTED_MODULE_8__.gsap.to(current, {
@@ -101,6 +55,29 @@ function animationEnter(next) {
     duration: 1
   });
 }
+/*function animationLeave(current) {
+  console.log(percentLeft, percentTop)
+  return gsap.fromTo(overlay, {
+    clipPath: 'polygon(0 0, 100% 0%, 0 0, 0% 100%)',
+    zIndex: '999'
+  },{
+    clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)',
+    duration: 1,
+  });
+}
+
+function animationEnter(next) {
+
+  return gsap.fromTo(overlay, {
+    clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)',
+
+  },{
+    clipPath: 'polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%)',
+    duration: 1,
+    zIndex: '-1'
+  });
+}*/
+
 
 _barba_core__WEBPACK_IMPORTED_MODULE_7___default().init({
   transitions: [{
@@ -789,8 +766,8 @@ if (_utils_nodesHelper__WEBPACK_IMPORTED_MODULE_1__.burger) {
       backgroundColor: 'rgba(0,0,0,0.9)'
     }, {
       backgroundColor: 'rgba(21,27,83,.3)',
-      duration: 1.1,
-      delay: .6,
+      duration: 1,
+      delay: .4,
       ease: 'ease-out'
     });
     (0,_burgerMenuAnimation__WEBPACK_IMPORTED_MODULE_3__.burgerLinesAnimationOut)();

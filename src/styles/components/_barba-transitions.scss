@@ -1,10 +1,10 @@
 .transition-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--light-color);
-
-  transform: translateX(-100vw);
+  background-color: var(--primary-color);
+  clip-path: circle(0%);
+  //transform: translateX(-100vw);
 }

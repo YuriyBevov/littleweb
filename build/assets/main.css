@@ -1816,6 +1816,17 @@ main {
 }
 
 /* components */
+.transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--primary-color);
+  -webkit-clip-path: circle(0%);
+  clip-path: circle(0%);
+}
+
 .loader {
   position: fixed;
   top: 0;

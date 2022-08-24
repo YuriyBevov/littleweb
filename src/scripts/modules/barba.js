@@ -5,57 +5,12 @@ import { parallaxBackgroundFiguresInit } from './parallaxBackgroundFigures.js';
 import { stackIconsAnimationInit } from "./stackIconsAnimation.js";
 import { smoothFooterInit } from "./smoothFooter.js";
 import { updateCurrentPage } from "./updateCurrentPage.js";
+
 import barba from '@barba/core';
 
 import {gsap} from 'gsap';
 
 updateCurrentPage();
-
-/*barba.init({
-  views: [{
-    namespace: 'home-page',
-    beforeEnter() {
-      console.log('beforeEnter');
-    },
-    afterEnter() {
-      console.log('AFTER ENT');
-    }
-  }],
-
-  transitions: [{
-    //name: 'custom-transition',
-    sync: true,
-    preventRunning: true,
-
-    leave(data) {
-      /*return gsap.to(data.current.container, {
-        opacity: 0,
-        duration: 1.2
-      });*/
-    /*},
-    enter(data) {
-      if(!nav.classList.contains('opened')) {
-        data.next.container.classList.add('fixed');
-        return gsap.fromTo(data.next.container, {
-          opacity: 0,
-          clipPath: "circle(0% at 0% 0%)"
-        }, {
-          opacity: 1,
-          clipPath: "circle(140% at 0% 0%)",
-          duration: 2,
-          onComplete: () => {
-            data.next.container.classList.remove('fixed');
-            data.next.container.style.clipPath = "none";
-          }
-        });
-      }
-    }
-  }]
-});*/
-
-/*barba.hooks.leave((data) => {
-  smoothScroller.scrollTop(0);
-})*/
 
 function animationLeave(current) {
   return gsap.to(current, {
@@ -71,8 +26,32 @@ function animationEnter(next) {
   });
 }
 
+/*function animationLeave(current) {
+  console.log(percentLeft, percentTop)
+  return gsap.fromTo(overlay, {
+    clipPath: 'polygon(0 0, 100% 0%, 0 0, 0% 100%)',
+    zIndex: '999'
+  },{
+    clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)',
+    duration: 1,
+  });
+}
+
+function animationEnter(next) {
+
+  return gsap.fromTo(overlay, {
+    clipPath: 'polygon(0 0, 100% 0%, 100% 100%, 0% 100%)',
+
+  },{
+    clipPath: 'polygon(100% 100%, 100% 0%, 100% 100%, 0% 100%)',
+    duration: 1,
+    zIndex: '-1'
+  });
+}*/
+
 barba.init({
   transitions: [
+
     {
       leave: ({current}) => animationLeave(current.container),
 
@@ -92,6 +71,8 @@ barba.hooks.enter((data) => {
     header.classList.contains('header--main') ?
     header.classList.remove('header--main') : null;
   }
+
+
 });
 
 barba.hooks.after((data) => {
@@ -103,5 +84,4 @@ barba.hooks.after((data) => {
   stackIconsAnimationInit();
 
   ScrollTrigger.refresh();
-
 });

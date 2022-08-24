@@ -142,8 +142,8 @@ if(burger) {
       backgroundColor: 'rgba(0,0,0,0.9)',
     },{
       backgroundColor: 'rgba(21,27,83,.3)',
-      duration: 1.1,
-      delay: .6,
+      duration: 1,
+      delay: .4,
       ease: 'ease-out'
     });
 
