@@ -1043,11 +1043,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function updatePageUrl() {
   var navLinks = document.querySelectorAll('.footer-nav__item a, .nav__list-item a');
-  console.log('update page');
+  console.log('update page test');
   navLinks.forEach(function (item) {
-    console.log(item.getAttribute('href'), window.location.pathname);
-
-    if ("/".concat(item.getAttribute('href')) === window.location.pathname) {
+    if (window.location.pathname.includes(item.getAttribute('href'))) {
       item.classList.add('active-nav');
       item.style.opacity = '0.6';
       item.addEventListener('click', function (evt) {

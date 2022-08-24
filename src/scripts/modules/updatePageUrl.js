@@ -1,9 +1,8 @@
 export function updatePageUrl() {
   const navLinks = document.querySelectorAll('.footer-nav__item a, .nav__list-item a');
-  console.log('update page')
+  console.log('update page test')
   navLinks.forEach(item => {
-    console.log(item.getAttribute('href'), window.location.pathname)
-    if(`/${item.getAttribute('href')}` === window.location.pathname) {
+    if(window.location.pathname.includes(item.getAttribute('href'))) {
       item.classList.add('active-nav');
 
       item.style.opacity = '0.6';
