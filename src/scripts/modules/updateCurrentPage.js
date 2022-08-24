@@ -1,6 +1,6 @@
 export function updateCurrentPage() {
   const navLinks = document.querySelectorAll('.footer-nav__item a, .nav__list-item a');
-
+  console.log('update page')
   navLinks.forEach(item => {
     if(`/${item.getAttribute('href')}` === window.location.pathname) {
       item.classList.add('active-nav');

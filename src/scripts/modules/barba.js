@@ -71,8 +71,6 @@ barba.hooks.enter((data) => {
     header.classList.contains('header--main') ?
     header.classList.remove('header--main') : null;
   }
-
-
 });
 
 barba.hooks.after((data) => {

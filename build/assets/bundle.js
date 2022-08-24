@@ -1043,6 +1043,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 function updateCurrentPage() {
   var navLinks = document.querySelectorAll('.footer-nav__item a, .nav__list-item a');
+  console.log('update page');
   navLinks.forEach(function (item) {
     if ("/".concat(item.getAttribute('href')) === window.location.pathname) {
       item.classList.add('active-nav');
